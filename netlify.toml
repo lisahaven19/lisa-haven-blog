@@ -1,0 +1,28 @@
+# Netlify configuration for lisahaven.co
+
+[build]
+  # This script reads your _posts/ markdown files and generates posts-index.json
+  command = "node build.js"
+  publish = "."
+
+# Netlify Identity - enables the CMS login system
+[template.environment]
+  NETLIFY_IDENTITY_ENABLED = "true"
+
+# Allow the admin panel to work on any URL path
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200
+
+# Cache images for performance
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+# Cache CSS/JS for performance
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
