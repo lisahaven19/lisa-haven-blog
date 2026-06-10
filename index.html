@@ -860,6 +860,24 @@
     }
     .c-card:hover::before { transform: scaleX(1); }
 
+    .c-photo {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      border-radius: 8px;
+      background-size: cover;
+      background-position: center top;
+      flex-shrink: 0;
+    }
+    .post-modal-photo {
+      width: 100%;
+      max-width: 340px;
+      aspect-ratio: 9 / 16;
+      border-radius: 12px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      margin: 0 auto 28px;
+    }
     .c-card-top {
       display: flex;
       align-items: center;
@@ -1033,17 +1051,6 @@
       background: #080808;
       position: relative;
       overflow: hidden;
-    }
-
-    /* Ambient rose glow behind the name */
-    footer::before {
-      content: '';
-      position: absolute;
-      top: -120px; left: 50%;
-      transform: translateX(-50%);
-      width: 700px; height: 400px;
-      background: radial-gradient(ellipse, rgba(196,126,138,0.12) 0%, transparent 70%);
-      pointer-events: none;
     }
 
     /* ── Top statement band ── */
@@ -2144,9 +2151,8 @@
       }, { passive: true });
     }
 
-    /* ── Carousel ───────────────────────────── */
-    // Global timer so re-init always clears the previous one
-    let _carouselTimer = null;
+    /* ── Carousel — continuous non-stop loop ── */
+    let _carouselRAF = null;
 
     function initCarousel() {
       const track    = document.getElementById('carouselTrack');
@@ -2156,62 +2162,67 @@
       const nextBtn  = document.querySelector('.carousel-next');
       if (!track) return;
 
-      // Kill any existing timer before re-initialising
-      clearInterval(_carouselTimer);
-
-      // Clear any previous dots so re-init works cleanly
+      cancelAnimationFrame(_carouselRAF);
       dotsWrap.innerHTML = '';
+      dotsWrap.style.display = 'none';
+      track.style.transition = 'none';
 
-      const cards      = Array.from(track.querySelectorAll('.c-card'));
-      const cardWidth  = 340 + 24; // card width + gap
-      let   current    = 0;
-      const perView    = Math.floor(viewport.offsetWidth / cardWidth) || 1;
-      const maxIndex   = Math.max(0, cards.length - perView);
-
-      // Build dots
-      const totalDots = maxIndex + 1;
-      for (let i = 0; i < totalDots; i++) {
-        const d = document.createElement('button');
-        d.className = 'c-dot' + (i === 0 ? ' active' : '');
-        d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-        d.addEventListener('click', () => goTo(i));
-        dotsWrap.appendChild(d);
+      // Duplicate the card set once for a seamless infinite loop
+      if (!track.dataset.looped) {
+        Array.from(track.children).forEach(card => {
+          const clone = card.cloneNode(true);
+          clone.addEventListener('click', e => {
+            e.preventDefault();
+            card.click(); // delegate to the original card's handler
+          });
+          track.appendChild(clone);
+        });
+        track.dataset.looped = '1';
       }
 
-      function goTo(index) {
-        current = Math.max(0, Math.min(index, maxIndex));
-        track.style.transform = `translateX(-${current * cardWidth}px)`;
-        dotsWrap.querySelectorAll('.c-dot').forEach((d, i) => d.classList.toggle('active', i === current));
-        prevBtn.disabled = current === 0;
-        nextBtn.disabled = current >= maxIndex;
+      const half  = () => track.scrollWidth / 2;
+      let offset  = 0;
+      let paused  = false;
+      const SPEED = 0.55; // pixels per frame ≈ 33px/second
+
+      function apply() {
+        const h = half();
+        if (h > 0) {
+          offset = ((offset % h) + h) % h;
+          track.style.transform = `translateX(-${offset}px)`;
+        }
       }
 
-      function startAuto() {
-        clearInterval(_carouselTimer);
-        _carouselTimer = setInterval(() => goTo(current >= maxIndex ? 0 : current + 1), 3000);
+      function step() {
+        if (!paused) { offset += SPEED; apply(); }
+        _carouselRAF = requestAnimationFrame(step);
       }
 
-      prevBtn.addEventListener('click', () => { goTo(current - 1); startAuto(); });
-      nextBtn.addEventListener('click', () => { goTo(current + 1); startAuto(); });
+      prevBtn.disabled = false;
+      nextBtn.disabled = false;
+      prevBtn.onclick = () => { offset -= 364; apply(); };
+      nextBtn.onclick = () => { offset += 364; apply(); };
 
-      // Drag / swipe
-      let startX = 0, isDragging = false, dragDelta = 0;
-      viewport.addEventListener('mousedown',  e => { isDragging = true; startX = e.clientX; viewport.style.cursor = 'grabbing'; });
-      viewport.addEventListener('touchstart', e => { isDragging = true; startX = e.touches[0].clientX; }, { passive: true });
-      window.addEventListener('mousemove',  e => { if (isDragging) dragDelta = e.clientX - startX; });
-      window.addEventListener('touchmove',  e => { if (isDragging) dragDelta = e.touches[0].clientX - startX; }, { passive: true });
-      window.addEventListener('mouseup',  () => { if (!isDragging) return; isDragging = false; viewport.style.cursor = 'grab'; if (dragDelta < -60) goTo(current + 1); else if (dragDelta > 60) goTo(current - 1); dragDelta = 0; startAuto(); });
-      window.addEventListener('touchend', () => { if (!isDragging) return; isDragging = false; if (dragDelta < -60) goTo(current + 1); else if (dragDelta > 60) goTo(current - 1); dragDelta = 0; startAuto(); });
+      // Pause while hovering or touching so posts are easy to read & click
+      viewport.addEventListener('mouseenter', () => paused = true);
+      viewport.addEventListener('mouseleave', () => paused = false);
+      viewport.addEventListener('touchstart', () => paused = true,  { passive: true });
+      viewport.addEventListener('touchend',   () => { setTimeout(() => paused = false, 1500); }, { passive: true });
 
-      // Prevent click-through after drag
-      cards.forEach(c => c.addEventListener('click', e => { if (Math.abs(dragDelta) > 5) e.preventDefault(); }));
+      // Drag / swipe still works
+      let startX = 0, isDragging = false, dragDelta = 0, startOffset = 0;
+      viewport.addEventListener('mousedown',  e => { isDragging = true; startX = e.clientX; startOffset = offset; viewport.style.cursor = 'grabbing'; });
+      viewport.addEventListener('touchstart', e => { isDragging = true; startX = e.touches[0].clientX; startOffset = offset; }, { passive: true });
+      window.addEventListener('mousemove',  e => { if (isDragging) { dragDelta = e.clientX - startX; offset = startOffset - dragDelta; apply(); } });
+      window.addEventListener('touchmove',  e => { if (isDragging) { dragDelta = e.touches[0].clientX - startX; offset = startOffset - dragDelta; apply(); } }, { passive: true });
+      window.addEventListener('mouseup',  () => { if (!isDragging) return; isDragging = false; viewport.style.cursor = 'grab'; dragDelta = 0; });
+      window.addEventListener('touchend', () => { if (!isDragging) return; isDragging = false; dragDelta = 0; });
 
-      // Pause on hover, resume on leave
-      viewport.addEventListener('mouseenter', () => clearInterval(_carouselTimer));
-      viewport.addEventListener('mouseleave', startAuto);
+      // Prevent click-through after a drag
+      track.querySelectorAll('.c-card').forEach(c => c.addEventListener('click', e => { if (Math.abs(dragDelta) > 5) e.preventDefault(); }));
 
-      goTo(0);
-      startAuto();
+      apply();
+      step();
     }
 
     // Run carousel on page load with the hardcoded cards
@@ -2244,9 +2255,10 @@
          <span>·</span><span>⏱ ${post.readTime}</span>`;
 
       // Render markdown body (or show coming-soon message)
+      const modalPhoto = post.image ? `<img class="post-modal-photo" src="${post.image}" alt="${post.title}">` : '';
       if (post.body && post.body.trim().length > 0) {
         const rawHtml = marked.parse(post.body);
-        postModalContent.innerHTML = `<h1>${post.title}</h1>` + rawHtml;
+        postModalContent.innerHTML = `<h1>${post.title}</h1>` + modalPhoto + rawHtml;
       } else {
         postModalContent.innerHTML =
           `<h1>${post.title}</h1>
@@ -2291,7 +2303,9 @@
       a.href = '#';
       a.className = 'c-card';
       a.dataset.slug = post.slug;
+      const photoHtml = post.image ? `<div class="c-photo" style="background-image:url('${post.image}')"></div>` : '';
       a.innerHTML = `
+        ${photoHtml}
         <div class="c-card-top">
           <span class="c-emoji">${post.emoji || '✨'}</span>
           <span class="c-cat">${post.category}</span>
@@ -2313,6 +2327,7 @@
 
       // Clear existing hardcoded cards and insert real ones
       track.innerHTML = '';
+      delete track.dataset.looped;
       posts.forEach(p => track.appendChild(buildCarouselCard(p)));
 
       // Re-run carousel logic now that cards exist
