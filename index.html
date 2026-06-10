@@ -520,17 +520,10 @@
 
     /* ── QUOTE BAND ─────────────────────────── */
     .quote-band {
-      background: #0a0a0a;
-      padding: 110px 64px 100px;
+      background: var(--cream);
+      padding: 90px 64px 80px;
       position: relative;
       overflow: hidden;
-    }
-    .quote-band::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent 0%, rgba(196,126,138,0.4) 50%, transparent 100%);
     }
     .quote-band-inner {
       max-width: 880px;
@@ -539,7 +532,7 @@
     }
     .qb-mark {
       font-family: var(--serif);
-      font-size: 200px;
+      font-size: 140px;
       font-weight: 700;
       line-height: 0.4;
       color: rgba(196,126,138,0.28);
@@ -554,9 +547,9 @@
       font-family: var(--serif);
       font-style: italic;
       font-weight: 400;
-      font-size: clamp(26px, 3.6vw, 44px);
-      line-height: 1.45;
-      color: var(--white);
+      font-size: clamp(20px, 2.4vw, 28px);
+      line-height: 1.5;
+      color: var(--black);
       padding-left: 56px;
     }
     .qb-hl {
@@ -576,7 +569,7 @@
       font-weight: 700;
       letter-spacing: 0.3em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
+      color: var(--mid);
     }
     .qb-attr-line {
       width: 44px;
@@ -1237,7 +1230,7 @@
       padding: 48px 64px;
       border-bottom: 1px solid rgba(255,255,255,0.07);
     }
-    .footer-col { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col { display: flex; flex-direction: column; gap: 10px; align-items: center; text-align: center; }
     .footer-col-title {
       font-size: 10px;
       font-weight: 700;
@@ -1253,7 +1246,7 @@
       transition: color 0.2s, transform 0.2s;
       width: fit-content;
     }
-    .footer-col a:hover { color: var(--rose-light); transform: translateX(3px); }
+    .footer-col a:hover { color: var(--rose-light); }
     @media (max-width: 700px) {
       .footer-cols { grid-template-columns: repeat(2, 1fr); padding: 36px 28px; gap: 28px; }
     }
@@ -1662,7 +1655,7 @@
       <li><a href="#blog">Blog</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#founder">My Story</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
     <a href="#newsletter" class="nav-cta">Join the Inner Circle</a>
   </nav>
@@ -2070,75 +2063,6 @@
 
   </section>
 
-  <!-- ── CONTACT ─────────────────────────────────── -->
-  <section class="contact" id="contact">
-    <div class="contact-inner">
-      <span class="section-label reveal">Get in Touch</span>
-      <h2 class="section-title reveal">Let's tell this story <em>together.</em></h2>
-      <p class="reveal" style="font-size:15px; color:var(--mid); margin-top:16px;">I'm seeking collaborations, press, partnerships, and conversations that open new doors. I respond within 24 hours.</p>
-
-      <div class="contact-grid reveal">
-        <div class="contact-types">
-          <div class="contact-type">
-            <span class="contact-type-icon">📰</span>
-            <div>
-              <p class="contact-type-title">Press & Media</p>
-              <p class="contact-type-desc">Feature stories, interviews, editorial coverage</p>
-            </div>
-          </div>
-          <div class="contact-type">
-            <span class="contact-type-icon">🤝</span>
-            <div>
-              <p class="contact-type-title">Partnerships & Brand</p>
-              <p class="contact-type-desc">Co-marketing, brand collaborations, sponsorships</p>
-            </div>
-          </div>
-          <div class="contact-type">
-            <span class="contact-type-icon">🎙️</span>
-            <div>
-              <p class="contact-type-title">Podcasts & Speaking</p>
-              <p class="contact-type-desc">Guest appearances, panels, keynote opportunities</p>
-            </div>
-          </div>
-          <div class="contact-type">
-            <span class="contact-type-icon">💗</span>
-            <div>
-              <p class="contact-type-title">Community & Connection</p>
-              <p class="contact-type-desc">Women on the same path are always welcome</p>
-            </div>
-          </div>
-        </div>
-
-        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact-thanks.html">
-          <input type="hidden" name="form-name" value="contact">
-          <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
-          <div class="form-row">
-            <input type="text" name="first-name" placeholder="First Name *" required>
-            <input type="text" name="last-name" placeholder="Last Name *" required>
-          </div>
-          <input type="email" name="email" placeholder="Email *" required>
-          <input type="text" name="organization" placeholder="Organization / Publication">
-          <input type="url" name="website" placeholder="Website URL">
-          <select name="inquiry-type">
-            <option value="">Inquiry Type *</option>
-            <option>Press & Media</option>
-            <option>Brand Partnership</option>
-            <option>Podcasts & Speaking</option>
-            <option>Creator & Influencer Collab</option>
-            <option>VIXA — Investor / Partnership</option>
-            <option>HAVENLY — Retail / Distribution</option>
-            <option>LUMAPROMPT — Collaboration</option>
-            <option>Fashion & Wardrobe Inquiry</option>
-            <option>Community & Connection</option>
-            <option>Other</option>
-          </select>
-          <textarea name="message" placeholder="Message *" required></textarea>
-          <button type="submit">Send Message →</button>
-          <p style="font-size:11px; color:var(--light); margin-top:12px; text-align:center;">I do not share your information with third parties.</p>
-        </form>
-      </div>
-    </div>
-  </section>
 
   <!-- ── FOOTER ──────────────────────────────────── -->
   <footer>
@@ -2168,7 +2092,7 @@
 
     <!-- Nav strip -->
     <div class="footer-cols">
-      <div class="footer-col">
+      <div class="footer-col reveal">
         <span class="footer-col-title">Explore</span>
         <a href="/">Home</a>
         <a href="#latest">Blog</a>
@@ -2176,19 +2100,19 @@
         <a href="#founder">Meet the Founder</a>
         <a href="#newsletter">Newsletter</a>
       </div>
-      <div class="footer-col">
+      <div class="footer-col reveal" style="transition-delay: 0.15s;">
         <span class="footer-col-title">Pages</span>
         <a href="/contact">Contact</a>
         <a href="/press-kit">Press Kit</a>
         <a href="/privacy-policy">Privacy Policy</a>
       </div>
-      <div class="footer-col">
+      <div class="footer-col reveal" style="transition-delay: 0.3s;">
         <span class="footer-col-title">Brands</span>
         <a href="https://havenly.co" target="_blank">HAVENLY ↗</a>
         <a href="https://vixaapp.ai" target="_blank">VIXA ↗</a>
         <a href="https://lumaprompt.ai" target="_blank">LUMAPROMPT.AI ↗</a>
       </div>
-      <div class="footer-col">
+      <div class="footer-col reveal" style="transition-delay: 0.45s;">
         <span class="footer-col-title">Connect</span>
         <a href="https://www.instagram.com/havenly1920" target="_blank">Instagram ↗</a>
         <a href="https://www.linkedin.com/in/lisahaven" target="_blank">LinkedIn ↗</a>

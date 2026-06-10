@@ -19,10 +19,19 @@
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: var(--sans); background: var(--cream); color: var(--black); line-height: 1.7; }
-    .topbar { display: flex; justify-content: space-between; align-items: center; padding: 24px 48px; }
-    .topbar a.logo { font-family: var(--serif); font-weight: 900; font-size: 20px; color: var(--black); text-decoration: none; }
-    .topbar a.back { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mid); text-decoration: none; }
-    .topbar a.back:hover { color: var(--rose-dark); }
+    .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 48px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .navbar .logo { font-family: var(--serif); font-weight: 900; font-size: 20px; color: var(--black); text-decoration: none; }
+    .nav-links { display: flex; gap: 8px; list-style: none; align-items: center; }
+    .nav-links a {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--black); text-decoration: none; padding: 8px 14px; transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--rose-dark); }
+    .nav-cta {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--white); background: var(--grad-h); text-decoration: none; padding: 12px 22px;
+    }
+    @media (max-width: 800px) { .nav-links { display: none; } .navbar { padding: 18px 24px; } }
     main { max-width: 1200px; margin: 0 auto; padding: 48px 32px 110px; }
     .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--mid); display: block; margin-bottom: 16px; }
     h1 { font-family: var(--serif); font-size: clamp(40px, 5.5vw, 64px); font-weight: 900; line-height: 1.06; margin-bottom: 20px; }
@@ -39,7 +48,7 @@
     }
     .photo-wrap img {
       position: relative; z-index: 1; display: block; width: 100%;
-      aspect-ratio: 4/3; object-fit: cover; object-position: center 20%;
+      height: auto;
       box-shadow: 0 24px 60px rgba(0,0,0,0.12);
     }
     .contact-type {
@@ -80,10 +89,16 @@
   </style>
 </head>
 <body>
-  <div class="topbar">
+  <nav class="navbar">
     <a class="logo" href="/">Lisa Haven</a>
-    <a class="back" href="/">&larr; Back to the blog</a>
-  </div>
+    <ul class="nav-links">
+      <li><a href="/#blog">Blog</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#founder">My Story</a></li>
+      <li><a href="/contact" class="active">Contact</a></li>
+    </ul>
+    <a href="/#newsletter" class="nav-cta">Join the Inner Circle</a>
+  </nav>
   <main>
     <span class="eyebrow">Get in Touch</span>
     <h1>Let's tell this story <em>together.</em></h1>
