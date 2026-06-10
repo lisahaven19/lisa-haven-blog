@@ -11,6 +11,7 @@ image: "/images/uploads/gym-photo.jpg"
 I know. I know. The first thing people say is: *"But where do you get your fiber?"*
 
 And I smile, because six months ago I was exhausted, brain-fogged, and running three companies on cortisol and iced coffee. Now I wake up at 5am before my daughters, get my workout in, and have clarity that I haven't felt in years.
+![Gym photo](/images/uploads/gym-photo.jpg)
 
 ## What Is the Carnivore Diet?
 
