@@ -2106,15 +2106,17 @@
           </div>
         </div>
 
-        <form class="contact-form" onsubmit="return false;">
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact-thanks.html">
+          <input type="hidden" name="form-name" value="contact">
+          <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
           <div class="form-row">
-            <input type="text" placeholder="First Name *" required>
-            <input type="text" placeholder="Last Name *" required>
+            <input type="text" name="first-name" placeholder="First Name *" required>
+            <input type="text" name="last-name" placeholder="Last Name *" required>
           </div>
-          <input type="email" placeholder="Email *" required>
-          <input type="text" placeholder="Organization / Publication">
-          <input type="url" placeholder="Website URL">
-          <select>
+          <input type="email" name="email" placeholder="Email *" required>
+          <input type="text" name="organization" placeholder="Organization / Publication">
+          <input type="url" name="website" placeholder="Website URL">
+          <select name="inquiry-type">
             <option value="">Inquiry Type *</option>
             <option>Press & Media</option>
             <option>Brand Partnership</option>
@@ -2127,7 +2129,7 @@
             <option>Community & Connection</option>
             <option>Other</option>
           </select>
-          <textarea placeholder="Message *" required></textarea>
+          <textarea name="message" placeholder="Message *" required></textarea>
           <button type="submit">Send Message →</button>
           <p style="font-size:11px; color:var(--light); margin-top:12px; text-align:center;">I do not share your information with third parties.</p>
         </form>
@@ -2169,11 +2171,11 @@
       <span class="footer-nav-sep"></span>
       <a href="#newsletter">Newsletter</a>
       <span class="footer-nav-sep"></span>
-      <a href="#founder">Contact</a>
+      <a href="/contact">Contact</a>
       <span class="footer-nav-sep"></span>
-      <a href="#">Press Kit</a>
+      <a href="/press-kit">Press Kit</a>
       <span class="footer-nav-sep"></span>
-      <a href="#">Privacy Policy</a>
+      <a href="/privacy-policy">Privacy Policy</a>
     </nav>
 
     <!-- Brand chips -->

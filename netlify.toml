@@ -26,3 +26,19 @@
   for = "/*.js"
   [headers.values]
     Cache-Control = "public, max-age=3600"
+
+# Clean URLs for standalone pages
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/press-kit"
+  to = "/press-kit.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy-policy.html"
+  status = 200
