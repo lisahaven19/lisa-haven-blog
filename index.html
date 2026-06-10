@@ -1227,32 +1227,35 @@
       transform: translateY(-4px);
     }
 
-    /* ── Nav strip ── */
-    .footer-nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0;
-      padding: 28px 64px;
+    /* ── Footer link columns ── */
+    .footer-cols {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 48px 64px;
       border-bottom: 1px solid rgba(255,255,255,0.07);
-      flex-wrap: wrap;
     }
-    .footer-nav a {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.14em;
+    .footer-col { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
       text-transform: uppercase;
-      color: rgba(0,0,0,0.65);
-      text-decoration: none;
-      padding: 6px 20px;
-      transition: color 0.2s;
-      white-space: nowrap;
+      color: var(--rose);
+      margin-bottom: 6px;
     }
-    .footer-nav a:hover { color: var(--rose-dark); }
-    .footer-nav-sep {
-      width: 1px; height: 12px;
-      background: rgba(0,0,0,0.18);
-      flex-shrink: 0;
+    .footer-col a {
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: color 0.2s, transform 0.2s;
+      width: fit-content;
+    }
+    .footer-col a:hover { color: var(--rose-light); transform: translateX(3px); }
+    @media (max-width: 700px) {
+      .footer-cols { grid-template-columns: repeat(2, 1fr); padding: 36px 28px; gap: 28px; }
     }
 
     /* ── Brand chips ── */
@@ -2164,18 +2167,34 @@
     </div>
 
     <!-- Nav strip -->
-    <nav class="footer-nav">
-      <a href="#latest">Blog</a>
-      <span class="footer-nav-sep"></span>
-      <a href="#about">About</a>
-      <span class="footer-nav-sep"></span>
-      <a href="#newsletter">Newsletter</a>
-      <span class="footer-nav-sep"></span>
-      <a href="/contact">Contact</a>
-      <span class="footer-nav-sep"></span>
-      <a href="/press-kit">Press Kit</a>
-      <span class="footer-nav-sep"></span>
-      <a href="/privacy-policy">Privacy Policy</a>
+    <nav class="footer-cols">
+      <div class="footer-col">
+        <span class="footer-col-title">Explore</span>
+        <a href="/">Home</a>
+        <a href="#latest">Blog</a>
+        <a href="#about">My Story</a>
+        <a href="#founder">Meet the Founder</a>
+        <a href="#newsletter">Newsletter</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-title">Pages</span>
+        <a href="/contact">Contact</a>
+        <a href="/press-kit">Press Kit</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-title">Brands</span>
+        <a href="https://havenly.co" target="_blank">HAVENLY ↗</a>
+        <a href="https://vixaapp.ai" target="_blank">VIXA ↗</a>
+        <a href="https://lumaprompt.ai" target="_blank">LUMAPROMPT.AI ↗</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-title">Connect</span>
+        <a href="https://www.instagram.com/havenly1920" target="_blank">Instagram ↗</a>
+        <a href="https://www.linkedin.com/in/lisahaven" target="_blank">LinkedIn ↗</a>
+        <a href="https://www.pinterest.com/lisahaven19" target="_blank">Pinterest ↗</a>
+        <a href="https://lisa-haven.beehiiv.com/subscribe" target="_blank">Join The Haven ↗</a>
+      </div>
     </nav>
 
     <!-- Brand chips -->
