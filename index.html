@@ -1646,14 +1646,14 @@
 
   <!-- ── NEWSLETTER ──────────────────────────────── -->
   <section class="newsletter" id="newsletter">
-    <span class="section-label reveal">The Inner Circle</span>
-    <h2 class="section-title reveal">Get the unfiltered <em>version.</em></h2>
-    <p class="newsletter-sub reveal">Weekly dispatches from the chaos: what's working, what broke, what I learned — and what I'm currently wearing. No fluff.</p>
-    <form class="newsletter-form" onsubmit="return false;">
-      <input type="email" placeholder="Your email address">
-      <button type="submit">Join Now</button>
+    <span class="section-label reveal">Join The Haven</span>
+    <h2 class="section-title reveal">The unfiltered <em>insider letter.</em></h2>
+    <p class="newsletter-sub reveal">Weekly dispatches from the chaos: what's working, what broke, what I learned — building three companies as a single mom. Real talk. No fluff. Free forever.</p>
+    <form class="newsletter-form" id="beehiivForm" action="https://lisa-haven.beehiiv.com/subscribe" method="post" target="_blank" onsubmit="handleNewsletterSubmit(event)">
+      <input type="email" name="email" placeholder="Your email address" required>
+      <button type="submit">Join The Haven 💗</button>
     </form>
-    <p class="newsletter-note">Free · No spam · Unsubscribe anytime</p>
+    <p class="newsletter-note" id="newsletterNote">Free · No spam · Unsubscribe anytime</p>
   </section>
 
   <!-- ── ALL BLOG POSTS ──────────────────────────── -->
@@ -2231,6 +2231,33 @@
           });
         }
       });
+    }
+
+    // ── Beehiiv newsletter signup ──────────────────────
+    function handleNewsletterSubmit(e) {
+      const form = document.getElementById('beehiivForm');
+      const note = document.getElementById('newsletterNote');
+      const btn  = form.querySelector('button[type="submit"]');
+      const email = form.querySelector('input[type="email"]').value;
+
+      if (!email) return false;
+
+      // Let the form POST to Beehiiv in a new tab (native behavior)
+      btn.textContent = '✓ You\'re in!';
+      btn.style.background = 'var(--rose)';
+      btn.disabled = true;
+      note.textContent = '💗 Welcome to The Haven — check your inbox to confirm!';
+
+      // Re-enable after a few seconds in case they want to re-submit
+      setTimeout(() => {
+        btn.textContent = 'Join The Haven 💗';
+        btn.style.background = '';
+        btn.disabled = false;
+        note.textContent = 'Free · No spam · Unsubscribe anytime';
+        form.reset();
+      }, 5000);
+
+      return true; // allow form to submit to Beehiiv
     }
   </script>
 </body>
