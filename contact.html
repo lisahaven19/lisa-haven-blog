@@ -8,10 +8,10 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --cream: #F2EDE6; --cream-dark: #E8E1D8; --black: #0A0A0A; --charcoal: #1A1A1A;
+      --cream: #F2EDE6; --cream-dark: #E8E1D8; --black: #0A0A0A;
       --mid: #555; --light: #888; --white: #FFFFFF;
       --rose: #C47E8A; --rose-dark: #a35f6d; --rose-light: #e8c4cb;
       --grad-h: linear-gradient(90deg, #0A0A0A 0%, #3d1e25 55%, #C47E8A 100%);
@@ -23,31 +23,60 @@
     .topbar a.logo { font-family: var(--serif); font-weight: 900; font-size: 20px; color: var(--black); text-decoration: none; }
     .topbar a.back { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mid); text-decoration: none; }
     .topbar a.back:hover { color: var(--rose-dark); }
-    main { max-width: 860px; margin: 0 auto; padding: 48px 28px 96px; }
-    .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--rose-dark); display: block; margin-bottom: 16px; }
-    h1 { font-family: var(--serif); font-size: clamp(36px, 5vw, 58px); font-weight: 900; line-height: 1.08; margin-bottom: 24px; }
+    main { max-width: 1200px; margin: 0 auto; padding: 48px 32px 110px; }
+    .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--mid); display: block; margin-bottom: 16px; }
+    h1 { font-family: var(--serif); font-size: clamp(40px, 5.5vw, 64px); font-weight: 900; line-height: 1.06; margin-bottom: 20px; }
     h1 em { font-style: italic; font-weight: 400; }
-    h2 { font-family: var(--serif); font-size: 26px; margin: 48px 0 14px; }
-    p { font-size: 15px; color: var(--mid); margin-bottom: 14px; }
-    a { color: var(--rose-dark); }
-    ul { margin: 0 0 14px 20px; color: var(--mid); font-size: 15px; }
-    li { margin-bottom: 6px; }
-    .divider { width: 56px; height: 2px; background: var(--grad-h); margin: 40px 0; }
-    footer { background: #080808; padding: 22px 48px; display: flex; justify-content: space-between; align-items: center; }
+    .sub { font-size: 15px; color: var(--mid); margin-bottom: 56px; }
+
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: start; }
+
+    /* Left column: photo + cards */
+    .photo-wrap { position: relative; margin-bottom: 28px; }
+    .photo-wrap::before {
+      content: ''; position: absolute; inset: -2px;
+      background: linear-gradient(135deg, #C47E8A 0%, rgba(196,126,138,0.25) 40%, rgba(196,126,138,0.05) 70%, #B76E79 100%);
+    }
+    .photo-wrap img {
+      position: relative; z-index: 1; display: block; width: 100%;
+      aspect-ratio: 4/3; object-fit: cover; object-position: center 20%;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.12);
+    }
+    .contact-type {
+      display: flex; align-items: flex-start; gap: 16px;
+      background: var(--white); padding: 22px 24px; margin-bottom: 16px;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .contact-type-icon { font-size: 22px; line-height: 1.4; }
+    .contact-type-title { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2px; }
+    .contact-type-desc { font-size: 13px; color: var(--light); }
+
+    /* Right column: form */
+    form { display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    input, select, textarea {
+      font-family: var(--sans); font-size: 15px; padding: 16px 18px;
+      border: 1px solid rgba(0,0,0,0.12); background: var(--white); color: var(--black); width: 100%;
+    }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--rose); }
+    textarea { min-height: 200px; resize: vertical; }
+    button {
+      font-family: var(--sans); font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--white); background: var(--grad-h); border: none; padding: 20px; cursor: pointer; transition: opacity 0.2s;
+    }
+    button:hover { opacity: 0.9; }
+    .form-note { font-size: 11px; color: var(--light); text-align: center; }
+
+    footer { background: #080808; padding: 22px 48px; display: flex; justify-content: space-between; align-items: center; margin-top: 40px; }
     footer p { font-size: 11px; color: rgba(255,255,255,0.55); margin: 0; }
     footer a { font-size: 11px; color: var(--rose-light); text-decoration: none; }
-    @media (max-width: 600px) { .topbar { padding: 20px 24px; } main { padding: 32px 22px 72px; } }
-  </style>
 
-  <style>
-    form { display: flex; flex-direction: column; gap: 14px; margin-top: 32px; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    input, select, textarea { font-family: var(--sans); font-size: 14px; padding: 14px 16px; border: 1px solid rgba(0,0,0,0.15); border-radius: 4px; background: var(--white); color: var(--black); width: 100%; }
-    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--rose); }
-    textarea { min-height: 140px; resize: vertical; }
-    button { font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--white); background: var(--grad-h); border: none; border-radius: 4px; padding: 16px; cursor: pointer; transition: opacity 0.2s; }
-    button:hover { opacity: 0.9; }
-    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+    @media (max-width: 800px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+      .topbar { padding: 20px 24px; }
+      main { padding: 32px 22px 72px; }
+    }
   </style>
 </head>
 <body>
@@ -58,32 +87,70 @@
   <main>
     <span class="eyebrow">Get in Touch</span>
     <h1>Let's tell this story <em>together.</em></h1>
-    <p>I'm seeking collaborations, press, partnerships, and conversations that open new doors. I respond within 24 hours.</p>
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact-thanks.html">
-      <input type="hidden" name="form-name" value="contact">
-      <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
-      <div class="form-row">
-        <input type="text" name="first-name" placeholder="First Name *" required>
-        <input type="text" name="last-name" placeholder="Last Name *" required>
+    <p class="sub">I'm seeking collaborations, press, partnerships, and conversations that open new doors. I respond within 24 hours.</p>
+
+    <div class="contact-grid">
+      <div>
+        <div class="photo-wrap">
+          <img src="/images/uploads/lisa-photo.jpg" alt="Lisa Haven">
+        </div>
+        <div class="contact-type">
+          <span class="contact-type-icon">📰</span>
+          <div>
+            <p class="contact-type-title">Press &amp; Media</p>
+            <p class="contact-type-desc">Feature stories, interviews, editorial coverage</p>
+          </div>
+        </div>
+        <div class="contact-type">
+          <span class="contact-type-icon">🤝</span>
+          <div>
+            <p class="contact-type-title">Partnerships &amp; Brand</p>
+            <p class="contact-type-desc">Co-marketing, brand collaborations, sponsorships</p>
+          </div>
+        </div>
+        <div class="contact-type">
+          <span class="contact-type-icon">🎙️</span>
+          <div>
+            <p class="contact-type-title">Podcasts &amp; Speaking</p>
+            <p class="contact-type-desc">Guest appearances, panels, keynote opportunities</p>
+          </div>
+        </div>
+        <div class="contact-type">
+          <span class="contact-type-icon">💗</span>
+          <div>
+            <p class="contact-type-title">Community &amp; Connection</p>
+            <p class="contact-type-desc">Women on the same path are always welcome</p>
+          </div>
+        </div>
       </div>
-      <input type="email" name="email" placeholder="Email *" required>
-      <input type="text" name="organization" placeholder="Organization / Publication">
-      <select name="inquiry-type" required>
-        <option value="">Inquiry Type *</option>
-        <option>Press &amp; Media</option>
-        <option>Brand Partnership</option>
-        <option>Podcasts &amp; Speaking</option>
-        <option>Creator &amp; Influencer Collab</option>
-        <option>VIXA — Investor / Partnership</option>
-        <option>HAVENLY — Retail / Distribution</option>
-        <option>LUMAPROMPT — Collaboration</option>
-        <option>Community &amp; Connection</option>
-        <option>Other</option>
-      </select>
-      <textarea name="message" placeholder="Message *" required></textarea>
-      <button type="submit">Send Message &rarr;</button>
-      <p style="font-size:11px; color:var(--light); text-align:center;">I do not share your information with third parties.</p>
-    </form>
+
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact-thanks.html">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div class="form-row">
+          <input type="text" name="first-name" placeholder="First Name *" required>
+          <input type="text" name="last-name" placeholder="Last Name *" required>
+        </div>
+        <input type="email" name="email" placeholder="Email *" required>
+        <input type="text" name="organization" placeholder="Organization / Publication">
+        <input type="url" name="website" placeholder="Website URL">
+        <select name="inquiry-type" required>
+          <option value="">Inquiry Type *</option>
+          <option>Press &amp; Media</option>
+          <option>Brand Partnership</option>
+          <option>Podcasts &amp; Speaking</option>
+          <option>Creator &amp; Influencer Collab</option>
+          <option>VIXA — Investor / Partnership</option>
+          <option>HAVENLY — Retail / Distribution</option>
+          <option>LUMAPROMPT — Collaboration</option>
+          <option>Community &amp; Connection</option>
+          <option>Other</option>
+        </select>
+        <textarea name="message" placeholder="Message *" required></textarea>
+        <button type="submit">Send Message &rarr;</button>
+        <p class="form-note">I do not share your information with third parties.</p>
+      </form>
+    </div>
   </main>
   <footer>
     <p>&copy; 2026 Lisa Haven. All rights reserved.</p>
