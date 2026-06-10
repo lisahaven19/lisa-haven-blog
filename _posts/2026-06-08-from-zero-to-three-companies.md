@@ -1,6 +1,5 @@
 ---
-title: From Zero to Three Companies — What Nobody Tells You About Building While
-  Raising Kids
+title: From 0 to 3 Companies — What Nobody Tells You About Building While Raising Kids
 category: The Journey
 emoji: 🚀
 date: 2026-06-08
