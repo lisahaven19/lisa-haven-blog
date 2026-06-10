@@ -520,33 +520,74 @@
 
     /* ── QUOTE BAND ─────────────────────────── */
     .quote-band {
-      background: var(--cream);
-      padding: 88px 24px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
+      background: #0a0a0a;
+      padding: 110px 64px 100px;
+      position: relative;
+      overflow: hidden;
     }
-    .qb-sans {
-      font-size: clamp(13px, 1.6vw, 18px);
-      font-weight: 800;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: var(--black);
+    .quote-band::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(196,126,138,0.4) 50%, transparent 100%);
     }
-    .qb-serif {
+    .quote-band-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .qb-mark {
+      font-family: var(--serif);
+      font-size: 200px;
+      font-weight: 700;
+      line-height: 0.4;
+      color: rgba(196,126,138,0.28);
+      position: absolute;
+      top: -8px;
+      left: -16px;
+      pointer-events: none;
+      user-select: none;
+    }
+    .qb-text {
+      position: relative;
       font-family: var(--serif);
       font-style: italic;
       font-weight: 400;
-      font-size: clamp(30px, 4.4vw, 54px);
-      line-height: 1.2;
-      color: var(--black);
+      font-size: clamp(26px, 3.6vw, 44px);
+      line-height: 1.45;
+      color: var(--white);
+      padding-left: 56px;
     }
-    .qb-rose {
-      background: linear-gradient(90deg, #8A4A55 0%, #C47E8A 60%, #B76E79 100%);
+    .qb-hl {
+      font-style: italic;
+      background: linear-gradient(90deg, #C47E8A 0%, #dbb0b8 50%, #C47E8A 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+    .qb-attr {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 36px;
+      padding-left: 56px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+    .qb-attr-line {
+      width: 44px;
+      height: 1px;
+      background: var(--grad-h);
+    }
+    @media (max-width: 600px) {
+      .quote-band { padding: 72px 28px; }
+      .qb-text { padding-left: 0; }
+      .qb-attr { padding-left: 0; }
+      .qb-mark { display: none; }
     }
     /* ── MEET THE FOUNDER ───────────────────── */
     /* ── FOUNDER SECTION ───────────────────────── */
@@ -1771,10 +1812,11 @@
 
   <!-- ── QUOTE ───────────────────────────────────── -->
   <section class="quote-band">
-    <span class="qb-sans reveal">There's no such thing as</span>
-    <span class="qb-serif reveal">making the right choice.</span>
-    <span class="qb-sans reveal">First you make a choice,</span>
-    <span class="qb-serif qb-rose reveal">then you make it right. 🖤</span>
+    <div class="quote-band-inner reveal">
+      <span class="qb-mark">&ldquo;</span>
+      <p class="qb-text">There's no such thing as making the <em class="qb-hl">right choice</em>.<br>First you make a choice &mdash; <em class="qb-hl">then you make it right</em>. 🖤</p>
+      <div class="qb-attr"><span class="qb-attr-line"></span>Lisa Haven</div>
+    </div>
   </section>
 
   <!-- ── ABOUT / WELCOME ────────────────────────── -->
