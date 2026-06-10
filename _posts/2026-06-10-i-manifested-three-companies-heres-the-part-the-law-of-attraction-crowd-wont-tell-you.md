@@ -1,6 +1,5 @@
 ---
-title: I "Manifested" Three Companies. Here's the Part the Law of Attraction
-  Crowd Won't Tell You.
+title: "I “Manifested” Three Companies. Here’s the Part the Law of Attraction Crowd Won’t Tell You."
 category: Mindset & Growth
 emoji: ✨
 date: 2026-06-10T00:01:00.000-04:00
