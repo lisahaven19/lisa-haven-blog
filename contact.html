@@ -76,9 +76,187 @@
     button:hover { opacity: 0.9; }
     .form-note { font-size: 11px; color: var(--light); text-align: center; }
 
-    footer { background: #080808; padding: 22px 48px; display: flex; justify-content: space-between; align-items: center; margin-top: 40px; }
-    footer p { font-size: 11px; color: rgba(255,255,255,0.55); margin: 0; }
-    footer a { font-size: 11px; color: var(--rose-light); text-decoration: none; }
+    footer {
+      background: #080808;
+      position: relative;
+      overflow: hidden;
+    }
+    .footer-statement {
+      text-align: center;
+      padding: 80px 64px 56px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      position: relative;
+    }
+    .footer-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--rose);
+      display: block;
+      margin-bottom: 24px;
+    }
+    @keyframes footerShimmer {
+      0%   { background-position: 0% center; }
+      50%  { background-position: 100% center; }
+      100% { background-position: 0% center; }
+    }
+    @keyframes iconFloat {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-5px); }
+    }
+    .footer-icon-btn { animation: iconFloat 3.6s ease-in-out infinite; }
+
+    .footer-socials-row .footer-icon-btn:nth-child(1) { animation-delay: 0s; }
+
+    .footer-socials-row .footer-icon-btn:nth-child(2) { animation-delay: 0.45s; }
+
+    .footer-socials-row .footer-icon-btn:nth-child(3) { animation-delay: 0.9s; }
+
+    .footer-socials-row .footer-icon-btn:nth-child(4) { animation-delay: 1.35s; }
+
+    .footer-icon-btn:hover { animation-play-state: paused; }
+
+    .footer-name {
+      font-family: var(--serif);
+      font-size: clamp(40px, 6vw, 76px);
+      font-weight: 700;
+      line-height: 1.0;
+      color: var(--white);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .footer-name em {
+      font-style: italic;
+      font-weight: 300;
+      background: linear-gradient(90deg, #C47E8A 0%, #dbb0b8 25%, #f0dde1 50%, #dbb0b8 75%, #C47E8A 100%);
+      background-size: 200% auto;
+      animation: footerShimmer 6s ease-in-out infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .footer-desc {
+      font-size: 15px;
+      color: rgba(255,255,255,0.82);
+      margin-top: 20px;
+      letter-spacing: 0.02em;
+    }
+    .footer-socials-row {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 36px;
+      overflow: visible;
+    }
+    .footer-icon-btn {
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.30);
+      background: rgba(255,255,255,0.07);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.90);
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.22,1,0.36,1);
+    }
+    .footer-icon-btn svg { width: 17px; height: 17px; }
+
+    .footer-icon-btn:hover {
+      background: #C47E8A;
+      border-color: #C47E8A;
+      color: var(--white);
+      transform: translateY(-4px);
+    }
+    .footer-cols {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 48px 64px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .footer-col { display: flex; flex-direction: column; gap: 10px; align-items: center; text-align: center; }
+
+    .footer-col-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 6px;
+    }
+    .footer-col a {
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: color 0.2s, transform 0.2s;
+      width: fit-content;
+    }
+    .footer-col a:hover { color: var(--rose-light); }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 64px;
+      background: #080808;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .footer-copy {
+      font-size: 11px;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.04em;
+    }
+    .footer-tagline {
+      font-family: var(--serif);
+      font-size: 15px;
+      font-style: italic;
+      color: #e8c4cb !important;
+      -webkit-text-fill-color: #e8c4cb !important;
+      background: none !important;
+    }
+    footer { margin-top: 64px; }
+    @media (max-width: 700px) { .footer-cols { grid-template-columns: repeat(2, 1fr); padding: 36px 28px; gap: 28px; } }
+
+    .after-form { margin-top: 18px; }
+    .after-line { width: 48px; height: 2px; background: var(--grad-h); margin-bottom: 18px; }
+    .after-title { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--rose-dark); margin-bottom: 8px; }
+    .after-text { font-size: 14px; color: var(--mid); margin-bottom: 16px; }
+    .after-text a { color: var(--rose-dark); font-weight: 600; }
+    .after-quote { font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--black); }
+    .after-quote em {
+      background: linear-gradient(90deg, #8A4A55 0%, #C47E8A 60%, #B76E79 100%);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+      font-style: italic;
+    }
+
+    /* ── Entrance animations ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .eyebrow, h1, .sub, .photo-wrap, .contact-type, form {
+      opacity: 0;
+      animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) forwards;
+    }
+    .eyebrow { animation-delay: 0.05s; }
+    h1 { animation-delay: 0.15s; }
+    .sub { animation-delay: 0.25s; }
+    .photo-wrap { animation-delay: 0.35s; }
+    .contact-type:nth-of-type(1) { animation-delay: 0.45s; }
+    .contact-type:nth-of-type(2) { animation-delay: 0.55s; }
+    .contact-type:nth-of-type(3) { animation-delay: 0.65s; }
+    .contact-type:nth-of-type(4) { animation-delay: 0.75s; }
+    form { animation-delay: 0.4s; }
+
+    .contact-type { transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s; }
+    .contact-type:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 36px rgba(196,126,138,0.18);
+    }
+    button { transition: opacity 0.2s, transform 0.25s; }
+    button:hover { transform: translateY(-2px); }
 
     @media (max-width: 800px) {
       .contact-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -164,12 +342,79 @@
         <textarea name="message" placeholder="Message *" required></textarea>
         <button type="submit">Send Message &rarr;</button>
         <p class="form-note">I do not share your information with third parties.</p>
+
+        <div class="after-form">
+          <div class="after-line"></div>
+          <p class="after-title">While you're here...</p>
+          <p class="after-text">I personally read every message and respond within 24 hours. In the meantime, browse the <a href="/press-kit">press kit</a>, join <a href="https://lisa-haven.beehiiv.com/subscribe" target="_blank">The Haven</a> — my free weekly letter on building with artificial intelligence — or come say hi on <a href="https://www.instagram.com/havenly1920" target="_blank">Instagram</a>.</p>
+          <p class="after-quote">"First you make a choice — <em>then you make it right.</em>" 🖤</p>
+        </div>
       </form>
     </div>
   </main>
   <footer>
-    <p>&copy; 2026 Lisa Haven. All rights reserved.</p>
-    <a href="/">lisahaven.co</a>
+
+    <!-- Big statement -->
+    <div class="footer-statement">
+      <span class="footer-eyebrow">Founder · Mom · Entrepreneur · Florida</span>
+      <span class="footer-name">Lisa <em>Haven</em></span>
+      <p class="footer-desc">Sharing the real journey — the wins, the mess, and everything in between.</p>
+
+      <!-- Social icon circles -->
+      <div class="footer-socials-row">
+        <a href="https://www.instagram.com/havenly1920" class="footer-icon-btn" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/lisahaven" class="footer-icon-btn" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.pinterest.com/lisahaven19" class="footer-icon-btn" target="_blank" aria-label="Pinterest">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+        </a>
+        <a href="https://lisa-haven.beehiiv.com/subscribe" class="footer-icon-btn" target="_blank" aria-label="Newsletter">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Nav strip -->
+    <div class="footer-cols">
+      <div class="footer-col">
+        <span class="footer-col-title">Explore</span>
+        <a href="/">Home</a>
+        <a href="/#latest">Blog</a>
+        <a href="/#about">My Story</a>
+        <a href="/#founder">Meet the Founder</a>
+        <a href="/#newsletter">Newsletter</a>
+      </div>
+      <div class="footer-col" style="transition-delay: 0.15s;">
+        <span class="footer-col-title">Pages</span>
+        <a href="/contact">Contact</a>
+        <a href="/press-kit">Press Kit</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+      </div>
+      <div class="footer-col" style="transition-delay: 0.3s;">
+        <span class="footer-col-title">Brands</span>
+        <a href="https://havenly.co" target="_blank">HAVENLY ↗</a>
+        <a href="https://vixaapp.ai" target="_blank">VIXA ↗</a>
+        <a href="https://lumaprompt.ai" target="_blank">LUMAPROMPT.AI ↗</a>
+      </div>
+      <div class="footer-col" style="transition-delay: 0.45s;">
+        <span class="footer-col-title">Connect</span>
+        <a href="https://www.instagram.com/havenly1920" target="_blank">Instagram ↗</a>
+        <a href="https://www.linkedin.com/in/lisahaven" target="_blank">LinkedIn ↗</a>
+        <a href="https://www.pinterest.com/lisahaven19" target="_blank">Pinterest ↗</a>
+        <a href="https://lisa-haven.beehiiv.com/subscribe" target="_blank">Join The Haven ↗</a>
+      </div>
+    </div>
+
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Lisa Haven. All rights reserved.</p>
+      <p class="footer-tagline">On the journey. Always. 💗</p>
+    </div>
+
   </footer>
 </body>
 </html>
