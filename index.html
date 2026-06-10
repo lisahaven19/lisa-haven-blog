@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="p:domain_verify" content="3ffa71063a37af525dfb17a73ae9b69f"/>
   <title>Lisa Haven — Life, Fashion & The Journey</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -557,21 +558,6 @@
       border-radius: 14px;
       border: 1px solid rgba(196,126,138,0.45);
       box-shadow: 0 24px 60px rgba(0,0,0,0.18);
-    }
-    .founder-photo-label {
-      position: absolute;
-      z-index: 2;
-      bottom: -14px;
-      left: 24px;
-      background: var(--grad-h);
-      color: var(--white);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      padding: 10px 20px;
-      border-radius: 3px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
     }
     .founder-content {
       padding: 0;
@@ -1198,18 +1184,19 @@
       align-items: center;
       justify-content: space-between;
       padding: 20px 64px;
+      background: linear-gradient(90deg, #8A4A55 0%, #B76E79 45%, #C47E8A 75%, #D9A4AE 100%);
     }
     .footer-copy {
       font-size: 11px;
-      color: rgba(255,255,255,0.55);
+      color: rgba(255,255,255,0.9);
       letter-spacing: 0.04em;
     }
     .footer-tagline {
       font-family: var(--serif);
       font-size: 15px;
       font-style: italic;
-      color: #e8c4cb !important;
-      -webkit-text-fill-color: #e8c4cb !important;
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
       background: none !important;
     }
 
@@ -1726,11 +1713,11 @@
             <span class="brand-name">LUMAPROMPT.AI</span>
             <span class="brand-desc">Human prompt library for women ↗</span>
           </a>
-          <div class="brand-item" style="cursor:default;">
+          <a href="https://havenly.co" class="brand-item" target="_blank">
             <span class="brand-dot"></span>
             <span class="brand-name">HAVENLY</span>
-            <span class="brand-desc">Makeup wipes · Coming to Sephora</span>
-          </div>
+            <span class="brand-desc">Makeup wipes · Coming to Sephora ↗</span>
+          </a>
         </div>
       </div>
     </div>
@@ -1748,7 +1735,6 @@
       <!-- Left: photo fills the panel via CSS background -->
       <div class="founder-photo-wrap">
         <div class="founder-photo-bg"></div>
-        <span class="founder-photo-label">Founder &amp; Chief Executive Officer · HAVENLY</span>
       </div>
 
       <!-- Right: content -->
