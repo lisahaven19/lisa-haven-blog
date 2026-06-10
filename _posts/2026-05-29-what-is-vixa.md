@@ -6,6 +6,7 @@ date: 2026-05-29
 readTime: 3 min read
 excerpt: VIXA was born from one too many nights dissecting a 'lol' text with my
   girlfriends. Women deserve actual clarity — not just opinions.
+image: /images/uploads/0i4a7811.jpg
 ---
 
 You know the scene. Your phone buzzes. You screenshot the text. You send it to four different group chats. Everyone has a different theory. Two hours later you're more confused than when you started, and he's moved on with his evening completely unbothered.
