@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story — Lisa Haven</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/marked@9.1.6/marked.min.js"></script>
+  <style>
+    :root {
+      --cream: #F2EDE6; --black: #0A0A0A; --mid: #555; --light: #888; --white: #FFFFFF;
+      --rose: #C47E8A; --rose-dark: #a35f6d; --rose-light: #e8c4cb;
+      --grad-h: linear-gradient(90deg, #0A0A0A 0%, #3d1e25 55%, #C47E8A 100%);
+      --serif: 'Playfair Display', Georgia, serif; --sans: 'Inter', system-ui, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--sans); background: var(--cream); color: var(--black); line-height: 1.75; }
+    .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 48px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .navbar .logo { font-family: var(--serif); font-weight: 900; font-size: 20px; color: var(--black); text-decoration: none; }
+    .nav-links { display: flex; gap: 8px; list-style: none; align-items: center; }
+    .nav-links a { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--black); text-decoration: none; padding: 8px 14px; }
+    .nav-links a:hover { color: var(--rose-dark); }
+    .nav-cta { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--white); background: var(--grad-h); text-decoration: none; padding: 12px 22px; }
+    main { max-width: 760px; margin: 0 auto; padding: 56px 28px 100px; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+    .post-meta, h1, .post-stats, .post-photo, .post-body { opacity: 0; animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) forwards; }
+    .post-meta { animation-delay: 0.05s; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose-dark); margin-bottom: 18px; }
+    .post-meta span { color: var(--light); font-weight: 500; letter-spacing: 0.06em; text-transform: none; }
+    h1 { animation-delay: 0.12s; font-family: var(--serif); font-size: clamp(32px, 4.6vw, 50px); font-weight: 900; line-height: 1.12; margin-bottom: 22px; }
+    .post-stats { animation-delay: 0.2s; display: flex; align-items: center; gap: 22px; margin-bottom: 34px; font-size: 13px; color: var(--mid); }
+    .like-btn { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(196,126,138,0.5); background: var(--white); color: var(--black); font-family: var(--sans); font-size: 13px; font-weight: 600; padding: 9px 18px; border-radius: 100px; cursor: pointer; transition: all 0.25s; }
+    .like-btn:hover { border-color: var(--rose); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(196,126,138,0.2); }
+    .like-btn.liked { background: var(--grad-h); color: var(--white); border-color: transparent; }
+    .post-photo { animation-delay: 0.28s; position: relative; margin: 6px 0 36px; }
+    .post-photo::before { content: ''; position: absolute; inset: -2px; background: linear-gradient(135deg, #C47E8A 0%, rgba(196,126,138,0.2) 45%, #B76E79 100%); }
+    .post-photo img { position: relative; z-index: 1; display: block; width: 100%; height: auto; }
+    .post-body { animation-delay: 0.36s; font-size: 16px; color: #333; }
+    .post-body h2 { font-family: var(--serif); font-size: 26px; margin: 38px 0 12px; color: var(--black); }
+    .post-body h3 { font-family: var(--serif); font-size: 21px; margin: 30px 0 10px; color: var(--black); }
+    .post-body p { margin-bottom: 16px; }
+    .post-body em { font-style: italic; }
+    .post-body blockquote { font-family: var(--serif); font-style: italic; font-size: 19px; border-left: 2px solid var(--rose); padding-left: 20px; margin: 26px 0; color: var(--black); }
+    .post-body ul, .post-body ol { margin: 0 0 16px 22px; }
+    .post-body img { max-width: 100%; border-radius: 4px; }
+    .post-body a { color: var(--rose-dark); }
+    .back-row { margin-top: 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .back-row a { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--rose-dark); text-decoration: none; }
+    .coming { text-align: center; padding: 80px 0; }
+    .coming h1 { margin-bottom: 14px; }
+    .coming p { color: var(--mid); }
+    footer { background: #080808; padding: 22px 48px; display: flex; justify-content: space-between; align-items: center; }
+    footer p { font-size: 11px; color: rgba(255,255,255,0.55); margin: 0; }
+    footer a { font-size: 11px; color: var(--rose-light); text-decoration: none; }
+    @media (max-width: 800px) { .nav-links { display: none; } .navbar { padding: 18px 24px; } main { padding: 40px 22px 72px; } }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a class="logo" href="/">Lisa Haven</a>
+    <ul class="nav-links">
+      <li><a href="/#blog">Blog</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#founder">My Story</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <a href="/#newsletter" class="nav-cta">Join the Inner Circle</a>
+  </nav>
+  <main id="main">
+    <p style="color:var(--light); font-size:14px;">Loading story…</p>
+  </main>
+  <footer>
+    <p>&copy; 2026 Lisa Haven. All rights reserved.</p>
+    <a href="/">lisahaven.co</a>
+  </footer>
+  <script>
+    const COUNTER = 'https://abacus.jasoncameron.dev';
+    const NS = 'lisahaven-co';
+    const slug = new URLSearchParams(location.search).get('slug') || '';
+    const main = document.getElementById('main');
+
+    function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
+
+    function comingSoon() {
+      main.innerHTML = `<div class="coming">
+        <h1 style="animation:none;opacity:1;">This story is <em style="font-family:var(--serif);font-style:italic;">coming soon.</em> ✨</h1>
+        <p>I'm still writing this one — join <a href="/#newsletter" style="color:var(--rose-dark);">The Haven</a> and you'll be first to read it.</p>
+        <p style="margin-top:24px;"><a href="/" style="color:var(--rose-dark);font-weight:700;">&larr; Back to the blog</a></p>
+      </div>`;
+    }
+
+    fetch('/posts-index.json')
+      .then(r => r.ok ? r.json() : [])
+      .then(posts => {
+        const post = (posts || []).find(p => p.slug === slug);
+        if (!post) { comingSoon(); return; }
+        document.title = post.title + ' — Lisa Haven';
+        const d = new Date(post.date);
+        const dateStr = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        const photo = post.image ? `<div class="post-photo"><img src="${esc(post.image)}" alt="${esc(post.title)}"></div>` : '';
+        const body = post.body && post.body.trim() ? marked.parse(post.body) : '<p><em>Full story coming soon — stay tuned! ✨</em></p>';
+        main.innerHTML = `
+          <p class="post-meta">${esc(post.emoji || '✨')} ${esc(post.category)} <span>&nbsp;·&nbsp; ${dateStr} &nbsp;·&nbsp; ⏱ ${esc(post.readTime)}</span></p>
+          <h1>${esc(post.title)}</h1>
+          <div class="post-stats">
+            <button class="like-btn" id="likeBtn">♡ <span id="likeCount">–</span></button>
+            <span>👁 <span id="viewCount">–</span> reads</span>
+          </div>
+          ${photo}
+          <div class="post-body">${body}</div>
+          <div class="back-row">
+            <a href="/">&larr; Back to the blog</a>
+            <a href="/#newsletter">Join The Haven &rarr;</a>
+          </div>`;
+
+        // ── View counter (counts once per page load) ──
+        fetch(`${COUNTER}/hit/${NS}/views-${slug}`)
+          .then(r => r.json())
+          .then(d => { document.getElementById('viewCount').textContent = d.value.toLocaleString(); })
+          .catch(() => { document.getElementById('viewCount').textContent = '1'; });
+
+        // ── Likes ──
+        const likeBtn = document.getElementById('likeBtn');
+        const likeCount = document.getElementById('likeCount');
+        const likedKey = 'liked-' + slug;
+        fetch(`${COUNTER}/get/${NS}/likes-${slug}`)
+          .then(r => r.json())
+          .then(d => { likeCount.textContent = (d.value || 0).toLocaleString(); })
+          .catch(() => { likeCount.textContent = '0'; });
+        if (localStorage.getItem(likedKey)) { likeBtn.classList.add('liked'); likeBtn.firstChild.textContent = '♥ '; }
+        likeBtn.addEventListener('click', () => {
+          if (localStorage.getItem(likedKey)) return;
+          localStorage.setItem(likedKey, '1');
+          likeBtn.classList.add('liked');
+          likeBtn.childNodes[0].textContent = '♥ ';
+          fetch(`${COUNTER}/hit/${NS}/likes-${slug}`)
+            .then(r => r.json())
+            .then(d => { likeCount.textContent = d.value.toLocaleString(); })
+            .catch(() => { likeCount.textContent = (parseInt(likeCount.textContent || '0') + 1); });
+        });
+      })
+      .catch(comingSoon);
+  </script>
+</body>
+</html>

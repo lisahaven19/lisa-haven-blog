@@ -42,3 +42,8 @@
   from = "/privacy-policy"
   to = "/privacy-policy.html"
   status = 200
+
+[[redirects]]
+  from = "/post"
+  to = "/post.html"
+  status = 200

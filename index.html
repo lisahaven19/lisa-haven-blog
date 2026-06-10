@@ -1665,7 +1665,7 @@
 
       <p class="hero-body">I'm a 40-year-old Brazilian founder, single mother, and serial entrepreneur based in Florida. I spent eight years as a professional photographer before building three brands at the intersection of technology, beauty, and women's empowerment. Behind <strong>VIXA</strong> (an artificial intelligence dating clarity app), <strong>LUMAPROMPT.AI</strong> (a human-written prompt library built for women), and <strong>HAVENLY</strong> (a Gen Z makeup remover wipe heading to Sephora shelves).</p>
 
-      <p class="hero-body">This blog is where I share the real journey — building three brands as a solo parent, using artificial intelligence every day to work smarter (tips included), and the fashion I love: the outfits I'm wearing and the best pieces from my closet up for resale. No filter. No apologies.</p>
+      <p class="hero-body">This blog is where I share the real journey — building three brands as a solo parent, using artificial intelligence every day to work smarter (tips included), the fashion I love — outfits I'm wearing and my best closet pieces up for resale — and the places I travel, with itineraries worth saving. No filter. No apologies.</p>
 
       <div class="hero-tags">
         <span class="hero-tag">🚀 Entrepreneurship</span>
@@ -1735,7 +1735,7 @@
     </div>
 
     <div class="posts-grid stagger">
-      <a href="#" class="post-card featured">
+      <a href="/post?slug=from-zero-to-three-companies" class="post-card featured">
         <div class="post-meta">
           <span class="post-cat">🚀 The Journey</span>
           <span class="post-date">June 5, 2026</span>
@@ -1747,7 +1747,7 @@
           <span class="post-arrow">→</span>
         </div>
       </a>
-      <a href="#" class="post-card">
+      <a href="/post?slug=what-im-wearing-and-reselling" class="post-card">
         <div class="post-meta">
           <span class="post-cat">👗 Fashion</span>
           <span class="post-date">June 2, 2026</span>
@@ -1759,7 +1759,7 @@
           <span class="post-arrow">→</span>
         </div>
       </a>
-      <a href="#" class="post-card">
+      <a href="/post?slug=why-i-created-havenly" class="post-card">
         <div class="post-meta">
           <span class="post-cat">✨ Beauty</span>
           <span class="post-date">May 10, 2026</span>
@@ -1771,7 +1771,7 @@
           <span class="post-arrow">→</span>
         </div>
       </a>
-      <a href="#" class="post-card">
+      <a href="/post?slug=raising-valentina-mili-scarlett" class="post-card">
         <div class="post-meta">
           <span class="post-cat">💗 Single Mom Life</span>
           <span class="post-date">May 28, 2026</span>
@@ -1783,7 +1783,7 @@
           <span class="post-arrow">→</span>
         </div>
       </a>
-      <a href="#" class="post-card">
+      <a href="/post?slug=the-carnivore-diet-changed-my-life" class="post-card">
         <div class="post-meta">
           <span class="post-cat">🧠 Mindset</span>
           <span class="post-date">May 15, 2026</span>
@@ -1821,7 +1821,8 @@
         <p class="about-body">That eye for detail carried me into the beauty world building consumer packaged goods, then into mobile apps. Different industries, same obsession: creating things women actually want.</p>
         <blockquote class="about-quote">"Artificial intelligence doesn't just make the internet easier to navigate — it transforms the way you work."</blockquote>
         <p class="about-body">Today, artificial intelligence is the most powerful tool in my building. I use it every single day — in my marketing, my product decisions, my content, my research — and it has completely changed what one woman can build on her own.</p>
-        <p class="about-body">That's what this blog gives you: the real playbook. I share exactly how I use artificial intelligence inside my businesses — the tools, the prompts, the wins and the flops — plus the honest lessons of building three brands as a single mom of three. Stick around and you'll walk away with tips you can use the same day. That's my promise.</p>
+        <p class="about-body">And here's the truth most founders won't say out loud: none of my businesses have launched yet. I'm sharing this journey anyway — the business tips, the artificial intelligence operations behind everything I build, even the failures — because I'm not afraid to fail or be embarrassed in public. I won't stop until something works. That's the mindset.</p>
+        <p class="about-body">So here's what this blog gives you: the real playbook. Exactly how I use artificial intelligence inside my businesses — the tools, the prompts, the wins and the flops — plus business tips, travel itineraries, and the honest lessons of building three brands as a single mom of three. Stick around and you'll walk away with something you can use the same day. That's my promise.</p>
       </div>
     </div>
     <div class="about-right">
@@ -2281,6 +2282,10 @@
     const postModalContent = document.getElementById('postModalContent');
 
     function openPost(post) {
+      // Open the story on its own page (likes + read counts live there)
+      window.location.href = '/post?slug=' + encodeURIComponent(post.slug);
+      return;
+
       // Format date nicely
       const d = new Date(post.date);
       const dateStr = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -2337,7 +2342,7 @@
       const d = new Date(post.date);
       const dateStr = d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
       const a = document.createElement('a');
-      a.href = '#';
+      a.href = '/post?slug=' + encodeURIComponent(post.slug);
       a.className = 'c-card';
       a.dataset.slug = post.slug;
       const photoHtml = post.image ? `<div class="c-photo" style="background-image:url('${post.image}')"></div>` : '';
