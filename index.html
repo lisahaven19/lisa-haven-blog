@@ -518,55 +518,61 @@
     }
 
     /* ── MEET THE FOUNDER ───────────────────── */
+    /* ── FOUNDER SECTION (redesigned) ───────────── */
     .founder {
-      padding: 96px 64px;
+      padding: 0;
       background: var(--cream);
+      overflow: hidden;
     }
-
     .founder-inner {
       display: grid;
-      grid-template-columns: 480px 1fr;
-      gap: 80px;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
+      grid-template-columns: 1fr 1fr;
+      min-height: 700px;
+      max-width: 100%;
     }
-
+    /* Left: photo panel */
     .founder-photo-wrap {
       position: relative;
+      overflow: hidden;
+      min-height: 600px;
     }
-    .founder-photo-wrap img {
-      width: 100%;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      object-position: top center;
-      display: block;
+    .founder-photo-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/uploads/family-photo.jpg');
+      background-size: cover;
+      background-position: center top;
+      transition: transform 0.6s cubic-bezier(0.22,1,0.36,1);
     }
-    .founder-photo-wrap .placeholder {
-      width: 100%;
-      aspect-ratio: 3/4;
-      background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(255,255,255,0.15);
-      font-size: 12px;
-      letter-spacing: 0.1em;
+    .founder:hover .founder-photo-bg { transform: scale(1.03); }
+    .founder-photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%);
     }
     .founder-photo-label {
       position: absolute;
-      bottom: -16px;
-      left: 24px;
-      background: var(--grad-h);
+      bottom: 28px;
+      left: 32px;
+      background: rgba(0,0,0,0.72);
       color: var(--white);
       font-size: 10px;
       font-weight: 600;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      padding: 10px 20px;
+      padding: 9px 18px;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(196,126,138,0.3);
+      border-radius: 3px;
     }
-
-    .founder-content { padding-top: 16px; }
+    /* Right: content panel */
+    .founder-content {
+      padding: 80px 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: var(--cream);
+    }
 
     .founder-eyebrow {
       font-size: 10px;
@@ -1434,8 +1440,10 @@
       .about-split { grid-template-columns: 1fr; }
       .about-right { min-height: 400px; }
 
-      .founder { padding: 64px 24px; }
-      .founder-inner { grid-template-columns: 1fr; gap: 48px; }
+      .founder { padding: 0; }
+      .founder-inner { grid-template-columns: 1fr; }
+      .founder-photo-wrap { min-height: 420px; }
+      .founder-content { padding: 48px 28px; }
 
       .newsletter { padding: 64px 24px; }
       .newsletter-form { flex-direction: column; }
@@ -1719,14 +1727,17 @@
 
   <!-- ── MEET THE FOUNDER ───────────────────────── -->
   <section class="founder" id="founder">
-    <div class="founder-inner reveal">
+    <div class="founder-inner">
+
+      <!-- Left: photo fills the panel via CSS background -->
       <div class="founder-photo-wrap">
-        <img src="images/uploads/family-photo.jpg" alt="Lisa Haven" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="placeholder" style="display:none;">[ Add your photo as images/founder.jpg ]</div>
+        <div class="founder-photo-bg"></div>
+        <div class="founder-photo-overlay"></div>
         <span class="founder-photo-label">Founder &amp; Chief Executive Officer · HAVENLY</span>
       </div>
 
-      <div class="founder-content">
+      <!-- Right: content -->
+      <div class="founder-content reveal">
         <span class="founder-eyebrow">Meet the Founder</span>
         <h2 class="founder-name">Lisa Haven</h2>
         <p class="founder-title">Founder &amp; Chief Executive Officer · HAVENLY · VIXA · LUMAPROMPT.AI</p>
@@ -1754,6 +1765,7 @@
           </a>
         </div>
       </div>
+
     </div>
   </section>
 
