@@ -2047,6 +2047,9 @@
     }
 
     /* ── Carousel ───────────────────────────── */
+    // Global timer so re-init always clears the previous one
+    let _carouselTimer = null;
+
     function initCarousel() {
       const track    = document.getElementById('carouselTrack');
       const viewport = document.getElementById('carouselViewport');
@@ -2054,6 +2057,9 @@
       const prevBtn  = document.querySelector('.carousel-prev');
       const nextBtn  = document.querySelector('.carousel-next');
       if (!track) return;
+
+      // Kill any existing timer before re-initialising
+      clearInterval(_carouselTimer);
 
       // Clear any previous dots so re-init works cleanly
       dotsWrap.innerHTML = '';
@@ -2080,20 +2086,15 @@
         dotsWrap.querySelectorAll('.c-dot').forEach((d, i) => d.classList.toggle('active', i === current));
         prevBtn.disabled = current === 0;
         nextBtn.disabled = current >= maxIndex;
-
-        // Subtle float effect on visible cards
-        cards.forEach((c, i) => {
-          const dist = Math.abs(i - current);
-          c.style.transform = dist === 0 ? 'translateY(-2px)'
-                            : dist === 1 ? 'translateY(0)'
-                            : 'translateY(4px)';
-          c.style.opacity   = dist > perView + 1 ? '0.4' : '1';
-          c.style.transition = 'transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94), opacity 0.4s ease, box-shadow 0.35s';
-        });
       }
 
-      prevBtn.addEventListener('click', () => goTo(current - 1));
-      nextBtn.addEventListener('click', () => goTo(current + 1));
+      function startAuto() {
+        clearInterval(_carouselTimer);
+        _carouselTimer = setInterval(() => goTo(current >= maxIndex ? 0 : current + 1), 3000);
+      }
+
+      prevBtn.addEventListener('click', () => { goTo(current - 1); startAuto(); });
+      nextBtn.addEventListener('click', () => { goTo(current + 1); startAuto(); });
 
       // Drag / swipe
       let startX = 0, isDragging = false, dragDelta = 0;
@@ -2101,18 +2102,18 @@
       viewport.addEventListener('touchstart', e => { isDragging = true; startX = e.touches[0].clientX; }, { passive: true });
       window.addEventListener('mousemove',  e => { if (isDragging) dragDelta = e.clientX - startX; });
       window.addEventListener('touchmove',  e => { if (isDragging) dragDelta = e.touches[0].clientX - startX; }, { passive: true });
-      window.addEventListener('mouseup',  () => { if (!isDragging) return; isDragging = false; viewport.style.cursor = 'grab'; if (dragDelta < -60) goTo(current + 1); else if (dragDelta > 60) goTo(current - 1); dragDelta = 0; });
-      window.addEventListener('touchend', () => { if (!isDragging) return; isDragging = false; if (dragDelta < -60) goTo(current + 1); else if (dragDelta > 60) goTo(current - 1); dragDelta = 0; });
+      window.addEventListener('mouseup',  () => { if (!isDragging) return; isDragging = false; viewport.style.cursor = 'grab'; if (dragDelta < -60) goTo(current + 1); else if (dragDelta > 60) goTo(current - 1); dragDelta = 0; startAuto(); });
+      window.addEventListener('touchend', () => { if (!isDragging) return; isDragging = false; if (dragDelta < -60) goTo(current + 1); else if (dragDelta > 60) goTo(current - 1); dragDelta = 0; startAuto(); });
 
       // Prevent click-through after drag
       cards.forEach(c => c.addEventListener('click', e => { if (Math.abs(dragDelta) > 5) e.preventDefault(); }));
 
-      // Auto-advance every 5s
-      let autoTimer = setInterval(() => goTo(current >= maxIndex ? 0 : current + 1), 5000);
-      viewport.addEventListener('mouseenter', () => clearInterval(autoTimer));
-      viewport.addEventListener('mouseleave', () => { autoTimer = setInterval(() => goTo(current >= maxIndex ? 0 : current + 1), 5000); });
+      // Pause on hover, resume on leave
+      viewport.addEventListener('mouseenter', () => clearInterval(_carouselTimer));
+      viewport.addEventListener('mouseleave', startAuto);
 
       goTo(0);
+      startAuto();
     }
 
     // Run carousel on page load with the hardcoded cards
