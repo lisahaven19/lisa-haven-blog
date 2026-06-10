@@ -521,23 +521,32 @@
     /* ── QUOTE BAND ─────────────────────────── */
     .quote-band {
       background: var(--cream);
-      padding: 72px 24px 88px;
+      padding: 88px 24px;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
     }
-    .quote-band-line {
-      width: 56px;
-      height: 2px;
-      background: var(--grad-h);
-      margin: 0 auto 36px;
+    .qb-sans {
+      font-size: clamp(13px, 1.6vw, 18px);
+      font-weight: 800;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--black);
     }
-    .quote-band blockquote {
+    .qb-serif {
       font-family: var(--serif);
       font-style: italic;
-      font-size: clamp(22px, 3vw, 34px);
-      line-height: 1.45;
+      font-weight: 400;
+      font-size: clamp(30px, 4.4vw, 54px);
+      line-height: 1.2;
       color: var(--black);
-      max-width: 820px;
-      margin: 0 auto;
+    }
+    .qb-rose {
+      background: linear-gradient(90deg, #8A4A55 0%, #C47E8A 60%, #B76E79 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     /* ── MEET THE FOUNDER ───────────────────── */
     /* ── FOUNDER SECTION ───────────────────────── */
@@ -1760,6 +1769,14 @@
     </div>
   </section>
 
+  <!-- ── QUOTE ───────────────────────────────────── -->
+  <section class="quote-band">
+    <span class="qb-sans reveal">There's no such thing as</span>
+    <span class="qb-serif reveal">making the right choice.</span>
+    <span class="qb-sans reveal">First you make a choice,</span>
+    <span class="qb-serif qb-rose reveal">then you make it right. 🖤</span>
+  </section>
+
   <!-- ── ABOUT / WELCOME ────────────────────────── -->
   <section class="about-split" id="about">
     <div class="about-left">
@@ -1826,12 +1843,6 @@
       </div>
 
     </div>
-  </section>
-
-  <!-- ── QUOTE ───────────────────────────────────── -->
-  <section class="quote-band">
-    <div class="quote-band-line reveal"></div>
-    <blockquote class="reveal">"There's no such thing as making the right choice. First you make a choice, then you make it right. 🖤"</blockquote>
   </section>
 
   <!-- ── NEWSLETTER ──────────────────────────────── -->
