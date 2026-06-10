@@ -518,60 +518,64 @@
     }
 
     /* ── MEET THE FOUNDER ───────────────────── */
-    /* ── FOUNDER SECTION (redesigned) ───────────── */
+    /* ── FOUNDER SECTION ───────────────────────── */
     .founder {
-      padding: 0;
+      padding: 96px 64px;
       background: var(--cream);
-      overflow: hidden;
     }
     .founder-inner {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 700px;
-      max-width: 100%;
+      grid-template-columns: 460px 1fr;
+      gap: 80px;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    /* Left: photo panel */
+    /* Photo with modern offset frame */
     .founder-photo-wrap {
       position: relative;
-      overflow: hidden;
-      min-height: 600px;
+    }
+    .founder-photo-wrap::before {
+      content: '';
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      right: -18px;
+      bottom: -18px;
+      background: var(--grad-h);
+      border-radius: 16px;
+      z-index: 0;
     }
     .founder-photo-bg {
-      position: absolute;
-      inset: 0;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      aspect-ratio: 3/4;
       background-image: url('images/uploads/family-photo.jpg');
       background-size: cover;
       background-position: center top;
-      transition: transform 0.6s cubic-bezier(0.22,1,0.36,1);
-    }
-    .founder:hover .founder-photo-bg { transform: scale(1.03); }
-    .founder-photo-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%);
+      border-radius: 14px;
+      border: 1px solid rgba(196,126,138,0.45);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.18);
     }
     .founder-photo-label {
       position: absolute;
-      bottom: 28px;
-      left: 32px;
-      background: rgba(0,0,0,0.72);
+      z-index: 2;
+      bottom: -14px;
+      left: 24px;
+      background: var(--grad-h);
       color: var(--white);
       font-size: 10px;
       font-weight: 600;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      padding: 9px 18px;
-      backdrop-filter: blur(6px);
-      border: 1px solid rgba(196,126,138,0.3);
+      padding: 10px 20px;
       border-radius: 3px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
     }
-    /* Right: content panel */
     .founder-content {
-      padding: 80px 72px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background: var(--cream);
+      padding: 0;
+      background: transparent;
     }
 
     .founder-eyebrow {
@@ -618,6 +622,18 @@
 
     .founder-socials {
       margin-top: 40px;
+    }
+    .founder-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #0d0d0d 0%, #1a0f12 45%, #6e3a44 80%, #c47e8a 100%);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 16px 30px;
+      border-radius: 2px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.18);
     }
 
     /* LinkedIn connection card */
@@ -1440,10 +1456,10 @@
       .about-split { grid-template-columns: 1fr; }
       .about-right { min-height: 400px; }
 
-      .founder { padding: 0; }
-      .founder-inner { grid-template-columns: 1fr; }
-      .founder-photo-wrap { min-height: 420px; }
-      .founder-content { padding: 48px 28px; }
+      .founder { padding: 64px 24px; }
+      .founder-inner { grid-template-columns: 1fr; gap: 56px; }
+      .founder-photo-wrap { max-width: 420px; margin: 0 auto; }
+      .founder-content { padding: 0; }
 
       .newsletter { padding: 64px 24px; }
       .newsletter-form { flex-direction: column; }
@@ -1732,7 +1748,6 @@
       <!-- Left: photo fills the panel via CSS background -->
       <div class="founder-photo-wrap">
         <div class="founder-photo-bg"></div>
-        <div class="founder-photo-overlay"></div>
         <span class="founder-photo-label">Founder &amp; Chief Executive Officer · HAVENLY</span>
       </div>
 
@@ -1749,20 +1764,7 @@
         <div class="founder-divider"></div>
 
         <div class="founder-socials">
-          <a href="https://www.linkedin.com/in/lisahaven" class="li-card" target="_blank">
-            <img src="images/uploads/founder-director..jpg" alt="Lisa Haven"
-                 class="li-card-photo"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="li-card-photo-placeholder" style="display:none;">L</div>
-            <div class="li-card-text">
-              <span class="li-card-name">Lisa Haven</span>
-              <span class="li-card-label">Founder & CEO · HAVENLY · VIXA · LUMAPROMPT</span>
-            </div>
-            <div class="li-card-btn">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              Connect
-            </div>
-          </a>
+          <span class="founder-badge">Founder &amp; Chief Executive Officer &middot; HAVENLY</span>
         </div>
       </div>
 
