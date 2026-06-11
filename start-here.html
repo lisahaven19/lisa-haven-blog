@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Here — Lisa Haven</title>
+  <meta name="description" content="New here? Start with this page — who Lisa Haven is, what this blog is about, and the best posts to read first.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #F2EDE6; --cream-dark: #E8E1D8; --black: #0A0A0A; --charcoal: #1A1A1A;
+      --mid: #555; --light: #888; --white: #FFFFFF;
+      --rose: #C47E8A; --rose-dark: #a35f6d; --rose-light: #e8c4cb;
+      --grad-h: linear-gradient(90deg, #0A0A0A 0%, #3d1e25 55%, #C47E8A 100%);
+      --serif: 'Playfair Display', Georgia, serif; --sans: 'Inter', system-ui, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--sans); background: var(--cream); color: var(--black); line-height: 1.7; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; padding: 24px 48px; }
+    .topbar a.logo { font-family: var(--serif); font-weight: 900; font-size: 20px; color: var(--black); text-decoration: none; }
+    .topbar a.back { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mid); text-decoration: none; }
+    .topbar a.back:hover { color: var(--rose-dark); }
+    main { max-width: 860px; margin: 0 auto; padding: 48px 28px 96px; }
+    .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--rose-dark); display: block; margin-bottom: 16px; }
+    h1 { font-family: var(--serif); font-size: clamp(36px, 5vw, 58px); font-weight: 900; line-height: 1.08; margin-bottom: 24px; }
+    h1 em { font-style: italic; font-weight: 400; }
+    h2 { font-family: var(--serif); font-size: 26px; margin: 48px 0 14px; }
+    p { font-size: 15px; color: var(--mid); margin-bottom: 14px; }
+    a { color: var(--rose-dark); }
+    .divider { width: 56px; height: 2px; background: var(--grad-h); margin: 40px 0; }
+    .start-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0 8px; }
+    .start-card {
+      display: block; background: var(--white); border: 1px solid var(--cream-dark);
+      border-radius: 16px; padding: 22px 20px; text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .start-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(10,10,10,0.08); }
+    .start-card .emoji { font-size: 24px; display: block; margin-bottom: 10px; }
+    .start-card .cat { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose-dark); display: block; margin-bottom: 8px; }
+    .start-card h3 { font-family: var(--serif); font-size: 17px; line-height: 1.3; color: var(--black); margin-bottom: 8px; }
+    .start-card p { font-size: 13px; margin: 0; }
+    .brand-list { display: grid; gap: 14px; margin: 24px 0 8px; }
+    .brand-item { background: var(--white); border: 1px solid var(--cream-dark); border-radius: 16px; padding: 20px 24px; }
+    .brand-item strong { font-size: 14px; letter-spacing: 0.06em; }
+    .brand-item p { font-size: 14px; margin: 4px 0 0; }
+    .cta-band {
+      background: var(--black); border-radius: 20px; padding: 36px 32px; margin-top: 56px; text-align: center;
+    }
+    .cta-band h2 { color: var(--white); margin: 0 0 10px; }
+    .cta-band p { color: rgba(255,255,255,0.7); margin-bottom: 22px; }
+    .cta-btn {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--black); background: linear-gradient(135deg, #e8c4cb 0%, #C47E8A 50%, #a35f6d 100%);
+      padding: 14px 32px; border-radius: 100px; text-decoration: none;
+      box-shadow: 0 4px 16px rgba(196,126,138,0.35); transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(196,126,138,0.5); }
+    footer { background: #080808; padding: 22px 48px; display: flex; justify-content: space-between; align-items: center; margin-top: 0; }
+    footer p { font-size: 11px; color: rgba(255,255,255,0.55); margin: 0; }
+    footer a { font-size: 11px; color: var(--rose-light); text-decoration: none; }
+    @media (max-width: 700px) {
+      .topbar { padding: 20px 24px; }
+      main { padding: 32px 22px 72px; }
+      .start-cards { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a class="logo" href="/">Lisa Haven</a>
+    <a class="back" href="/">&larr; Back to the blog</a>
+  </div>
+  <main>
+    <span class="eyebrow">Start Here</span>
+    <h1>New here? <em>Welcome to The Haven.</em></h1>
+    <p>I'm Lisa Haven — a 40-year-old founder, single mother of three daughters, and serial entrepreneur based in Florida. I'm building three companies at once, and this blog is where I share all of it: the wins, the mess, the fashion, the mindset, and the real behind-the-scenes of building as a solo parent. No filter. No apologies.</p>
+
+    <div class="divider"></div>
+
+    <h2>The three brands</h2>
+    <div class="brand-list">
+      <div class="brand-item">
+        <strong>HAVENLY</strong>
+        <p>A bigger, thicker, dermatologist-tested makeup remover wipe designed for the Gen Z market — headed for Sephora shelves and made in the United States of America.</p>
+      </div>
+      <div class="brand-item">
+        <strong><a href="https://vixaapp.ai">VIXA ↗</a></strong>
+        <p>A next-generation dating clarity app for women. Its artificial intelligence companion, Vela, turns messy conversations into sharp, private, emotionally neutral insight in seconds.</p>
+      </div>
+      <div class="brand-item">
+        <strong><a href="https://lumaprompt.ai">LUMAPROMPT.AI ↗</a></strong>
+        <p>A premium prompt library authored by human industry expert writers — built around how women think, decide, and communicate.</p>
+      </div>
+    </div>
+
+    <h2>The best posts to read first</h2>
+    <div class="start-cards">
+      <a class="start-card" href="/post?slug=from-zero-to-three-companies">
+        <span class="emoji">🚀</span>
+        <span class="cat">The Journey</span>
+        <h3>From Zero to Three Companies — What Nobody Tells You</h3>
+        <p>The unfiltered truth about building three brands while raising three daughters.</p>
+      </a>
+      <a class="start-card" href="/post?slug=what-is-vixa">
+        <span class="emoji">💬</span>
+        <span class="cat">Founder Life</span>
+        <h3>I Built a Dating App Because I Was Tired of Group Chat Guesswork</h3>
+        <p>The story behind VIXA — and why women deserve clarity, not confusion.</p>
+      </a>
+      <a class="start-card" href="/post?slug=why-i-went-carnivore">
+        <span class="emoji">🥩</span>
+        <span class="cat">Carnivore &amp; Wellness</span>
+        <h3>Why I Went Carnivore — And How It Changed My Energy</h3>
+        <p>Real, sustained energy for 5 a.m. workouts, deep work, and bedtime stories.</p>
+      </a>
+    </div>
+
+    <h2>What you'll find on the blog</h2>
+    <p>🚀 Entrepreneurship &nbsp;·&nbsp; 👗 Fashion &amp; Resell &nbsp;·&nbsp; 💗 Single Mom Life &nbsp;·&nbsp; 🧠 Mindset &amp; Growth &nbsp;·&nbsp; ✨ Beauty &amp; Wellness &nbsp;·&nbsp; ✈️ Miami Vibes</p>
+    <p>Want to work together? I'm open to press, partnerships, podcasts, and conversations that open new doors — <a href="/contact">get in touch here</a>. You can also grab the <a href="/press-kit">official press kit</a>.</p>
+
+    <div class="cta-band">
+      <h2>Join the Inner Circle 💗</h2>
+      <p>Weekly dispatches from the chaos: what's working, what broke, what I learned. Real talk. No fluff. Free forever.</p>
+      <a class="cta-btn" href="/#newsletter">Join The Haven</a>
+    </div>
+  </main>
+  <footer>
+    <p>© 2026 Lisa Haven. All rights reserved.</p>
+    <a href="/">lisahaven.co</a>
+  </footer>
+</body>
+</html>

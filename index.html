@@ -441,10 +441,10 @@
     /* ── ABOUT / WELCOME ─────────────────────── */
     .about-split {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 600px;
+      grid-template-columns: 1fr;
       background: var(--black);
     }
+    .about-left .about-content { max-width: 720px; }
 
     .about-left {
       background: var(--black);
@@ -510,46 +510,6 @@
       font-size: 12px;
       color: rgba(255,255,255,0.4);
       margin-left: auto;
-    }
-
-    .about-right {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: radial-gradient(ellipse at 40% 50%, rgba(196,126,138,0.13) 0%, transparent 70%);
-      min-height: 520px;
-      overflow: visible;
-    }
-    .about-circles {
-      position: relative;
-      width: 380px;
-      height: 460px;
-    }
-    .about-circle-main {
-      position: absolute;
-      top: 0; left: 0;
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      overflow: hidden;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.14);
-      background-image: url('images/uploads/0i4a7811.jpg');
-      background-size: cover;
-      background-position: center top;
-    }
-    .about-circle-family {
-      position: absolute;
-      bottom: 0; right: 0;
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 4px solid #C47E8A;
-      box-shadow: 0 12px 36px rgba(196,126,138,0.25);
-      background-image: url('images/uploads/family-photo.jpg');
-      background-size: cover;
-      background-position: center top;
     }
 
     /* ── QUOTE BAND ─────────────────────────── */
@@ -1668,25 +1628,17 @@
       .nav-links { display: none; }
       .hamburger { display: flex; order: 3; }
 
-      /* Row 1: Logo left, hamburger right */
+      /* Single row: Logo left, hamburger right */
       .nav-logo {
         order: 1;
         flex: 1;
         font-size: 20px;
       }
 
-      /* Row 2: CTA full width below logo */
-      .nav-cta {
-        order: 4;
-        width: 100%;
-        text-align: center;
-        margin-top: 10px;
-        padding: 12px 16px;
-        font-size: 11px;
-        border-radius: 100px;
-      }
+      /* CTA hidden on mobile — it lives inside the hamburger menu */
+      .nav-cta { display: none; }
 
-      .mobile-menu { display: block; top: 90px; }
+      .mobile-menu { display: block; top: 50px; }
 
       .hero { grid-template-columns: 1fr; min-height: auto; }
       .hero-left { padding: 56px 24px 48px; order: 2; }
@@ -1697,10 +1649,6 @@
       .posts-grid { grid-template-columns: 1fr; }
 
       .about-split { grid-template-columns: 1fr; }
-      .about-right { min-height: 380px; padding: 24px 0; }
-      .about-circles { width: 300px; height: 360px; }
-      .about-circle-main { width: 230px; height: 230px; }
-      .about-circle-family { width: 170px; height: 170px; }
 
       .founder { padding: 64px 24px; }
       .founder-inner { grid-template-columns: 1fr; gap: 56px; }
@@ -2056,12 +2004,6 @@
         <p class="about-body">So here's what this blog gives you: the real playbook. Exactly how I use artificial intelligence inside my businesses — the tools, the prompts, the wins and the flops — plus business tips, travel itineraries, and the honest lessons of building three brands as a single mom of three. Stick around and you'll walk away with something you can use the same day. That's my promise.</p>
       </div>
     </div>
-    <div class="about-right">
-      <div class="about-circles">
-        <div class="about-circle-main"></div>
-        <div class="about-circle-family"></div>
-      </div>
-    </div>
   </section>
 
   <!-- ── MEET THE FOUNDER ───────────────────────── -->
@@ -2071,7 +2013,7 @@
       <!-- Left: overlapping circle photos -->
       <div class="founder-photo-wrap">
         <div class="founder-circles">
-          <div class="fc-big"><img src="images/uploads/lisa-photo.jpg" alt="Lisa Haven"></div>
+          <div class="fc-big"><img src="images/uploads/0i4a7811.jpg" alt="Lisa Haven" onerror="this.src='images/uploads/lisa-photo.jpg'"></div>
           <div class="fc-small"><img src="images/uploads/family-photo.jpg" alt="Valentina, Mili, Scarlett, and Lucky"></div>
         </div>
       </div>
