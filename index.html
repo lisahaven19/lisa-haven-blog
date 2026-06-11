@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="p:domain_verify" content="3ffa71063a37af525dfb17a73ae9b69f"/>
   <title>Lisa Haven — Life, Fashion & The Journey</title>
+  <meta name="description" content="Lisa Haven — founder of HAVENLY, LUMAPROMPT.AI, and VIXA — shares the real journey of building three companies as a single mom of three. The wins, the mess, and everything in between.">
+  <link rel="canonical" href="https://lisahaven.co/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lisa Haven">
+  <meta property="og:title" content="Lisa Haven — Life, Fashion & The Journey">
+  <meta property="og:description" content="The real journey of building three companies as a single mom of three. The wins, the mess, and everything in between.">
+  <meta property="og:image" content="https://lisahaven.co/images/uploads/lisa-photo.jpg">
+  <meta property="og:url" content="https://lisahaven.co/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lisa Haven — Life, Fashion & The Journey">
+  <meta name="twitter:image" content="https://lisahaven.co/images/uploads/lisa-photo.jpg">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -332,7 +343,7 @@
 
     /* ── LATEST POSTS ────────────────────────── */
     .latest {
-      padding: 96px 64px;
+      padding: 96px 64px 24px;
       background: var(--cream);
     }
 
@@ -521,7 +532,10 @@
     /* ── QUOTE BAND ─────────────────────────── */
     .quote-band {
       background: var(--cream);
-      padding: 90px 64px 80px;
+      padding: 88px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
       overflow: hidden;
     }
@@ -538,6 +552,8 @@
       line-height: 0.5;
       color: rgba(196,126,138,0.28);
       display: block;
+      height: 58px;
+      overflow: hidden;
       pointer-events: none;
       user-select: none;
     }
@@ -575,7 +591,7 @@
       background: var(--grad-h);
     }
     @media (max-width: 600px) {
-      .quote-band { padding: 72px 28px; }
+      .quote-band { padding: 28px 28px 48px; }
       .qb-mark { font-size: 90px; }
     }
     /* ── MEET THE FOUNDER ───────────────────── */
@@ -596,23 +612,30 @@
     .founder-photo-wrap {
       position: relative;
     }
-    .founder-photo-wrap::before {
-      content: '';
-      position: absolute;
-      inset: -2px;
-      background: linear-gradient(135deg, #C47E8A 0%, rgba(196,126,138,0.25) 40%, rgba(196,126,138,0.05) 70%, #B76E79 100%);
-      z-index: 0;
-    }
-    .founder-photo-bg {
+    .founder-circles {
       position: relative;
-      z-index: 1;
       width: 100%;
-      aspect-ratio: 3/4;
-      background-image: url('images/uploads/family-photo.jpg');
-      background-size: cover;
-      background-position: center top;
-      box-shadow: 0 24px 60px rgba(0,0,0,0.12);
+      padding-bottom: 118%;
     }
+    .fc-big, .fc-small {
+      position: absolute;
+      border-radius: 50%;
+      padding: 5px;
+      background: linear-gradient(135deg, #C47E8A 0%, #e8c4cb 45%, #B76E79 100%);
+      box-shadow: 0 24px 60px rgba(196,126,138,0.32);
+    }
+    .fc-big { width: 74%; top: 0; left: 0; z-index: 1; }
+    .fc-small { width: 58%; right: 0; bottom: 0; z-index: 2; }
+    .fc-big img, .fc-small img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      object-position: center 18%;
+      border-radius: 50%;
+      background: var(--white);
+    }
+    .fc-small img { object-position: center center; }
     .founder-content {
       padding: 0;
       background: transparent;
@@ -1545,7 +1568,7 @@
       .hero-left { padding: 56px 24px 48px; order: 2; }
       .hero-right { min-height: 60vw; order: 1; }
 
-      .latest { padding: 64px 24px; }
+      .latest { padding: 64px 24px 24px; }
       .latest-header { flex-direction: column; align-items: flex-start; gap: 24px; }
       .posts-grid { grid-template-columns: 1fr; }
 
@@ -1648,6 +1671,7 @@
   <nav id="navbar">
     <a href="#" class="nav-logo">Lisa Haven</a>
     <ul class="nav-links">
+      <li><a href="/start-here">Start Here</a></li>
       <li><a href="#blog">Blog</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#founder">My Story</a></li>
@@ -1806,7 +1830,7 @@
   <section class="quote-band">
     <div class="quote-band-inner reveal">
       <span class="qb-mark">&ldquo;</span>
-      <p class="qb-text">There's no such thing as making the <em class="qb-hl">right choice</em>.<br>First you make a choice &mdash; <em class="qb-hl">then you make it right</em>. 🖤</p>
+      <p class="qb-text">There's no such thing as making the <em class="qb-hl">right decision</em>.<br>First you make a decision &mdash; <em class="qb-hl">then you make it right</em>. 🖤</p>
       <div class="qb-attr"><span class="qb-attr-line"></span>Lisa Haven</div>
     </div>
   </section>
@@ -1836,9 +1860,12 @@
   <section class="founder" id="founder">
     <div class="founder-inner">
 
-      <!-- Left: photo fills the panel via CSS background -->
+      <!-- Left: overlapping circle photos -->
       <div class="founder-photo-wrap">
-        <div class="founder-photo-bg"></div>
+        <div class="founder-circles">
+          <div class="fc-big"><img src="images/uploads/lisa-photo.jpg" alt="Lisa Haven"></div>
+          <div class="fc-small"><img src="images/uploads/family-photo.jpg" alt="Valentina, Mili, Scarlett, and Lucky"></div>
+        </div>
       </div>
 
       <!-- Right: content -->
@@ -1847,9 +1874,9 @@
         <h2 class="founder-name">Lisa Haven</h2>
         <p class="founder-title">Founder &amp; Chief Executive Officer · HAVENLY · VIXA · LUMAPROMPT.AI</p>
 
-        <p class="founder-body">Lisa Haven is a <strong>serial entrepreneur and beauty visionary</strong> based in Florida, building brands at the intersection of innovation, self-care, and Gen Z culture. As the founder of Havenly, she set out to reimagine the everyday makeup remover wipe — creating something bigger, thicker, and actually worthy of your skin. Dermatologist tested, female founded, and made in the United States of America, Havenly is her love letter to every woman who deserves better.</p>
+        <p class="founder-body">Every decision I make starts with three names: <strong>Valentina, Mili, and Scarlett</strong>. My daughters are my biggest purpose — the reason behind every company, every early morning, every leap of faith. I think of them before anything else, because they matter the most. My oldest is fifteen and about to get her driving permit — time flies, and it reminds me every single day why I'm building this now, not someday.</p>
 
-        <p class="founder-body">A devoted mother of three daughters — <strong>Valentina, Mili, and Scarlett</strong> — and proud dog mom to Lucky, Lisa is also the founder of <a href="https://lumaprompt.ai" style="color:inherit;font-weight:600;">LumaPrompt.ai</a> and <a href="https://vixaapp.ai" style="color:inherit;font-weight:600;">VIXA</a>. Her mission: build world-class brands that empower women to show up as their most confident, unfiltered selves.</p>
+        <p class="founder-body">HAVENLY is truly a family company: I'm building it <strong>with my two older daughters</strong>, who will be right beside me in the marketing and appearances as the brand grows. Watch our growth! And through every late night, <strong>Lucky</strong> — my dog and most loyal teammate — is curled up next to me. One day I'll launch a pet product in his honor… but for now, my whole focus is on the three.</p>
 
         <div class="founder-divider"></div>
 
@@ -1885,15 +1912,8 @@
       </div>
     </div>
 
-    <div class="blog-cats reveal">
+    <div class="blog-cats reveal" id="blogCats">
       <button class="cat-btn active">All Posts</button>
-      <button class="cat-btn">The Journey</button>
-      <button class="cat-btn">Fashion & Resell</button>
-      <button class="cat-btn">Single Mom Life</button>
-      <button class="cat-btn">Mindset</button>
-      <button class="cat-btn">Beauty</button>
-      <button class="cat-btn">Travel</button>
-      <button class="cat-btn">Founder Journey</button>
     </div>
 
     <!-- Carousel -->
@@ -2076,6 +2096,7 @@
       <div class="footer-col reveal">
         <span class="footer-col-title">Explore</span>
         <a href="/">Home</a>
+        <a href="/start-here">Start Here</a>
         <a href="#latest">Blog</a>
         <a href="#about">My Story</a>
         <a href="#founder">Meet the Founder</a>
@@ -2397,17 +2418,43 @@
     }
 
     // Try to load real posts from posts-index.json (generated by build.js on Netlify)
+    let allPosts = [];
     fetch('/posts-index.json')
       .then(r => r.ok ? r.json() : null)
       .then(posts => {
         if (posts && posts.length > 0) {
+          allPosts = posts;
           renderCarousel(posts);
+          renderCategoryFilters(posts);
         } else {
           // Use fallback — just wire up click handlers on existing hardcoded cards
           wireFallbackCards();
         }
       })
       .catch(() => wireFallbackCards());
+
+    // ── Category filters (built from the real posts) ──
+    function renderCategoryFilters(posts) {
+      const wrap = document.getElementById('blogCats');
+      if (!wrap) return;
+      const cats = [...new Set(posts.map(p => p.category).filter(Boolean))];
+      wrap.innerHTML = '';
+      const mkBtn = (label, filterCat) => {
+        const b = document.createElement('button');
+        b.className = 'cat-btn';
+        b.textContent = label;
+        b.addEventListener('click', () => {
+          wrap.querySelectorAll('.cat-btn').forEach(x => x.classList.remove('active'));
+          b.classList.add('active');
+          renderCarousel(filterCat ? allPosts.filter(p => p.category === filterCat) : allPosts);
+        });
+        return b;
+      };
+      const allBtn = mkBtn('All Posts', null);
+      allBtn.classList.add('active');
+      wrap.appendChild(allBtn);
+      cats.forEach(c => wrap.appendChild(mkBtn(c, c)));
+    }
 
     function wireFallbackCards() {
       document.querySelectorAll('.c-card').forEach((card, i) => {
