@@ -1633,10 +1633,35 @@
 
     /* ── MOBILE ──────────────────────────────── */
     @media (max-width: 900px) {
-      nav { padding: 18px 24px; }
+      /* Nav becomes 2-row stacked layout */
+      nav {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0;
+      }
       .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .mobile-menu { display: block; }
+      .hamburger { display: flex; order: 3; }
+
+      /* Row 1: Logo left, hamburger right */
+      .nav-logo {
+        order: 1;
+        flex: 1;
+        font-size: 20px;
+      }
+
+      /* Row 2: CTA full width below logo */
+      .nav-cta {
+        order: 4;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        padding: 11px 16px;
+        font-size: 11px;
+        border-radius: 3px;
+      }
+
+      .mobile-menu { display: block; top: 90px; }
 
       .hero { grid-template-columns: 1fr; min-height: auto; }
       .hero-left { padding: 56px 24px 48px; order: 2; }
