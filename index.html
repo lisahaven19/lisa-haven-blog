@@ -1559,10 +1559,84 @@
     .hero-right:hover img { transform: scale(1.02); }
     .founder-photo-wrap:hover img { transform: scale(1.03); }
 
+    /* ── HAMBURGER + MOBILE MENU ─────────────── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 26px;
+      height: 18px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 200;
+    }
+    .hamburger span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: var(--black);
+      border-radius: 2px;
+      transition: transform 0.3s cubic-bezier(0.22,1,0.36,1),
+                  opacity 0.3s ease;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 62px; left: 0; right: 0;
+      background: var(--cream);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      z-index: 99;
+      transform: translateY(-110%);
+      transition: transform 0.4s cubic-bezier(0.22,1,0.36,1),
+                  opacity 0.3s ease;
+      opacity: 0;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    }
+    .mobile-menu.open {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      padding: 24px 0 28px;
+    }
+    .mobile-nav-link {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--black);
+      text-decoration: none;
+      padding: 14px 32px;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      transition: color 0.2s, background 0.2s;
+    }
+    .mobile-nav-link:hover { color: var(--rose-dark); background: rgba(196,126,138,0.04); }
+    .mobile-nav-cta {
+      margin: 16px 32px 0;
+      padding: 14px 24px;
+      background: var(--black);
+      color: var(--white) !important;
+      text-align: center;
+      border-radius: 4px;
+      border-bottom: none;
+      letter-spacing: 0.1em;
+    }
+    .mobile-nav-cta:hover { background: var(--rose-dark) !important; }
+
     /* ── MOBILE ──────────────────────────────── */
     @media (max-width: 900px) {
       nav { padding: 18px 24px; }
       .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu { display: block; }
 
       .hero { grid-template-columns: 1fr; min-height: auto; }
       .hero-left { padding: 56px 24px 48px; order: 2; }
@@ -1741,7 +1815,24 @@
       <li><a href="/contact">Contact</a></li>
     </ul>
     <a href="#newsletter" class="nav-cta">Join the Inner Circle</a>
+
+    <!-- Hamburger button (mobile only) -->
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <!-- Mobile menu drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-nav-links">
+      <a href="/start-here" class="mobile-nav-link">Start Here</a>
+      <a href="#blog"       class="mobile-nav-link">Blog</a>
+      <a href="#about"      class="mobile-nav-link">About</a>
+      <a href="#founder"    class="mobile-nav-link">My Story</a>
+      <a href="/contact"    class="mobile-nav-link">Contact</a>
+      <a href="#newsletter" class="mobile-nav-link mobile-nav-cta">Join the Inner Circle 💗</a>
+    </nav>
+  </div>
 
   <!-- ── HERO ───────────────────────────────────── -->
   <section class="hero">
@@ -2210,6 +2301,26 @@
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 40);
     }, { passive: true });
+
+    /* ── Hamburger / mobile menu ── */
+    const hamburger   = document.getElementById('hamburger');
+    const mobileMenu  = document.getElementById('mobileMenu');
+    function closeMenu() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    // Close when a link is tapped
+    mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+    // Close when scrolling
+    window.addEventListener('scroll', closeMenu, { passive: true });
 
     /* ── Scroll-reveal (IntersectionObserver) ── */
     const revealObs = new IntersectionObserver((entries) => {
