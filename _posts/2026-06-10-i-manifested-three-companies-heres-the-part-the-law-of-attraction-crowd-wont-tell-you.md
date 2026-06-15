@@ -1,5 +1,5 @@
 ---
-title: "Law of Attraction for Entrepreneurs: The Part Nobody Sells You"
+title: "Law of Attraction for Entrepreneurs: The Part Nobody Tells You"
 category: Mindset & Growth
 emoji: ✨
 date: 2026-06-10T00:01:00.000-04:00
