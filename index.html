@@ -64,18 +64,18 @@
       align-items: center;
       justify-content: space-between;
       padding: 16px 48px;
-      background: #0A0A0A;
-      border-bottom: 1px solid rgba(196,126,138,0.15);
+      background: var(--cream);
+      border-bottom: 1px solid rgba(10,10,10,0.08);
       transition: box-shadow 0.3s;
     }
-    nav.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.4); }
+    nav.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
 
     .nav-logo {
       font-family: var(--serif);
       font-size: 22px;
       font-weight: 700;
       letter-spacing: 0.02em;
-      color: var(--white);
+      color: var(--black);
       text-decoration: none;
     }
 
@@ -89,12 +89,12 @@
       font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.7);
+      color: rgba(10,10,10,0.7);
       text-decoration: none;
       position: relative;
       transition: color 0.2s;
     }
-    .nav-links a:hover { color: var(--rose-light); }
+    .nav-links a:hover { color: var(--rose-dark); }
     .nav-links a::after {
       content: '';
       position: absolute;
@@ -782,6 +782,23 @@
       border: 1.5px solid #C47E8A;
     }
     .li-card-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
+
+    
+    /* ── SHOP TEASER ─────────────────────────── */
+    .shop-teaser { background: var(--white); padding: 88px 24px; text-align: center; }
+    .shop-teaser-inner { max-width: 680px; margin: 0 auto; }
+    .shop-teaser-body { font-size: 15px; color: var(--mid); margin: 18px 0 28px; }
+    .shop-teaser-actions { display: flex; gap: 18px; justify-content: center; align-items: center; flex-wrap: wrap; }
+    .shop-btn {
+      display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 1.7px; text-transform: uppercase;
+      color: var(--white); background: var(--black);
+      padding: 14px 32px; border-radius: 0; text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .shop-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(10,10,10,0.25); }
+    .shop-link { font-size: 12px; font-weight: 600; letter-spacing: 1.7px; text-transform: uppercase; color: var(--rose-dark); text-decoration: none; }
+    .shop-link:hover { text-decoration: underline; }
+    @media (max-width: 900px) { .shop-teaser { padding: 64px 24px; } }
 
     /* ── NEWSLETTER ──────────────────────────── */
     .newsletter {
@@ -2038,6 +2055,20 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  
+  <!-- ── SHOP TEASER ─────────────────────────────── -->
+  <section class="shop-teaser" id="shop">
+    <div class="shop-teaser-inner reveal">
+      <span class="section-label">The Playbook Shop</span>
+      <h2 class="section-title">Ebooks &amp; templates. <em>Coming soon.</em></h2>
+      <p class="shop-teaser-body">The exact artificial intelligence systems, templates, and step-by-step playbooks I use to build my brands &mdash; packaged to help you build yours. Join The Haven to get first access the moment it opens.</p>
+      <div class="shop-teaser-actions">
+        <a href="#newsletter" class="shop-btn">Join The Haven 🖤</a>
+        <a href="/shop" class="shop-link">See what&rsquo;s coming &rarr;</a>
+      </div>
     </div>
   </section>
 
