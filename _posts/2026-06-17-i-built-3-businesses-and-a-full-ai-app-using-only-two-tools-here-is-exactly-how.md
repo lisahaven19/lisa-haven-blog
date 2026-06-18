@@ -1,6 +1,6 @@
 ---
-title: I Built 3 Businesses and a Full AI App Using Only Two Tools. Here Is
-  Exactly How.
+title: "How I Built 3 Businesses and a Full AI App Without a Tech Team: The Only
+  2 Tools You Need as a Solo Founder"
 category: Business Tips
 emoji: ✨
 date: 2026-06-17T13:01:00.000-04:00
