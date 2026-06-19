@@ -21,14 +21,13 @@ collections:
         name: "category"
         widget: "select"
         options:
-          - "The Journey"
+          - "Building With AI"
           - "Founder Life"
-          - "Single Mom Life"
-          - "Mindset & Growth"
-          - "Beauty & Style"
           - "Business Tips"
+          - "Mindset & Growth"
+          - "Beauty & Fashion"
           - "Travel"
-          - "Carnivore & Wellness"
+          - "Discipline"
       - { label: "Emoji", name: "emoji", widget: "string", default: "✨", hint: "One emoji that represents this post" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Read Time", name: "readTime", widget: "string", default: "3 min read" }
