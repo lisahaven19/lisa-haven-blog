@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Start Here â Lisa Haven</title>
-  <meta name="description" content="New to Lisa Haven? Start here â who I am, why I'm building 3 companies as a single mom, and the best blog posts on AI, beauty, dating, and discipline.">
+  <title>Start Here — Lisa Haven</title>
+  <meta name="description" content="New here? Start with this page — who Lisa Haven is, what this blog is about, and the best posts to read first.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,22 +31,13 @@
     p { font-size: 15px; color: var(--mid); margin-bottom: 14px; }
     a { color: var(--rose-dark); }
     .divider { width: 56px; height: 2px; background: var(--grad-h); margin: 40px 0; }
-    .intro-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: top; border-radius: 16px; display: block; margin: 28px 0 4px; }
-    .sc-img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 12px; display: block; margin-bottom: 14px; }
-    .start-marquee { overflow: hidden; position: relative; margin: 24px 0 8px; }
-    .start-marquee::before, .start-marquee::after { content: ''; position: absolute; top: 0; bottom: 0; width: 32px; z-index: 2; pointer-events: none; }
-    .start-marquee::before { left: 0; background: linear-gradient(90deg, var(--cream), transparent); }
-    .start-marquee::after { right: 0; background: linear-gradient(270deg, var(--cream), transparent); }
-    .start-cards { display: flex; width: max-content; animation: shScroll 30s linear infinite; }
-    .start-cards:hover, .start-cards:active { animation-play-state: paused; }
-    @keyframes shScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .start-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0 8px; }
     .start-card {
       display: block; background: var(--white); border: 1px solid var(--cream-dark);
       border-radius: 16px; padding: 22px 20px; text-decoration: none;
-      width: 280px; flex-shrink: 0; margin-right: 16px;
-      transition: box-shadow 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .start-card:hover { box-shadow: 0 12px 32px rgba(10,10,10,0.08); }
+    .start-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(10,10,10,0.08); }
     .start-card .emoji { font-size: 24px; display: block; margin-bottom: 10px; }
     .start-card .cat { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose-dark); display: block; margin-bottom: 8px; }
     .start-card h3 { font-family: var(--serif); font-size: 17px; line-height: 1.3; color: var(--black); margin-bottom: 8px; }
@@ -73,26 +64,22 @@
     @media (max-width: 700px) {
       .topbar { padding: 20px 24px; }
       main { padding: 32px 22px 72px; }
-      .start-card { width: 225px; margin-right: 13px; }
-      .start-cards { animation-duration: 24s; }
+      .start-cards { grid-template-columns: 1fr; }
       footer { flex-direction: column; gap: 8px; text-align: center; }
     }
   
-    /* ââ Unified site footer ââ */
+    /* ── Unified site footer ── */
     footer { flex-direction: column; gap: 12px; align-items: center; text-align: center; padding: 28px 24px; }
     .sf-links { display: flex; flex-wrap: nowrap; white-space: nowrap; justify-content: center; align-items: center; }
     .sf-links a { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.75); text-decoration: none; }
-    .sf-links a + a::before { content: 'Â·'; color: rgba(196,126,138,0.7); margin: 0 9px; font-weight: 700; }
+    .sf-links a + a::before { content: '·'; color: rgba(196,126,138,0.7); margin: 0 9px; font-weight: 700; }
     .sf-tag { color: #e8c4cb !important; }
   
-    /* ââ Unified top navigation (matches homepage) ââ */
+    /* ── Unified top navigation (matches homepage) ── */
     .navbar { display: flex; justify-content: space-between; align-items: center; padding: 16px 48px; background: var(--cream); border-bottom: 1px solid rgba(10,10,10,0.08); }
-    .navbar .logo { font-family: var(--serif); font-weight: 700; font-size: 22px; letter-spacing: 0.02em; color: var(--black); text-decoration: none; }
-    .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
-    .nav-links a { font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(10,10,10,0.7); text-decoration: none; position: relative; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--rose-dark); }
-    .nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1px; background: var(--rose); transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease; }
-    .nav-links a:hover::after { transform: scaleX(1); }
+    .navbar .logo { font-family: var(--serif); font-weight: 700; font-size: 25px; letter-spacing: 0.02em; color: var(--black); text-decoration: none; }
+    .nav-links { display: flex; gap: 34px; list-style: none; align-items: center; }
+    .nav-links a { font-size: 15px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(10,10,10,0.7); text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover, .nav-links a.active { color: var(--rose-dark); }
     .nav-cta {
       font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
@@ -119,7 +106,7 @@
       .navbar { padding: 12px 20px; } .navbar .logo { font-size: 20px; }
     }
   
-    /* ââ Unified site footer (matches homepage) ââ */
+    /* ── Unified site footer (matches homepage) ── */
     footer { display: block; background: #080808; padding: 0; text-align: initial; gap: 0; position: relative; overflow: hidden; }
     .footer-statement { text-align: center; padding: 80px 64px 56px; border-bottom: 1px solid rgba(255,255,255,0.07); position: relative; }
     .footer-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--rose); display: block; margin-bottom: 24px; }
@@ -150,19 +137,36 @@
       .footer-cols { display: none; }
       .footer-essentials { display: flex; flex-wrap: nowrap; white-space: nowrap; justify-content: center; align-items: center; padding: 30px 12px 34px; border-top: 1px solid rgba(255,255,255,0.07); }
       .footer-essentials a { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.75); text-decoration: none; padding: 6px 0; }
-      .footer-essentials a + a::before { content: 'Â·'; color: rgba(196,126,138,0.7); margin: 0 9px; font-weight: 700; }
+      .footer-essentials a + a::before { content: '·'; color: rgba(196,126,138,0.7); margin: 0 9px; font-weight: 700; }
       .footer-bottom { padding: 16px 24px; flex-direction: column; gap: 8px; text-align: center; }
     }
+  
+    /* ── Start Here revisions ── */
+    .sh-hero { display: grid; grid-template-columns: 1.35fr 1fr; gap: 44px; align-items: center; margin-bottom: 8px; }
+    .sh-hero-text p { margin-bottom: 0; }
+    .sh-hero-photo { position: relative; padding: 5px; background: linear-gradient(135deg, #C47E8A 0%, #e8c4cb 45%, #B76E79 100%); border-radius: 20px; box-shadow: 0 24px 60px rgba(196,126,138,0.28); }
+    .sh-hero-photo img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center 18%; border-radius: 16px; }
+    .start-cards { grid-template-columns: 1fr; gap: 18px; }
+    .start-card { display: flex; padding: 0; overflow: hidden; }
+    .sc-thumb { width: 170px; min-height: 235px; align-self: stretch; object-fit: cover; object-position: center 22%; flex-shrink: 0; }
+    .sc-body { display: block; padding: 22px 24px; }
+    @keyframes shFadeUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
+    .sh-hero-text .eyebrow { opacity: 0; animation: shFadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.05s forwards; }
+    .sh-hero-text h1      { opacity: 0; animation: shFadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.15s forwards; }
+    .sh-hero-text p       { opacity: 0; animation: shFadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.28s forwards; }
+    .sh-hero-photo        { opacity: 0; animation: shFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.35s forwards; }
+    .sh-reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1); }
+    .sh-reveal.visible { opacity: 1; transform: none; }
+    .brand-item.sh-reveal:nth-child(2).visible { transition-delay: 0.12s; }
+    .brand-item.sh-reveal:nth-child(3).visible { transition-delay: 0.24s; }
+    @media (max-width: 700px) {
+      .sh-hero { grid-template-columns: 1fr; gap: 28px; }
+      .sh-hero-photo { order: -1; max-width: 330px; margin: 0 auto; width: 100%; }
+      .sc-thumb { width: 130px; min-height: 210px; }
+      .sc-body { padding: 18px 18px; }
+    }
   </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9FBEC5V5BW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9FBEC5V5BW');
-</script></head>
+</head>
 <body>
   <nav class="navbar">
     <a class="logo" href="/">Lisa Haven</a>
@@ -186,7 +190,7 @@
       <a href="/#about"     class="mobile-nav-link">About</a>
       <a href="/#founder"   class="mobile-nav-link">My Story</a>
       <a href="/contact"    class="mobile-nav-link">Contact</a>
-      <a href="/#newsletter" class="mobile-nav-link mobile-nav-cta">Join the Inner Circle ð¤</a>
+      <a href="/#newsletter" class="mobile-nav-link mobile-nav-cta">Join the Inner Circle 🖤</a>
     </nav>
   </div>
   <script>
@@ -204,82 +208,72 @@
     });
   </script>
   <main>
-    <span class="eyebrow">Start Here</span>
-    <h1>New here? <em>Welcome to The Haven.</em></h1>
-    <p>I'm Lisa Haven â a 40-year-old founder, single mother of three daughters, and serial entrepreneur based in Florida. I'm building three companies at once, and this blog is where I share all of it: the wins, the mess, the fashion, the mindset, and the real behind-the-scenes of building as a solo parent. No filter. No apologies.</p>
-
-    <div class="intro-photo"><img src="/images/uploads/lisainred.jpg" alt="Lisa Haven, founder of HAVENLY, VIXA, and LUMAPROMPT.AI"></div>
-
-    <div class="divider"></div>
-
-    <h2>The three brands</h2>
-    <div class="brand-list">
-      <div class="brand-item">
-        <strong><a href="https://havenly.co">HAVENLY &#8599;</a></strong>
-        <p>A bigger, thicker, dermatologist-tested makeup remover wipe designed for the Gen Z market â headed for Sephora shelves and made in the United States of America.</p>
+    <div class="sh-hero">
+      <div class="sh-hero-text">
+        <span class="eyebrow">Start Here</span>
+        <h1>New here? <em>Welcome to The Haven.</em></h1>
+        <p>I'm Lisa Haven — a 40-year-old founder, single mother of three daughters, and serial entrepreneur based in Florida. I'm building three companies at once, and this blog is where I share all of it: the wins, the mess, the fashion, the mindset, and the real behind-the-scenes of building as a solo parent. No filter. No apologies.</p>
       </div>
-      <div class="brand-item">
-        <strong><a href="https://vixaapp.ai">VIXA â</a></strong>
-        <p>A next-generation dating clarity app for women. Its artificial intelligence companion, Vela, turns messy conversations into sharp, private, emotionally neutral insight in seconds.</p>
-      </div>
-      <div class="brand-item">
-        <strong><a href="https://lumaprompt.ai">LUMAPROMPT.AI â</a></strong>
-        <p>A premium prompt library authored by human industry expert writers â built around how women think, decide, and communicate.</p>
+      <div class="sh-hero-photo">
+        <img src="/images/uploads/hero-red.jpg" alt="Lisa Haven">
       </div>
     </div>
 
-    <h2>The best posts to read first</h2>
-    <div class="start-marquee"><div class="start-cards">
-      <a class="start-card" href="/post?slug=from-zero-to-three-companies">
-        <img class="sc-img" src="/images/uploads/family-photo.jpg" alt="Lisa Haven with her daughters">
-        <span class="emoji">ð</span>
-        <span class="cat">The Journey</span>
-        <h3>From Zero to Three Companies â What Nobody Tells You</h3>
-        <p>The unfiltered truth about building three brands while raising three daughters.</p>
-      </a>
-      <a class="start-card" href="/post?slug=what-is-vixa">
-        <img class="sc-img" src="/images/uploads/0i4a7811.jpg" alt="Lisa Haven, founder of VIXA">
-        <span class="emoji">ð¬</span>
-        <span class="cat">Founder Life</span>
-        <h3>I Built a Dating App Because I Was Tired of Group Chat Guesswork</h3>
-        <p>The story behind VIXA â and why women deserve clarity, not confusion.</p>
-      </a>
-      <a class="start-card" href="/post?slug=why-i-went-carnivore">
-        <img class="sc-img" src="/images/uploads/gym-photo.jpg" alt="Lisa Haven at the gym">
-        <span class="emoji">ð¥©</span>
-        <span class="cat">Mindset &amp; Growth</span>
-        <h3>Why I Went Carnivore â And How It Changed My Energy</h3>
-        <p>Real, sustained energy for 5 a.m. workouts, deep work, and bedtime stories.</p>
-      </a>
-      <a class="start-card" aria-hidden="true" tabindex="-1" href="/post?slug=from-zero-to-three-companies">
-        <img class="sc-img" src="/images/uploads/family-photo.jpg" alt="Lisa Haven with her daughters">
-        <span class="emoji">ð</span>
-        <span class="cat">The Journey</span>
-        <h3>From Zero to Three Companies â What Nobody Tells You</h3>
-        <p>The unfiltered truth about building three brands while raising three daughters.</p>
-      </a>
-      <a class="start-card" aria-hidden="true" tabindex="-1" href="/post?slug=what-is-vixa">
-        <img class="sc-img" src="/images/uploads/0i4a7811.jpg" alt="Lisa Haven, founder of VIXA">
-        <span class="emoji">ð¬</span>
-        <span class="cat">Founder Life</span>
-        <h3>I Built a Dating App Because I Was Tired of Group Chat Guesswork</h3>
-        <p>The story behind VIXA â and why women deserve clarity, not confusion.</p>
-      </a>
-      <a class="start-card" aria-hidden="true" tabindex="-1" href="/post?slug=why-i-went-carnivore">
-        <img class="sc-img" src="/images/uploads/gym-photo.jpg" alt="Lisa Haven at the gym">
-        <span class="emoji">ð¥©</span>
-        <span class="cat">Mindset &amp; Growth</span>
-        <h3>Why I Went Carnivore â And How It Changed My Energy</h3>
-        <p>Real, sustained energy for 5 a.m. workouts, deep work, and bedtime stories.</p>
-      </a>
-    </div></div>
+    <div class="divider"></div>
 
-    <h2>What you'll find on the blog</h2>
-    <p>ð Entrepreneurship &nbsp;Â·&nbsp; ð Fashion &amp; Beauty &nbsp;Â·&nbsp; ð Single Mom Life &nbsp;Â·&nbsp; ð§  Mindset &amp; Growth &nbsp;Â·&nbsp; âï¸ Miami Vibes</p>
-    <p>Want to work together? I'm open to press, partnerships, podcasts, and conversations that open new doors â <a href="/contact">get in touch here</a>. You can also grab the <a href="/press-kit">official press kit</a>.</p>
+    <h2 class="sh-reveal">The three brands</h2>
+    <div class="brand-list">
+      <div class="brand-item sh-reveal">
+        <strong><a href="https://havenly.co">HAVENLY ↗</a></strong>
+        <p>A bigger, thicker, dermatologist-tested makeup remover wipe designed for the Gen Z market — headed for Sephora shelves and made in the United States of America.</p>
+      </div>
+      <div class="brand-item sh-reveal">
+        <strong><a href="https://vixaapp.ai">VIXA ↗</a></strong>
+        <p>A next-generation dating clarity app for women. Its artificial intelligence companion, Vela, turns messy conversations into sharp, private, emotionally neutral insight in seconds.</p>
+      </div>
+      <div class="brand-item sh-reveal">
+        <strong><a href="https://lumaprompt.ai">LUMAPROMPT.AI ↗</a></strong>
+        <p>A premium prompt library authored by human industry expert writers — built around how women think, decide, and communicate.</p>
+      </div>
+    </div>
 
-    <div class="cta-band">
-      <h2>Join the Inner Circle ð¤</h2>
+    <h2 class="sh-reveal">The best posts to read first</h2>
+    <div class="start-cards">
+      <a class="start-card sh-reveal" href="/post?slug=from-zero-to-three-companies">
+        <img class="sc-thumb" src="/images/uploads/founder-director.jpg" alt="Lisa Haven">
+        <span class="sc-body">
+          <span class="emoji">🚀</span>
+          <span class="cat">The Journey</span>
+          <h3>From Zero to Three Companies — What Nobody Tells You</h3>
+          <p>The unfiltered truth about building three brands while raising three daughters.</p>
+        </span>
+      </a>
+      <a class="start-card sh-reveal" href="/post?slug=what-is-vixa">
+        <img class="sc-thumb" src="/images/uploads/lisa-photo.jpg" alt="Lisa Haven">
+        <span class="sc-body">
+          <span class="emoji">💬</span>
+          <span class="cat">Founder Life</span>
+          <h3>I Built a Dating App Because I Was Tired of Group Chat Guesswork</h3>
+          <p>The story behind VIXA — and why women deserve clarity, not confusion.</p>
+        </span>
+      </a>
+      <a class="start-card sh-reveal" href="/post?slug=why-i-went-carnivore">
+        <img class="sc-thumb" src="/images/uploads/gym-photo.jpg" alt="Lisa Haven at the gym">
+        <span class="sc-body">
+          <span class="emoji">🥩</span>
+          <span class="cat">Mindset &amp; Growth</span>
+          <h3>Why I Went Carnivore — And How It Changed My Energy</h3>
+          <p>Real, sustained energy for 5 a.m. workouts, deep work, and bedtime stories.</p>
+        </span>
+      </a>
+    </div>
+
+    <h2 class="sh-reveal">What you'll find on the blog</h2>
+    <p>🚀 Entrepreneurship &nbsp;·&nbsp; 👗 Fashion &amp; Beauty &nbsp;·&nbsp; 💗 Single Mom Life &nbsp;·&nbsp; 🧠 Mindset &amp; Growth &nbsp;·&nbsp; ✈️ Miami Vibes</p>
+    <p>Want to work together? I'm open to press, partnerships, podcasts, and conversations that open new doors — <a href="/contact">get in touch here</a>. You can also grab the <a href="/press-kit">official press kit</a>.</p>
+
+    <div class="cta-band sh-reveal">
+      <h2 class="sh-reveal">Join the Inner Circle 🖤</h2>
       <p>Weekly dispatches from the chaos: what's working, what broke, what I learned. Real talk. No fluff. Free forever.</p>
       <a class="cta-btn" href="/#newsletter">Join The Haven</a>
     </div>
@@ -288,9 +282,9 @@
 
     <!-- Big statement -->
     <div class="footer-statement">
-      <span class="footer-eyebrow">Founder Â· Mom Â· Entrepreneur Â· Florida</span>
+      <span class="footer-eyebrow">Founder · Mom · Entrepreneur · Florida</span>
       <span class="footer-name"><span class="fn-first">Lisa</span> <em>Haven</em></span>
-      <p class="footer-desc">Sharing the real journey â the wins, the mess, and everything in between.</p>
+      <p class="footer-desc">Sharing the real journey — the wins, the mess, and everything in between.</p>
 
       <!-- Social icon circles -->
       <div class="footer-socials-row">
@@ -303,7 +297,7 @@
         <a href="https://www.pinterest.com/lisahaven19" class="footer-icon-btn" target="_blank" aria-label="Pinterest">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
         </a>
-        <a href="https://lisa-haven.beehiiv.com/subscribe" class="footer-icon-btn" target="_blank" aria-label="Newsletter">
+        <a href="/#newsletter" class="footer-icon-btn" target="_blank" aria-label="Newsletter">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
         </a>
       </div>
@@ -328,16 +322,16 @@
       </div>
       <div class="footer-col">
         <span class="footer-col-title">Brands</span>
-        <a href="https://havenly.co" target="_blank">HAVENLY â</a>
-        <a href="https://vixaapp.ai" target="_blank">VIXA â</a>
-        <a href="https://lumaprompt.ai" target="_blank">LUMAPROMPT.AI â</a>
+        <a href="https://havenly.co" target="_blank">HAVENLY ↗</a>
+        <a href="https://vixaapp.ai" target="_blank">VIXA ↗</a>
+        <a href="https://lumaprompt.ai" target="_blank">LUMAPROMPT.AI ↗</a>
       </div>
       <div class="footer-col">
         <span class="footer-col-title">Connect</span>
-        <a href="https://www.instagram.com/havenly1920" target="_blank">Instagram â</a>
-        <a href="https://www.linkedin.com/in/lisahaven" target="_blank">LinkedIn â</a>
-        <a href="https://www.pinterest.com/lisahaven19" target="_blank">Pinterest â</a>
-        <a href="https://lisa-haven.beehiiv.com/subscribe" target="_blank">Join The Haven â</a>
+        <a href="https://www.instagram.com/havenly1920" target="_blank">Instagram ↗</a>
+        <a href="https://www.linkedin.com/in/lisahaven" target="_blank">LinkedIn ↗</a>
+        <a href="https://www.pinterest.com/lisahaven19" target="_blank">Pinterest ↗</a>
+        <a href="/#newsletter" target="_blank">Join The Haven ↗</a>
       </div>
     </div>
 
@@ -352,41 +346,20 @@
 
     <!-- Bottom bar -->
     <div class="footer-bottom">
-      <p class="footer-copy">Â© 2026 Lisa Haven. All rights reserved.</p>
-      <p class="footer-tagline">On the journey. Always. ð</p>
+      <p class="footer-copy">© 2026 Lisa Haven. All rights reserved.</p>
+      <p class="footer-tagline">On the journey. Always. 💗</p>
     </div>
 
   </footer>
-  <style>
-    .rv { opacity: 0; transform: translateY(22px); transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1); will-change: opacity, transform; }
-    .rv.in { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) { .rv { transition: none; opacity: 1; transform: none; } }
-  </style>
   <script>
-    window.__initReveal = function() {
-      var els = document.querySelectorAll('main > *, .footer-statement, .footer-cols, .footer-bottom');
-      var fresh = [];
-      els.forEach ? null : els = Array.prototype.slice.call(els);
-      Array.prototype.forEach.call(els, function(el) {
-        if (el.classList.contains('rv') || el.classList.contains('reveal')) return;
-        el.classList.add('rv');
-        fresh.push(el);
-      });
-      if (!('IntersectionObserver' in window)) { fresh.forEach(function(el){ el.classList.add('in'); }); return; }
-      var io = new IntersectionObserver(function(entries) {
-        var batch = 0;
-        entries.forEach(function(en) {
-          if (en.isIntersecting) {
-            en.target.style.transitionDelay = (batch * 0.07) + 's';
-            en.target.classList.add('in');
-            io.unobserve(en.target);
-            batch++;
-          }
+    document.addEventListener('DOMContentLoaded', function () {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
         });
-      }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
-      fresh.forEach(function(el) { io.observe(el); });
-    };
-    document.addEventListener('DOMContentLoaded', function() { window.__initReveal(); });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.sh-reveal').forEach(function (el) { obs.observe(el); });
+    });
   </script>
 </body>
 </html>

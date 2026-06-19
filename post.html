@@ -17,69 +17,642 @@
       --serif: 'Playfair Display', Georgia, serif; --sans: 'Inter', system-ui, sans-serif;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: var(--sans); background: var(--cream); color: var(--black); line-height: 1.75; }
-    .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 48px; border-bottom: 1px solid rgba(0,0,0,0.06); }
-    .navbar .logo { font-family: var(--serif); font-weight: 900; font-size: 20px; color: var(--black); text-decoration: none; }
-    .nav-links { display: flex; gap: 8px; list-style: none; align-items: center; }
-    .nav-links a { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--black); text-decoration: none; padding: 8px 14px; }
-    .nav-links a:hover { color: var(--rose-dark); }
-    .nav-cta { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--white); background: var(--grad-h); text-decoration: none; padding: 12px 22px; }
+    body { font-family: var(--sans); background: var(--cream); color: var(--black); line-height: 1.75; overflow-x: hidden; }
+
+    /* ══════════════════════════════════
+       ANIMATIONS
+    ══════════════════════════════════ */
+    @keyframes fadeUp    { from { opacity:0; transform:translateY(32px); } to { opacity:1; transform:none; } }
+    @keyframes fadeDown  { from { opacity:0; transform:translateY(-24px); } to { opacity:1; transform:none; } }
+    @keyframes fadeLeft  { from { opacity:0; transform:translateX(-40px); } to { opacity:1; transform:none; } }
+    @keyframes fadeRight { from { opacity:0; transform:translateX(40px); } to { opacity:1; transform:none; } }
+    @keyframes scalePop  { from { opacity:0; transform:scale(0.88); } to { opacity:1; transform:scale(1); } }
+    @keyframes shimmer   { 0%,100%{background-position:0% center} 50%{background-position:100% center} }
+    @keyframes pulseRose { 0%,100%{box-shadow:0 0 0 0 rgba(196,126,138,0.4)} 50%{box-shadow:0 0 0 10px rgba(196,126,138,0)} }
+    @keyframes slideInLeft  { from{transform:translateX(-100%);opacity:0} to{transform:translateX(0);opacity:1} }
+    @keyframes iconFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+
+    /* Scroll-reveal base */
+    .sr { opacity:0; transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1); }
+    .sr-up    { transform: translateY(36px); }
+    .sr-left  { transform: translateX(-36px); }
+    .sr-right { transform: translateX(36px); }
+    .sr-scale { transform: scale(0.92); }
+    .sr.visible { opacity:1; transform:none; }
+    .sr-d1  { transition-delay:0.05s; }
+    .sr-d2  { transition-delay:0.12s; }
+    .sr-d3  { transition-delay:0.20s; }
+    .sr-d4  { transition-delay:0.28s; }
+    .sr-d5  { transition-delay:0.36s; }
+    .sr-d6  { transition-delay:0.44s; }
+
+    /* ── Reading progress bar ── */
+    .progress-bar {
+      position:fixed; top:0; left:0; height:3px; width:0%;
+      background: var(--grad-h); z-index:9999; transition:width 0.08s linear;
+      box-shadow:0 0 8px rgba(196,126,138,0.6);
+    }
+
+    /* ══════════════════════════════════
+       NAVBAR
+    ══════════════════════════════════ */
+    .navbar { display:flex; justify-content:space-between; align-items:center; padding:16px 48px; border-bottom:1px solid rgba(0,0,0,0.06); animation: fadeDown 0.6s cubic-bezier(0.22,1,0.36,1) both; }
+    .navbar .logo { font-family:var(--serif); font-weight:700; font-size:25px; letter-spacing:0.02em; color:var(--black); text-decoration:none; transition: color 0.2s; }
+    .navbar .logo:hover { color: var(--rose-dark); }
+    .nav-links { display:flex; gap:34px; list-style:none; align-items:center; }
+    .nav-links a { font-size:15px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:rgba(10,10,10,0.7); text-decoration:none; position:relative; transition: color 0.2s; }
+    .nav-links a::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:var(--rose-dark); transition:width 0.3s ease; }
+    .nav-links a:hover { color:var(--rose-dark); }
+    .nav-links a:hover::after { width:100%; }
+    .nav-cta {
+      font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase;
+      color:var(--black); background:linear-gradient(135deg,#e8c4cb 0%,#C47E8A 50%,#a35f6d 100%);
+      border:none; border-radius:0; text-decoration:none; padding:11px 26px;
+      box-shadow:0 4px 16px rgba(196,126,138,0.35); transition:transform 0.2s,box-shadow 0.2s;
+      animation: pulseRose 3s ease-in-out infinite;
+    }
+    .nav-cta:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(196,126,138,0.5); }
+    .hamburger { display:none; flex-direction:column; justify-content:space-between; width:26px; height:18px; background:none; border:none; cursor:pointer; padding:0; z-index:200; }
+    .hamburger span { display:block; height:2px; width:100%; background:var(--black); border-radius:2px; transition:transform 0.3s cubic-bezier(0.22,1,0.36,1),opacity 0.3s ease; }
+    .hamburger.open span:nth-child(1) { transform:translateY(8px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform:translateY(-8px) rotate(-45deg); }
+    .mobile-menu { display:none; position:fixed; top:50px; left:0; right:0; background:var(--cream); border-bottom:1px solid rgba(10,10,10,0.1); z-index:99; transform:translateY(-110%); opacity:0; transition:transform 0.4s cubic-bezier(0.22,1,0.36,1),opacity 0.3s ease; box-shadow:0 12px 40px rgba(0,0,0,0.12); }
+    .mobile-menu.open { transform:translateY(0); opacity:1; }
+    .mobile-nav-links { display:flex; flex-direction:column; padding:20px 0 28px; }
+    .mobile-nav-link { font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:rgba(10,10,10,0.75); text-decoration:none; padding:15px 32px; border-bottom:1px solid rgba(10,10,10,0.06); transition:color 0.2s,padding-left 0.2s; }
+    .mobile-nav-link:hover { color:var(--rose-dark); padding-left:40px; }
+    .mobile-nav-cta { margin:20px 28px 0; padding:14px 24px; background:linear-gradient(135deg,#e8c4cb 0%,#C47E8A 50%,#a35f6d 100%); color:#0A0A0A !important; font-weight:700 !important; text-align:center; border-radius:0; border-bottom:none; letter-spacing:0.12em; box-shadow:0 4px 16px rgba(196,126,138,0.35); }
+
+
+    /* ══════════════════════════════════
+       MAIN CONTENT
+    ══════════════════════════════════ */
     main { max-width: 760px; margin: 0 auto; padding: 56px 28px 100px; }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
-    .post-meta, h1, .post-stats, .post-photo, .post-body { opacity: 0; animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) forwards; }
-    .post-meta { animation-delay: 0.05s; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose-dark); margin-bottom: 18px; }
-    .post-meta span { color: var(--light); font-weight: 500; letter-spacing: 0.06em; text-transform: none; }
-    h1 { animation-delay: 0.12s; font-family: var(--serif); font-size: clamp(32px, 4.6vw, 50px); font-weight: 900; line-height: 1.12; margin-bottom: 22px; }
-    .post-stats { animation-delay: 0.2s; display: flex; align-items: center; gap: 22px; margin-bottom: 34px; font-size: 13px; color: var(--mid); }
-    .like-btn { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(196,126,138,0.5); background: var(--white); color: var(--black); font-family: var(--sans); font-size: 13px; font-weight: 600; padding: 9px 18px; border-radius: 100px; cursor: pointer; transition: all 0.25s; }
-    .like-btn:hover { border-color: var(--rose); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(196,126,138,0.2); }
-    .like-btn.liked { background: var(--grad-h); color: var(--white); border-color: transparent; }
-    .post-photo { animation-delay: 0.28s; position: relative; margin: 6px 0 36px; }
-    .post-photo::before { content: ''; position: absolute; inset: -2px; background: linear-gradient(135deg, #C47E8A 0%, rgba(196,126,138,0.2) 45%, #B76E79 100%); }
-    .post-photo img { position: relative; z-index: 1; display: block; width: 100%; height: auto; }
-    .post-body { animation-delay: 0.36s; font-size: 16px; color: #333; }
-    .post-body h2 { font-family: var(--serif); font-size: 26px; margin: 38px 0 12px; color: var(--black); }
-    .post-body h3 { font-family: var(--serif); font-size: 21px; margin: 30px 0 10px; color: var(--black); }
-    .post-body p { margin-bottom: 16px; }
-    .post-body em { font-style: italic; }
-    .post-body blockquote { font-family: var(--serif); font-style: italic; font-size: 19px; border-left: 2px solid var(--rose); padding-left: 20px; margin: 26px 0; color: var(--black); }
-    .post-body ul, .post-body ol { margin: 0 0 16px 22px; }
-    .post-body img { max-width: 100%; border-radius: 4px; }
-    .post-body a { color: var(--rose-dark); }
-    .back-row { margin-top: 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-    .back-row a { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--rose-dark); text-decoration: none; }
-    .coming { text-align: center; padding: 80px 0; }
-    .coming h1 { margin-bottom: 14px; }
-    .coming p { color: var(--mid); }
-    footer { background: #080808; padding: 22px 48px; display: flex; justify-content: space-between; align-items: center; }
-    footer p { font-size: 11px; color: rgba(255,255,255,0.55); margin: 0; }
-    footer a { font-size: 11px; color: var(--rose-light); text-decoration: none; }
-    @media (max-width: 800px) { .nav-links { display: none; } .navbar { padding: 18px 24px; } main { padding: 40px 22px 72px; } }
+
+    .post-meta {
+      font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase;
+      color:var(--rose-dark); margin-bottom:18px;
+      animation: fadeUp 0.6s 0.05s cubic-bezier(0.22,1,0.36,1) both;
+    }
+    .post-meta span { color:var(--light); font-weight:500; letter-spacing:0.06em; text-transform:none; }
+    h1 {
+      font-family:var(--serif); font-size:clamp(32px,4.6vw,50px); font-weight:900; line-height:1.12; margin-bottom:22px;
+      animation: fadeUp 0.7s 0.12s cubic-bezier(0.22,1,0.36,1) both;
+    }
+    .post-stats {
+      display:flex; align-items:center; gap:22px; margin-bottom:22px; font-size:13px; color:var(--mid); flex-wrap:wrap;
+      animation: fadeUp 0.6s 0.20s cubic-bezier(0.22,1,0.36,1) both;
+    }
+    .like-btn {
+      display:inline-flex; align-items:center; gap:8px; border:1px solid rgba(196,126,138,0.5);
+      background:var(--white); color:var(--black); font-family:var(--sans); font-size:13px; font-weight:600;
+      padding:9px 18px; border-radius:100px; cursor:pointer; transition:all 0.25s;
+    }
+    .like-btn:hover { border-color:var(--rose); transform:translateY(-2px) scale(1.03); box-shadow:0 8px 22px rgba(196,126,138,0.2); }
+    .like-btn:active { transform: scale(0.96); }
+    .like-btn.liked { background:var(--grad-h); color:var(--white); border-color:transparent; }
+
+    /* ── Share bar (reusable) ── */
+    .share-section {
+      display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+      padding:14px 18px; background:rgba(255,255,255,0.7); border:1px solid rgba(196,126,138,0.2);
+      border-radius:4px;
+    }
+    .share-label { font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--mid); margin-right:4px; white-space:nowrap; }
+    .share-btn {
+      display:inline-flex; align-items:center; gap:6px;
+      font-size:11px; font-weight:600; letter-spacing:0.06em;
+      padding:7px 13px; border-radius:100px; border:1px solid rgba(0,0,0,0.12);
+      background:var(--white); color:var(--black); text-decoration:none; cursor:pointer;
+      transition:all 0.22s cubic-bezier(0.22,1,0.36,1); white-space:nowrap; font-family:var(--sans);
+    }
+    .share-btn:hover { transform:translateY(-3px) scale(1.05); box-shadow:0 8px 22px rgba(0,0,0,0.12); border-color:transparent; }
+    .share-btn:active { transform: scale(0.96); }
+    .share-btn svg { width:14px; height:14px; flex-shrink:0; }
+    .share-btn.x-btn:hover   { background:#000;     color:#fff; }
+    .share-btn.fb-btn:hover  { background:#1877F2;  color:#fff; }
+    .share-btn.pin-btn:hover { background:#E60023;  color:#fff; }
+    .share-btn.li-btn:hover  { background:#0A66C2;  color:#fff; }
+    .share-btn.wa-btn:hover  { background:#25D366;  color:#fff; }
+    .share-btn.sms-btn:hover { background:#34C759;  color:#fff; }
+    .share-btn.copy-btn:hover{ background:var(--rose-dark); color:#fff; }
+
+    /* Top share (after stats, before photo) */
+    .share-top { animation: fadeUp 0.6s 0.26s cubic-bezier(0.22,1,0.36,1) both; margin-bottom:34px; }
+
+    /* ── Bottom share — icon circles ── */
+    @keyframes circleFloat  { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-6px) scale(1.04)} }
+    @keyframes gradientSpin { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+    @keyframes glowPulse    { 0%,100%{box-shadow:0 4px 18px rgba(196,126,138,0.45),0 0 0 0 rgba(196,126,138,0.3)} 50%{box-shadow:0 8px 30px rgba(196,126,138,0.7),0 0 0 8px rgba(196,126,138,0)} }
+
+    .share-bottom-section {
+      margin-top:52px; padding:36px 28px 32px;
+      background: transparent;
+      position:relative; overflow:hidden;
+    }
+    .share-bottom-label {
+      font-family:var(--serif); font-size:18px; font-style:italic; color:var(--black);
+      display:block; text-align:center; margin-bottom:6px;
+    }
+    .share-bottom-sub {
+      font-size:10px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase;
+      color:var(--rose-dark); display:block; text-align:center; margin-bottom:26px;
+    }
+    .share-bottom-icons {
+      display:flex; justify-content:center; align-items:center; gap:16px; flex-wrap:wrap;
+      position:relative; z-index:1;
+    }
+    .sbi {
+      width:52px; height:52px; border-radius:50%; border:none; cursor:pointer;
+      display:inline-flex; align-items:center; justify-content:center;
+      background:linear-gradient(135deg,#e8c4cb 0%,#C47E8A 30%,#a35f6d 65%,#3D1E25 85%,#0A0A0A 100%);
+      background-size:250% 250%;
+      color:#fff; text-decoration:none; font-family:var(--sans);
+      animation: glowPulse 3s ease-in-out infinite, circleFloat 3.5s ease-in-out infinite;
+      transition:transform 0.3s cubic-bezier(0.22,1,0.36,1), filter 0.3s ease;
+      position:relative; overflow:hidden;
+    }
+    .sbi::before {
+      content:''; position:absolute; inset:0; border-radius:50%;
+      background:linear-gradient(135deg,rgba(255,255,255,0.18) 0%,transparent 60%);
+      pointer-events:none;
+    }
+    .sbi:hover {
+      transform:translateY(-8px) scale(1.18) !important;
+      filter:brightness(1.2);
+      animation: gradientSpin 1.2s linear infinite, glowPulse 1s ease-in-out infinite;
+    }
+    .sbi:active { transform:scale(0.94) !important; filter:brightness(0.9); }
+    .sbi svg { width:20px; height:20px; position:relative; z-index:1; }
+    /* Stagger float delays so icons wave */
+    .sbi:nth-child(1) { animation-delay:0s,   0s;    }
+    .sbi:nth-child(2) { animation-delay:0.4s, 0.4s;  }
+    .sbi:nth-child(3) { animation-delay:0.8s, 0.8s;  }
+    .sbi:nth-child(4) { animation-delay:1.2s, 1.2s;  }
+    .sbi:nth-child(5) { animation-delay:1.6s, 1.6s;  }
+    .sbi:nth-child(6) { animation-delay:2.0s, 2.0s;  }
+    .sbi:nth-child(7) { animation-delay:2.4s, 2.4s;  }
+    /* Tooltip label on hover */
+    .sbi-wrap { position:relative; display:inline-flex; flex-direction:column; align-items:center; }
+    .sbi-wrap::after {
+      content:attr(data-label);
+      position:absolute; bottom:-26px;
+      font-size:9px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
+      color:rgba(196,126,138,0.9); white-space:nowrap; opacity:0;
+      transition:opacity 0.2s ease, transform 0.2s ease;
+      transform:translateY(-4px);
+    }
+    .sbi-wrap:hover::after { opacity:1; transform:translateY(0); }
+
+    /* Copy toast */
+    .copy-toast {
+      position:fixed; bottom:90px; left:50%; transform:translateX(-50%) translateY(20px);
+      background:var(--black); color:var(--white); font-size:12px; font-weight:600;
+      padding:10px 22px; border-radius:100px; opacity:0;
+      transition:all 0.35s cubic-bezier(0.22,1,0.36,1); pointer-events:none; z-index:9998;
+    }
+    .copy-toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+
+    /* ── Post photo & body ── */
+    .post-photo { position:relative; margin:6px 0 36px; animation: scalePop 0.8s 0.32s cubic-bezier(0.22,1,0.36,1) both; overflow:hidden; }
+    .post-photo::before { content:''; position:absolute; inset:-2px; background:linear-gradient(135deg,#C47E8A 0%,rgba(196,126,138,0.2) 45%,#B76E79 100%); z-index:0; }
+    .post-photo img { position:relative; z-index:1; display:block; width:100%; height:auto; transition:transform 0.6s cubic-bezier(0.22,1,0.36,1); }
+    .post-photo:hover img { transform: scale(1.02); }
+
+    .post-body { font-size:16px; color:#333; animation: fadeUp 0.7s 0.38s cubic-bezier(0.22,1,0.36,1) both; }
+    .post-body h2 { font-family:var(--serif); font-size:26px; margin:38px 0 12px; color:var(--black); position:relative; padding-left:14px; }
+    .post-body h2::before { content:''; position:absolute; left:0; top:4px; bottom:4px; width:3px; background:var(--rose); border-radius:2px; }
+    .post-body h3 { font-family:var(--serif); font-size:21px; margin:30px 0 10px; color:var(--black); }
+    .post-body p { margin-bottom:16px; }
+    .post-body em { font-style:italic; }
+    .post-body strong { font-weight:700; color:var(--black); }
+    .post-body blockquote {
+      font-family:var(--serif); font-style:italic; font-size:19px;
+      border-left:3px solid var(--rose); padding:16px 20px; margin:26px 0;
+      color:var(--black); background:rgba(196,126,138,0.06); border-radius:0 4px 4px 0;
+    }
+    .post-body ul,.post-body ol { margin:0 0 16px 22px; }
+    .post-body li { margin-bottom:6px; }
+    .post-body img { max-width:100%; border-radius:4px; }
+    .post-body a { color:var(--rose-dark); text-decoration:underline; text-underline-offset:3px; transition:color 0.2s; }
+    .post-body a:hover { color:var(--black); }
+    .post-body hr { border:none; border-top:1px solid rgba(196,126,138,0.3); margin:36px 0; }
+
+    /* ── Closing quote ── */
+    .post-closing-quote {
+      margin: 52px 0 0;
+      padding: 40px 0 8px;
+      border-top: 1px solid rgba(196,126,138,0.2);
+    }
+    .post-closing-quote p {
+      font-family: var(--serif);
+      font-size: clamp(22px, 3vw, 30px);
+      font-style: italic;
+      line-height: 1.45;
+      color: var(--black);
+      margin-bottom: 14px !important;
+    }
+    .post-closing-quote em {
+      font-style: italic;
+      color: var(--rose);
+    }
+    .post-closing-quote .quote-attr {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      font-style: normal;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--light);
+    }
+
+    /* ── Mid-article newsletter CTA ── */
+    .nl-cta-mid {
+      margin:40px 0; padding:32px 28px; background:#0A0A0A;
+      border-left:4px solid var(--rose); position:relative; overflow:hidden;
+    }
+    .nl-cta-mid::before {
+      content:''; position:absolute; top:0; right:0; width:180px; height:100%;
+      background:linear-gradient(135deg,transparent 0%,rgba(196,126,138,0.08) 100%);
+    }
+    .nl-cta-mid::after {
+      content:''; position:absolute; top:-40px; right:-40px; width:120px; height:120px;
+      border-radius:50%; background:rgba(196,126,138,0.08); pointer-events:none;
+    }
+    .nl-cta-mid-eyebrow { font-size:9px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--rose); display:block; margin-bottom:10px; }
+    .nl-cta-mid h3 { font-family:var(--serif); font-size:22px; color:var(--white); margin-bottom:10px; line-height:1.25; }
+    .nl-cta-mid p { font-size:14px; color:rgba(255,255,255,0.72); margin-bottom:18px; }
+    .nl-cta-mid a {
+      display:inline-block; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase;
+      background:linear-gradient(135deg,#e8c4cb 0%,#C47E8A 50%,#a35f6d 100%);
+      color:var(--black); text-decoration:none; padding:12px 24px;
+      box-shadow:0 4px 16px rgba(196,126,138,0.4); transition:all 0.25s cubic-bezier(0.22,1,0.36,1);
+    }
+    .nl-cta-mid a:hover { transform:translateY(-3px) scale(1.04); box-shadow:0 10px 28px rgba(196,126,138,0.55); }
+
+    /* ── Author card ── */
+    .author-card {
+      display:flex; gap:22px; align-items:flex-start;
+      margin-top:52px; padding:28px; background:rgba(255,255,255,0.8);
+      border:1px solid rgba(196,126,138,0.2); border-radius:4px;
+      position:relative; overflow:hidden;
+    }
+    .author-card::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:3px;
+      background: var(--grad-h);
+    }
+    .author-avatar {
+      width:72px; height:72px; border-radius:50%; object-fit:cover; flex-shrink:0;
+      border:2px solid var(--rose-light); transition:transform 0.3s ease,box-shadow 0.3s ease;
+    }
+    .author-avatar:hover { transform:scale(1.08); box-shadow:0 8px 24px rgba(196,126,138,0.3); }
+    .author-info { flex:1; }
+    .author-by { font-size:9px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--rose-dark); margin-bottom:4px; }
+    .author-name { font-family:var(--serif); font-size:18px; font-weight:700; margin-bottom:8px; }
+    .author-bio { font-size:13px; color:var(--mid); line-height:1.65; margin-bottom:12px; }
+    .author-links { display:flex; gap:10px; flex-wrap:wrap; }
+    .author-link {
+      font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
+      color:var(--rose-dark); text-decoration:none; border:1px solid rgba(196,126,138,0.4);
+      padding:5px 12px; border-radius:100px; transition:all 0.22s cubic-bezier(0.22,1,0.36,1);
+    }
+    .author-link:hover { background:var(--rose-dark); color:var(--white); border-color:transparent; transform:translateY(-2px); box-shadow:0 6px 16px rgba(163,95,109,0.3); }
+
+    /* ── Related posts — auto-scroll marquee ── */
+    @keyframes marqueeLeft { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+
+    .related-section { margin-top:60px; }
+    .related-eyebrow {
+      font-size:10px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase;
+      color:var(--rose-dark); margin-bottom:20px; display:flex; align-items:center; gap:12px;
+    }
+    .related-eyebrow::after { content:''; flex:1; height:1px; background:rgba(196,126,138,0.3); }
+
+    /* Marquee track — full bleed so cards scroll edge-to-edge */
+    .related-marquee-outer {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      overflow: hidden;
+      padding: 8px 0 16px;
+      /* Fade edges */
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
+    .related-marquee-track {
+      display: flex;
+      gap: 18px;
+      width: max-content;
+      animation: marqueeLeft 28s linear infinite;
+    }
+    .related-marquee-track:hover { animation-play-state: paused; }
+
+    .related-card {
+      background:var(--white); border:1px solid rgba(0,0,0,0.07);
+      text-decoration:none; color:var(--black); padding:0;
+      transition:all 0.3s cubic-bezier(0.22,1,0.36,1); display:block;
+      position:relative; overflow:hidden; flex-shrink:0;
+      width: 240px;
+    }
+    .related-card::before {
+      content:''; position:absolute; bottom:0; left:0; right:0; height:2px;
+      background:var(--grad-h); transform:scaleX(0); transition:transform 0.3s ease;
+      transform-origin:left; z-index:1;
+    }
+    .related-card:hover { transform:translateY(-6px); box-shadow:0 16px 40px rgba(0,0,0,0.14); border-color:var(--rose-light); }
+    .related-card:hover::before { transform:scaleX(1); }
+    .related-thumb {
+      width:100%; height:300px; object-fit:cover; display:block;
+      transition:transform 0.5s cubic-bezier(0.22,1,0.36,1);
+    }
+    .related-card:hover .related-thumb { transform:scale(1.06); }
+    .related-thumb-placeholder {
+      width:100%; height:300px; display:block;
+      background:linear-gradient(135deg,#e8c4cb 0%,#C47E8A 50%,#3D1E25 100%);
+    }
+    .related-body { padding:16px; }
+    .related-emoji { font-size:18px; margin-bottom:8px; display:block; transition:transform 0.3s ease; }
+    .related-card:hover .related-emoji { transform:scale(1.2) rotate(-5deg); }
+    .related-cat { font-size:9px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--rose-dark); margin-bottom:5px; }
+    .related-title { font-family:var(--serif); font-size:14px; font-weight:700; line-height:1.35; margin-bottom:8px; }
+    .related-read { font-size:11px; color:var(--light); }
+
+    /* ── Next/Prev navigation (inline, stays in doc flow) ── */
+    .post-nav {
+      display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:52px;
+      border-top:1px solid rgba(196,126,138,0.25); padding-top:32px;
+    }
+    .post-nav-item {
+      text-decoration:none; color:var(--black); padding:18px;
+      background:var(--white); border:1px solid rgba(0,0,0,0.07);
+      transition:all 0.25s cubic-bezier(0.22,1,0.36,1); position:relative; overflow:hidden;
+    }
+    .post-nav-item::after {
+      content:''; position:absolute; inset:0; background:var(--grad-h); opacity:0;
+      transition:opacity 0.25s; z-index:0;
+    }
+    .post-nav-item:hover::after { opacity:0.04; }
+    .post-nav-item:hover { border-color:var(--rose-light); box-shadow:0 8px 28px rgba(0,0,0,0.1); transform:translateY(-3px); }
+    .post-nav-dir { font-size:9px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--rose-dark); margin-bottom:6px; display:block; position:relative; z-index:1; }
+    .post-nav-title { font-family:var(--serif); font-size:15px; font-weight:700; line-height:1.3; position:relative; z-index:1; }
+    .post-nav-next { text-align:right; }
+
+    /* ── Back row ── */
+    .back-row { margin-top:40px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+    .back-row a { font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--rose-dark); text-decoration:none; transition:letter-spacing 0.2s,opacity 0.2s; }
+    .back-row a:hover { letter-spacing:0.22em; }
+
+    /* ── Back to top button ── */
+    .back-top {
+      position:fixed; bottom:28px; right:28px;
+      width:44px; height:44px; border-radius:50%;
+      background:var(--black); color:var(--white);
+      border:none; cursor:pointer; display:flex; align-items:center; justify-content:center;
+      opacity:0; transform:translateY(12px);
+      transition:all 0.3s cubic-bezier(0.22,1,0.36,1); z-index:999;
+      box-shadow:0 4px 16px rgba(0,0,0,0.25);
+    }
+    .back-top.visible { opacity:1; transform:translateY(0); }
+    .back-top:hover { background:var(--rose-dark); transform:translateY(-3px) scale(1.1); box-shadow:0 8px 24px rgba(163,95,109,0.4); }
+    .back-top svg { width:18px; height:18px; }
+
+    .coming { text-align:center; padding:80px 0; }
+    .coming h1 { margin-bottom:14px; }
+    .coming p { color:var(--mid); }
+
+    /* ══════════════════════════════════
+       FOOTER
+    ══════════════════════════════════ */
+    footer { display:block; background:#080808; padding:0; text-align:initial; gap:0; position:relative; overflow:hidden; }
+    .footer-statement { text-align:center; padding:80px 64px 56px; border-bottom:1px solid rgba(255,255,255,0.07); position:relative; }
+    .footer-eyebrow { font-size:10px; font-weight:700; letter-spacing:0.28em; text-transform:uppercase; color:var(--rose); display:block; margin-bottom:24px; }
+    .footer-name { font-family:var(--serif); font-size:clamp(40px,6vw,76px); font-weight:700; line-height:1.0; color:var(--white); display:block; margin-bottom:8px; }
+    .footer-name em { font-style:italic; font-weight:300; background:linear-gradient(90deg,#C47E8A 0%,#dbb0b8 25%,#f0dde1 50%,#dbb0b8 75%,#C47E8A 100%); background-size:200% auto; animation:shimmer 6s ease-in-out infinite; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .fn-first { display:inline-block; }
+    .footer-desc { font-size:15px; color:rgba(255,255,255,0.82); margin-top:20px; letter-spacing:0.02em; margin-bottom:0; }
+    .footer-socials-row { display:flex; justify-content:center; gap:14px; margin-top:36px; }
+    .footer-icon-btn { width:46px; height:46px; border-radius:50%; border:1px solid rgba(255,255,255,0.30); background:rgba(255,255,255,0.07); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.90); text-decoration:none; transition:all 0.3s cubic-bezier(0.22,1,0.36,1); animation:iconFloat 3.6s ease-in-out infinite; }
+    .footer-icon-btn svg { width:17px; height:17px; }
+    .footer-icon-btn:hover { background:var(--rose-dark); border-color:var(--rose-dark); transform:translateY(-4px) scale(1.1); }
+    .footer-socials-row .footer-icon-btn:nth-child(1) { animation-delay:0s; }
+    .footer-socials-row .footer-icon-btn:nth-child(2) { animation-delay:0.45s; }
+    .footer-socials-row .footer-icon-btn:nth-child(3) { animation-delay:0.9s; }
+    .footer-socials-row .footer-icon-btn:nth-child(4) { animation-delay:1.35s; }
+    .footer-socials-row .footer-icon-btn:nth-child(5) { animation-delay:1.8s; }
+    .footer-cols { display:grid; grid-template-columns:repeat(4,1fr); gap:32px; max-width:1000px; margin:0 auto; padding:48px 64px; border-bottom:1px solid rgba(255,255,255,0.07); }
+    .footer-col { display:flex; flex-direction:column; gap:10px; align-items:center; text-align:center; }
+    .footer-col-title { font-size:10px; font-weight:700; letter-spacing:0.24em; text-transform:uppercase; color:var(--rose); margin-bottom:6px; }
+    .footer-col a { font-size:13px; color:rgba(255,255,255,0.7); text-decoration:none; transition:color 0.2s,transform 0.2s; width:fit-content; }
+    .footer-col a:hover { color:var(--rose-light); transform:translateX(3px); }
+    .footer-essentials { display:none; }
+    .footer-bottom { display:flex; align-items:center; justify-content:space-between; padding:20px 64px; background:#080808; border-top:1px solid rgba(255,255,255,0.07); }
+    .footer-copy { font-size:11px; color:rgba(255,255,255,0.55); letter-spacing:0.04em; margin:0; }
+    .footer-tagline { font-family:var(--serif); font-size:15px; font-style:italic; color:#e8c4cb !important; margin:0; }
+
+    /* ══════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════ */
+    @media (max-width:1100px) {
+      .next-post-float { display:none; }
+    }
+    @media (max-width:800px) {
+      .nav-links{display:none;} .nav-cta{display:none;} .hamburger{display:flex;} .mobile-menu{display:block;} .navbar{padding:18px 24px;}
+      main { padding:40px 22px 72px; }
+      .related-grid { grid-template-columns:1fr; }
+      .post-nav { grid-template-columns:1fr; }
+      .post-nav-next { text-align:left; }
+      .author-card { flex-direction:column; gap:14px; }
+      .footer-statement { padding:56px 24px 40px; }
+      .footer-cols { display:none; }
+      .footer-essentials { display:flex; flex-wrap:nowrap; white-space:nowrap; justify-content:center; align-items:center; padding:30px 12px 34px; border-top:1px solid rgba(255,255,255,0.07); }
+      .footer-essentials a { font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.75); text-decoration:none; padding:6px 0; }
+      .footer-essentials a+a::before { content:'·'; color:rgba(196,126,138,0.7); margin:0 9px; font-weight:700; }
+      .footer-bottom { padding:16px 24px; flex-direction:column; gap:8px; text-align:center; }
+      .share-section { gap:7px; }
+      .share-btn { font-size:10px; padding:6px 10px; }
+      .back-top { bottom:18px; right:18px; }
+    }
   </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9FBEC5V5BW"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js',new Date()); gtag('config','G-9FBEC5V5BW');
+  </script>
 </head>
 <body>
+  <div class="progress-bar" id="progressBar"></div>
+
   <nav class="navbar">
     <a class="logo" href="/">Lisa Haven</a>
     <ul class="nav-links">
+      <li><a href="/start-here">Start Here</a></li>
       <li><a href="/#blog">Blog</a></li>
       <li><a href="/#about">About</a></li>
       <li><a href="/#founder">My Story</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
     <a href="/#newsletter" class="nav-cta">Join the Inner Circle</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-nav-links">
+      <a href="/start-here" class="mobile-nav-link">Start Here</a>
+      <a href="/#blog"      class="mobile-nav-link">Blog</a>
+      <a href="/#about"     class="mobile-nav-link">About</a>
+      <a href="/#founder"   class="mobile-nav-link">My Story</a>
+      <a href="/contact"    class="mobile-nav-link">Contact</a>
+      <a href="/#newsletter" class="mobile-nav-link mobile-nav-cta">Join the Inner Circle 🖤</a>
+    </nav>
+  </div>
+
+
+  <div class="copy-toast" id="copyToast">✓ Link copied!</div>
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
   <main id="main">
-    <p style="color:var(--light); font-size:14px;">Loading story…</p>
+    <p style="color:var(--light);font-size:14px;">Loading story…</p>
   </main>
+
   <footer>
-    <p>&copy; 2026 Lisa Haven. All rights reserved.</p>
-    <a href="/">lisahaven.co</a>
+    <div class="footer-statement sr sr-up">
+      <span class="footer-eyebrow">Founder · Mom · Entrepreneur · Florida</span>
+      <span class="footer-name"><span class="fn-first">Lisa</span> <em>Haven</em></span>
+      <p class="footer-desc">Sharing the real journey — the wins, the mess, and everything in between.</p>
+      <div class="footer-socials-row">
+        <a href="https://www.instagram.com/havenly1920" class="footer-icon-btn" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/lisahaven" class="footer-icon-btn" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.pinterest.com/lisahaven19" class="footer-icon-btn" target="_blank" aria-label="Pinterest">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+        </a>
+        <a href="https://poshmark.com/closet/lisahaven" class="footer-icon-btn" target="_blank" aria-label="Poshmark">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-.5 14.5v-9l7 4.5-7 4.5z"/></svg>
+        </a>
+        <a href="/#newsletter" class="footer-icon-btn" target="_blank" aria-label="Newsletter">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-cols sr sr-up sr-d2">
+      <div class="footer-col">
+        <span class="footer-col-title">Explore</span>
+        <a href="/">Home</a><a href="/start-here">Start Here</a><a href="/#blog">Blog</a><a href="/#about">My Story</a><a href="/#founder">Meet the Founder</a><a href="/#newsletter">Newsletter</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-title">Pages</span>
+        <a href="/contact">Contact</a><a href="/press-kit">Press Kit</a><a href="/shop">Shop</a><a href="/privacy-policy">Privacy Policy</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-title">Brands</span>
+        <a href="https://havenly.co" target="_blank">HAVENLY ↗</a><a href="https://vixaapp.ai" target="_blank">VIXA ↗</a><a href="https://lumaprompt.ai" target="_blank">LUMAPROMPT.AI ↗</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-title">Connect</span>
+        <a href="https://www.instagram.com/havenly1920" target="_blank">Instagram ↗</a><a href="https://www.linkedin.com/in/lisahaven" target="_blank">LinkedIn ↗</a><a href="https://www.pinterest.com/lisahaven19" target="_blank">Pinterest ↗</a><a href="https://poshmark.com/closet/lisahaven" target="_blank">Poshmark ↗</a><a href="/#newsletter" target="_blank">Join The Haven ↗</a>
+      </div>
+    </div>
+    <div class="footer-essentials">
+      <a href="/start-here">Start Here</a><a href="/#blog">Blog</a><a href="/contact">Contact</a><a href="/#newsletter">Newsletter</a>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Lisa Haven. All rights reserved.</p>
+      <p class="footer-tagline">On the journey. Always. 💗</p>
+    </div>
   </footer>
+
   <script>
     const COUNTER = 'https://abacus.jasoncameron.dev';
     const NS = 'lisahaven-co';
     const slug = new URLSearchParams(location.search).get('slug') || '';
     const main = document.getElementById('main');
+
+    // ── Hamburger ──
+    document.addEventListener('DOMContentLoaded', function () {
+      var hb = document.getElementById('hamburger');
+      var mm = document.getElementById('mobileMenu');
+      if (hb && mm) {
+        hb.addEventListener('click', function () {
+          var open = !mm.classList.contains('open');
+          mm.classList.toggle('open', open);
+          hb.classList.toggle('open', open);
+          hb.setAttribute('aria-expanded', open);
+        });
+      }
+    });
+
+    // ── Scroll-reveal IntersectionObserver ──
+    function initScrollReveal() {
+      const els = document.querySelectorAll('.sr');
+      if (!els.length) return;
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(el => io.observe(el));
+    }
+
+    // ── Progress bar + back-to-top + floating next post ──
+    let floatVisible = false;
+    let floatCollapsed = false;
+    window.addEventListener('scroll', function () {
+      const doc = document.documentElement;
+      const scrollTop = doc.scrollTop || document.body.scrollTop;
+      const scrollHeight = doc.scrollHeight - doc.clientHeight;
+      const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+      document.getElementById('progressBar').style.width = pct + '%';
+
+      // Back to top
+      const btn = document.getElementById('backTop');
+      btn.classList.toggle('visible', scrollTop > 400);
+
+      // Floating next post — appear after 300px scroll
+      const fp = document.getElementById('nextPostFloat');
+      if (fp && fp.style.display !== 'none') {
+        if (scrollTop > 300 && !floatVisible) {
+          floatVisible = true;
+          fp.classList.add('visible');
+        } else if (scrollTop <= 300 && floatVisible) {
+          floatVisible = false;
+          fp.classList.remove('visible');
+        }
+      }
+    });
+
+    // ── Back to top ──
+    document.getElementById('backTop').addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ── Floating panel toggle ──
+    const tabBtn = document.getElementById('nextPostTab');
+    if (tabBtn) {
+      tabBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        const fp = document.getElementById('nextPostFloat');
+        floatCollapsed = !floatCollapsed;
+        fp.classList.toggle('collapsed', floatCollapsed);
+        tabBtn.querySelector('svg polyline').setAttribute('points', floatCollapsed ? '15 18 9 12 15 6' : '9 18 15 12 9 6');
+      });
+    }
+
+    // ── Copy link toast ──
+    function showToast() {
+      const t = document.getElementById('copyToast');
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2400);
+    }
 
     function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
 
@@ -91,31 +664,211 @@
       </div>`;
     }
 
-    fetch('/posts-index.json')
+    // ── Build BOTTOM share bar — animated gradient icon circles ──
+    function buildShareBarBottom(url, title) {
+      const enc = encodeURIComponent;
+      const shareText = enc(title + ' — ' + url);
+      const icons = [
+        { cls:'x-btn',   label:'X / Twitter',  href:`https://twitter.com/intent/tweet?text=${enc(title)}&url=${enc(url)}`,        svg:`<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>` },
+        { cls:'fb-btn',  label:'Facebook',      href:`https://www.facebook.com/sharer/sharer.php?u=${enc(url)}`,                   svg:`<svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.027 4.388 11.024 10.125 11.927v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.513c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796v8.437C19.612 23.097 24 18.1 24 12.073z"/></svg>` },
+        { cls:'pin-btn', label:'Pinterest',     href:`https://pinterest.com/pin/create/button/?url=${enc(url)}&description=${enc(title)}`, svg:`<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>` },
+        { cls:'li-btn',  label:'LinkedIn',      href:`https://www.linkedin.com/sharing/share-offsite/?url=${enc(url)}`,             svg:`<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>` },
+        { cls:'wa-btn',  label:'WhatsApp',      href:`https://wa.me/?text=${shareText}`,                                            svg:`<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>` },
+        { cls:'sms-btn', label:'iMessage',      href:`sms:?body=${shareText}`,                                                      svg:`<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>` },
+        { cls:'copy-btn',label:'Copy Link',     href:'#',                                                                           svg:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>` },
+      ];
+      const btns = icons.map(ic => {
+        const isBtn = ic.cls === 'copy-btn';
+        const tag = isBtn ? 'button' : 'a';
+        const attrs = isBtn
+          ? `onclick="navigator.clipboard.writeText('${url}').then(()=>showToast());return false;"`
+          : `href="${ic.href}" target="_blank" rel="noopener"`;
+        return `<span class="sbi-wrap" data-label="${ic.label}"><${tag} class="sbi ${ic.cls}" ${attrs} aria-label="${ic.label}">${ic.svg}</${tag}></span>`;
+      }).join('');
+      return `
+        <div class="share-bottom-section sr sr-up">
+          <span class="share-bottom-label">If this resonated, share it. 💗</span>
+          <span class="share-bottom-sub">Every share helps another woman find her path</span>
+          <div class="share-bottom-icons">${btns}</div>
+        </div>`;
+    }
+
+    // ── Build TOP share HTML (text pill buttons) ──
+    function buildShareBar(url, title, extraClass) {
+      const enc = encodeURIComponent;
+      const shareText = enc(title + ' — ' + url);
+      return `
+        <div class="share-section ${extraClass||''}">
+          <span class="share-label">Share</span>
+          <a class="share-btn x-btn" href="https://twitter.com/intent/tweet?text=${enc(title)}&url=${enc(url)}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            X
+          </a>
+          <a class="share-btn fb-btn" href="https://www.facebook.com/sharer/sharer.php?u=${enc(url)}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.027 4.388 11.024 10.125 11.927v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.513c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796v8.437C19.612 23.097 24 18.1 24 12.073z"/></svg>
+            Facebook
+          </a>
+          <a class="share-btn pin-btn" href="https://pinterest.com/pin/create/button/?url=${enc(url)}&description=${enc(title)}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            Pinterest
+          </a>
+          <a class="share-btn li-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=${enc(url)}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a class="share-btn wa-btn" href="https://wa.me/?text=${shareText}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            WhatsApp
+          </a>
+          <a class="share-btn sms-btn" href="sms:?body=${shareText}">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+            iMessage
+          </a>
+          <button class="share-btn copy-btn" onclick="navigator.clipboard.writeText('${url}').then(()=>showToast())">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copy Link
+          </button>
+        </div>`;
+    }
+
+    // ── Build related posts — marquee ──
+    function buildRelated(allPosts, currentSlug) {
+      const others = allPosts.filter(p => p.slug !== currentSlug);
+      if (!others.length) return '';
+      // Need enough cards to fill the viewport; repeat until we have at least 8
+      let pool = [...others];
+      while (pool.length < 8) pool = [...pool, ...others];
+      const makeCard = p => `
+        <a class="related-card" href="/post?slug=${esc(p.slug)}">
+          ${p.image ? `<img class="related-thumb" src="${esc(p.image)}" alt="${esc(p.title)}" loading="lazy">` : `<span class="related-thumb-placeholder"></span>`}
+          <div class="related-body">
+            <span class="related-emoji">${esc(p.emoji||'✨')}</span>
+            <div class="related-cat">${esc(p.category)}</div>
+            <div class="related-title">${esc(p.title)}</div>
+            <div class="related-read">⏱ ${esc(p.readTime)}</div>
+          </div>
+        </a>`;
+      // Duplicate the set so the marquee loops seamlessly (translateX -50%)
+      const cards = pool.map(makeCard).join('');
+      return `
+        <div class="related-section sr sr-up">
+          <div class="related-eyebrow">More from Lisa Haven</div>
+          <div class="related-marquee-outer">
+            <div class="related-marquee-track">
+              ${cards}${cards}
+            </div>
+          </div>
+        </div>`;
+    }
+
+    // ── Build next/prev nav ──
+    function buildPostNav(allPosts, currentSlug) {
+      const idx = allPosts.findIndex(p => p.slug === currentSlug);
+      const prev = idx < allPosts.length - 1 ? allPosts[idx + 1] : null;
+      const next = idx > 0 ? allPosts[idx - 1] : null;
+      if (!prev && !next) return '';
+      const prevHtml = prev ? `
+        <a class="post-nav-item post-nav-prev sr sr-left" href="/post?slug=${esc(prev.slug)}">
+          <span class="post-nav-dir">← Previous Post</span>
+          <span class="post-nav-title">${esc(prev.title)}</span>
+        </a>` : '<div></div>';
+      const nextHtml = next ? `
+        <a class="post-nav-item post-nav-next sr sr-right" href="/post?slug=${esc(next.slug)}">
+          <span class="post-nav-dir">Next Post →</span>
+          <span class="post-nav-title">${esc(next.title)}</span>
+        </a>` : '<div></div>';
+      return `<div class="post-nav">${prevHtml}${nextHtml}</div>`;
+    }
+
+    // ── Setup floating next post ──
+    function setupFloatingNext(allPosts, currentSlug) {
+      const idx = allPosts.findIndex(p => p.slug === currentSlug);
+      const next = idx > 0 ? allPosts[idx - 1] : null;
+      if (!next) return;
+      const fp = document.getElementById('nextPostFloat');
+      if (!fp) return;
+      document.getElementById('nextPostLink').href = '/post?slug=' + encodeURIComponent(next.slug);
+      document.getElementById('nextPostEmoji').textContent = next.emoji || '✨';
+      document.getElementById('nextPostTitle').textContent = next.title;
+      fp.style.display = 'block';
+    }
+
+    // ── Main fetch ──
+    fetch('/blog-posts.json')
       .then(r => r.ok ? r.json() : [])
       .then(posts => {
         const post = (posts || []).find(p => p.slug === slug);
         if (!post) { comingSoon(); return; }
+
         document.title = post.title + ' — Lisa Haven';
+        const pageUrl = 'https://lisahaven.co/post?slug=' + encodeURIComponent(slug);
         const d = new Date(post.date);
-        const dateStr = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        const dateStr = d.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
         const photo = post.image ? `<div class="post-photo"><img src="${esc(post.image)}" alt="${esc(post.title)}"></div>` : '';
-        const body = post.body && post.body.trim() ? marked.parse(post.body) : '<p><em>Full story coming soon — stay tuned! ✨</em></p>';
+
+        let bodyHtml = post.body && post.body.trim() ? marked.parse(post.body) : '<p><em>Full story coming soon — stay tuned! ✨</em></p>';
+
+        const nlCta = `
+          <div class="nl-cta-mid sr sr-scale">
+            <span class="nl-cta-mid-eyebrow">Join The Haven</span>
+            <h3>Get my next post before anyone else.</h3>
+            <p>No fluff. No filler. Real founder strategy, sent straight to your inbox.</p>
+            <a href="/#newsletter" target="_blank">Subscribe Free →</a>
+          </div>`;
+
+        // Inject CTA after 3rd </p>
+        let injected = 0;
+        bodyHtml = bodyHtml.replace(/<\/p>/g, m => { injected++; return m + (injected === 3 ? nlCta : ''); });
+
         main.innerHTML = `
-          <p class="post-meta">${esc(post.emoji || '✨')} ${esc(post.category)} <span>&nbsp;·&nbsp; ${dateStr} &nbsp;·&nbsp; ⏱ ${esc(post.readTime)}</span></p>
+          <p class="post-meta">${esc(post.emoji||'✨')} ${esc(post.category)} <span>&nbsp;·&nbsp; ${dateStr} &nbsp;·&nbsp; ⏱ ${esc(post.readTime)}</span></p>
           <h1>${esc(post.title)}</h1>
           <div class="post-stats">
             <button class="like-btn" id="likeBtn">♡ <span id="likeCount">–</span></button>
             <span>👁 <span id="viewCount">–</span> reads</span>
           </div>
+
           ${photo}
-          <div class="post-body">${body}</div>
-          <div class="back-row">
+          <div class="post-body">${bodyHtml}</div>
+
+          ${post.quote ? `
+          <div class="post-closing-quote sr sr-up">
+            <p>${esc(post.quote.text1)}<em>${esc(post.quote.text2)}</em>" 🖤</p>
+            <span class="quote-attr">— ${esc(post.quote.author)}</span>
+          </div>` : ''}
+
+          ${buildShareBarBottom(pageUrl, post.title)}
+
+          <div class="author-card sr sr-up">
+            <img class="author-avatar" src="/images/uploads/lisa-photo.jpg" alt="Lisa Haven" onerror="this.style.display='none'">
+            <div class="author-info">
+              <div class="author-by">Written by</div>
+              <div class="author-name">Lisa Haven</div>
+              <p class="author-bio">Founder &amp; CEO of VIXA, HAVENLY, and LUMAPROMPT.AI. Single mom of three daughters building a global empire from Boca Raton, Florida. I document the real journey — every decision, every lesson, every win.</p>
+              <div class="author-links">
+                <a class="author-link" href="https://www.instagram.com/havenly1920" target="_blank">Instagram</a>
+                <a class="author-link" href="https://www.linkedin.com/in/lisahaven" target="_blank">LinkedIn</a>
+                <a class="author-link" href="https://poshmark.com/closet/lisahaven" target="_blank">Poshmark</a>
+                <a class="author-link" href="/#newsletter" target="_blank">Newsletter</a>
+              </div>
+            </div>
+          </div>
+
+          ${buildPostNav(posts, slug)}
+          ${buildRelated(posts, slug)}
+
+          <div class="back-row sr sr-up">
             <a href="/">&larr; Back to the blog</a>
             <a href="/#newsletter">Join The Haven &rarr;</a>
           </div>`;
 
-        // ── View counter (counts once per page load) ──
+        // Init scroll reveal after DOM inserted
+        setTimeout(initScrollReveal, 50);
+
+        // Setup floating panel
+        setupFloatingNext(posts, slug);
+
+        // ── View counter ──
         fetch(`${COUNTER}/hit/${NS}/views-${slug}`)
           .then(r => r.json())
           .then(d => { document.getElementById('viewCount').textContent = d.value.toLocaleString(); })
@@ -127,7 +880,7 @@
         const likedKey = 'liked-' + slug;
         fetch(`${COUNTER}/get/${NS}/likes-${slug}`)
           .then(r => r.json())
-          .then(d => { likeCount.textContent = (d.value || 0).toLocaleString(); })
+          .then(d => { likeCount.textContent = (d.value||0).toLocaleString(); })
           .catch(() => { likeCount.textContent = '0'; });
         if (localStorage.getItem(likedKey)) { likeBtn.classList.add('liked'); likeBtn.firstChild.textContent = '♥ '; }
         likeBtn.addEventListener('click', () => {
@@ -138,10 +891,13 @@
           fetch(`${COUNTER}/hit/${NS}/likes-${slug}`)
             .then(r => r.json())
             .then(d => { likeCount.textContent = d.value.toLocaleString(); })
-            .catch(() => { likeCount.textContent = (parseInt(likeCount.textContent || '0') + 1); });
+            .catch(() => { likeCount.textContent = (parseInt(likeCount.textContent||'0')+1); });
         });
       })
       .catch(comingSoon);
+
+    // Footer scroll reveal (for elements already in DOM)
+    document.addEventListener('DOMContentLoaded', initScrollReveal);
   </script>
 </body>
 </html>

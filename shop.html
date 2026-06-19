@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Playbook Shop — Lisa Haven</title>
+  <meta name="description" content="The Playbook Shop — ebooks, templates, and the artificial intelligence systems Lisa Haven uses to build her brands. Coming soon.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #F2EDE6; --cream-dark: #E8E1D8; --black: #0A0A0A; --charcoal: #1A1A1A;
+      --mid: #555; --light: #888; --white: #FFFFFF;
+      --rose: #C47E8A; --rose-dark: #a35f6d; --rose-light: #e8c4cb;
+      --grad-h: linear-gradient(90deg, #0A0A0A 0%, #3d1e25 55%, #C47E8A 100%);
+      --serif: 'Playfair Display', Georgia, serif; --sans: 'Inter', system-ui, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--sans); background: var(--cream); color: var(--black); line-height: 1.7; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; padding: 24px 48px; }
+    .topbar a.logo { font-family: var(--serif); font-weight: 700; font-size: 22px; letter-spacing: 0.02em; color: var(--black); text-decoration: none; }
+    .topbar a.back { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mid); text-decoration: none; }
+    .topbar a.back:hover { color: var(--rose-dark); }
+    main { max-width: 860px; margin: 0 auto; padding: 48px 28px 96px; }
+    .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--rose-dark); display: block; margin-bottom: 16px; }
+    h1 { font-family: var(--serif); font-size: clamp(36px, 5vw, 58px); font-weight: 900; line-height: 1.08; margin-bottom: 24px; }
+    h1 em { font-style: italic; font-weight: 400; }
+    h2 { font-family: var(--serif); font-size: 26px; margin: 48px 0 14px; }
+    p { font-size: 15px; color: var(--mid); margin-bottom: 14px; }
+    a { color: var(--rose-dark); }
+    .divider { width: 56px; height: 2px; background: var(--grad-h); margin: 40px 0; }
+    .start-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0 8px; }
+    .start-card {
+      display: block; background: var(--white); border: 1px solid var(--cream-dark);
+      border-radius: 16px; padding: 22px 20px; text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .start-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(10,10,10,0.08); }
+    .start-card .emoji { font-size: 24px; display: block; margin-bottom: 10px; }
+    .start-card .cat { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose-dark); display: block; margin-bottom: 8px; }
+    .start-card h3 { font-family: var(--serif); font-size: 17px; line-height: 1.3; color: var(--black); margin-bottom: 8px; }
+    .start-card p { font-size: 13px; margin: 0; }
+    .brand-list { display: grid; gap: 14px; margin: 24px 0 8px; }
+    .brand-item { background: var(--white); border: 1px solid var(--cream-dark); border-radius: 16px; padding: 20px 24px; }
+    .brand-item strong { font-size: 14px; letter-spacing: 0.06em; }
+    .brand-item p { font-size: 14px; margin: 4px 0 0; }
+    .cta-band {
+      background: var(--black); border-radius: 20px; padding: 36px 32px; margin-top: 56px; text-align: center;
+    }
+    .cta-band h2 { color: var(--white); margin: 0 0 10px; }
+    .cta-band p { color: rgba(255,255,255,0.7); margin-bottom: 22px; }
+    .cta-btn {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--black); background: linear-gradient(135deg, #e8c4cb 0%, #C47E8A 50%, #a35f6d 100%);
+      padding: 14px 32px; border-radius: 100px; text-decoration: none;
+      box-shadow: 0 4px 16px rgba(196,126,138,0.35); transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(196,126,138,0.5); }
+    footer { background: #080808; padding: 22px 48px; display: flex; justify-content: space-between; align-items: center; margin-top: 0; }
+    footer p { font-size: 11px; color: rgba(255,255,255,0.55); margin: 0; }
+    footer a { font-size: 11px; color: var(--rose-light); text-decoration: none; }
+    @media (max-width: 700px) {
+      .topbar { padding: 20px 24px; }
+      main { padding: 32px 22px 72px; }
+      .start-cards { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  
+    /* ── Unified site footer ── */
+    footer { flex-direction: column; gap: 12px; align-items: center; text-align: center; padding: 28px 24px; }
+    .sf-links { display: flex; flex-wrap: nowrap; white-space: nowrap; justify-content: center; align-items: center; }
+    .sf-links a { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.75); text-decoration: none; }
+    .sf-links a + a::before { content: '·'; color: rgba(196,126,138,0.7); margin: 0 9px; font-weight: 700; }
+    .sf-tag { color: #e8c4cb !important; }
+  
+    /* ── Unified top navigation (matches homepage) ── */
+    .navbar { display: flex; justify-content: space-between; align-items: center; padding: 16px 48px; background: var(--cream); border-bottom: 1px solid rgba(10,10,10,0.08); }
+    .navbar .logo { font-family: var(--serif); font-weight: 700; font-size: 25px; letter-spacing: 0.02em; color: var(--black); text-decoration: none; }
+    .nav-links { display: flex; gap: 34px; list-style: none; align-items: center; }
+    .nav-links a { font-size: 15px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(10,10,10,0.7); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--rose-dark); }
+    .nav-cta {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--black); background: linear-gradient(135deg, #e8c4cb 0%, #C47E8A 50%, #a35f6d 100%);
+      border: none; border-radius: 0; text-decoration: none; padding: 11px 26px;
+      box-shadow: 0 4px 16px rgba(196,126,138,0.35); transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(196,126,138,0.5); }
+    .hamburger { display: none; flex-direction: column; justify-content: space-between; width: 26px; height: 18px; background: none; border: none; cursor: pointer; padding: 0; z-index: 200; }
+    .hamburger span { display: block; height: 2px; width: 100%; background: var(--black); border-radius: 2px; transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease; }
+    .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    .mobile-menu { display: none; position: fixed; top: 50px; left: 0; right: 0; background: var(--cream); border-bottom: 1px solid rgba(10,10,10,0.1); z-index: 99; transform: translateY(-110%); opacity: 0; transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease; box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+    .mobile-menu.open { transform: translateY(0); opacity: 1; }
+    .mobile-nav-links { display: flex; flex-direction: column; padding: 20px 0 28px; }
+    .mobile-nav-link { font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(10,10,10,0.75); text-decoration: none; padding: 15px 32px; border-bottom: 1px solid rgba(10,10,10,0.06); }
+    .mobile-nav-cta { margin: 20px 28px 0; padding: 14px 24px; background: linear-gradient(135deg, #e8c4cb 0%, #C47E8A 50%, #a35f6d 100%); color: #0A0A0A !important; font-weight: 700 !important; text-align: center; border-radius: 0; border-bottom: none; letter-spacing: 0.12em; box-shadow: 0 4px 16px rgba(196,126,138,0.35); }
+    @media (max-width: 800px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu { display: block; }
+      .navbar { padding: 12px 20px; } .navbar .logo { font-size: 20px; }
+    }
+  
+    /* ── Unified site footer (matches homepage) ── */
+    footer { display: block; background: #080808; padding: 0; text-align: initial; gap: 0; position: relative; overflow: hidden; }
+    .footer-statement { text-align: center; padding: 80px 64px 56px; border-bottom: 1px solid rgba(255,255,255,0.07); position: relative; }
+    .footer-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--rose); display: block; margin-bottom: 24px; }
+    .footer-name { font-family: var(--serif); font-size: clamp(40px, 6vw, 76px); font-weight: 700; line-height: 1.0; color: var(--white); display: block; margin-bottom: 8px; }
+    @keyframes footerShimmer { 0% { background-position: 0% center; } 50% { background-position: 100% center; } 100% { background-position: 0% center; } }
+    .footer-name em { font-style: italic; font-weight: 300; background: linear-gradient(90deg, #C47E8A 0%, #dbb0b8 25%, #f0dde1 50%, #dbb0b8 75%, #C47E8A 100%); background-size: 200% auto; animation: footerShimmer 6s ease-in-out infinite; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .fn-first { display: inline-block; }
+    .footer-desc { font-size: 15px; color: rgba(255,255,255,0.82); margin-top: 20px; letter-spacing: 0.02em; margin-bottom: 0; }
+    .footer-socials-row { display: flex; justify-content: center; gap: 14px; margin-top: 36px; }
+    @keyframes iconFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    .footer-icon-btn { width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.30); background: rgba(255,255,255,0.07); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.90); text-decoration: none; transition: all 0.3s cubic-bezier(0.22,1,0.36,1); animation: iconFloat 3.6s ease-in-out infinite; }
+    .footer-icon-btn svg { width: 17px; height: 17px; }
+    .footer-socials-row .footer-icon-btn:nth-child(1) { animation-delay: 0s; }
+    .footer-socials-row .footer-icon-btn:nth-child(2) { animation-delay: 0.45s; }
+    .footer-socials-row .footer-icon-btn:nth-child(3) { animation-delay: 0.9s; }
+    .footer-socials-row .footer-icon-btn:nth-child(4) { animation-delay: 1.35s; }
+    .footer-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; max-width: 1000px; margin: 0 auto; padding: 48px 64px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .footer-col { display: flex; flex-direction: column; gap: 10px; align-items: center; text-align: center; }
+    .footer-col-title { font-size: 10px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--rose); margin-bottom: 6px; }
+    .footer-col a { font-size: 13px; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; width: fit-content; }
+    .footer-col a:hover { color: var(--rose-light); }
+    .footer-essentials { display: none; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding: 20px 64px; background: #080808; border-top: 1px solid rgba(255,255,255,0.07); }
+    .footer-copy { font-size: 11px; color: rgba(255,255,255,0.55); letter-spacing: 0.04em; margin: 0; }
+    .footer-tagline { font-family: var(--serif); font-size: 15px; font-style: italic; color: #e8c4cb !important; margin: 0; }
+    @media (max-width: 800px) {
+      .footer-statement { padding: 56px 24px 40px; }
+      .footer-cols { display: none; }
+      .footer-essentials { display: flex; flex-wrap: nowrap; white-space: nowrap; justify-content: center; align-items: center; padding: 30px 12px 34px; border-top: 1px solid rgba(255,255,255,0.07); }
+      .footer-essentials a { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.75); text-decoration: none; padding: 6px 0; }
+      .footer-essentials a + a::before { content: '·'; color: rgba(196,126,138,0.7); margin: 0 9px; font-weight: 700; }
+      .footer-bottom { padding: 16px 24px; flex-direction: column; gap: 8px; text-align: center; }
+    }
+  
+    /* ── Start Here revisions ── */
+    .sh-hero { display: grid; grid-template-columns: 1.35fr 1fr; gap: 44px; align-items: center; margin-bottom: 8px; }
+    .sh-hero-text p { margin-bottom: 0; }
+    .sh-hero-photo { position: relative; padding: 5px; background: linear-gradient(135deg, #C47E8A 0%, #e8c4cb 45%, #B76E79 100%); border-radius: 20px; box-shadow: 0 24px 60px rgba(196,126,138,0.28); }
+    .sh-hero-photo img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center 18%; border-radius: 16px; }
+    .start-cards { grid-template-columns: 1fr; gap: 18px; }
+    .start-card { display: flex; padding: 0; overflow: hidden; }
+    .sc-thumb { width: 170px; min-height: 235px; align-self: stretch; object-fit: cover; object-position: center 22%; flex-shrink: 0; }
+    .sc-body { display: block; padding: 22px 24px; }
+    @keyframes shFadeUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
+    .sh-hero-text .eyebrow { opacity: 0; animation: shFadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.05s forwards; }
+    .sh-hero-text h1      { opacity: 0; animation: shFadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.15s forwards; }
+    .sh-hero-text p       { opacity: 0; animation: shFadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.28s forwards; }
+    .sh-hero-photo        { opacity: 0; animation: shFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.35s forwards; }
+    .sh-reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1); }
+    .sh-reveal.visible { opacity: 1; transform: none; }
+    .brand-item.sh-reveal:nth-child(2).visible { transition-delay: 0.12s; }
+    .brand-item.sh-reveal:nth-child(3).visible { transition-delay: 0.24s; }
+    @media (max-width: 700px) {
+      .sh-hero { grid-template-columns: 1fr; gap: 28px; }
+      .sh-hero-photo { order: -1; max-width: 330px; margin: 0 auto; width: 100%; }
+      .sc-thumb { width: 130px; min-height: 210px; }
+      .sc-body { padding: 18px 18px; }
+    }
+  
+    /* Brand guideline button spec */
+    .cta-btn { border-radius: 0; font-size: 12px; font-weight: 600; letter-spacing: 1.7px; }
+
+    /* ── SHOP PAGE SPECIFIC ───────────────────── */
+    .shop-header { text-align: center; padding: 56px 28px 48px; }
+    .shop-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; color: var(--rose-dark); display: block; margin-bottom: 18px; }
+    .shop-title { font-family: var(--serif); font-size: clamp(40px, 6vw, 68px); font-weight: 900; line-height: 1.05; color: var(--black); }
+    .shop-title em { color: var(--rose); font-style: normal; }
+
+    /* Book covers grid */
+    .books-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto 72px; padding: 0 28px; }
+
+    .book-cover {
+      position: relative; overflow: hidden;
+      padding: 32px 28px 28px;
+      display: flex; flex-direction: column;
+      min-height: 520px;
+      border-radius: 4px;
+    }
+    .book-dark  { background: #1a0c10; color: #fff; }
+    .book-light { background: #FAF7F4; color: var(--black); border: 1px solid var(--cream-dark); }
+
+    /* Top row: type label + vol */
+    .book-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 28px; }
+    .book-type { font-size: 9px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; }
+    .book-dark  .book-type { color: var(--rose-light); }
+    .book-light .book-type { color: var(--rose-dark); }
+    .book-vol  { font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; }
+    .book-dark  .book-vol { color: rgba(255,255,255,0.45); }
+    .book-light .book-vol { color: var(--mid); }
+
+    /* Feature number */
+    .book-num { font-family: var(--serif); font-weight: 900; line-height: 1; margin-bottom: 4px; }
+    .book-dark  .book-num { font-size: 72px; color: var(--rose); }
+    .book-light .book-num { font-size: 80px; color: var(--black); }
+    .book-num-label { font-size: 8px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 18px; }
+    .book-dark  .book-num-label { color: rgba(255,255,255,0.5); }
+    .book-light .book-num-label { color: var(--mid); }
+
+    /* Title */
+    .book-title { font-family: var(--serif); font-size: clamp(22px, 2.4vw, 28px); font-weight: 900; line-height: 1.15; margin-bottom: 10px; }
+    .book-dark  .book-title { color: #fff; }
+    .book-light .book-title { color: var(--black); }
+    .book-title em { font-style: normal; }
+    .book-dark  .book-title em { color: var(--rose); }
+    .book-light .book-title em { color: var(--rose-dark); }
+
+    /* Tagline */
+    .book-tag { font-family: var(--serif); font-size: 13px; font-style: italic; margin-bottom: 18px; }
+    .book-dark  .book-tag { color: rgba(255,255,255,0.6); }
+    .book-light .book-tag { color: var(--mid); }
+
+    /* Divider dot */
+    .book-dot { width: 5px; height: 5px; border-radius: 50%; margin: 0 0 18px; }
+    .book-dark  .book-dot { background: var(--rose); }
+    .book-light .book-dot { background: var(--rose-dark); }
+
+    /* Section label (INSIDE THIS GUIDE / WHAT'S INCLUDED) */
+    .book-section-label { font-size: 8px; font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase; margin-bottom: 12px; }
+    .book-dark  .book-section-label { color: rgba(255,255,255,0.4); }
+    .book-light .book-section-label { color: var(--mid); }
+
+    /* Bullets */
+    .book-bullets { list-style: none; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .book-bullets li { font-size: 12px; line-height: 1.4; display: flex; gap: 8px; align-items: flex-start; }
+    .book-bullets li::before { content: '→'; flex-shrink: 0; margin-top: 0; }
+    .book-dark  .book-bullets li { color: rgba(255,255,255,0.75); }
+    .book-dark  .book-bullets li::before { color: var(--rose); }
+    .book-light .book-bullets li { color: #444; }
+    .book-light .book-bullets li::before { color: var(--rose-dark); }
+
+    /* Bottom branding + CTA */
+    .book-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 28px; padding-top: 18px; }
+    .book-dark  .book-footer { border-top: 1px solid rgba(255,255,255,0.12); }
+    .book-light .book-footer { border-top: 1px solid rgba(196,126,138,0.2); }
+    .book-brand { font-family: var(--serif); font-size: 14px; font-weight: 700; }
+    .book-dark  .book-brand { color: #fff; }
+    .book-light .book-brand { color: var(--black); }
+    .book-brand em { font-style: italic; font-weight: 400; }
+    .book-cta-btn { font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 8px 14px; cursor: default; }
+    .book-dark  .book-cta-btn { border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.7); }
+    .book-light .book-cta-btn { border: 1px solid var(--rose); color: var(--rose-dark); }
+
+    /* Concentric circles decoration (card 1) */
+    .book-circles { position: absolute; top: -30px; right: -30px; width: 140px; height: 140px; pointer-events: none; opacity: 0.12; }
+    .book-circles circle { fill: none; stroke: #C47E8A; }
+
+    /* Ghost number background (card 2) */
+    .book-ghost { position: absolute; bottom: -20px; right: -10px; font-family: var(--serif); font-size: 200px; font-weight: 900; color: rgba(196,126,138,0.07); line-height: 1; pointer-events: none; user-select: none; }
+
+    /* Book spine (card 2) */
+    .book-spine { position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: linear-gradient(180deg, #C47E8A 0%, #a35f6d 100%); }
+
+    @media (max-width: 800px) { .books-grid { grid-template-columns: 1fr; max-width: 400px; } }
+
+    /* CTA band */
+    .shop-cta-band { background: #F5E6E9; padding: 72px 28px; text-align: center; }
+    .shop-cta-band h2 { font-family: var(--serif); font-size: clamp(28px, 4vw, 40px); color: var(--black); margin-bottom: 14px; }
+    .shop-cta-band p  { font-size: 16px; color: var(--mid); margin-bottom: 32px; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .shop-cta-band .cta-btn { display: inline-block; padding: 16px 40px; font-size: 12px; letter-spacing: 1.7px; }
+
+    /* Shop hero intro */
+    .shop-intro { max-width: 780px; margin: 0 auto 64px; padding: 0 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .shop-intro-text .shop-eyebrow { margin-bottom: 14px; }
+    .shop-intro-text h2 { font-family: var(--serif); font-size: clamp(28px, 3.5vw, 38px); font-weight: 900; line-height: 1.15; margin-bottom: 18px; color: var(--black); }
+    .shop-intro-text h2 em { font-style: italic; color: var(--rose-dark); }
+    .shop-intro-text p { font-size: 15px; color: var(--mid); line-height: 1.75; margin-bottom: 14px; }
+    .shop-intro-photo { position: relative; }
+    .shop-intro-photo img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center 15%; border-radius: 4px; }
+    .shop-intro-photo::after { content: ''; position: absolute; inset: 10px -10px -10px 10px; border: 2px solid var(--rose-light); border-radius: 4px; z-index: -1; }
+    @media (max-width: 700px) { .shop-intro { grid-template-columns: 1fr; gap: 32px; } .shop-intro-photo { max-width: 300px; } }
+
+    /* "This is for you if" */
+    .shop-for { background: #1a0c10; padding: 72px 28px; margin-bottom: 0; }
+    .shop-for-inner { max-width: 780px; margin: 0 auto; }
+    .shop-for h2 { font-family: var(--serif); font-size: clamp(26px, 3.5vw, 36px); font-weight: 900; color: #fff; margin-bottom: 10px; }
+    .shop-for h2 em { color: var(--rose); font-style: italic; }
+    .shop-for .sub { font-size: 15px; color: rgba(255,255,255,0.55); margin-bottom: 40px; }
+    .shop-for-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .shop-for-item { background: rgba(255,255,255,0.05); border: 1px solid rgba(196,126,138,0.2); padding: 28px 24px; display: flex; flex-direction: column; justify-content: center; }
+    .shop-for-item::before { content: '✓'; font-size: 13px; font-weight: 700; color: var(--rose); display: block; margin-bottom: 10px; }
+    .shop-for-item p { font-size: 14px; color: rgba(255,255,255,0.8); line-height: 1.6; margin: 0; }
+    @media (max-width: 600px) { .shop-for-grid { grid-template-columns: 1fr; } }
+
+    /* Product deep-dive strips */
+    .shop-products { max-width: 860px; margin: 0 auto; padding: 72px 28px 0; }
+    .shop-products h2 { font-family: var(--serif); font-size: clamp(26px,3.5vw,34px); font-weight: 900; margin-bottom: 8px; color: var(--black); }
+    .shop-product { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; align-items: center; padding: 64px 0; border-bottom: 1px solid var(--cream-dark); }
+    .shop-product:last-child { border-bottom: none; }
+    .shop-product.flip { grid-template-columns: 1.6fr 1fr; }
+    .shop-product-visual { display: flex; justify-content: center; align-items: center; }
+    .shop-product.flip .shop-product-visual { order: 2; }
+    .shop-product.flip .shop-product-copy { order: 1; }
+    .shop-mini-book { width: 100%; max-width: 300px; padding: 32px 26px; border-radius: 4px; min-height: 200px; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 20px 60px rgba(0,0,0,0.18); }
+    .shop-product-copy .shop-eyebrow { font-size: 9px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--rose-dark); display: block; margin-bottom: 10px; }
+    .shop-product-copy h2 { font-family: var(--serif); font-size: clamp(20px,2.5vw,28px); font-weight: 900; color: var(--black); margin-bottom: 12px; }
+    .shop-product-hook { font-family: var(--serif); font-size: 16px; font-style: italic; color: var(--rose-dark) !important; margin-bottom: 16px !important; }
+    .shop-product-copy p { font-size: 14px; color: var(--mid); line-height: 1.75; margin-bottom: 12px; }
+    .shop-product-list { list-style: none; margin: 16px 0 20px; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+    .shop-product-list li { font-size: 13px; color: var(--mid); padding-left: 20px; position: relative; line-height: 1.5; }
+    .shop-product-list li::before { content: '→'; position: absolute; left: 0; color: var(--rose); font-weight: 700; }
+    .shop-product-badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--white); background: var(--black); padding: 8px 16px; border-radius: 2px; margin-top: 4px; }
+    @media (max-width: 700px) { .shop-product, .shop-product.flip { grid-template-columns: 1fr; } .shop-product.flip .shop-product-visual { order: 0; } .shop-product.flip .shop-product-copy { order: 0; } }
+    .shop-product.flip > * { direction: ltr; }
+    .prod-label { font-size: 9px; font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rose-dark); display: block; margin-bottom: 12px; }
+    .prod-title { font-family: var(--serif); font-size: clamp(22px,3vw,30px); font-weight: 900; line-height: 1.15; color: var(--black); margin-bottom: 10px; }
+    .prod-title em { color: var(--rose-dark); font-style: normal; }
+    .prod-hook { font-family: var(--serif); font-size: 17px; font-style: italic; color: var(--mid); margin-bottom: 18px; line-height: 1.5; }
+    .prod-body { font-size: 14px; color: var(--mid); line-height: 1.75; margin-bottom: 20px; }
+    .prod-outcomes { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
+    .prod-outcomes li { font-size: 13px; color: var(--black); display: flex; gap: 10px; align-items: flex-start; line-height: 1.45; }
+    .prod-outcomes li::before { content: '→'; color: var(--rose-dark); flex-shrink: 0; font-weight: 700; }
+    .prod-tag { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; border: 1px solid var(--rose); color: var(--rose-dark); padding: 7px 14px; }
+    .prod-visual { position: relative; }
+    .prod-visual-card { background: #1a0c10; padding: 32px 26px; border-radius: 4px; min-height: 300px; display: flex; flex-direction: column; justify-content: space-between; }
+    .prod-visual-card.light { background: #FAF7F4; border: 1px solid var(--cream-dark); }
+    .prod-visual-num { font-family: var(--serif); font-size: 64px; font-weight: 900; color: var(--rose); line-height: 1; }
+    .prod-visual-card.light .prod-visual-num { color: var(--black); }
+    .prod-visual-title { font-family: var(--serif); font-size: 18px; font-weight: 900; color: #fff; line-height: 1.2; margin-top: 16px; }
+    .prod-visual-card.light .prod-visual-title { color: var(--black); }
+    .prod-visual-tag { font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose-light); margin-top: auto; padding-top: 24px; }
+    .prod-visual-card.light .prod-visual-tag { color: var(--rose-dark); }
+    @media (max-width: 700px) { .shop-product, .shop-product.flip { grid-template-columns: 1fr; direction: ltr; gap: 28px; } }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a class="logo" href="/">Lisa Haven</a>
+    <ul class="nav-links">
+      <li><a href="/start-here">Start Here</a></li>
+      <li><a href="/#blog">Blog</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#founder">My Story</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <a href="/#newsletter" class="nav-cta">Join the Inner Circle</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-nav-links">
+      <a href="/start-here" class="mobile-nav-link">Start Here</a>
+      <a href="/#blog"      class="mobile-nav-link">Blog</a>
+      <a href="/#about"     class="mobile-nav-link">About</a>
+      <a href="/#founder"   class="mobile-nav-link">My Story</a>
+      <a href="/contact"    class="mobile-nav-link">Contact</a>
+      <a href="/#newsletter" class="mobile-nav-link mobile-nav-cta">Join the Inner Circle 🖤</a>
+    </nav>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var hb = document.getElementById('hamburger');
+      var mm = document.getElementById('mobileMenu');
+      if (hb && mm) {
+        hb.addEventListener('click', function () {
+          var open = !mm.classList.contains('open');
+          mm.classList.toggle('open', open);
+          hb.classList.toggle('open', open);
+          hb.setAttribute('aria-expanded', open);
+        });
+      }
+    });
+  </script>
+  <!-- HERO INTRO -->
+  <div class="shop-intro sh-reveal">
+    <div class="shop-intro-text">
+      <span class="shop-eyebrow">The Shop</span>
+      <h2>Everything I know, <em>packaged so you can skip the hard part.</em></h2>
+      <p>I spent years making expensive mistakes — bad manufacturers, wasted ad spend, blank pages where a strategy should have been. I figured it out the hard way so you don't have to.</p>
+      <p>These ebooks, templates, and artificial intelligence playbooks are the exact systems I use every single day to run three companies as a solo founder and single mother of three. Nothing theoretical. Nothing recycled from the internet. Real playbooks from someone who is actively in it.</p>
+      <p>Join The Haven to get first access and launch pricing the moment the shop opens.</p>
+      <a class="sh-btn-dark" href="/#newsletter" style="display:inline-block; margin-top:8px;">Join The Haven 🖤</a>
+    </div>
+    <div class="shop-intro-photo">
+      <img src="/images/uploads/hero-red.jpg" alt="Lisa Haven">
+    </div>
+  </div>
+
+  <!-- THIS IS FOR YOU IF -->
+  <div class="shop-for sh-reveal">
+    <div class="shop-for-inner">
+      <h2>This is for you <em>if…</em></h2>
+      <p class="sub">You don't need more inspiration. You need a system.</p>
+      <div class="shop-for-grid">
+        <div class="shop-for-item"><p>You have a business idea but have no idea how to actually start — and you're tired of vague advice that doesn't apply to your real life.</p></div>
+        <div class="shop-for-item"><p>You're spending hours staring at a blank page trying to write content, plan a launch, or pitch a brand — and you just need a template that works.</p></div>
+        <div class="shop-for-item"><p>You know artificial intelligence can help your business but you don't know which prompts to use or how to build a real workflow around it.</p></div>
+        <div class="shop-for-item"><p>You're building alone — no co-founder, no big team — and you need tools that were designed for the woman doing everything herself.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOK COVERS -->
+  <div class="shop-header sh-reveal" style="padding-top:72px;">
+    <span class="shop-eyebrow">The Shop</span>
+    <h1 class="shop-title">What's coming<em>.</em></h1>
+  </div>
+
+  <div class="books-grid">
+
+    <!-- Card 1: The Founder's Real Playbook (dark) -->
+    <div class="book-cover book-dark sh-reveal">
+      <svg class="book-circles" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="70" cy="70" r="65" stroke-width="1"/>
+        <circle cx="70" cy="70" r="50" stroke-width="1"/>
+        <circle cx="70" cy="70" r="35" stroke-width="1"/>
+        <circle cx="70" cy="70" r="20" stroke-width="1"/>
+      </svg>
+      <div class="book-top">
+        <span class="book-type">Ebook</span>
+        <span class="book-vol">Vol. 01</span>
+      </div>
+      <h2 class="book-title">The Founder's Real Playbook<em>.</em></h2>
+      <p class="book-tag">Stop guessing. Start building.</p>
+      <div class="book-dot"></div>
+      <p style="font-size:12px; font-style:italic; color:rgba(255,255,255,0.6); margin-bottom:18px; line-height:1.5;">The unfiltered blueprint every ambitious woman needs — from idea validation to your very first sale.</p>
+      <p class="book-section-label">Inside This Guide</p>
+      <ul class="book-bullets">
+        <li>Validate your idea without spending a dollar</li>
+        <li>Your first 90-day launch blueprint</li>
+        <li>Manufacturer negotiation scripts</li>
+        <li>Real costs. Real timelines. No theory.</li>
+      </ul>
+      <div class="book-footer">
+        <span class="book-brand">Lisa Haven<em>.</em></span>
+        <span class="book-cta-btn">Coming Soon</span>
+      </div>
+    </div>
+
+    <!-- Card 2: The Founder's Template Kit (light) -->
+    <div class="book-cover book-light sh-reveal">
+      <div class="book-spine"></div>
+      <span class="book-ghost">12</span>
+      <div class="book-top">
+        <span class="book-type">Templates</span>
+        <span class="book-vol">Collection 01</span>
+      </div>
+      <div class="book-num">12</div>
+      <p class="book-num-label">Done-For-You Templates</p>
+      <h2 class="book-title">The Founder's Template Kit<em>.</em></h2>
+      <p class="book-tag">Skip the blank page. Build faster.</p>
+      <div class="book-dot"></div>
+      <p class="book-section-label">What's Included</p>
+      <ul class="book-bullets">
+        <li>Brand strategy one-pager</li>
+        <li>90-day content calendar</li>
+        <li>Product launch checklist — 47 items</li>
+        <li>Investor pitch deck outline</li>
+      </ul>
+      <div class="book-footer">
+        <span class="book-brand">Lisa Haven<em>.</em></span>
+        <span class="book-cta-btn">Coming Soon</span>
+      </div>
+    </div>
+
+    <!-- Card 3: The AI Playbook (dark) -->
+    <div class="book-cover book-dark sh-reveal">
+      <div class="book-top">
+        <span class="book-type">Playbook Series</span>
+        <span class="book-vol">Vol. 01</span>
+      </div>
+      <div class="book-num">50+</div>
+      <p class="book-num-label">Prompt Templates</p>
+      <h2 class="book-title">The Artificial Intelligence Playbook<em>.</em></h2>
+      <p class="book-tag">Move at 10× speed. Every single day.</p>
+      <div class="book-dot"></div>
+      <p class="book-section-label">What's Inside</p>
+      <ul class="book-bullets">
+        <li>50+ battle-tested prompt templates</li>
+        <li>Brand voice training frameworks</li>
+        <li>Marketing and launch campaign systems</li>
+        <li>Full operations at 10× speed</li>
+      </ul>
+      <div class="book-footer">
+        <span class="book-brand">Lisa Haven<em>.</em></span>
+        <span class="book-cta-btn">Coming Soon</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PRODUCT DEEP-DIVE STRIPS -->
+  <div class="shop-products sh-reveal">
+
+    <!-- Product 1: The Founder's Real Playbook -->
+    <div class="shop-product">
+      <div class="shop-product-visual">
+        <div class="shop-mini-book" style="background:#1a0c10; color:#fff;">
+          <span style="font-size:9px;font-weight:700;letter-spacing:0.22em;color:rgba(196,126,138,0.7);display:block;margin-bottom:8px;">EBOOK VOL. 01</span>
+          <span style="font-family:'Playfair Display',serif;font-size:18px;font-weight:900;line-height:1.2;display:block;">The Founder's<br><em style="color:#C47E8A;">Real Playbook</em></span>
+          <span style="font-size:10px;color:rgba(255,255,255,0.4);display:block;margin-top:12px;">Lisa Haven.</span>
+        </div>
+      </div>
+      <div class="shop-product-copy">
+        <span class="shop-eyebrow">Ebook Vol. 01</span>
+        <h2>The Founder's Real Playbook</h2>
+        <p class="shop-product-hook">The guide I wish I had when I started building from zero.</p>
+        <p>This is not a motivational PDF. This is the operational playbook I built from three years of running companies solo — as a single mother of three, with no co-founder, no investor, and no one handing me a roadmap.</p>
+        <p>Inside you'll find the exact frameworks I use to validate a product idea before spending a dollar, negotiate with manufacturers without getting taken advantage of, build a brand on a bootstrap budget, and make strategic decisions fast when you're the only one in the room.</p>
+        <ul class="shop-product-list">
+          <li>How to go from idea to first sale without a team</li>
+          <li>The manufacturer negotiation script that saved me thousands</li>
+          <li>Brand positioning for women building in competitive markets</li>
+          <li>The daily operating rhythm I use to run three companies at once</li>
+        </ul>
+        <span class="shop-product-badge">Coming Soon — Join The Haven for first access</span>
+      </div>
+    </div>
+
+    <!-- Product 2: The Founder's Template Kit -->
+    <div class="shop-product flip">
+      <div class="shop-product-visual">
+        <div class="shop-mini-book" style="background:#FAF7F4; color:#0A0A0A; border:1px solid #E8E1D8;">
+          <span style="font-size:9px;font-weight:700;letter-spacing:0.22em;color:rgba(163,95,109,0.8);display:block;margin-bottom:8px;">TEMPLATES VOL. 01</span>
+          <span style="font-family:'Playfair Display',serif;font-size:18px;font-weight:900;line-height:1.2;display:block;">The Founder's<br><em style="color:#a35f6d;">Template Kit</em></span>
+          <span style="font-size:10px;color:#888;display:block;margin-top:12px;">12 Done-For-You Templates</span>
+        </div>
+      </div>
+      <div class="shop-product-copy">
+        <span class="shop-eyebrow">Templates Collection 01</span>
+        <h2>The Founder's Template Kit</h2>
+        <p class="shop-product-hook">Stop starting from scratch. 12 done-for-you templates built for solo founders who need to move fast.</p>
+        <p>Every hour you spend writing a pitch email, reformatting a brand deck, or rebuilding a launch checklist from memory is an hour you're not building. This kit hands you the exact documents — formatted, professional, and ready to personalize in minutes.</p>
+        <p>These aren't generic business school templates scraped from the internet. Every single one was written from my real experience pitching retailers, onboarding collaborators, planning product launches, and communicating with suppliers. They work because they've already worked.</p>
+        <ul class="shop-product-list">
+          <li>Brand pitch deck template (retailer + investor ready)</li>
+          <li>Manufacturer outreach + negotiation email sequence</li>
+          <li>Product launch planning checklist (90-day)</li>
+          <li>Content calendar and brand voice guide template</li>
+        </ul>
+        <span class="shop-product-badge">Coming Soon — Join The Haven for first access</span>
+      </div>
+    </div>
+
+    <!-- Product 3: The AI Playbook -->
+    <div class="shop-product">
+      <div class="shop-product-visual">
+        <div class="shop-mini-book" style="background:#1a0c10; color:#fff;">
+          <span style="font-size:9px;font-weight:700;letter-spacing:0.22em;color:rgba(196,126,138,0.7);display:block;margin-bottom:8px;">PLAYBOOK VOL. 01</span>
+          <span style="font-family:'Playfair Display',serif;font-size:18px;font-weight:900;line-height:1.2;display:block;">The Artificial<br>Intelligence<br><em style="color:#C47E8A;">Playbook</em></span>
+          <span style="font-size:10px;color:rgba(255,255,255,0.4);display:block;margin-top:12px;">50+ Prompt Templates</span>
+        </div>
+      </div>
+      <div class="shop-product-copy">
+        <span class="shop-eyebrow">Playbook Series Vol. 01</span>
+        <h2>The Artificial Intelligence Playbook</h2>
+        <p class="shop-product-hook">50+ prompts. Zero fluff. The exact artificial intelligence workflows I use to run three companies alone.</p>
+        <p>Artificial intelligence is the great equalizer — but only if you know how to use it. Most people type vague questions and get vague answers back. I use structured prompts that produce boardroom-level strategy, brand copy, and business systems in minutes instead of days.</p>
+        <p>This playbook gives you my complete prompt library, organized by function: brand strategy, content creation, product development, customer research, and operational planning. You don't need to understand artificial intelligence deeply. You just need to know what to ask — and this is the book that tells you.</p>
+        <ul class="shop-product-list">
+          <li>Brand voice and messaging prompts that actually sound like you</li>
+          <li>Content creation workflows for Instagram, email, and blog</li>
+          <li>Product strategy and market research prompt sequences</li>
+          <li>Operations, planning, and decision-making frameworks</li>
+        </ul>
+        <span class="shop-product-badge">Coming Soon — Join The Haven for first access</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="shop-cta-band sh-reveal">
+    <h2>Be first in line 🖤</h2>
+    <p>Join The Haven — my free weekly letter — and you'll get first access (and the best pricing) the moment the shop opens.</p>
+    <a class="cta-btn" href="/#newsletter">Join The Haven</a>
+  </div>
+  <footer>
+
+    <!-- Big statement -->
+    <div class="footer-statement">
+      <span class="footer-eyebrow">Founder · Mom · Entrepreneur · Florida</span>
+      <span class="footer-name"><span class="fn-first">Lisa</span> <em>Haven</em></span>
+      <p class="footer-desc">Sharing the real journey — the wins, the mess, and everything in between.</p>
+
+      <!-- Social icon circles -->
+      <div class="footer-socials-row">
+        <a href="https://www.instagram.com/havenly1920" class="footer-icon-btn" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/lisahaven" class="footer-icon-btn" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.pinterest.com/lisahaven19" class="footer-icon-btn" target="_blank" aria-label="Pinterest">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+        </a>
+        <a href="/#newsletter" class="footer-icon-btn" target="_blank" aria-label="Newsletter">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Nav strip -->
+    <div class="footer-cols">
+      <div class="footer-col">
+        <span class="footer-col-title">Explore</span>
+        <a href="/">Home</a>
+        <a href="/start-here">Start Here</a>
+        <a href="#latest">Blog</a>
+        <a href="#about">My Story</a>
+        <a href="#founder">Meet the Founder</a>
+        <a href="#newsletter">Newsletter</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-title">Pages</span>
+        <a href="/contact">Contact</a>
+        <a href="/press-kit">Press Kit</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-title">Brands</span>
+        <a href="https://havenly.co" target="_blank">HAVENLY ↗</a>
+        <a href="https://vixaapp.ai" target="_blank">VIXA ↗</a>
+        <a href="https://lumaprompt.ai" target="_blank">LUMAPROMPT.AI ↗</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-title">Connect</span>
+        <a href="https://www.instagram.com/havenly1920" target="_blank">Instagram ↗</a>
+        <a href="https://www.linkedin.com/in/lisahaven" target="_blank">LinkedIn ↗</a>
+        <a href="https://www.pinterest.com/lisahaven19" target="_blank">Pinterest ↗</a>
+        <a href="/#newsletter" target="_blank">Join The Haven ↗</a>
+      </div>
+    </div>
+
+    <!-- Mobile-only quick links -->
+    <div class="footer-essentials">
+      <a href="/start-here">Start Here</a>
+      <a href="#latest">Blog</a>
+      <a href="/contact">Contact</a>
+      <a href="#newsletter">Newsletter</a>
+    </div>
+
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Lisa Haven. All rights reserved.</p>
+      <p class="footer-tagline">On the journey. Always. 💗</p>
+    </div>
+
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.sh-reveal').forEach(function (el) { obs.observe(el); });
+    });
+  </script>
+</body>
+</html>
