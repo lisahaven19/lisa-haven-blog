@@ -1,6 +1,6 @@
 ---
 title: Why I Went Carnivore — And How It Changed My Energy as a CEO Mom
-category: Carnivore & Wellness
+category: Discipline
 emoji: 🥩
 date: 2026-06-04
 readTime: 4 min read
