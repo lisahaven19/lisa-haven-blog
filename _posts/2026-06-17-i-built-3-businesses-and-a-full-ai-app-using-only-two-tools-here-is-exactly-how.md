@@ -1,7 +1,7 @@
 ---
 title: "How I Built 3 Businesses and a Full AI App Without a Tech Team: The Only
   2 Tools You Need as a Solo Founder"
-category: Building With AI
+category: Business Tips
 emoji: ✨
 date: 2026-06-17T13:01:00.000-04:00
 readTime: 7 min read
@@ -60,7 +60,7 @@ Follow My Next Post — I'm Showing You Exactly How I Did It
 In my next post I am pulling back the curtain completely. The exact steps I took. How I used Claude Code to build VIXA. How I use Claude Cowork to run my marketing. What the workflow actually looks like day to day.
 If you have ever wanted to build something and thought you did not have the skills, the time, or the resources, that post is going to change your perspective.
 Subscribe to this blog and follow along. I am just getting started and I am sharing every step.
-Stay on the lookout. 🐀
+Stay on the lookout. 👀
 Lisa
 Find me and my brands:
 •	VIXA — VIXAapp.ai

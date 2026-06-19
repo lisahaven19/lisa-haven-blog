@@ -1,6 +1,6 @@
 ---
 title: I Built a Dating Clarity App Because I Was Tired of Group Chat Guesswork
-category: Building With AI
+category: Founder Life
 emoji: 💬
 date: 2026-05-29
 readTime: 3 min read

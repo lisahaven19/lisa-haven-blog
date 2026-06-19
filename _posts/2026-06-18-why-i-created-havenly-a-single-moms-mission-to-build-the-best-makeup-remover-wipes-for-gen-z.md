@@ -1,7 +1,7 @@
 ---
 title: "Why I Created Havenly: A Single Mom's Mission to Build the Best Makeup
   Remover Wipes for Gen Z"
-category: Beauty & Fashion
+category: Founder Life
 emoji: 💄
 date: 2026-06-18T07:52:00.000-04:00
 readTime: 5 min read

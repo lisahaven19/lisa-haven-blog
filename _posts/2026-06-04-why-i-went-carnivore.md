@@ -1,18 +1,17 @@
 ---
-title: Why I Went Carnivore — And How It Changed My Energy as a CEO Mom
-category: Discipline
-emoji: 🥩
-date: 2026-06-04
-readTime: 4 min read
-excerpt: I needed something that would give me energy at 5am, clarity at noon,
-  and still leave fuel in the tank for my daughters at 8pm. The carnivore diet
-  did that.
-image: /images/uploads/gym-photo.jpg
+title: "Why I Went Carnivore — And How It Changed My Energy as a CEO Mom"
+category: "Carnivore & Wellness"
+emoji: "🥩"
+date: "2026-06-04"
+readTime: "4 min read"
+excerpt: "I needed something that would give me energy at 5am, clarity at noon, and still leave fuel in the tank for my daughters at 8pm. The carnivore diet did that."
+image: "/images/uploads/gym-photo.jpg"
 ---
 
 I know. I know. The first thing people say is: *"But where do you get your fiber?"*
 
 And I smile, because six months ago I was exhausted, brain-fogged, and running three companies on cortisol and iced coffee. Now I wake up at 5am before my daughters, get my workout in, and have clarity that I haven't felt in years.
+![Gym photo](/images/uploads/gym-photo.jpg)
 
 ## What Is the Carnivore Diet?
 
