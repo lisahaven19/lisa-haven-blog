@@ -128,11 +128,13 @@ try {
         + '  <meta property="og:site_name" content="Lisa Haven">\n'
         + '  <meta property="og:title" content="Lisa Haven — The Real Journey">\n'
         + '  <meta property="og:description" content="The real journey of building three companies as a single mom of three. The wins, the mess, and everything in between.">\n'
-        + '  <meta property="og:image" content="https://lisahaven.co/images/uploads/lisa-photo.jpg">\n'
+        + '  <meta property="og:image" content="https://lisahaven.co/images/uploads/og-card.jpg">\n'
+        + '  <meta property="og:image:width" content="1200">\n'
+        + '  <meta property="og:image:height" content="630">\n'
         + '  <meta property="og:url" content="https://lisahaven.co/">\n'
         + '  <meta name="twitter:card" content="summary_large_image">\n'
         + '  <meta name="twitter:title" content="Lisa Haven — The Real Journey">\n'
-        + '  <meta name="twitter:image" content="https://lisahaven.co/images/uploads/lisa-photo.jpg">\n';
+        + '  <meta name="twitter:image" content="https://lisahaven.co/images/uploads/og-card.jpg">\n';
       const ti = html.indexOf('</title>');
       if (ti !== -1) {
         html = html.slice(0, ti + 8) + og + html.slice(ti + 8);
@@ -148,4 +150,29 @@ try {
   }
 } catch (e) {
   console.log('⚠️ Open Graph injection skipped:', e.message);
+}
+
+// ── 4. Point the homepage share image at the wide 1200x630 card ──
+try {
+  const idxPath = path.join(__dirname, 'index.html');
+  if (fs.existsSync(idxPath)) {
+    let html = fs.readFileSync(idxPath, 'utf-8');
+    const before = html;
+    // Only swap the social-preview image URLs (og:image / twitter:image), not page photos
+    html = html.replace(
+      /(property=["']og:image["'][^>]*content=["'])https:\/\/lisahaven\.co\/images\/uploads\/lisa-photo\.jpg(["'])/i,
+      '$1https://lisahaven.co/images/uploads/og-card.jpg$2'
+    ).replace(
+      /(name=["']twitter:image["'][^>]*content=["'])https:\/\/lisahaven\.co\/images\/uploads\/lisa-photo\.jpg(["'])/i,
+      '$1https://lisahaven.co/images/uploads/og-card.jpg$2'
+    );
+    if (html !== before) {
+      fs.writeFileSync(idxPath, html);
+      console.log('✅ Updated homepage social-preview image to og-card.jpg');
+    } else {
+      console.log('ℹ️ Homepage social-preview image already set (no change).');
+    }
+  }
+} catch (e) {
+  console.log('⚠️ Homepage OG image swap skipped:', e.message);
 }
