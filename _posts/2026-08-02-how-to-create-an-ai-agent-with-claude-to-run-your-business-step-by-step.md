@@ -7,7 +7,7 @@ readTime: 10 min read
 excerpt: The exact step by step system I use to run three companies with an AI
   agent that briefs me every morning before my daughters wake up. No code, no
   tech team, about 20 minutes to build.
-image: /images/uploads/ai-agent-claude-hero.png
+image: /images/uploads/ai-agent-claude-cover.png
 ---
 Every morning before my three daughters are awake, an AI agent I built inside Claude has already done my first hour of work for me. It reads what happened overnight across my three companies, checks my calendar, scans my inbox for the messages that actually need me, and hands me a short brief I can read with my coffee in five minutes.
 
