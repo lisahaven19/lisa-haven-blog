@@ -4,7 +4,7 @@ category: The Journey
 emoji: 🚀
 date: 2026-06-08
 readTime: 5 min read
-excerpt: Building three companies as a single mom of three daughters taught me
+excerpt: Building three companies as a mom of three daughters taught me
   things no business book ever could. Here's the unfiltered truth.
 image: /images/uploads/family-photo.jpg
 ---
