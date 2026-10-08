@@ -30,7 +30,7 @@ Explore it at Lumaprompt.ai.
 LISAHAVEN.CO — The Blog Where I Document Everything
 This blog. Where I share every tool, every strategy, and every lesson from building four brands using AI. Built for women who want to do the same thing.
 Now Here Is the Part That Makes This Even More Interesting
-I am 40 years old. I am a mom of three daughters. I share custody, which means my schedule looks nothing like a traditional founder's schedule.
+I am 40 years old. I am a mom of three daughters. My schedule looks nothing like a traditional founder's schedule.
 When I do not have my kids, I work 13 hours a day. When I do have them, I work 5 hours in the morning while my sitter is here. And honestly, what would I do without her.
 I do not have a computer science degree. I am not a developer. I did not come from money or connections in tech.
 What I have is an obsession with AI, an idea I could not let go of, and a deep passion for building things that actually matter. I work the hours I do because I genuinely love this. Not because I have to. Because I am hungry for it.
