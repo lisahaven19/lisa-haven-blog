@@ -4,6 +4,8 @@
  * Runs automatically on Netlify every time you publish.
  *  1. Reads your _posts/ markdown files and creates posts-index.json
  *     (so the website carousel can display your latest posts).
+ *  1b. Adds any new post from the editor to blog-posts.json (the list the site reads),
+ *      and skips posts marked "Hide this post".
  *  2. Auto-injects the "Latest Stories" auto-update script into index.html
  *     (so the homepage strip always shows your newest posts from blog-posts.json).
  *  3. Auto-injects default Open Graph / Twitter tags into post.html
@@ -21,28 +23,85 @@ const path = require('path');
 const POSTS_DIR = path.join(__dirname, '_posts');
 const OUTPUT_FILE = path.join(__dirname, 'posts-index.json');
 
-// Parse YAML-style frontmatter from a markdown file
+// Parse YAML-style frontmatter from a markdown file.
+// Handles what the Decap editor writes: single values, quoted text,
+// long text wrapped over several lines, true/false, and lists (the photo gallery).
+function unquote(v) {
+  v = v.trim();
+  if (v.length >= 2 && v.startsWith('"') && v.endsWith('"')) {
+    return v.slice(1, -1)
+      .replace(/\\u([0-9a-fA-F]{4})/g, (m, h) => String.fromCharCode(parseInt(h, 16)))
+      .replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+  }
+  if (v.length >= 2 && v.startsWith("'") && v.endsWith("'")) {
+    return v.slice(1, -1).replace(/''/g, "'");
+  }
+  return v;
+}
+
 function parseFrontmatter(content) {
-  const match = content.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  content = content.replace(/\r\n/g, '\n');
+  const match = content.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
   if (!match) return { meta: {}, body: content };
 
   const meta = {};
-  const yamlBlock = match[1];
+  const lines = match[1].split('\n');
   const body = match[2].trim();
 
-  yamlBlock.split('\n').forEach(line => {
-    const colonIdx = line.indexOf(':');
-    if (colonIdx === -1) return;
-    const key = line.slice(0, colonIdx).trim();
-    let value = line.slice(colonIdx + 1).trim();
-    if ((value.startsWith('"') && value.endsWith('"')) ||
-        (value.startsWith("'") && value.endsWith("'"))) {
-      value = value.slice(1, -1);
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i];
+    const m = line.match(/^([A-Za-z0-9_-]+):\s*(.*)$/);
+    if (!m) { i++; continue; }
+    const key = m[1];
+    let value = m[2];
+    i++;
+
+    // Gather the indented lines (and list items) that belong to this key
+    const block = [];
+    while (i < lines.length && (/^\s+\S/.test(lines[i]) || /^-\s/.test(lines[i]) || lines[i].trim() === '')) {
+      // a blank line only belongs here if more indented lines follow
+      if (lines[i].trim() === '') {
+        let j = i + 1;
+        while (j < lines.length && lines[j].trim() === '') j++;
+        if (j >= lines.length || !/^\s+\S/.test(lines[j])) break;
+      }
+      block.push(lines[i]);
+      i++;
     }
-    meta[key] = value;
-  });
+
+    const isList = value === '' && block.length > 0 && block.every(l => l.trim() === '' || /^\s*-\s/.test(l) || /^\s{2,}\S/.test(l));
+    if (isList && block.some(l => /^\s*-\s/.test(l))) {
+      const items = [];
+      block.forEach(l => {
+        const li = l.match(/^\s*-\s+(.*)$/);
+        if (li) {
+          // supports "- /path.jpg" and "- image: /path.jpg"
+          const kv = li[1].match(/^[A-Za-z0-9_-]+:\s+(.*)$/);
+          items.push(unquote(kv ? kv[1] : li[1]));
+        }
+      });
+      meta[key] = items.filter(Boolean);
+    } else if (/^[>|][+-]?$/.test(value)) {
+      const joiner = value[0] === '|' ? '\n' : ' ';
+      meta[key] = block.map(l => l.trim()).join(joiner).trim();
+    } else {
+      const full = [value].concat(block.map(l => l.trim())).join(' ').trim();
+      meta[key] = unquote(full);
+    }
+  }
 
   return { meta, body };
+}
+
+function isDraft(meta) {
+  return meta.draft === true || String(meta.draft).toLowerCase() === 'true';
+}
+
+function asList(v) {
+  if (Array.isArray(v)) return v;
+  if (typeof v === 'string' && v.trim() && v.trim() !== '[]') return [v.trim()];
+  return [];
 }
 
 // ── 1. Generate posts-index.json from _posts/ ──
@@ -72,13 +131,57 @@ if (fs.existsSync(POSTS_DIR)) {
       readTime: meta.readTime || '3 min read',
       excerpt: meta.excerpt || '',
       image: meta.image || '',
+      gallery: asList(meta.gallery),
+      draft: isDraft(meta),
       body: body
     };
-  }).filter(p => p.title !== 'Untitled Post' || p.body.length > 0);
+  }).filter(p => p.title !== 'Untitled Post' || p.body.length > 0)
+    .filter(p => !p.draft)
+    .map(p => { delete p.draft; return p; });
 }
 
 fs.writeFileSync(OUTPUT_FILE, JSON.stringify(posts, null, 2));
 console.log(`✅ Generated posts-index.json with ${posts.length} post(s).`);
+
+// ── 1b. Add new editor posts to blog-posts.json (the list the website reads) ──
+// The posts already in blog-posts.json stay exactly as they are.
+// Any post in _posts/ that is not in that list yet gets added, so a post
+// published in the editor shows up on the site by itself.
+// A post marked "Hide this post" (draft) is never added.
+try {
+  const livePath = path.join(__dirname, 'blog-posts.json');
+  let live = [];
+  if (fs.existsSync(livePath)) {
+    const parsed = JSON.parse(fs.readFileSync(livePath, 'utf-8'));
+    if (Array.isArray(parsed)) live = parsed;
+  }
+  const day = d => String(d || '').slice(0, 10);
+  const liveSlugs = new Set(live.map(p => p.slug));
+  const liveDays = new Set(live.map(p => day(p.date)));
+  const fileDay = {};
+  if (fs.existsSync(POSTS_DIR)) {
+    fs.readdirSync(POSTS_DIR).forEach(f => {
+      const m = f.match(/^(\d{4}-\d{2}-\d{2})-(.+)\.md$/);
+      if (m) fileDay[m[2]] = m[1];
+    });
+  }
+  let added = 0;
+  posts.forEach(p => {
+    if (liveSlugs.has(p.slug)) return;
+    // an older post that is already in the list under a shorter web address
+    if (liveDays.has(fileDay[p.slug] || day(p.date))) return;
+    live.push(p);
+    liveSlugs.add(p.slug);
+    added++;
+  });
+  if (added > 0) {
+    live.sort((a, b) => new Date(b.date) - new Date(a.date));
+    fs.writeFileSync(livePath, JSON.stringify(live, null, 2));
+  }
+  console.log(`✅ blog-posts.json has ${live.length} post(s) (${added} added from the editor).`);
+} catch (e) {
+  console.log('⚠️ blog-posts.json update skipped:', e.message);
+}
 
 // ── 2. Inject "Latest Stories" auto-update into index.html ──
 try {

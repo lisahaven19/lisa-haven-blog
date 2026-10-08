@@ -220,6 +220,27 @@
     .post-photo img { position:relative; z-index:1; display:block; width:100%; height:auto; transition:transform 0.6s cubic-bezier(0.22,1,0.36,1); }
     .post-photo:hover img { transform: scale(1.02); }
 
+    /* ── Photo gallery ── */
+    .post-gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:30px 0 36px; }
+    .post-gallery.g-2, .post-gallery.g-4 { grid-template-columns:repeat(2,1fr); }
+    .post-gallery.g-1 { grid-template-columns:1fr; }
+    .pg-item { position:relative; display:block; aspect-ratio:1/1; overflow:hidden; padding:0; border:0; background:#eadfd6; cursor:zoom-in; border-radius:4px; }
+    .post-gallery.g-1 .pg-item { aspect-ratio:4/3; }
+    .pg-item img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.5s cubic-bezier(0.22,1,0.36,1); }
+    .pg-item:hover img, .pg-item:focus-visible img { transform:scale(1.08); }
+    .pg-item:focus-visible { outline:2px solid var(--rose); outline-offset:2px; }
+    @media (max-width:520px) { .post-gallery { grid-template-columns:repeat(2,1fr); gap:6px; } .post-gallery.g-1 { grid-template-columns:1fr; } }
+    .pg-box { position:fixed; inset:0; z-index:10000; background:rgba(10,10,10,0.94); display:none; align-items:center; justify-content:center; }
+    .pg-box.open { display:flex; }
+    .pg-box img { max-width:92vw; max-height:86vh; object-fit:contain; display:block; user-select:none; -webkit-user-drag:none; }
+    .pg-btn { position:absolute; background:rgba(255,255,255,0.12); color:#fff; border:0; width:46px; height:46px; border-radius:50%; font-size:24px; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+    .pg-btn:hover { background:rgba(255,255,255,0.26); }
+    .pg-close { top:16px; right:16px; }
+    .pg-prev { left:12px; top:50%; transform:translateY(-50%); }
+    .pg-next { right:12px; top:50%; transform:translateY(-50%); }
+    .pg-count { position:absolute; bottom:18px; left:0; right:0; text-align:center; color:#fff; font-size:13px; letter-spacing:0.08em; }
+    @media (prefers-reduced-motion: reduce) { .pg-item img { transition:none; } }
+
     .post-body { font-size:16px; color:#333; animation: fadeUp 0.7s 0.38s cubic-bezier(0.22,1,0.36,1) both; }
     .post-body h2 { font-family:var(--serif); font-size:26px; margin:38px 0 12px; color:var(--black); position:relative; padding-left:14px; }
     .post-body h2::before { content:''; position:absolute; left:0; top:4px; bottom:4px; width:3px; background:var(--rose); border-radius:2px; }
@@ -793,6 +814,56 @@
       fp.style.display = 'block';
     }
 
+    // ── Photo gallery viewer (tap to open, arrows or swipe to move, Escape to close) ──
+    function setupGallery(list) {
+      if (!list || !list.length) return;
+      const items = document.querySelectorAll('.pg-item');
+      if (!items.length) return;
+      const box = document.createElement('div');
+      box.className = 'pg-box';
+      box.setAttribute('role', 'dialog');
+      box.setAttribute('aria-modal', 'true');
+      box.setAttribute('aria-label', 'Photo viewer');
+      box.innerHTML = '<button type="button" class="pg-btn pg-close" aria-label="Close">×</button>'
+        + '<button type="button" class="pg-btn pg-prev" aria-label="Previous photo">‹</button>'
+        + '<img alt="">'
+        + '<button type="button" class="pg-btn pg-next" aria-label="Next photo">›</button>'
+        + '<div class="pg-count"></div>';
+      document.body.appendChild(box);
+      const big = box.querySelector('img');
+      const count = box.querySelector('.pg-count');
+      const many = list.length > 1;
+      if (!many) { box.querySelector('.pg-prev').style.display = 'none'; box.querySelector('.pg-next').style.display = 'none'; }
+      let cur = 0, lastFocus = null;
+      function show(i) {
+        cur = (i + list.length) % list.length;
+        big.src = list[cur];
+        big.alt = 'Photo ' + (cur + 1) + ' of ' + list.length;
+        count.textContent = many ? (cur + 1) + ' / ' + list.length : '';
+      }
+      function open(i) { lastFocus = document.activeElement; show(i); box.classList.add('open'); document.body.style.overflow = 'hidden'; box.querySelector('.pg-close').focus(); }
+      function close() { box.classList.remove('open'); document.body.style.overflow = ''; big.removeAttribute('src'); if (lastFocus && lastFocus.focus) lastFocus.focus(); }
+      items.forEach(el => el.addEventListener('click', () => open(parseInt(el.dataset.pg, 10) || 0)));
+      box.querySelector('.pg-close').addEventListener('click', close);
+      box.querySelector('.pg-prev').addEventListener('click', e => { e.stopPropagation(); show(cur - 1); });
+      box.querySelector('.pg-next').addEventListener('click', e => { e.stopPropagation(); show(cur + 1); });
+      box.addEventListener('click', e => { if (e.target === box) close(); });
+      document.addEventListener('keydown', e => {
+        if (!box.classList.contains('open')) return;
+        if (e.key === 'Escape') close();
+        else if (many && e.key === 'ArrowLeft') show(cur - 1);
+        else if (many && e.key === 'ArrowRight') show(cur + 1);
+      });
+      let startX = null;
+      box.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+      box.addEventListener('touchend', e => {
+        if (startX === null || !many) return;
+        const dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) > 40) show(cur + (dx < 0 ? 1 : -1));
+        startX = null;
+      }, { passive: true });
+    }
+
     // ── Main fetch ──
     fetch('/blog-posts.json')
       .then(r => r.ok ? r.json() : [])
@@ -807,6 +878,20 @@
         const photo = post.image ? `<div class="post-photo"><img src="${esc(post.image)}" alt="${esc(post.title)}"></div>` : '';
 
         let bodyHtml = post.body && post.body.trim() ? marked.parse(post.body) : '<p><em>Full story coming soon — stay tuned! ✨</em></p>';
+
+        // Photo gallery: a grid of squares that open big when tapped
+        const galleryList = (Array.isArray(post.gallery) ? post.gallery : []).filter(Boolean);
+        const galleryHtml = galleryList.length
+          ? `<div class="post-gallery g-${galleryList.length}">` + galleryList.map((src, i) =>
+              `<button type="button" class="pg-item" data-pg="${i}" aria-label="Open photo ${i + 1} of ${galleryList.length}"><img src="${esc(src)}" alt="${esc(post.title)}, photo ${i + 1}" loading="lazy"></button>`
+            ).join('') + `</div>`
+          : '';
+        const galleryMark = /<p>\s*\[gallery\]\s*<\/p>/i;
+        let galleryPlaced = false;
+        if (galleryMark.test(bodyHtml)) {
+          bodyHtml = bodyHtml.replace(galleryMark, () => galleryHtml);
+          galleryPlaced = true;
+        }
 
         const nlCta = `
           <div class="nl-cta-mid sr sr-scale">
@@ -830,6 +915,7 @@
 
           ${photo}
           <div class="post-body">${bodyHtml}</div>
+          ${galleryPlaced ? '' : galleryHtml}
 
           ${post.quote ? `
           <div class="post-closing-quote sr sr-up">
@@ -866,6 +952,7 @@
         setTimeout(initScrollReveal, 50);
 
         // Setup floating panel
+        setupGallery(galleryList);
         setupFloatingNext(posts, slug);
 
         // ── View counter ──
