@@ -7,7 +7,7 @@ readTime: 7 min read
 excerpt: I am building a UGC creator program for my app before it even launches.
   Here are 7 lessons, plus how AI helps me run it, for any founder who wants to
   do the same.
-image: /images/uploads/ugc-creator-program-cover.png
+image: /images/uploads/ugc-creator-program-cover-v2.png
 ---
 My app is not live yet. I already have about 20 creators ready to post about it.
 
