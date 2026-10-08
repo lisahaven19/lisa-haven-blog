@@ -1,6 +1,5 @@
 ---
-draft: true
-title: "Why I Created Havenly: A Single Mom's Mission to Build the Best Makeup
+title: "Why I Created Havenly: A Mom's Mission to Build the Best Makeup
   Remover Wipes for Gen Z"
 category: Founder Life
 emoji: 💄
@@ -8,12 +7,10 @@ date: 2026-06-18T07:52:00.000-04:00
 readTime: 5 min read
 excerpt: Lisa Haven shares the real story behind Havenly, the best makeup
   remover wipes for Gen Z. Bigger, thicker, and built different. Here is why she
-  created this beauty brand as a single mom of three.
-image: /images/uploads/0i4a7694.jpg
+  created this beauty brand as a mom of three.
+image: /images/uploads/havenly-makeup-remover-wipes-cover.png
 ---
-# Why I Created Havenly: A Single Mom's Mission to Build the Best Makeup Remover Wipes for Gen Z
-
-I did not start Havenly because I had a team, a business degree, or a perfectly mapped-out plan. I started Havenly because I was a single mom of three daughters who was tired of using makeup remover wipes that fell apart before the job was done, and I knew there had to be a better way.
+I did not start Havenly because I had a team, a business degree, or a perfectly mapped-out plan. I started Havenly because I was a mom of three daughters who was tired of using makeup remover wipes that fell apart before the job was done, and I knew there had to be a better way.
 
 That is the honest truth behind one of the most important beauty brands being built right now.
 
@@ -21,7 +18,7 @@ If you have ever wondered what makes Havenly makeup remover wipes different from
 
 ## The Problem With Makeup Remover Wipes Nobody Was Fixing
 
-Before I tell you why I started a beauty brand as a single mom, you need to understand the problem I was solving.
+Before I tell you why I started a beauty brand as a mom of three, you need to understand the problem I was solving.
 
 Standard makeup remover wipes have not meaningfully changed in decades. They are too small to cover a full face. They are too thin to hold together through one use. They leave residue, they irritate skin, and they force you to use three or four wipes just to get the job done. For women who wear full coverage foundation, eyeshadow, mascara, and lip color, this is a daily frustration that costs time and money.
 
@@ -41,17 +38,17 @@ Here is what sets Havenly apart from every other makeup remover wipe on the mark
 
 If you are searching for the best makeup remover wipes for Gen Z skin, including sensitive skin that reacts to harsh ingredients and low-quality materials, Havenly is the answer the market has been waiting for.
 
-## Why I Started a Beauty Brand as a Single Mom
+## Why I Started a Beauty Brand as a Mom of 3
 
 People ask me how I do it. Three companies, three daughters, zero co-founders, zero days off.
 
-The honest answer is that I do not have a choice. And I do not say that with any trace of complaint. I say it because necessity is the most powerful fuel there is, and starting a beauty brand as a single mom has clarified my priorities in ways that no business school ever could.
+The honest answer is that I do not have a choice. And I do not say that with any trace of complaint. I say it because necessity is the most powerful fuel there is, and starting a beauty brand as a mom of three has clarified my priorities in ways that no business school ever could.
 
 My daughters are named Valentina, Mili, and Scarlett. Everything I am building is for them to witness. Not to inherit someday, but to watch right now, in real time. I want them to grow up knowing what it looks like when a woman bets on herself and builds something real.
 
 Havenly is part of that. It is not a hobby. It is not a side hustle. It is a global consumer beauty brand being developed for retail shelves worldwide, and I am treating it with the seriousness that vision deserves.
 
-Starting a beauty brand as a single mom means every decision I make is intentional. Every manufacturer I negotiate with, every formulation I review, every packaging choice I debate, it all happens with a clear purpose: to build a product I believe in and a business that lasts.
+Starting a beauty brand as a mom of three means every decision I make is intentional. Every manufacturer I negotiate with, every formulation I review, every packaging choice I debate, it all happens with a clear purpose: to build a product I believe in and a business that lasts.
 
 ## Havenly Is Built for Women Who Expect More
 
@@ -77,7 +74,7 @@ I did better. And I am just getting started.
 
 ## Follow the Havenly Journey
 
-If you are a woman who is tired of makeup remover wipes that do not work, your solution is coming. If you are a female entrepreneur watching a single mom build a beauty brand from the ground up and wondering how it is done, the answer is here, documented in real time at [lisahaven.co](https://www.lisahaven.co).
+If you are a woman who is tired of makeup remover wipes that do not work, your solution is coming. If you are a female entrepreneur watching a mom of three build a beauty brand from the ground up and wondering how it is done, the answer is here, documented in real time at [lisahaven.co](https://www.lisahaven.co).
 
 Follow along. Share this post. Tell every woman in your life who has thrown a shredded wipe in the trash in frustration that something better exists.
 
@@ -87,7 +84,7 @@ Havenly is what the best makeup remover wipes for Gen Z should have always been.
 
 ---
 
-Shop and follow Havenly: [havenly.co](https://www.havenly.co)
+Follow Havenly: [havenly.co](https://www.havenly.co)
 
 Read the founder's journey: [lisahaven.co](https://www.lisahaven.co)
 
