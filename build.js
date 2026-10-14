@@ -130,6 +130,8 @@ if (fs.existsSync(POSTS_DIR)) {
       date: meta.date || date,
       readTime: meta.readTime || '3 min read',
       excerpt: meta.excerpt || '',
+      seoTitle: meta.seoTitle || '',
+      metaDescription: meta.metaDescription || '',
       image: meta.image || '',
       gallery: asList(meta.gallery),
       draft: isDraft(meta),
@@ -366,8 +368,8 @@ try {
     let made = 0;
     live.forEach(p => {
       const url = SITE + '/blog/' + encodeURIComponent(p.slug) + '/';
-      const title = p.title + ' | Lisa Haven';
-      const desc = (p.excerpt && p.excerpt.trim()) ? p.excerpt.trim() : (plain(p.body).slice(0, 155) || DEFAULT_DESC);
+      const title = (p.seoTitle && p.seoTitle.trim()) ? p.seoTitle.trim() : p.title + ' | Lisa Haven';
+      const desc = (p.metaDescription && p.metaDescription.trim()) ? p.metaDescription.trim() : (p.excerpt && p.excerpt.trim()) ? p.excerpt.trim() : (plain(p.body).slice(0, 155) || DEFAULT_DESC);
       const img = abs(p.image) || DEFAULT_IMG;
       const published = iso(p.date);
       const schema = {

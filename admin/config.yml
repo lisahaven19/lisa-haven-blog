@@ -27,12 +27,15 @@ collections:
           - "Mindset & Growth"
           - "Beauty & Style"
           - "Business Tips"
+          - "AI & Tech"
           - "Travel"
           - "Carnivore & Wellness"
       - { label: "Emoji", name: "emoji", widget: "string", default: "✨", hint: "One emoji that represents this post" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Read Time", name: "readTime", widget: "string", default: "3 min read" }
       - { label: "Excerpt", name: "excerpt", widget: "text", hint: "Short teaser shown on the homepage (1-2 sentences)" }
+      - { label: "SEO Title", name: "seoTitle", widget: "string", required: false, hint: "Optional. The title Google shows, up to 60 characters, search phrase first." }
+      - { label: "Meta Description", name: "metaDescription", widget: "text", required: false, hint: "Optional. The summary Google shows, 150 to 160 characters, with the search phrase." }
       - { label: "Cover Image", name: "image", widget: "image", required: false, hint: "Optional. Leave this empty for a post with only the title and text." }
       - label: "Photo Gallery"
         name: "gallery"

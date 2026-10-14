@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lisa Haven card template</title>
+<!--
+  The Lisa Haven cover and Pinterest pin template.
+  tools/render-images.py fills this in and saves the PNG files.
+  Sizes: cover 1080 x 1350 (blog post card), pin 1000 x 1500 (Pinterest).
+-->
+<style>
+  @font-face { font-family: 'PF'; src: url('fonts/PlayfairDisplay.ttf'); font-weight: 400 900; font-style: normal; }
+  @font-face { font-family: 'PF'; src: url('fonts/PlayfairDisplay-Italic.ttf'); font-weight: 400 900; font-style: italic; }
+  @font-face { font-family: 'IN'; src: url('fonts/Inter.ttf'); font-weight: 300 800; font-style: normal; }
+  :root { --cream:#F2EDE6; --ink:#0A0A0A; --rose:#C47E8A; --rose-dark:#A35F6D; --rose-light:#E8C4CB; --plum:#3D1E25; --mid:#555; --sub:#1A1A1A; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { background: var(--cream); }
+  .card { position:relative; overflow:hidden; background:var(--cream); display:flex; flex-direction:column; }
+  .card.pin { width:1000px; height:1500px; }
+  .card.cover { width:1080px; height:1350px; }
+  .ribbon { height:12px; background:linear-gradient(90deg,#0A0A0A 0%,#3D1E25 55%,#C47E8A 100%); flex:none; }
+  .top { flex:none; text-align:center; padding-top:110px; }
+  .site { font:600 26px 'IN'; letter-spacing:.32em; color:var(--rose-dark); }
+  .cat { font:500 18px 'IN'; letter-spacing:.26em; color:#7A706A; margin-top:16px; text-transform:uppercase; }
+  .middle { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:40px 130px; }
+  .title { font-family:'PF'; font-weight:900; color:var(--ink); line-height:1.08; text-wrap:balance; }
+  .title .accent { display:block; font-style:italic; font-weight:400; color:var(--rose-dark); }
+  .rule { width:110px; height:4px; margin:52px auto 44px; background:linear-gradient(90deg,#0A0A0A,#3D1E25 55%,#C47E8A); border-radius:2px; flex:none; }
+  .sub { font-family:'IN'; font-weight:400; color:var(--sub); line-height:1.45; max-width:560px; text-wrap:balance; }
+  .tag { font-family:'PF'; font-style:italic; font-weight:400; color:#6B6260; margin-top:24px; }
+  .foot { flex:none; background:linear-gradient(180deg,#0A0A0A 0%,#0A0A0A 55%,#1E1316 100%); position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
+  .foot::after { content:''; position:absolute; inset:0; background:radial-gradient(120% 140% at 100% 0%, rgba(196,126,138,.22), transparent 55%); pointer-events:none; }
+  .pin .foot { height:170px; }
+  .cover .foot { height:150px; }
+  .name { font-family:'PF'; font-weight:700; font-size:46px; color:#F2EDE6; position:relative; z-index:1; }
+  .name em { font-style:italic; font-weight:400; color:var(--rose-light); }
+  .cta { font:600 15px 'IN'; letter-spacing:.3em; color:#D9CFC8; position:relative; z-index:1; }
+</style>
+</head>
+<body>
+<div class="card" id="card">
+  <div class="ribbon"></div>
+  <div class="top"><div class="site">LISAHAVEN.CO</div><div class="cat" id="cat"></div></div>
+  <div class="middle" id="middle">
+    <div class="title" id="title"></div>
+    <div class="rule"></div>
+    <div class="sub" id="sub"></div>
+    <div class="tag" id="tag"></div>
+  </div>
+  <div class="foot"><div class="name">Lisa <em>Haven</em></div><div class="cta" id="cta">READ THE FULL POST</div></div>
+</div>
+<script>
+// Called by the renderer with: {kind:'pin'|'cover', category, title, accent, subtitle, tagline}
+window.fill = async function (d) {
+  const card = document.getElementById('card');
+  card.className = 'card ' + (d.kind === 'cover' ? 'cover' : 'pin');
+  document.getElementById('cat').textContent = d.category || '';
+  const t = document.getElementById('title');
+  t.textContent = d.title || '';
+  if (d.accent) { const a = document.createElement('span'); a.className = 'accent'; a.textContent = d.accent; t.appendChild(a); }
+  document.getElementById('sub').textContent = d.subtitle || '';
+  const tag = document.getElementById('tag');
+  tag.textContent = d.tagline || '';
+  tag.style.display = d.tagline ? '' : 'none';
+  document.getElementById('cta').style.display = d.kind === 'cover' ? 'none' : '';
+  await document.fonts.ready;
+  // Shrink the type until everything fits with breathing room: nothing overlaps, nothing crammed.
+  const mid = document.getElementById('middle');
+  const sub = document.getElementById('sub');
+  let ts = d.kind === 'cover' ? 104 : 112, ss = 38, gs = 32;
+  const fits = () => { const pad = 140; let h = 0; for (const c of mid.children) { if (c.style.display === 'none') continue; const s = getComputedStyle(c); h += c.offsetHeight + parseFloat(s.marginTop) + parseFloat(s.marginBottom); } return h <= mid.clientHeight - pad && t.scrollWidth <= t.clientWidth + 1; };
+  for (let i = 0; i < 60; i++) {
+    t.style.fontSize = ts + 'px'; sub.style.fontSize = ss + 'px'; tag.style.fontSize = gs + 'px';
+    if (fits()) break;
+    ts -= 3; if (ts < 70) { ss = Math.max(26, ss - 1); gs = Math.max(22, gs - 1); }
+  }
+  return fits();
+};
+</script>
+</body>
+</html>

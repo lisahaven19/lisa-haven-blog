@@ -71,3 +71,22 @@
   from = "/blog"
   to = "/#latest"
   status = 302
+
+# Working files for publishing posts stay private (not part of the website)
+[[redirects]]
+  from = "/CLAUDE.md"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/tools/*"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/templates/*"
+  to = "/404"
+  status = 404
+  force = true
