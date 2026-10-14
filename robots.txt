@@ -1,0 +1,9 @@
+# robots.txt for lisahaven.co
+# Tells search engines (Google, Bing) they are welcome to read the blog,
+# keeps them out of the private editor, and points them to the sitemap.
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://lisahaven.co/sitemap.xml

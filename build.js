@@ -279,3 +279,38 @@ try {
 } catch (e) {
   console.log('⚠️ Homepage OG image swap skipped:', e.message);
 }
+
+// ── 5. Build sitemap.xml (the list of every page Google should find) ──
+// Rebuilt on every publish from blog-posts.json, so new posts are added by themselves.
+try {
+  const livePath = path.join(__dirname, 'blog-posts.json');
+  let live = [];
+  if (fs.existsSync(livePath)) {
+    const parsed = JSON.parse(fs.readFileSync(livePath, 'utf-8'));
+    if (Array.isArray(parsed)) live = parsed;
+  }
+  const SITE = 'https://lisahaven.co';
+  const xmlEsc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const day = d => { const m = String(d || '').match(/^\d{4}-\d{2}-\d{2}/); return m ? m[0] : ''; };
+  const urls = [
+    { loc: SITE + '/', priority: '1.0' },
+    { loc: SITE + '/start-here', priority: '0.8' },
+    { loc: SITE + '/shop', priority: '0.6' },
+    { loc: SITE + '/press-kit', priority: '0.5' },
+    { loc: SITE + '/contact', priority: '0.4' },
+    { loc: SITE + '/privacy-policy', priority: '0.2' }
+  ];
+  live.filter(p => p && p.slug && !p.draft).forEach(p => {
+    urls.push({ loc: SITE + '/post?slug=' + encodeURIComponent(p.slug), lastmod: day(p.date), priority: '0.9' });
+  });
+  const xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    + '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    + urls.map(u => '  <url>\n    <loc>' + xmlEsc(u.loc) + '</loc>\n'
+      + (u.lastmod ? '    <lastmod>' + u.lastmod + '</lastmod>\n' : '')
+      + '    <priority>' + u.priority + '</priority>\n  </url>').join('\n')
+    + '\n</urlset>\n';
+  fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), xml);
+  console.log(`✅ Built sitemap.xml with ${urls.length} page(s).`);
+} catch (e) {
+  console.log('⚠️ sitemap.xml build skipped:', e.message);
+}
