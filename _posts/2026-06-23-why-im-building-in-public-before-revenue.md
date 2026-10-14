@@ -48,6 +48,6 @@ So I'll keep building in public before the revenue comes in. I'll keep documenti
 
 If you're a woman building something of your own, take this with you. You don't have to wait until you've made it to start. Start now, and let people see you trying. Invest in yourself now. 💸
 
-> "Let us not become weary in doing good, for at the proper time we will reap a harvest if we do not give up."
+> "Embrace what you don't know, especially in the beginning, because what you don't know can become your greatest asset."
 >
-> ~ Galatians 6:9
+> ~ Sara Blakely

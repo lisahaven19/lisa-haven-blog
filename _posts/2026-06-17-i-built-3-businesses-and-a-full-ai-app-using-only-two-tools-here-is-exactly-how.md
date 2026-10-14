@@ -116,6 +116,6 @@ Stay on the lookout. 👀
 - HAVENLY: [Havenly.co](https://havenly.co)
 - BLOG: [lisahaven.co](https://lisahaven.co)
 
-> "Commit to the Lord whatever you do, and he will establish your plans."
+> "Do what you can, with what you have, where you are."
 >
-> ~ Proverbs 16:3
+> ~ Theodore Roosevelt

@@ -90,6 +90,6 @@ AI tools built for women: [lumaprompt.ai](https://www.lumaprompt.ai)
 
 Dating clarity for women: [vixaapp.ai](https://www.vixaapp.ai)
 
-> "She is clothed with strength and dignity; she can laugh at the days to come."
+> "I got my start by giving myself a start."
 >
-> ~ Proverbs 31:25
+> ~ Madam C.J. Walker

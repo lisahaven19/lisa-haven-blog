@@ -161,6 +161,6 @@ If you build one, tell me about it. I share what I'm building every week here on
 
 Now go build your first employee who never sleeps.
 
-> "This thing is too heavy for thee; thou art not able to perform it thyself alone."
+> "Your time is limited, so don't waste it living someone else's life."
 >
-> ~ Exodus 18:18
+> ~ Steve Jobs
