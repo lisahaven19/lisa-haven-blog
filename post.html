@@ -312,6 +312,15 @@
     }
     .nl-cta-mid a:hover { transform:translateY(-3px) scale(1.04); box-shadow:0 10px 28px rgba(196,126,138,0.55); }
 
+
+    /* ── End-of-post signup (beehiiv) ── */
+    .post-signup { margin:48px 0 8px; padding:34px 28px 26px; background:#0A0A0A; border-left:4px solid var(--rose); text-align:center; position:relative; overflow:hidden; }
+    .post-signup .nl-cta-mid-eyebrow { margin-bottom:10px; }
+    .post-signup h3 { font-family:var(--serif); font-size:24px; color:var(--white); margin-bottom:10px; line-height:1.25; }
+    .post-signup p { font-size:14px; color:rgba(255,255,255,0.72); margin:0 auto 18px; max-width:46ch; }
+    .post-signup-form { max-width:520px; margin:0 auto; min-height:60px; }
+    .post-signup-note { font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-top:12px !important; }
+
     /* ── Author card ── */
     .author-card {
       display:flex; gap:22px; align-items:flex-start;
@@ -898,7 +907,7 @@
             <span class="nl-cta-mid-eyebrow">Join The Haven</span>
             <h3>Get my next post before anyone else.</h3>
             <p>No fluff. No filler. Real founder strategy, sent straight to your inbox.</p>
-            <a href="/#newsletter" target="_blank">Subscribe Free →</a>
+            <a href="#post-signup">Subscribe Free →</a>
           </div>`;
 
         // Inject CTA after 3rd </p>
@@ -922,6 +931,14 @@
             <p>${esc(post.quote.text1)}<em>${esc(post.quote.text2)}</em>" 🖤</p>
             <span class="quote-attr">~ ${esc(post.quote.author)}</span>
           </div>` : ''}
+
+          <div class="post-signup sr sr-up" id="post-signup">
+            <span class="nl-cta-mid-eyebrow">Join The Haven</span>
+            <h3>Liked this? Get the next one in your inbox.</h3>
+            <p>My free weekly letter: how I run 3 companies with AI, what's working, and what I'd do differently. Real talk. No fluff.</p>
+            <div class="post-signup-form" id="postSignupForm"></div>
+            <p class="post-signup-note">Free · No spam · Unsubscribe anytime</p>
+          </div>
 
           ${buildShareBarBottom(pageUrl, post.title)}
 
@@ -950,6 +967,18 @@
 
         // Init scroll reveal after DOM inserted
         setTimeout(initScrollReveal, 50);
+
+        // ── Beehiiv signup form at the end of every post ──
+        try {
+          const formHost = document.getElementById('postSignupForm');
+          if (formHost) {
+            const s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://subscribe-forms.beehiiv.com/v3/loader.js';
+            s.setAttribute('data-beehiiv-form', '422f6a2e-d4cd-4500-a21b-b5883beb30c2');
+            formHost.appendChild(s);
+          }
+        } catch (e) {}
 
         // Setup floating panel
         setupGallery(galleryList);
