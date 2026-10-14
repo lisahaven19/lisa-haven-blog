@@ -3,26 +3,24 @@ title: What to Do When Apple Rejects Your App
 category: Founder Life
 emoji: 🖤
 date: 2026-10-14T11:00:00.000-04:00
-readTime: 7 min read
+readTime: 8 min read
 excerpt: "What to do when Apple rejects your app: read the message, fix the exact issue and resubmit. My 5 step founder playbook, written in the middle of it."
-image: /images/uploads/apple-rejects-your-app-cover.jpg
+image: /images/uploads/what-to-do-when-apple-rejects-your-app-cover.png
 seoTitle: "What to Do When Apple Rejects Your App: 5 Founder Steps"
 metaDescription: "What to do when Apple rejects your app: read the message, fix the exact issue and resubmit. My 5 step playbook, plus how I use AI to keep my team moving."
 draft: false
 ---
 I opened App Store Connect and saw a small red X next to my app's name.
 
-**VIXA: Dating Clarity for Women. iOS 1.0.0 Rejected.**
+**VIXA: Dating Clarity for Women. iOS 1.0.0 Rejected.** (iOS is the software that runs every iPhone.)
 
-![Screenshot of App Store Connect showing the VIXA app with an iOS 1.0.0 Rejected status](/images/uploads/apple-rejects-your-app-screenshot.jpg)
+![Screenshot of App Store Connect showing the VIXA app with an iOS 1.0.0 Rejected status](/images/uploads/what-to-do-when-apple-rejects-your-app-screenshot.jpg)
 
 I have about 30 creators in my Discord group, ready to advertise VIXA the day it goes live. And Apple just said: not yet.
 
 I'm not going to pretend that didn't sting. It's disappointing. But here is what I know about what to do when Apple rejects your app: you read the message, you fix the exact issue Apple names, and you resubmit. Most rejections are fixable, and Apple says it reviews 90% of submissions in under 48 hours.
 
 So today I'm sharing my real playbook, written while I'm in the middle of it.
-
-## First, how I feel about it
 
 Disappointed? Yes. Defeated? No.
 
@@ -38,7 +36,7 @@ Yes. Very normal.
 
 In its [2025 App Store Transparency Report](https://www.apple.com/legal/app-store/transparency/2025), Apple says it reviewed 9,100,620 app submissions and rejected 2,093,244 of them. That's about 23%, or roughly 1 in 4.
 
-![Bar chart showing Apple reviewed 9.1 million app submissions in 2025 and rejected 2.1 million, about 1 in 4](/images/uploads/apple-rejects-your-app-chart.jpg)
+![Bar chart showing Apple reviewed 9.1 million app submissions in 2025 and rejected 2.1 million, about 1 in 4](/images/uploads/what-to-do-when-apple-rejects-your-app-chart.jpg)
 
 Big companies get rejected. Funded startups get rejected. Founders with full engineering teams get rejected.
 
@@ -86,9 +84,9 @@ If you truly believe your app follows the rules, you can appeal to the App Revie
 
 ### 5. Resubmit and update your team
 
-Once the fix is in, resubmit. Then give your team a realistic new timeline. Which brings me to the part nobody teaches you.
+Once the fix is in, resubmit. Then give your team a realistic new timeline.
 
-## What not to do after a rejection
+### What not to do after a rejection
 
 A rejection is a moment where small mistakes can cost you weeks. Avoid these:
 
@@ -100,9 +98,17 @@ A rejection is a moment where small mistakes can cost you weeks. Avoid these:
 
 **Don't go silent.** Your team, your creators and your early users can handle a delay. What they can't handle is not knowing.
 
-## How I keep 30 creators excited while we wait
+### 1 thing you cannot skip
 
-A rejection doesn't just delay your app. It tests your team.
+Give Apple a working demo account every single time you submit, with a short note that walks the reviewer through your main feature.
+
+It sounds small. It isn't. If the reviewer can't log in, they can't see what your app does, and the answer will be no before they ever reach the good part. Test the login yourself the morning you submit.
+
+## How I keep 30 creators ready while we wait
+
+### Keeping them close
+
+This is the part nobody teaches you. A rejection delays your app, and it also tests your team.
 
 My creators signed up because they believe in VIXA, and I take that seriously. Here's how I keep them close:
 
@@ -114,7 +120,7 @@ My creators signed up because they believe in VIXA, and I take that seriously. H
 
 **Keep your word on updates.** If I said Friday, I update them Friday, even if the news is "still in review."
 
-## How I run my creator program with AI
+### Running it with AI
 
 This is the part people ask me about the most.
 
@@ -128,6 +134,14 @@ I don't write code. I just tell it what I need in plain words, like:
 * "Let the creators know the launch date moved, and what to work on this week."
 * "Show me a list of who still needs to send her account link."
 
+These are the tools I use to run it:
+
+*Disclosure: some links below may be affiliate links, which means I may earn a small commission at no extra cost to you. I only share tools I actually use.*
+
+* **[Claude](https://claude.ai)** handles the messages, reminders, guides and tracking.
+* **[Monday.com](https://monday.com)** holds every task, with an owner and a due date, so nothing slips.
+* **[Slack](https://slack.com)** is where my team and I talk through fixes fast.
+
 So even on a day like today, the program doesn't stop. My creators still get answers, and I get to focus on fixing the app.
 
 I'm writing up exactly how I do it, step by step, in an upcoming post, because this is what I want every woman to know: you can leverage AI to run your businesses and take hours off your plate. In the meantime, you can read [how I built my UGC creator program before launch](https://www.lisahaven.co/blog/how-to-build-ugc-creator-program-before-launch/) and [how to create an AI agent with Claude](https://www.lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/).
@@ -136,17 +150,22 @@ I'm writing up exactly how I do it, step by step, in an upcoming post, because t
 
 I could have kept this quiet, fixed it and posted only the win. But that's not why I started this blog.
 
-The same week VIXA got rejected, I read an interview with Christina Qi, the CEO and co-founder of Databento, in [Entrepreneur](https://www.entrepreneur.com/building-a-business/she-grew-up-on-food-stamps-how-she-built-a-million-dollar-company). She grew up on food stamps, started a hedge fund as an MIT student, and now runs a company that counts Nvidia and OpenAI as clients. Her point hit me hard: getting rejected is part of the founder job description. If you're getting told no, you're doing the job.
+The same week VIXA got rejected, I read an interview with Christina Qi, the CEO and co-founder of Databento, in [Entrepreneur](https://www.entrepreneur.com/building-a-business/she-grew-up-on-food-stamps-how-she-built-a-million-dollar-company). She grew up on food stamps, started a hedge fund as a student at the Massachusetts Institute of Technology (MIT), and now runs a company that counts Nvidia and OpenAI as clients. Her point hit me hard: getting rejected is part of the founder job description. If you're getting told no, you're doing the job.
 
 As a mother of 3 running 3 companies, I also know my daughters are watching how I handle hard days. I want them to see what a founder does after a no: she fixes it and moves forward.
 
 That's why I believe in [building in public before revenue](https://www.lisahaven.co/blog/building-in-public-before-revenue/). The wins, the mess and everything in between. If you only ever see the highlight reel, you start to think your own setbacks mean something is wrong with you. They don't.
 
-## 1 thing you cannot skip
+## Frequently asked questions
 
-Give Apple a working demo account every single time you submit, with a short note that walks the reviewer through your main feature.
+**How long does Apple take to review an app?**
+Apple says it reviews at least 50% of submissions in under 24 hours and 90% in under 48 hours. A resubmission goes through the same review.
 
-It sounds small. It isn't. If the reviewer can't log in, they can't see what your app does, and the answer will be no before they ever reach the good part. Test the login yourself the morning you submit.
+**Can I appeal an App Store rejection?**
+Yes. If you believe your app follows the guidelines, you can appeal to the App Review Board. Apple allows 1 appeal per submission, and you need to give specific reasons.
+
+**What is the most common reason apps get rejected?**
+App Completeness, guideline 2.1. Apple says it causes over 40% of unresolved issues. Crashes, broken links, placeholder content and missing demo logins all fall under it.
 
 ## Your next step
 
