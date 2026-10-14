@@ -2125,7 +2125,7 @@
     </div>
 
     <div class="posts-grid stagger">
-      <a href="/post?slug=i-built-3-businesses-and-a-full-ai-app-using-only-two-tools-here-is-exactly-how" class="post-card featured">
+      <a href="/blog/i-built-3-businesses-and-a-full-ai-app-using-only-two-tools-here-is-exactly-how/" class="post-card featured">
         <div class="post-card-body">
           <div class="post-meta">
             <span class="post-cat">✨ Business</span>
@@ -2139,7 +2139,7 @@
           </div>
         </div>
       </a>
-      <a href="/post?slug=i-manifested-three-companies-heres-the-part-the-law-of-attraction-crowd-wont-tell-you" class="post-card">
+      <a href="/blog/i-manifested-three-companies-heres-the-part-the-law-of-attraction-crowd-wont-tell-you/" class="post-card">
         <div class="post-card-body">
           <div class="post-meta">
             <span class="post-cat">✨ Mindset &amp; Growth</span>
@@ -2153,7 +2153,7 @@
           </div>
         </div>
       </a>
-      <a href="/post?slug=from-zero-to-three-companies" class="post-card">
+      <a href="/blog/from-zero-to-three-companies/" class="post-card">
         <div class="post-card-body">
           <div class="post-meta">
             <span class="post-cat">🚀 The Journey</span>
@@ -2167,7 +2167,7 @@
           </div>
         </div>
       </a>
-      <a href="/post?slug=why-i-went-carnivore" class="post-card">
+      <a href="/blog/why-i-went-carnivore/" class="post-card">
         <div class="post-card-body">
           <div class="post-meta">
             <span class="post-cat">🥩 Mindset &amp; Growth</span>
@@ -2181,7 +2181,7 @@
           </div>
         </div>
       </a>
-      <a href="/post?slug=what-is-vixa" class="post-card">
+      <a href="/blog/what-is-vixa/" class="post-card">
         <div class="post-card-body">
           <div class="post-meta">
             <span class="post-cat">💬 Founder Life</span>
@@ -2723,7 +2723,7 @@
 
     function openPost(post) {
       // Open the story on its own page (likes + read counts live there)
-      window.location.href = '/post?slug=' + encodeURIComponent(post.slug);
+      window.location.href = '/blog/' + encodeURIComponent(post.slug) + '/';
       return;
 
       // Format date nicely
@@ -2782,7 +2782,7 @@
       const d = new Date(post.date);
       const dateStr = d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
       const a = document.createElement('a');
-      a.href = '/post?slug=' + encodeURIComponent(post.slug);
+      a.href = '/blog/' + encodeURIComponent(post.slug) + '/';
       a.className = 'c-card';
       a.dataset.slug = post.slug;
       const photoHtml = post.image ? `<div class="c-photo" style="background-image:url('${post.image}')"></div>` : '';

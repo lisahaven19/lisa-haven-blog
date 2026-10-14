@@ -54,7 +54,20 @@
   to = "/privacy-policy.html"
   status = 200
 
+# Old post links (/post?slug=...) move permanently to each post's own page
+[[redirects]]
+  from = "/post"
+  to = "/blog/:slug/"
+  status = 301
+  force = true
+  query = {slug = ":slug"}
+
 [[redirects]]
   from = "/post"
   to = "/post.html"
   status = 200
+
+[[redirects]]
+  from = "/blog"
+  to = "/#latest"
+  status = 302

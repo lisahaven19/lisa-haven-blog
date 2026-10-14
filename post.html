@@ -604,7 +604,7 @@
   <script>
     const COUNTER = 'https://abacus.jasoncameron.dev';
     const NS = 'lisahaven-co';
-    const slug = new URLSearchParams(location.search).get('slug') || '';
+    const slug = (location.pathname.match(/^\/blog\/([^\/]+)/) || [])[1] || new URLSearchParams(location.search).get('slug') || '';
     const main = document.getElementById('main');
 
     // ── Hamburger ──
@@ -769,7 +769,7 @@
       let pool = [...others];
       while (pool.length < 8) pool = [...pool, ...others];
       const makeCard = p => `
-        <a class="related-card" href="/post?slug=${esc(p.slug)}">
+        <a class="related-card" href="/blog/${esc(p.slug)}/">
           ${p.image ? `<img class="related-thumb" src="${esc(p.image)}" alt="${esc(p.title)}" loading="lazy">` : `<span class="related-thumb-placeholder"></span>`}
           <div class="related-body">
             <span class="related-emoji">${esc(p.emoji||'✨')}</span>
@@ -798,12 +798,12 @@
       const next = idx > 0 ? allPosts[idx - 1] : null;
       if (!prev && !next) return '';
       const prevHtml = prev ? `
-        <a class="post-nav-item post-nav-prev sr sr-left" href="/post?slug=${esc(prev.slug)}">
+        <a class="post-nav-item post-nav-prev sr sr-left" href="/blog/${esc(prev.slug)}/">
           <span class="post-nav-dir">← Previous Post</span>
           <span class="post-nav-title">${esc(prev.title)}</span>
         </a>` : '<div></div>';
       const nextHtml = next ? `
-        <a class="post-nav-item post-nav-next sr sr-right" href="/post?slug=${esc(next.slug)}">
+        <a class="post-nav-item post-nav-next sr sr-right" href="/blog/${esc(next.slug)}/">
           <span class="post-nav-dir">Next Post →</span>
           <span class="post-nav-title">${esc(next.title)}</span>
         </a>` : '<div></div>';
@@ -817,7 +817,7 @@
       if (!next) return;
       const fp = document.getElementById('nextPostFloat');
       if (!fp) return;
-      document.getElementById('nextPostLink').href = '/post?slug=' + encodeURIComponent(next.slug);
+      document.getElementById('nextPostLink').href = '/blog/' + encodeURIComponent(next.slug) + '/';
       document.getElementById('nextPostEmoji').textContent = next.emoji || '✨';
       document.getElementById('nextPostTitle').textContent = next.title;
       fp.style.display = 'block';
@@ -881,7 +881,7 @@
         if (!post) { comingSoon(); return; }
 
         document.title = post.title + ' | Lisa Haven';
-        const pageUrl = 'https://lisahaven.co/post?slug=' + encodeURIComponent(slug);
+        const pageUrl = 'https://lisahaven.co/blog/' + encodeURIComponent(slug) + '/';
         const d = new Date(post.date);
         const dateStr = d.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
         const photo = post.image ? `<div class="post-photo"><img src="${esc(post.image)}" alt="${esc(post.title)}"></div>` : '';

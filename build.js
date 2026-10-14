@@ -199,7 +199,7 @@ try {
         + '    if(!grid) return;\n'
         + '    posts.sort(function(a,b){ return new Date(b.date)-new Date(a.date); });\n'
         + '    grid.innerHTML=posts.slice(0,5).map(function(p,i){\n'
-        + '      return \'<a href="/post?slug=\'+encodeURIComponent(p.slug)+\'" class="post-card\'+(i===0?\' featured\':\'\')+\'"><div class="post-card-body"><div class="post-meta"><span class="post-cat">\'+esc(((p.emoji||\'\')+\' \'+(p.category||\'\')).trim())+\'</span><span class="post-date">\'+esc(fmtDate(p.date))+\'</span></div><h3 class="post-title">\'+esc(p.title)+\'</h3><p class="post-excerpt">\'+esc(p.excerpt)+\'</p><div class="post-footer"><span class="post-read">⏱ \'+esc(p.readTime||\'\')+\'</span><span class="post-arrow">→</span></div></div></a>\';\n'
+        + '      return \'<a href="/blog/\'+encodeURIComponent(p.slug)+\'/" class="post-card\'+(i===0?\' featured\':\'\')+\'"><div class="post-card-body"><div class="post-meta"><span class="post-cat">\'+esc(((p.emoji||\'\')+\' \'+(p.category||\'\')).trim())+\'</span><span class="post-date">\'+esc(fmtDate(p.date))+\'</span></div><h3 class="post-title">\'+esc(p.title)+\'</h3><p class="post-excerpt">\'+esc(p.excerpt)+\'</p><div class="post-footer"><span class="post-read">⏱ \'+esc(p.readTime||\'\')+\'</span><span class="post-arrow">→</span></div></div></a>\';\n'
         + "    }).join('');\n"
         + '  }).catch(function(){});\n'
         + '})();\n'
@@ -301,7 +301,7 @@ try {
     { loc: SITE + '/privacy-policy', priority: '0.2' }
   ];
   live.filter(p => p && p.slug && !p.draft).forEach(p => {
-    urls.push({ loc: SITE + '/post?slug=' + encodeURIComponent(p.slug), lastmod: day(p.date), priority: '0.9' });
+    urls.push({ loc: SITE + '/blog/' + encodeURIComponent(p.slug) + '/', lastmod: day(p.date), priority: '0.9' });
   });
   const xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
     + '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -313,4 +313,107 @@ try {
   console.log(`✅ Built sitemap.xml with ${urls.length} page(s).`);
 } catch (e) {
   console.log('⚠️ sitemap.xml build skipped:', e.message);
+}
+
+// ── 6. Give every post its own real page at /blog/<slug>/ ──
+// Google, Pinterest (Rich Pins), Facebook, LinkedIn and text messages read these
+// pages directly, so each one carries its own title, description, share image,
+// article details, and a readable copy of the post. The page then loads as usual.
+try {
+  const livePath = path.join(__dirname, 'blog-posts.json');
+  const tplPath = path.join(__dirname, 'post.html');
+  if (fs.existsSync(livePath) && fs.existsSync(tplPath)) {
+    const live = JSON.parse(fs.readFileSync(livePath, 'utf-8')).filter(p => p && p.slug && !p.draft);
+    const tpl = fs.readFileSync(tplPath, 'utf-8')
+      .replace(/\n\s*<!-- AUTO-OG -->[\s\S]*?<meta name="twitter:image"[^>]*>\n?/, '\n');
+    const SITE = 'https://lisahaven.co';
+    const DEFAULT_IMG = SITE + '/images/uploads/og-card.jpg';
+    const DEFAULT_DESC = 'The real journey of building three companies as a mother of 3. The wins, the mess, and everything in between.';
+    const esc = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    const abs = u => !u ? '' : (/^https?:\/\//.test(u) ? u : SITE + (u.startsWith('/') ? u : '/' + u));
+    const iso = d => { const t = new Date(d); return isNaN(t) ? '' : t.toISOString(); };
+    const plain = s => String(s || '').replace(/[#>*_`\[\]]/g, '').replace(/\(([^)]*)\)/g, '').replace(/\s+/g, ' ').trim();
+
+    // A small Markdown reader, only for the copy search engines see first.
+    // The live page still renders the post with the full Markdown library.
+    const inline = t => esc(t)
+      .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, a, h) => '<a href="' + h.replace(/"/g, '&quot;') + '">' + a + '</a>')
+      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/(^|[^*])\*([^*]+)\*/g, '$1<em>$2</em>');
+    const md = src => {
+      const out = []; let list = null; let para = [];
+      const flush = () => { if (para.length) { out.push('<p>' + inline(para.join(' ')) + '</p>'); para = []; } if (list) { out.push('</' + list + '>'); list = null; } };
+      String(src || '').replace(/\r\n/g, '\n').split('\n').forEach(line => {
+        const l = line.trim();
+        let m;
+        if (!l || l === '[gallery]') { flush(); return; }
+        if ((m = l.match(/^(#{1,4})\s+(.*)$/))) { flush(); const n = Math.min(m[1].length + 1, 4); out.push('<h' + n + '>' + inline(m[2]) + '</h' + n + '>'); return; }
+        if (/^(-{3,}|\*{3,})$/.test(l)) { flush(); out.push('<hr>'); return; }
+        if ((m = l.match(/^>\s?(.*)$/))) { flush(); out.push('<blockquote><p>' + inline(m[1]) + '</p></blockquote>'); return; }
+        if ((m = l.match(/^[-*]\s+(.*)$/)) || (m = l.match(/^\d+[.)]\s+(.*)$/))) {
+          const type = /^\d/.test(l) ? 'ol' : 'ul';
+          if (para.length) { out.push('<p>' + inline(para.join(' ')) + '</p>'); para = []; }
+          if (list !== type) { if (list) out.push('</' + list + '>'); out.push('<' + type + '>'); list = type; }
+          out.push('<li>' + inline(m[1]) + '</li>'); return;
+        }
+        if (list) { out.push('</' + list + '>'); list = null; }
+        para.push(l);
+      });
+      flush();
+      return out.join('\n');
+    };
+
+    let made = 0;
+    live.forEach(p => {
+      const url = SITE + '/blog/' + encodeURIComponent(p.slug) + '/';
+      const title = p.title + ' | Lisa Haven';
+      const desc = (p.excerpt && p.excerpt.trim()) ? p.excerpt.trim() : (plain(p.body).slice(0, 155) || DEFAULT_DESC);
+      const img = abs(p.image) || DEFAULT_IMG;
+      const published = iso(p.date);
+      const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: p.title,
+        description: desc,
+        image: [img],
+        datePublished: published || undefined,
+        dateModified: published || undefined,
+        author: { '@type': 'Person', name: 'Lisa Haven', url: SITE + '/' },
+        publisher: { '@type': 'Person', name: 'Lisa Haven', url: SITE + '/' },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+        articleSection: p.category || undefined
+      };
+      const head = '\n  <meta name="description" content="' + esc(desc) + '">'
+        + '\n  <link rel="canonical" href="' + url + '">'
+        + '\n  <meta property="og:type" content="article">'
+        + '\n  <meta property="og:site_name" content="Lisa Haven">'
+        + '\n  <meta property="og:title" content="' + esc(p.title) + '">'
+        + '\n  <meta property="og:description" content="' + esc(desc) + '">'
+        + '\n  <meta property="og:url" content="' + url + '">'
+        + '\n  <meta property="og:image" content="' + esc(img) + '">'
+        + (published ? '\n  <meta property="article:published_time" content="' + published + '">' : '')
+        + '\n  <meta property="article:author" content="Lisa Haven">'
+        + (p.category ? '\n  <meta property="article:section" content="' + esc(p.category) + '">' : '')
+        + '\n  <meta name="author" content="Lisa Haven">'
+        + '\n  <meta name="twitter:card" content="summary_large_image">'
+        + '\n  <meta name="twitter:title" content="' + esc(p.title) + '">'
+        + '\n  <meta name="twitter:description" content="' + esc(desc) + '">'
+        + '\n  <meta name="twitter:image" content="' + esc(img) + '">'
+        + '\n  <script type="application/ld+json">' + JSON.stringify(schema).replace(/</g, '\\u003c') + '</script>\n';
+      const article = '<article class="prerender">'
+        + '<p class="post-meta">' + esc((p.emoji || '') + ' ' + (p.category || '')) + '</p>'
+        + '<h1>' + esc(p.title) + '</h1>'
+        + (p.image ? '<p><img src="' + esc(p.image) + '" alt="' + esc(p.title) + '"></p>' : '')
+        + '<div class="post-body">' + md(p.body) + '</div></article>';
+      let html = tpl.replace(/<title>[\s\S]*?<\/title>/, '<title>' + esc(title) + '</title>' + head);
+      html = html.replace(/(<main id="main"[^>]*>)[\s\S]*?(<\/main>)/, '$1' + article + '$2');
+      const dir = path.join(__dirname, 'blog', p.slug);
+      fs.mkdirSync(dir, { recursive: true });
+      fs.writeFileSync(path.join(dir, 'index.html'), html);
+      made++;
+    });
+    console.log(`✅ Built ${made} post page(s) at /blog/<slug>/`);
+  }
+} catch (e) {
+  console.log('⚠️ Post pages build skipped:', e.message);
 }
