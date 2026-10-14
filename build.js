@@ -229,14 +229,14 @@ try {
       const og = '\n  <!-- AUTO-OG -->\n'
         + '  <meta property="og:type" content="article">\n'
         + '  <meta property="og:site_name" content="Lisa Haven">\n'
-        + '  <meta property="og:title" content="Lisa Haven — The Real Journey">\n'
+        + '  <meta property="og:title" content="Lisa Haven | The Real Journey">\n'
         + '  <meta property="og:description" content="The real journey of building three companies as a mother of 3. The wins, the mess, and everything in between.">\n'
         + '  <meta property="og:image" content="https://lisahaven.co/images/uploads/og-card.jpg">\n'
         + '  <meta property="og:image:width" content="1200">\n'
         + '  <meta property="og:image:height" content="630">\n'
         + '  <meta property="og:url" content="https://lisahaven.co/">\n'
         + '  <meta name="twitter:card" content="summary_large_image">\n'
-        + '  <meta name="twitter:title" content="Lisa Haven — The Real Journey">\n'
+        + '  <meta name="twitter:title" content="Lisa Haven | The Real Journey">\n'
         + '  <meta name="twitter:image" content="https://lisahaven.co/images/uploads/og-card.jpg">\n';
       const ti = html.indexOf('</title>');
       if (ti !== -1) {

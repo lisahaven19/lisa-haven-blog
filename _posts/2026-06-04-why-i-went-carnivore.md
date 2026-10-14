@@ -1,5 +1,5 @@
 ---
-title: "Why I Went Carnivore — And How It Changed My Energy as a CEO Mom"
+title: "Why I Went Carnivore and How It Changed My Energy as a CEO Mom"
 category: "Carnivore & Wellness"
 emoji: "🥩"
 date: "2026-06-04"
@@ -7,34 +7,36 @@ readTime: "4 min read"
 excerpt: "I needed something that would give me energy at 5am, clarity at noon, and still leave fuel in the tank for my daughters at 8pm. The carnivore diet did that."
 image: "/images/uploads/gym-photo.jpg"
 ---
+I know, I know. The first thing people ask is, *"But where do you get your fiber?"*
 
-I know. I know. The first thing people say is: *"But where do you get your fiber?"*
-
-And I smile, because six months ago I was exhausted, brain-fogged, and running three companies on cortisol and iced coffee. Now I wake up at 5am before my daughters, get my workout in, and have clarity that I haven't felt in years.
-![Gym photo](/images/uploads/gym-photo.jpg)
+I just smile. 6 months ago I was exhausted and foggy, running 3 companies on stress and iced coffee. Now I wake up at 5am before my daughters, get my workout in and think more clearly than I have in years.
 
 ## What Is the Carnivore Diet?
 
-Simple: meat, eggs, and water. That's essentially it. Some people add butter, some add salt. The premise is that animal products are the most nutrient-dense foods on earth and that many people do better eliminating plants entirely — especially those with autoimmune issues, gut problems, or chronic fatigue.
+It's simple: meat, eggs and water. That's pretty much it. Some people add butter, and some add salt. The idea is that animal foods are the most nutrient-dense foods on earth, and that a lot of people do better when they cut out plants completely, especially people dealing with autoimmune issues, gut problems or constant fatigue.
 
-I'm not here to debate the science. I'm here to tell you what happened to my body.
+I'm not here to argue the science. I'm here to tell you what it did for my body.
 
-## The First Two Weeks Were Brutal
+## The First 2 Weeks Were Brutal
 
-I won't sugarcoat it. The adaptation period is rough — headaches, fatigue, crankiness. My body was a sugar-burner and it was not happy about the eviction notice.
+Getting adjusted was rough. I had headaches, I was tired and I was cranky. My body was used to running on sugar, and it was not happy about being cut off.
 
-By week three, something shifted. The brain fog I'd been carrying like a weighted blanket? Gone. The afternoon energy crash that had me reaching for a third espresso? Gone. I started sleeping deeply instead of anxiously.
+By week 3, something changed. The brain fog I'd been dragging around like a heavy blanket was gone. So was the afternoon crash that used to send me looking for a third espresso. I started sleeping deeply instead of anxiously.
 
 ## As a Busy Mom and CEO
 
-Running a household with three daughters (one who is 15 months old and still waking up at night) while building three companies requires ENERGY. Not fake energy from stimulants — real, sustained energy.
+Running a home with 3 daughters (one is 15 months old and still waking up at night) while building 3 companies takes a lot of energy. Not the jittery kind from caffeine, but real energy that lasts.
 
-Carnivore gave me that. I meal prep on Sundays: ground beef, eggs, steak, sometimes chicken. It takes 30 minutes and I'm fueled for the week without decision fatigue around food.
+Carnivore gave me that. I meal prep on Sundays with ground beef, eggs, steak and sometimes chicken. It takes 30 minutes, and I'm fueled for the whole week without having to think about what to eat.
 
 ## Should You Try It?
 
-Talk to your doctor. Seriously — this isn't for everyone and I'm not a nutritionist. But if you're chronically exhausted, inflamed, or running on empty, it might be worth investigating.
+Talk to your doctor first. This isn't for everyone, and I'm not a nutritionist. But if you're always exhausted, inflamed or running on empty, it might be worth looking into.
 
-What I can tell you is that what you put in your body directly determines what you can pour out for your business, your kids, and your vision. 
+What I do know is that what you put into your body decides how much you can give to your business, your kids and your vision.
 
-For me, this was the answer. 🥩✨
+For me, this was the answer.
+
+> "Those who hope in the Lord will renew their strength."
+>
+> ~ Isaiah 40:31
