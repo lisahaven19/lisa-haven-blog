@@ -6,6 +6,9 @@ date: 2026-10-14T11:00:00.000-04:00
 readTime: 7 min read
 excerpt: "What to do when Apple rejects your app: read the message, fix the exact issue and resubmit. My 5 step founder playbook, written in the middle of it."
 image: /images/uploads/apple-rejects-your-app-cover.jpg
+seoTitle: "What to Do When Apple Rejects Your App: 5 Founder Steps"
+metaDescription: "What to do when Apple rejects your app: read the message, fix the exact issue and resubmit. My 5 step playbook, plus how I use AI to keep my team moving."
+draft: false
 ---
 I opened App Store Connect and saw a small red X next to my app's name.
 
