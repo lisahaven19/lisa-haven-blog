@@ -2,7 +2,7 @@
 title: How to Manage UGC Creators with AI
 category: AI & Tech
 emoji: 💗
-date: 2026-10-15T19:00:00.000-04:00
+date: 2026-10-15T18:15:00.000-04:00
 readTime: 8 min read
 excerpt: "How to manage UGC creators with AI: 6 steps I use to run about 30 creators with AI and 2 creator managers, plus the prompts I copy and paste every week."
 image: /images/uploads/how-to-manage-ugc-creators-with-ai-cover.png
