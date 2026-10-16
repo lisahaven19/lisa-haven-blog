@@ -242,6 +242,8 @@ Then, when a draft is done, send this final check:
 
 1 more honest note: no prompt makes writing pass every AI checker out there. So aim higher: writing real people enjoy reading and trust. Write for them.
 
+**Want more prompts like this?** [LUMAPROMPT.AI](https://www.lumaprompt.ai) is my library of prompts written by human experts, made for women who want better results from ChatGPT and Claude without the guesswork. Pick a prompt, fill in the blanks and get an answer that sounds like you. [Browse the prompts at www.lumaprompt.ai](https://www.lumaprompt.ai).
+
 ## How I use AI every day without losing my voice
 
 How do I run 3 companies as a mother of 3? The honest answer: AI handles the busywork, and I protect the parts that need me.
