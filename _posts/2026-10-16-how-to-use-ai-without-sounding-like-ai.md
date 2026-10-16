@@ -3,7 +3,7 @@ title: How to Use AI Without Sounding Like AI
 category: AI & Tech
 emoji: 🖤
 date: 2026-10-16T12:00:00.000-04:00
-readTime: 13 min read
+readTime: 14 min read
 excerpt: "How to use AI without sounding like AI: the 7 step system I use to run 3 companies with AI while every post, email and caption still sounds like me."
 image: /images/uploads/how-to-use-ai-without-sounding-like-ai-cover.png
 seoTitle: "How to Use AI Without Sounding Like AI: 7 Steps"
@@ -218,6 +218,29 @@ This one is my favorite. Instead of AI making things up, it asks you for the tru
 > "List any sentence patterns that repeat in this draft, like lists of 3 or sentences that all start the same way. Then vary them."
 
 Notice what these prompts have in common: AI does the checking and the cleanup, and you make the final calls. That's the balance that keeps your voice yours.
+
+## Bonus: the set it once "Sound Like Me" prompt
+
+Typing the same rules into every chat gets old fast. So set them up 1 time and let AI check itself forever.
+
+Paste this into the custom instructions in ChatGPT, or the instructions of a Claude project. Fill in the brackets first.
+
+> "You write for me, [your name]. Before you show me any draft, run this check on your own work:
+>
+> 1. **Words:** swap fancy or salesy words for words I'd say out loud. Never use: [your banned word list].
+> 2. **Rhythm:** mix short and long sentences. No 3 sentences in a row that start the same way.
+> 3. **Proof:** if a sentence says "experts say" or "studies show," name the real source or cut it.
+> 4. **Fluff:** no compliments to me, no "great question," no long warm up. Start with the answer.
+> 5. **Punctuation:** no em dashes. Use a period, a comma or a colon.
+> 6. **Facts:** never invent a story, number or result. If you need one, ask me.
+>
+> My voice in 5 words: [5 words]. Here's a sample of how I write: [paste 1 paragraph you wrote]."
+
+Then, when a draft is done, send this final check:
+
+> "Read this draft like a picky editor. Point to every line that still sounds like AI, tell me why in a few words, and give me a more human version. Don't change anything else."
+
+1 more honest note: no prompt makes writing pass every AI checker out there. So aim higher: writing real people enjoy reading and trust. Write for them.
 
 ## How I use AI every day without losing my voice
 
