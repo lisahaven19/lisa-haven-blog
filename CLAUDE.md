@@ -10,6 +10,7 @@ The writing rules live in Lisa's "Blog Post Rulebook" artifact (claude.ai). Foll
    `python3 tools/render-images.py tools/specs/<slug>.json`
    If Chromium is not found, prefix `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers`.
    This makes `images/uploads/<slug>-cover.png` (1080 x 1350) and `images/pins/lisa-haven-pin-<slug>-N.png` (1000 x 1500) in the brand template (`templates/card.html`). Look at every image before publishing.
+   **Share card.** Add the post to `tools/specs/share-cards.json` (eyebrow, title, accent, sub) and run `python3 tools/render-share.py <slug>`. This makes `images/og/<slug>.jpg` (1200 x 630), the preview people see when the link is texted or shared. `build.js` uses it automatically. The `_site` entry is the home page card (`images/uploads/og-card.jpg`).
 2. **Post file.** Create `_posts/YYYY-MM-DD-<slug>.md`. The slug after the date becomes the web address `lisahaven.co/blog/<slug>/`. Frontmatter fields: `title`, `category`, `emoji`, `date`, `readTime` (like `8 min read`), `excerpt`, `seoTitle`, `metaDescription`, `image` (`/images/uploads/<slug>-cover.png`), `draft: false`. Body in Markdown. Posts here show up in Decap automatically.
 3. **Publish.** Commit the post, spec and images together and push to `main`. Netlify runs `build.js`, which adds the post to `blog-posts.json`, builds its page at `/blog/<slug>/` with its own title, description, share image and article details, and updates `sitemap.xml`.
 4. **Check.** Confirm the Netlify deploy is `ready` and lists `blog/<slug>/index.html`.

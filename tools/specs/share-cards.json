@@ -1,0 +1,19 @@
+{
+  "photo": "/images/uploads/hero-red.jpg",
+  "cards": {
+    "_site": {"eyebrow": "Lisa Haven · Founder blog", "title": "Three companies.", "accent": "One relentless vision.", "sub": "How a mom of 3 builds with AI. The wins, the mess and everything in between."},
+    "how-to-use-ai-without-sounding-like-ai": {"eyebrow": "lisahaven.co · AI & Tech", "title": "How to use AI", "accent": "without sounding like AI.", "sub": "7 steps to keep your real voice, plus my prompts."},
+    "how-to-manage-ugc-creators-with-ai": {"eyebrow": "lisahaven.co · AI & Tech", "title": "Manage UGC creators", "accent": "with AI.", "sub": "The 6 step system I use to run my creator program."},
+    "what-to-do-when-apple-rejects-your-app": {"eyebrow": "lisahaven.co · Founder Life", "title": "Apple rejected", "accent": "my app.", "sub": "My 5 step playbook to fix it and resubmit."},
+    "how-to-build-ugc-creator-program-before-launch": {"eyebrow": "lisahaven.co · Business Tips", "title": "Build a creator program", "accent": "before launch.", "sub": "7 lessons from lining up creators early."},
+    "how-to-create-an-ai-agent-with-claude": {"eyebrow": "lisahaven.co · Business Tips", "title": "Build an AI agent", "accent": "with Claude.", "sub": "Step by step, to help run your business."},
+    "how-to-ask-chatgpt-better-questions": {"eyebrow": "lisahaven.co · AI & Tech", "title": "Ask ChatGPT", "accent": "better questions.", "sub": "Better answers start with how you ask."},
+    "building-in-public-before-revenue": {"eyebrow": "lisahaven.co · Mindset & Growth", "title": "Building in public", "accent": "before revenue.", "sub": "Why I share the journey in real time."},
+    "why-i-created-havenly-makeup-remover-wipes-for-gen-z": {"eyebrow": "lisahaven.co · Founder Life", "title": "Why I created", "accent": "Havenly.", "sub": "Makeup remover wipes built for Gen Z."},
+    "i-built-3-businesses-and-a-full-ai-app-using-only-two-tools-here-is-exactly-how": {"eyebrow": "lisahaven.co · Business", "title": "3 businesses.", "accent": "2 tools.", "sub": "Plus a full AI app. Here is exactly how."},
+    "i-manifested-three-companies-heres-the-part-the-law-of-attraction-crowd-wont-tell-you": {"eyebrow": "lisahaven.co · Mindset & Growth", "title": "I manifested", "accent": "3 companies.", "sub": "The part the law of attraction crowd won't tell you."},
+    "from-zero-to-three-companies": {"eyebrow": "lisahaven.co · The Journey", "title": "From 0 to", "accent": "3 companies.", "sub": "What nobody tells you about building while raising kids."},
+    "why-i-went-carnivore": {"eyebrow": "lisahaven.co · Mindset & Growth", "title": "Why I went", "accent": "carnivore.", "sub": "How it changed my energy as a CEO mom."},
+    "what-is-vixa": {"eyebrow": "lisahaven.co · Founder Life", "title": "Done with group chat", "accent": "guesswork.", "sub": "Why I built a dating clarity app for women."}
+  }
+}

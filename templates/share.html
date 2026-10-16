@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>Lisa Haven share card</title>
+<!-- Link preview card (1200 x 630) for texts, iMessage, LinkedIn, Facebook and X. Filled in by tools/render-share.py -->
+<style>
+@font-face{font-family:'PF';src:url('fonts/PlayfairDisplay.ttf');font-weight:400 900}
+@font-face{font-family:'PF';src:url('fonts/PlayfairDisplay-Italic.ttf');font-weight:400 900;font-style:italic}
+@font-face{font-family:'IN';src:url('fonts/Inter.ttf');font-weight:300 800}
+:root{--cream:#F2EDE6;--ink:#0A0A0A;--rose:#C47E8A;--rd:#A35F6D;--rl:#E8C4CB;--plum:#3D1E25}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--cream)}
+#card{width:1200px;height:630px;position:relative;overflow:hidden;background:var(--cream)}
+.ribbon{position:absolute;top:0;left:0;right:0;height:8px;background:linear-gradient(90deg,#0A0A0A,#3D1E25 55%,#C47E8A)}
+.left{position:absolute;left:84px;top:78px;width:620px;height:474px;display:flex;flex-direction:column}
+.eye{font:700 17px 'IN';letter-spacing:.2em;color:var(--rd);text-transform:uppercase}
+.h{font-variant-numeric:lining-nums;margin-top:30px;font-family:'PF';font-weight:900;color:var(--ink);line-height:1.04}
+.h .a{display:block;font-style:italic;font-weight:500;color:var(--rd)}
+.sub{text-wrap:balance;margin-top:24px;font:400 23px/1.4 'IN';color:#333;max-width:540px}
+.brand{margin-top:auto;display:flex;align-items:center;gap:14px}
+.dot{width:46px;height:46px;border-radius:50%;background:var(--rl);display:flex;align-items:center;justify-content:center}
+.brand b{font:600 22px 'IN';color:var(--ink);letter-spacing:.01em}
+.photo-wrap{position:absolute;right:92px;top:84px;width:330px;height:430px}
+.back{position:absolute;inset:0;border-radius:26px;background:linear-gradient(160deg,#3D1E25,#C47E8A);transform:rotate(5deg) translate(14px,10px)}
+.photo{position:absolute;inset:0;border-radius:26px;overflow:hidden;transform:rotate(-3deg);box-shadow:0 18px 40px rgba(61,30,37,.28);border:6px solid #FBF8F4}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.spark{position:absolute;fill:var(--rose)}
+</style></head><body>
+<div id="card"><div class="ribbon"></div>
+<div class="left">
+  <div class="eye" id="eye"></div>
+  <div class="h" id="h"><span id="t"></span><span class="a" id="a"></span></div>
+  <div class="sub" id="sub"></div>
+  <div class="brand"><div class="dot"><svg width="24" height="22" viewBox="0 0 24 22"><path d="M12 21.2 10.3 19.6C4.3 14.2 0.4 10.7 0.4 6.4 0.4 2.9 3.1 0.2 6.6 0.2c2 0 3.9.9 5.4 2.4C13.5 1.1 15.4.2 17.4.2c3.5 0 6.2 2.7 6.2 6.2 0 4.3-3.9 7.8-9.9 13.2z" fill="#0A0A0A"/></svg></div><b>lisahaven.co</b></div>
+</div>
+<div class="photo-wrap"><div class="back"></div><div class="photo"><img id="img"></div></div>
+<svg class="spark" style="right:58px;top:52px" width="46" height="46" viewBox="0 0 24 24"><path d="M12 0C12.8 7 17 11.2 24 12 17 12.8 12.8 17 12 24 11.2 17 7 12.8 0 12 7 11.2 11.2 7 12 0Z"/></svg>
+<svg class="spark" style="right:44px;top:112px" width="20" height="20" viewBox="0 0 24 24"><path d="M12 0C12.8 7 17 11.2 24 12 17 12.8 12.8 17 12 24 11.2 17 7 12.8 0 12 7 11.2 11.2 7 12 0Z"/></svg>
+<svg class="spark" style="right:418px;top:500px" width="34" height="34" viewBox="0 0 24 24"><path d="M12 0C12.8 7 17 11.2 24 12 17 12.8 12.8 17 12 24 11.2 17 7 12.8 0 12 7 11.2 11.2 7 12 0Z"/></svg>
+</div>
+<script>
+window.fill=async function(d){
+  eye.textContent=d.eyebrow; t.textContent=d.title; a.textContent=d.accent; sub.textContent=d.sub; img.src=d.photo;
+  await new Promise(r=>{if(img.complete&&img.naturalWidth)r();else img.onload=r;});
+  await document.fonts.ready;
+  // shrink headline until the left column fits without touching the brand row
+  let size=78; const L=document.querySelector('.left'), brand=document.querySelector('.brand');
+  for(;size>=44;size-=2){ h.style.fontSize=size+'px';
+    const s=document.getElementById('sub').getBoundingClientRect(), b=brand.getBoundingClientRect(), hb=h.getBoundingClientRect();
+    if(s.bottom+28<=b.top && hb.right<=L.getBoundingClientRect().right+1) break; }
+  const p=document.querySelector('.photo-wrap').getBoundingClientRect(), lr=L.getBoundingClientRect();
+  // nothing in the text column may reach the photo
+  const widest=Math.max(...[...L.querySelectorAll('#t,#a,#sub,#eye')].map(e=>{const r=document.createRange();r.selectNodeContents(e);return Math.max(...[...r.getClientRects()].map(x=>x.right),0)}));
+  return size>=44 && widest < p.left-40;
+};
+</script></body></html>

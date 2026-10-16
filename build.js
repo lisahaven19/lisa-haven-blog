@@ -370,7 +370,8 @@ try {
       const url = SITE + '/blog/' + encodeURIComponent(p.slug) + '/';
       const title = (p.seoTitle && p.seoTitle.trim()) ? p.seoTitle.trim() : p.title + ' | Lisa Haven';
       const desc = (p.metaDescription && p.metaDescription.trim()) ? p.metaDescription.trim() : (p.excerpt && p.excerpt.trim()) ? p.excerpt.trim() : (plain(p.body).slice(0, 155) || DEFAULT_DESC);
-      const img = abs(p.image) || DEFAULT_IMG;
+      const ogFile = path.join(__dirname, 'images', 'og', p.slug + '.jpg');
+      const img = fs.existsSync(ogFile) ? SITE + '/images/og/' + encodeURIComponent(p.slug) + '.jpg' : (abs(p.image) || DEFAULT_IMG);
       const published = iso(p.date);
       const schema = {
         '@context': 'https://schema.org',
@@ -393,6 +394,7 @@ try {
         + '\n  <meta property="og:description" content="' + esc(desc) + '">'
         + '\n  <meta property="og:url" content="' + url + '">'
         + '\n  <meta property="og:image" content="' + esc(img) + '">'
+        + (fs.existsSync(ogFile) ? '\n  <meta property="og:image:width" content="1200">\n  <meta property="og:image:height" content="630">' : '')
         + (published ? '\n  <meta property="article:published_time" content="' + published + '">' : '')
         + '\n  <meta property="article:author" content="Lisa Haven">'
         + (p.category ? '\n  <meta property="article:section" content="' + esc(p.category) + '">' : '')
