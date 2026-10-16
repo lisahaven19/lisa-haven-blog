@@ -10,7 +10,7 @@ seoTitle: "How to Use AI Without Sounding Like AI: 7 Steps"
 metaDescription: "How to use AI without sounding like AI: my 7 step system to keep your real voice in every post, email and caption, plus a robot word list and my prompts."
 draft: false
 ---
-This week I wrote a rulebook for this blog. 46 rules. 1 of them is a list of banned words: "delve," "tapestry," "in today's fast-paced world." If AI writes one of those words in a draft for me, it gets cut. No discussion.
+This week I wrote a rulebook for this blog. 46 rules. 1 of them is a list of banned words: "delve," "tapestry," "in today's fast-paced world." I write my own posts, and I use AI to edit and polish them. If AI ever suggests one of those words, it gets cut. No discussion.
 
 A few days before that, I gave my AI assistant another rule: no more hearts and emojis in the messages it drafts for my team and my creators. Keep it direct. Keep it professional. Keep it me.
 
@@ -90,7 +90,13 @@ Then paste it at the start of every chat, or save it inside your AI tool's custo
 
 Try this prompt to build it:
 
-> "Here are 3 things I wrote myself: [paste them]. Study how I write. Then write me a 1 page voice guide: my tone, my sentence length, words I use often, words I never use, and how I open and close. Keep it simple enough to paste into any AI chat."
+```prompt
+Here are 3 things I wrote myself: [paste them].
+
+Study how I write. Then write me a 1 page voice guide: my tone, my sentence length, words I use often, words I never use, and how I open and close.
+
+Keep it simple enough to paste into any AI chat.
+```
 
 ### Step 2. Make a banned word list
 
@@ -110,7 +116,13 @@ Before you ask for a draft, give it the raw stuff: what happened, what you felt,
 
 Here's the prompt I use:
 
-> "Here's what happened this week in my own words: [paste]. Turn this into a [post / email / caption] for [who it's for]. Keep my real details and my opinions. Do not add any facts, stories or numbers I did not give you."
+```prompt
+Here's what happened this week in my own words: [paste].
+
+Turn this into a [post / email / caption] for [who it's for]. Keep my real details and my opinions.
+
+Do not add any facts, stories or numbers I did not give you.
+```
 
 That last sentence matters. AI sometimes fills gaps with made up details that sound nice. One fake detail can cost you trust you spent years building.
 
@@ -197,25 +209,45 @@ Save these. They work in ChatGPT, Claude or any AI tool, especially after you've
 
 **1. The robot scrub.**
 
-> "Rewrite this in plain, everyday words. Remove any word that sounds like marketing or AI. Keep it the same length or shorter."
+```prompt
+Rewrite this in plain, everyday words. Remove any word that sounds like marketing or AI. Keep it the same length or shorter.
+
+[paste your draft]
+```
 
 **2. The friend test.**
 
-> "Rewrite this the way I'd say it to a close friend over coffee. Keep my meaning. Use short sentences."
+```prompt
+Rewrite this the way I'd say it to a close friend over coffee. Keep my meaning. Use short sentences.
+
+[paste your draft]
+```
 
 **3. The detail finder.**
 
-> "Find every vague sentence in this draft and ask me 1 question for each, so I can replace it with a real detail."
+```prompt
+Find every vague sentence in this draft and ask me 1 question for each, so I can replace it with a real detail.
+
+[paste your draft]
+```
 
 This one is my favorite. Instead of AI making things up, it asks you for the truth.
 
 **4. The opinion pusher.**
 
-> "Where in this draft am I sitting on the fence? Point to those spots and suggest a clear opinion I could take. I'll choose."
+```prompt
+Where in this draft am I sitting on the fence? Point to those spots and suggest a clear opinion I could take. I'll choose.
+
+[paste your draft]
+```
 
 **5. The pattern check.**
 
-> "List any sentence patterns that repeat in this draft, like lists of 3 or sentences that all start the same way. Then vary them."
+```prompt
+List any sentence patterns that repeat in this draft, like lists of 3 or sentences that all start the same way. Then vary them.
+
+[paste your draft]
+```
 
 Notice what these prompts have in common: AI does the checking and the cleanup, and you make the final calls. That's the balance that keeps your voice yours.
 
@@ -225,20 +257,27 @@ Typing the same rules into every chat gets old fast. So set them up 1 time and l
 
 Paste this into the custom instructions in ChatGPT, or the instructions of a Claude project. Fill in the brackets first.
 
-> "You write for me, [your name]. Before you show me any draft, run this check on your own work:
->
-> 1. **Words:** swap fancy or salesy words for words I'd say out loud. Never use: [your banned word list].
-> 2. **Rhythm:** mix short and long sentences. No 3 sentences in a row that start the same way.
-> 3. **Proof:** if a sentence says "experts say" or "studies show," name the real source or cut it.
-> 4. **Fluff:** no compliments to me, no "great question," no long warm up. Start with the answer.
-> 5. **Punctuation:** no em dashes. Use a period, a comma or a colon.
-> 6. **Facts:** never invent a story, number or result. If you need one, ask me.
->
-> My voice in 5 words: [5 words]. Here's a sample of how I write: [paste 1 paragraph you wrote]."
+```prompt
+You write for me, [your name]. Before you show me any draft, run this check on your own work:
+
+1. Words: swap fancy or salesy words for words I'd say out loud. Never use: [your banned word list].
+2. Rhythm: mix short and long sentences. No 3 sentences in a row that start the same way.
+3. Proof: if a sentence says "experts say" or "studies show," name the real source or cut it.
+4. Fluff: no compliments to me, no "great question," no long warm up. Start with the answer.
+5. Punctuation: no em dashes. Use a period, a comma or a colon.
+6. Facts: never invent a story, number or result. If you need one, ask me.
+
+My voice in 5 words: [5 words].
+Here's a sample of how I write: [paste 1 paragraph you wrote].
+```
 
 Then, when a draft is done, send this final check:
 
-> "Read this draft like a picky editor. Point to every line that still sounds like AI, tell me why in a few words, and give me a more human version. Don't change anything else."
+```prompt
+Read this draft like a picky editor. Point to every line that still sounds like AI, tell me why in a few words, and give me a more human version. Don't change anything else.
+
+[paste your draft]
+```
 
 1 more honest note: no prompt makes writing pass every AI checker out there. So aim higher: writing real people enjoy reading and trust. Write for them.
 
@@ -250,7 +289,7 @@ How do I run 3 companies as a mother of 3? The honest answer: AI handles the bus
 
 Here's what that looks like in my real workflow.
 
-**For this blog,** I give AI my week, my opinions and my rulebook. It researches, outlines, drafts and designs. Then I check that it sounds like me, and I cut anything that doesn't.
+**For this blog,** the stories, opinions and ideas are mine. AI is my editor: it checks my grammar and flow, fact checks my numbers, helps with research and designs my charts. Then I read every word to make sure it still sounds like me.
 
 **For my team,** AI drafts messages. My rule is clear: serious, direct and professional. No fluffy openers. No hearts. If a message feels too nice or too vague, it gets rewritten.
 
@@ -276,7 +315,7 @@ I talk about using AI openly on this blog. It's the whole point of this blog.
 
 *Disclosure: some links below may be affiliate links, which means I may earn a small commission at no extra cost to you. I only share tools I actually use.*
 
-- **[Claude](https://claude.ai)** is my main writing partner. I keep my voice guide and rules saved in it, so every draft starts closer to me.
+- **[Claude](https://claude.ai)** is my main editing partner. I keep my voice guide and rules saved in it, so every edit stays true to me.
 - **[ChatGPT](https://chatgpt.com)** is great for quick brainstorming, headlines and turning 1 idea into 10 angles.
 - **[Notion](https://www.notion.so)** is where my voice guide, banned word list and content ideas live, so they're always 1 copy and paste away.
 - **[LUMAPROMPT.AI](https://www.lumaprompt.ai)** gives you prompts written by human experts, so you start with better instructions instead of generic ones.

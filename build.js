@@ -343,11 +343,13 @@ try {
       .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
       .replace(/(^|[^*])\*([^*]+)\*/g, '$1<em>$2</em>');
     const md = src => {
-      const out = []; let list = null; let para = [];
+      const out = []; let list = null; let para = []; let fence = null;
       const flush = () => { if (para.length) { out.push('<p>' + inline(para.join(' ')) + '</p>'); para = []; } if (list) { out.push('</' + list + '>'); list = null; } };
       String(src || '').replace(/\r\n/g, '\n').split('\n').forEach(line => {
         const l = line.trim();
         let m;
+        if (fence) { if (l.startsWith('```')) { out.push('<pre class="prompt"><code>' + esc(fence.join('\n')) + '</code></pre>'); fence = null; } else fence.push(line); return; }
+        if (l.startsWith('```')) { flush(); fence = []; return; }
         if (!l || l === '[gallery]') { flush(); return; }
         if ((m = l.match(/^(#{1,4})\s+(.*)$/))) { flush(); const n = Math.min(m[1].length + 1, 4); out.push('<h' + n + '>' + inline(m[2]) + '</h' + n + '>'); return; }
         if (/^(-{3,}|\*{3,})$/.test(l)) { flush(); out.push('<hr>'); return; }

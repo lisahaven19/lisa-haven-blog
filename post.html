@@ -253,6 +253,18 @@
       border-left:3px solid var(--rose); padding:16px 20px; margin:26px 0;
       color:var(--black); background:rgba(196,126,138,0.06); border-radius:0 4px 4px 0;
     }
+    /* ── Prompt cards: ```prompt blocks in a post ── */
+    .prompt-card { background:var(--black); border-radius:16px; margin:28px 0; overflow:hidden; box-shadow:0 10px 30px rgba(61,30,37,0.18); }
+    .prompt-card-head { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 18px 14px 22px; border-bottom:1px solid rgba(232,196,203,0.16); background:linear-gradient(90deg,#0A0A0A,#1d0f13); }
+    .prompt-card-label { font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--rose-light); }
+    .prompt-copy { font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#fff; border:none; cursor:pointer; padding:10px 16px; background:linear-gradient(135deg,#C47E8A,#a35f6d); border-radius:2px; display:inline-flex; align-items:center; gap:8px; flex:none; transition:opacity .2s; }
+    .prompt-copy:hover { opacity:.88; }
+    .prompt-copy svg { width:13px; height:13px; }
+    .prompt-card pre { margin:0; padding:22px; white-space:pre-wrap; word-wrap:break-word; font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace; font-size:14px; line-height:1.75; color:var(--cream); background:none; }
+    .prompt-card pre code { font:inherit; color:inherit; background:none; }
+    .prompt-card-foot { padding:13px 22px; border-top:1px solid rgba(232,196,203,0.16); font-family:var(--sans); font-size:13px; color:#cfc6bf; line-height:1.5; }
+    .prompt-card-foot a { color:var(--rose-light) !important; font-weight:600; text-decoration:none !important; }
+    .prompt-card-foot a:hover { color:#fff !important; }
     .post-body ul,.post-body ol { margin:0 0 16px 22px; }
     .post-body li { margin-bottom:6px; }
     .post-body img { max-width:100%; border-radius:4px; }
@@ -873,6 +885,16 @@
       }, { passive: true });
     }
 
+    // ── Copy buttons on prompt cards ──
+    document.addEventListener('click', e => {
+      const btn = e.target.closest('.prompt-copy');
+      if (!btn) return;
+      const text = btn.closest('.prompt-card').querySelector('pre').innerText;
+      const done = () => { const l = btn.querySelector('span'); l.textContent = 'Copied'; setTimeout(() => { l.textContent = 'Copy'; }, 1800); };
+      const fallback = () => { const t = document.createElement('textarea'); t.value = text; t.style.position = 'fixed'; t.style.opacity = '0'; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); done(); } catch (err) {} t.remove(); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback); else fallback();
+    });
+
     // ── Main fetch ──
     fetch('/blog-posts.json')
       .then(r => r.ok ? r.json() : [])
@@ -887,6 +909,16 @@
         const photo = post.image ? `<div class="post-photo"><img src="${esc(post.image)}" alt="${esc(post.title)}"></div>` : '';
 
         let bodyHtml = post.body && post.body.trim() ? marked.parse(post.body) : '<p><em>Full story coming soon. Stay tuned! ✨</em></p>';
+
+        // Prompt cards: a ```prompt block becomes a branded box with a copy button
+        let promptN = 0;
+        bodyHtml = bodyHtml.replace(/<pre><code class="language-prompt">([\s\S]*?)<\/code><\/pre>/g, (m, code) => {
+          promptN++;
+          return '<div class="prompt-card"><div class="prompt-card-head"><span class="prompt-card-label">Prompt ' + promptN + ' &middot; Copy &amp; paste</span>'
+            + '<button type="button" class="prompt-copy" aria-label="Copy prompt ' + promptN + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy</span></button></div>'
+            + '<pre><code>' + code.replace(/\n$/, '') + '</code></pre>'
+            + '<div class="prompt-card-foot">Want more prompts like this, written by human experts? <a href="https://www.lumaprompt.ai" target="_blank" rel="noopener">Explore LUMAPROMPT.AI &rarr;</a></div></div>';
+        });
 
         // Photo gallery: a grid of squares that open big when tapped
         const galleryList = (Array.isArray(post.gallery) ? post.gallery : []).filter(Boolean);
