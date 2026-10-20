@@ -1,0 +1,12 @@
+{
+  "slug": "how-to-use-ai-to-write-blog-posts-that-rank",
+  "category": "AI & Tech",
+  "cover": {"title": "Use AI to Write Posts", "accent": "That Rank",
+            "subtitle": "My 6 step system to get free traffic from Google",
+            "tagline": "Free tools only. Prompts included."},
+  "pins": [
+    {"title": "How to Use AI to Write Blog Posts", "accent": "That Rank", "subtitle": "My 6 step system to get free traffic from Google", "tagline": "Free tools only."},
+    {"title": "No Keyword Planner?", "accent": "No Problem.", "subtitle": "4 free Google tools to find what your readers really search", "tagline": "Blogging made simple."},
+    {"title": "The AI Editor Prompt for", "accent": "Better Blog Posts", "subtitle": "Copy it into ChatGPT or Claude and fix your draft in minutes", "tagline": "Prompt included."}
+  ]
+}
