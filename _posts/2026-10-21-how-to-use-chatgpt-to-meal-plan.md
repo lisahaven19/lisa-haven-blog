@@ -5,7 +5,7 @@ emoji: 🥗
 date: 2026-10-21T10:00:00.000-04:00
 readTime: 7 min read
 excerpt: "How to use ChatGPT to meal plan for the week: tell it your family, schedule and budget, get 7 dinners and 1 grocery list, then let it fix the week when life happens."
-image: /images/uploads/how-to-use-chatgpt-to-meal-plan-cover.png
+image: /images/uploads/how-to-use-chatgpt-to-meal-plan-photo.jpg
 seoTitle: "How to Use ChatGPT to Meal Plan for the Week"
 metaDescription: "How to use ChatGPT to meal plan for the week: give it your family, schedule and budget, get 7 dinners and 1 grocery list in minutes. Plus my 5 step system."
 draft: false
