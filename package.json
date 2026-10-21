@@ -1,0 +1,8 @@
+{
+  "name": "lisa-haven-blog",
+  "private": true,
+  "description": "lisahaven.co. The build runs node build.js; the comment functions use Netlify Blobs.",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}

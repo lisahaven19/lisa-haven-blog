@@ -4,6 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Story | Lisa Haven</title>
+  <!-- AUTO-OG -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Lisa Haven">
+  <meta property="og:title" content="Lisa Haven | The Real Journey">
+  <meta property="og:description" content="The real journey of building three companies as a mother of 3. The wins, the mess, and everything in between.">
+  <meta property="og:image" content="https://lisahaven.co/images/uploads/og-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://lisahaven.co/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lisa Haven | The Real Journey">
+  <meta name="twitter:image" content="https://lisahaven.co/images/uploads/og-card.jpg">
+
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -332,6 +345,39 @@
     .post-signup p { font-size:14px; color:rgba(255,255,255,0.72); margin:0 auto 18px; max-width:46ch; }
     .post-signup-form { max-width:520px; margin:0 auto; min-height:60px; }
     .post-signup-note { font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-top:12px !important; }
+
+
+    /* ── Comments ── */
+    .comments { margin:48px 0 8px; padding:34px 28px 28px; background:#FAF7F3; border:1px solid #E2DDD5; border-radius:20px; }
+    .comments h3 { font-family:var(--serif); font-size:26px; line-height:1.2; margin:8px 0 4px; }
+    .comments h3 em { color:var(--rose); font-weight:400; }
+    .cmt-note { font-size:14px; color:var(--mid); margin-bottom:22px; }
+    .cmt-list { display:flex; flex-direction:column; gap:14px; margin-bottom:26px; }
+    .cmt { background:var(--white); border:1px solid #ECE6DE; border-radius:16px; padding:16px 18px; }
+    .cmt.author { background:#0A0A0A; border-color:#0A0A0A; color:var(--white); margin-left:28px; }
+    .cmt-head { display:flex; align-items:center; gap:10px; margin-bottom:6px; flex-wrap:wrap; }
+    .cmt-av { width:34px; height:34px; border-radius:50%; background:var(--rose-light); color:#3d1e25; display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-weight:700; font-size:15px; flex-shrink:0; }
+    .cmt.author .cmt-av { background:var(--rose); color:var(--white); }
+    .cmt-name { font-weight:700; font-size:15px; }
+    .cmt-badge { font-size:10px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; background:var(--rose); color:var(--white); border-radius:20px; padding:2px 9px; }
+    .cmt-date { font-size:12px; color:var(--light); }
+    .cmt.author .cmt-date { color:rgba(255,255,255,0.55); }
+    .cmt-text { font-size:15px; line-height:1.65; white-space:pre-wrap; overflow-wrap:anywhere; }
+    .cmt-empty { font-size:15px; color:var(--light); font-style:italic; }
+    .cmt-form { display:grid; gap:10px; }
+    .cmt-form input, .cmt-form textarea { width:100%; font:15px var(--sans); color:var(--black); background:var(--white); border:1.5px solid #E2DDD5; border-radius:14px; padding:12px 14px; outline:none; transition:border-color .2s; }
+    .cmt-form input:focus, .cmt-form textarea:focus { border-color:var(--rose); }
+    .cmt-form textarea { min-height:110px; resize:vertical; }
+    .cmt-hp { position:absolute !important; left:-9999px !important; width:1px; height:1px; opacity:0; }
+    .cmt-row { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+    .cmt-chars { font-size:12px; color:var(--light); }
+    .cmt-btn { font:600 14px var(--sans); color:var(--white); background:var(--grad-h); border:0; border-radius:999px; padding:12px 24px; cursor:pointer; transition:transform .2s, box-shadow .2s; }
+    .cmt-btn:hover { transform:translateY(-2px); box-shadow:0 8px 22px rgba(196,126,138,0.25); }
+    .cmt-btn:disabled { opacity:.6; cursor:default; transform:none; }
+    .cmt-msg { font-size:14px; margin-top:10px; min-height:1px; }
+    .cmt-msg.good { color:#3d1e25; } .cmt-msg.bad { color:var(--rose-dark); }
+    .cmt-link { color:inherit; text-decoration:none; }
+    @media (max-width:520px) { .comments { padding:26px 18px 22px; } .cmt.author { margin-left:14px; } }
 
     /* ── Author card ── */
     .author-card {
@@ -698,6 +744,51 @@
 
     function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
 
+    // ── Comments ──
+    function initComments(slug) {
+      const list = document.getElementById('cmtList');
+      const form = document.getElementById('cmtForm');
+      if (!list || !form || !slug) return;
+      const nameEl = document.getElementById('cmtName'), textEl = document.getElementById('cmtText');
+      const msg = document.getElementById('cmtMsg'), btn = document.getElementById('cmtBtn'), chars = document.getElementById('cmtChars');
+      const fmt = d => new Date(d).toLocaleDateString('en-US', { month:'long', day:'numeric', year:'numeric' });
+      const card = c => `<div class="cmt${c.author ? ' author' : ''}"><div class="cmt-head"><span class="cmt-av">${esc((c.name || '?').trim().charAt(0).toUpperCase())}</span><span class="cmt-name">${esc(c.name)}</span>${c.author ? '<span class="cmt-badge">Author</span>' : ''}<span class="cmt-date">${fmt(c.date)}</span></div><div class="cmt-text">${esc(c.text)}</div></div>`;
+      let all = [];
+      const render = () => {
+        list.innerHTML = all.length ? all.map(card).join('') : '<p class="cmt-empty">Be the first to comment.</p>';
+        const n = all.length;
+        document.getElementById('cmtCount').textContent = n ? '(' + n + ')' : '';
+        const top = document.getElementById('cmtCountTop'); if (top) top.textContent = n;
+      };
+      fetch('/api/comments?slug=' + encodeURIComponent(slug)).then(r => r.ok ? r.json() : { comments: [] })
+        .then(d => { all = d.comments || []; render(); }).catch(() => { all = []; render(); });
+      try { const saved = localStorage.getItem('lh-cmt-name'); if (saved) nameEl.value = saved; } catch (e) {}
+      textEl.addEventListener('input', () => { chars.textContent = textEl.value.length.toLocaleString('en-US') + ' / 1,000'; });
+      form.addEventListener('submit', async e => {
+        e.preventDefault();
+        const name = nameEl.value.trim(), text = textEl.value.trim();
+        msg.className = 'cmt-msg';
+        if (name.length < 2) { msg.className = 'cmt-msg bad'; msg.textContent = 'Please add your first name.'; nameEl.focus(); return; }
+        if (text.length < 3) { msg.className = 'cmt-msg bad'; msg.textContent = 'Please write a comment.'; textEl.focus(); return; }
+        btn.disabled = true; btn.textContent = 'Posting...';
+        try {
+          const r = await fetch('/api/comments', { method:'POST', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify({ slug, name, text, website: document.getElementById('cmtWebsite').value }) });
+          const d = await r.json().catch(() => ({}));
+          if (!r.ok) { msg.className = 'cmt-msg bad'; msg.textContent = d.error || 'Something went wrong. Please try again.'; }
+          else if (d.status === 'published') {
+            if (d.comment) { all.push(d.comment); render(); }
+            textEl.value = ''; chars.textContent = '0 / 1,000';
+            msg.className = 'cmt-msg good'; msg.textContent = 'Thank you! Your comment is live 💗';
+            try { localStorage.setItem('lh-cmt-name', name); } catch (e) {}
+          } else if (d.status === 'review') {
+            textEl.value = ''; chars.textContent = '0 / 1,000';
+            msg.className = 'cmt-msg good'; msg.textContent = d.message || 'Thank you! Your comment will show after a quick review.';
+          } else { msg.className = 'cmt-msg bad'; msg.textContent = d.message || 'Please keep it kind. Your comment was not posted.'; }
+        } catch (err) { msg.className = 'cmt-msg bad'; msg.textContent = 'Something went wrong. Please try again.'; }
+        btn.disabled = false; btn.textContent = 'Post comment';
+      });
+    }
+
     function comingSoon() {
       main.innerHTML = `<div class="coming">
         <h1 style="animation:none;opacity:1;">This story is <em style="font-family:var(--serif);font-style:italic;">coming soon.</em> ✨</h1>
@@ -952,6 +1043,7 @@
           <div class="post-stats">
             <button class="like-btn" id="likeBtn">♡ <span id="likeCount">–</span></button>
             <span>👁 <span id="viewCount">–</span> reads</span>
+            <a class="cmt-link" href="#comments">💬 <span id="cmtCountTop">0</span></a>
           </div>
 
           ${photo}
@@ -963,6 +1055,20 @@
             <p>${esc(post.quote.text1)}<em>${esc(post.quote.text2)}</em>" 🖤</p>
             <span class="quote-attr">~ ${esc(post.quote.author)}</span>
           </div>` : ''}
+
+          <section class="comments sr sr-up" id="comments" aria-label="Comments">
+            <span class="nl-cta-mid-eyebrow">Join the conversation</span>
+            <h3>Comments <em id="cmtCount"></em></h3>
+            <p class="cmt-note">No sign up needed. Just your first name. Keep it kind 💗</p>
+            <div class="cmt-list" id="cmtList"><p class="cmt-empty">Loading comments...</p></div>
+            <form class="cmt-form" id="cmtForm" novalidate>
+              <input type="text" id="cmtName" name="name" maxlength="40" placeholder="Your first name" autocomplete="given-name" aria-label="Your first name" required>
+              <textarea id="cmtText" name="text" maxlength="1000" placeholder="Share your thoughts..." aria-label="Your comment" required></textarea>
+              <input class="cmt-hp" type="text" id="cmtWebsite" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <div class="cmt-row"><span class="cmt-chars" id="cmtChars">0 / 1,000</span><button class="cmt-btn" type="submit" id="cmtBtn">Post comment</button></div>
+              <p class="cmt-msg" id="cmtMsg" role="status"></p>
+            </form>
+          </section>
 
           <div class="post-signup sr sr-up" id="post-signup">
             <span class="nl-cta-mid-eyebrow">Join The Haven</span>
@@ -999,6 +1105,9 @@
 
         // Init scroll reveal after DOM inserted
         setTimeout(initScrollReveal, 50);
+
+        // ── Comments (no sign up, filtered for kindness) ──
+        initComments(slug);
 
         // ── Beehiiv signup form at the end of every post ──
         try {

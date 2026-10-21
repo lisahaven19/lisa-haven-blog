@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Comments | Lisa Haven Admin</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F2EDE6; --black:#0A0A0A; --rose:#C47E8A; --rose-dark:#a35f6d; --rose-light:#e8c4cb; --mid:#555; --light:#888; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:'Inter',system-ui,sans-serif; background:var(--cream); color:var(--black); line-height:1.6; }
+    .top { height:6px; background:linear-gradient(90deg,#0A0A0A,#3d1e25 55%,#C47E8A); }
+    .wrap { max-width:860px; margin:0 auto; padding:40px 20px 80px; }
+    .eyebrow { font-size:11px; font-weight:700; letter-spacing:.24em; text-transform:uppercase; color:var(--rose-dark); }
+    h1 { font-family:'Playfair Display',serif; font-size:40px; line-height:1.15; margin:8px 0 6px; }
+    h1 em { color:var(--rose); font-weight:400; }
+    .sub { color:var(--mid); margin-bottom:28px; }
+    h2 { font-family:'Playfair Display',serif; font-size:24px; margin:36px 0 14px; display:flex; align-items:center; gap:10px; }
+    .count { font-family:'Inter',sans-serif; font-size:13px; background:var(--black); color:#fff; border-radius:20px; padding:2px 10px; }
+    .card { background:#FAF7F3; border:1px solid #E2DDD5; border-radius:16px; padding:18px 20px; margin-bottom:12px; }
+    .meta { font-size:12px; color:var(--light); margin-bottom:6px; display:flex; flex-wrap:wrap; gap:8px; }
+    .meta b { color:var(--black); font-size:14px; }
+    .reason { background:var(--rose-light); color:#3d1e25; border-radius:20px; padding:1px 9px; font-weight:600; }
+    .text { white-space:pre-wrap; word-wrap:break-word; margin-bottom:12px; }
+    .btns { display:flex; gap:8px; flex-wrap:wrap; }
+    button { font:600 13px 'Inter',sans-serif; border-radius:999px; padding:9px 16px; cursor:pointer; border:1.5px solid var(--black); background:#fff; color:var(--black); }
+    button.ok { background:var(--black); color:#fff; }
+    button.no { border-color:var(--rose); color:var(--rose-dark); }
+    button:disabled { opacity:.5; cursor:default; }
+    .empty { color:var(--light); font-style:italic; }
+    .login { text-align:center; padding:60px 20px; }
+    .reply { display:none; margin-top:12px; }
+    .reply textarea { width:100%; min-height:80px; border:1px solid #E2DDD5; border-radius:12px; padding:10px 12px; font:15px 'Inter',sans-serif; margin-bottom:8px; background:#fff; }
+    a { color:var(--rose-dark); }
+    .author { background:var(--black); color:#fff; border-radius:20px; padding:1px 9px; font-weight:600; }
+  </style>
+</head>
+<body>
+  <div class="top"></div>
+  <div class="wrap">
+    <div class="eyebrow">lisahaven.co · Admin</div>
+    <h1>Reader <em>comments</em></h1>
+    <p class="sub">Clean comments go live on their own. Anything that sounds negative waits here for you. Swearing, slurs, threats and links are blocked and never saved.</p>
+    <div id="app"><div class="login"><button class="ok" id="loginBtn">Log in with your blog editor account</button></div></div>
+  </div>
+<script>
+  const app = document.getElementById('app');
+  const esc = s => { const d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; };
+  const when = d => new Date(d).toLocaleString('en-US', { month:'short', day:'numeric', hour:'numeric', minute:'2-digit' });
+  const postLink = s => `<a href="/blog/${esc(s)}/" target="_blank">${esc(s.replace(/-/g,' '))}</a>`;
+
+  async function token() {
+    const u = netlifyIdentity.currentUser();
+    if (!u) return null;
+    return u.jwt();
+  }
+  async function api(method, body) {
+    const t = await token();
+    const r = await fetch('/api/comments-admin', { method, headers: { 'Authorization': 'Bearer ' + t, 'Content-Type': 'application/json' }, body: body ? JSON.stringify(body) : undefined });
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(j.error || 'Something went wrong');
+    return j;
+  }
+
+  async function load() {
+    app.innerHTML = '<p class="empty">Loading comments...</p>';
+    let data;
+    try { data = await api('GET'); } catch (e) { app.innerHTML = `<p class="empty">${esc(e.message)}</p>`; return; }
+    const pend = data.pending.map(c => `
+      <div class="card" data-id="${esc(c.id)}">
+        <div class="meta"><b>${esc(c.name)}</b><span>${when(c.date)}</span><span>on ${postLink(c.slug)}</span><span class="reason">${esc(c.reason)}</span></div>
+        <div class="text">${esc(c.text)}</div>
+        <div class="btns"><button class="ok" data-act="approve" data-id="${esc(c.id)}">Approve</button><button class="no" data-act="reject" data-id="${esc(c.id)}">Delete</button></div>
+      </div>`).join('') || '<p class="empty">Nothing waiting. All clear.</p>';
+    const pub = data.published.map(c => `
+      <div class="card">
+        <div class="meta"><b>${esc(c.name)}</b>${c.author ? '<span class="author">You</span>' : ''}<span>${when(c.date)}</span><span>on ${postLink(c.slug)}</span></div>
+        <div class="text">${esc(c.text)}</div>
+        <div class="btns">
+          ${c.author ? '' : `<button data-act="replyOpen" data-id="${esc(c.id)}">Reply as Lisa</button>`}
+          <button class="no" data-act="delete" data-id="${esc(c.id)}" data-slug="${esc(c.slug)}">Delete</button>
+        </div>
+        <div class="reply" id="r-${esc(c.id)}"><textarea placeholder="Write your reply to ${esc(c.name)}..."></textarea><button class="ok" data-act="reply" data-id="${esc(c.id)}" data-slug="${esc(c.slug)}" data-to="${esc(c.name)}">Post reply</button></div>
+      </div>`).join('') || '<p class="empty">No comments yet.</p>';
+    app.innerHTML = `<h2>Waiting for you <span class="count">${data.pending.length}</span></h2>${pend}<h2>Live on the blog <span class="count">${data.published.length}</span></h2>${pub}
+      <p style="margin-top:30px"><button id="logoutBtn">Log out</button></p>`;
+    document.getElementById('logoutBtn').onclick = () => netlifyIdentity.logout();
+  }
+
+  app.addEventListener('click', async e => {
+    const b = e.target.closest('button[data-act]');
+    if (!b) return;
+    const act = b.dataset.act, id = b.dataset.id;
+    if (act === 'replyOpen') { document.getElementById('r-' + id).style.display = 'block'; return; }
+    if ((act === 'delete' || act === 'reject') && !confirm('Delete this comment for good?')) return;
+    b.disabled = true;
+    try {
+      if (act === 'reply') {
+        const ta = document.querySelector('#r-' + CSS.escape(id) + ' textarea');
+        const text = ta.value.trim();
+        if (!text) { b.disabled = false; return; }
+        await api('POST', { action: 'reply', slug: b.dataset.slug, text: '@' + b.dataset.to + ' ' + text });
+      } else {
+        await api('POST', { action: act, id, slug: b.dataset.slug });
+      }
+      load();
+    } catch (err) { alert(err.message); b.disabled = false; }
+  });
+
+  netlifyIdentity.on('init', u => { if (u) load(); });
+  netlifyIdentity.on('login', () => { netlifyIdentity.close(); load(); });
+  netlifyIdentity.on('logout', () => location.reload());
+  document.getElementById('loginBtn').onclick = () => netlifyIdentity.open('login');
+  netlifyIdentity.init();
+</script>
+</body>
+</html>
