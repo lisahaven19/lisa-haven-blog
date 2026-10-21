@@ -1,0 +1,12 @@
+{
+  "slug": "how-to-use-chatgpt-to-meal-plan",
+  "category": "AI & Tech",
+  "cover": {"title": "Use ChatGPT to", "accent": "Meal Plan",
+            "subtitle": "7 dinners and 1 grocery list in about 10 minutes a week",
+            "tagline": "Prompts included."},
+  "pins": [
+    {"title": "How to Use ChatGPT to", "accent": "Meal Plan", "subtitle": "7 dinners and 1 grocery list in about 10 minutes a week", "tagline": "For busy moms."},
+    {"title": "What's for Dinner?", "accent": "Ask AI.", "subtitle": "The 5 step AI meal plan for busy families", "tagline": "Prompts included."},
+    {"title": "The AI Grocery List", "accent": "Prompt", "subtitle": "Copy it into ChatGPT or Claude and shop by aisle", "tagline": "Save time and money."}
+  ]
+}
