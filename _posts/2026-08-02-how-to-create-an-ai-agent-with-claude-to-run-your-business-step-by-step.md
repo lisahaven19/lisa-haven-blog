@@ -135,6 +135,8 @@ My morning brief is on version 9 right now. Version 1 was decent. Version 9 feel
 
 My honest advice is to run your morning brief for a full month before you add anything. When you're ready, here are the natural next builds, in the order I'd do them: a weekly numbers agent that sums up your sales and key metrics every Friday, a customer voice agent that turns reviews and support messages into themes once a week, and a competitor watch agent that tells you every Monday what the brands in your space launched, posted and changed. One job each. Always one job each.
 
+If your inbox is where your hours go, start there. Here is my step by step guide on [how to use AI to answer customer emails](https://www.lisahaven.co/blog/how-to-use-ai-to-answer-customer-emails/), with prompts you can copy.
+
 ## What This Actually Changes for You
 
 I'm a mother of 3 building 3 companies at once, and I don't have a spare hour every morning to dig through 6 apps to figure out what matters. My agent hands me that hour back every day. It also gives me something worth more than time. I start each day with clarity instead of chaos, and clarity builds on itself.
