@@ -1,0 +1,12 @@
+{
+  "slug": "how-to-use-ai-to-answer-customer-emails",
+  "category": "AI & Tech",
+  "cover": {"title": "Use AI to Answer", "accent": "Customer Emails",
+            "subtitle": "1 answer bank, replies in your voice, a human hits send",
+            "tagline": "Prompts included."},
+  "pins": [
+    {"title": "How to Use AI to Answer", "accent": "Customer Emails", "subtitle": "The 5 step inbox system for small business owners", "tagline": "Prompts included."},
+    {"title": "Stop Typing the Same", "accent": "Email Twice", "subtitle": "Build 1 answer bank and let AI draft every reply", "tagline": "For busy founders."},
+    {"title": "The AI Email Reply", "accent": "Prompt", "subtitle": "Copy it into ChatGPT or Claude and answer in your voice", "tagline": "Save hours every week."}
+  ]
+}
