@@ -1,0 +1,12 @@
+{
+  "slug": "claude-vs-chatgpt",
+  "category": "AI & Tech",
+  "cover": {"title": "Claude vs ChatGPT:", "accent": "Which One Wins?",
+            "subtitle": "A founder who runs 3 companies with AI compares them honestly",
+            "tagline": "Prompts included."},
+  "pins": [
+    {"title": "Claude vs ChatGPT for", "accent": "Your Business", "subtitle": "Which AI to pay for, and the task split I use", "tagline": "Prompts included."},
+    {"title": "Which AI Should", "accent": "You Pay For?", "subtitle": "Writing, images, apps and price compared side by side", "tagline": "For busy founders."},
+    {"title": "The 7 Day AI", "accent": "Test", "subtitle": "Run Claude and ChatGPT on your real work, then decide", "tagline": "Then pay for 1."}
+  ]
+}

@@ -16,6 +16,8 @@ If you've ever typed a question into ChatGPT and gotten back an answer that felt
 
 ChatGPT and Claude respond to exactly what you give them. When you type "write me an Instagram caption," you're asking the tool to guess your brand, your audience, your tone and your goal all at once. It can't read your mind, so it averages everything out and hands you something that sounds like everybody else. Give it something vague and you'll get something vague back. Give it specifics and you'll get specifics. That's really all there is to it.
 
+Not sure which tool to ask in the first place? Read my honest [Claude vs ChatGPT comparison](https://www.lisahaven.co/blog/claude-vs-chatgpt/) to see which one fits your business.
+
 ## The Four Ingredients of a Better Question
 
 Every strong prompt I write has the same 4 ingredients. First, a role: tell the tool who to be, like "act as a retail buyer for a national beauty chain." Second, context: your situation, your audience and your goal. Third, format: spell out exactly what you want back, whether that's a table, a script or 3 headline options. Fourth, constraints: word count, tone and anything it should avoid.

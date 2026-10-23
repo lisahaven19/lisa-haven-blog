@@ -2,6 +2,7 @@
   "photo": "/images/uploads/hero-red.jpg",
   "cards": {
     "_site": {"eyebrow": "Lisa Haven · Founder blog", "title": "Three companies.", "accent": "One relentless vision.", "sub": "How a mom of 3 builds with AI. The wins, the mess and everything in between."},
+    "claude-vs-chatgpt": {"eyebrow": "lisahaven.co · AI & Tech", "title": "Claude vs ChatGPT:", "accent": "which one wins?", "sub": "An honest founder comparison, plus prompts."},
     "how-to-use-ai-to-answer-customer-emails": {"eyebrow": "lisahaven.co · AI & Tech", "title": "Use AI to answer", "accent": "customer emails.", "sub": "My 5 step inbox system, plus prompts."},
     "how-to-use-chatgpt-to-meal-plan": {"eyebrow": "lisahaven.co · AI & Tech", "title": "Use ChatGPT to", "accent": "meal plan.", "sub": "7 dinners and 1 grocery list in 10 minutes."},
     "how-to-use-ai-to-write-blog-posts-that-rank": {"eyebrow": "lisahaven.co · AI & Tech", "title": "Use AI to write posts", "accent": "that rank.", "sub": "My 6 step system for free Google traffic."},
