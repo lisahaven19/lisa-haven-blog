@@ -2,7 +2,7 @@
 title: "How to Use AI to Answer Customer Emails (Free Prompts)"
 category: AI & Tech
 emoji: 💌
-date: 2026-10-22T20:30:00.000-04:00
+date: 2026-10-22T19:30:00.000-04:00
 readTime: 8 min read
 excerpt: "How to use AI to answer customer emails: build an answer bank once, let AI draft every reply in your voice, then check and send. My 5 step system, plus prompts."
 seoTitle: "How to Use AI to Answer Customer Emails (Free Prompts)"
