@@ -1,16 +1,15 @@
 ---
-title: "How to Ask ChatGPT Better Questions: It Is Not What You Ask, It Is HOW
-  You Ask"
+title: "How to Ask ChatGPT a Question (and Get a Great Answer)"
+seoTitle: "How to Ask ChatGPT a Question and Get Great Answers"
+metaDescription: "Learn how to ask ChatGPT a question the right way. Use 4 simple ingredients and copy my before and after examples to get clear, useful answers every time."
+excerpt: "How to ask ChatGPT a question the right way: 4 simple ingredients and real before and after examples that get you clear, useful answers every time."
 category: Business Tips
 emoji: ✨
 date: 2026-07-03T11:43:00.000-04:00
 readTime: 4 min read
-excerpt: Learning how to ask ChatGPT better questions is the fastest way to turn
-  artificial intelligence into a real business partner. It is not what you ask,
-  it is HOW you ask.
 image: /images/uploads/0i4a8457.jpg
 ---
-If you've ever typed a question into ChatGPT and gotten back an answer that felt generic, flat or just plain wrong, the problem is almost never the tool. It's the question. Learning how to ask ChatGPT better questions is the fastest way I know to turn artificial intelligence from a toy into a real business partner, and most people were never taught how. I use artificial intelligence every day to run 3 companies as a mother of 3, and I built an entire platform around one belief: what matters most is HOW you ask.
+If you've ever typed a question into ChatGPT and gotten back an answer that felt generic, flat or just plain wrong, the problem is almost never the tool. It's the question. Here is the short answer on how to ask ChatGPT a question: tell it who to be, give it your situation, say exactly what you want back, and set your limits. Learning to ask this way is the fastest way I know to turn artificial intelligence from a toy into a real business partner, and most people were never taught how. I use artificial intelligence every day to run 3 companies as a mother of 3, and I built an entire platform around one belief: what matters most is HOW you ask.
 
 ## Why Your ChatGPT Answers Feel Generic
 
@@ -18,7 +17,7 @@ ChatGPT and Claude respond to exactly what you give them. When you type "write m
 
 Not sure which tool to ask in the first place? Read my honest [Claude vs ChatGPT comparison](https://www.lisahaven.co/blog/claude-vs-chatgpt/) to see which one fits your business.
 
-## The Four Ingredients of a Better Question
+## How to Ask ChatGPT a Question: The 4 Ingredients
 
 Every strong prompt I write has the same 4 ingredients. First, a role: tell the tool who to be, like "act as a retail buyer for a national beauty chain." Second, context: your situation, your audience and your goal. Third, format: spell out exactly what you want back, whether that's a table, a script or 3 headline options. Fourth, constraints: word count, tone and anything it should avoid.
 
@@ -36,9 +35,17 @@ The second one took maybe 30 extra seconds to write, and it saves hours of back 
 
 I'll be honest with you. Most women don't have time to become prompt experts, and they shouldn't have to. That's exactly why I built [LUMAPROMPT.AI](https://www.lumaprompt.ai), a premium prompt generator and curated library written by human industry experts and designed around how women take in information and make decisions. Every prompt is written by professionals who understand real world results. Nothing is scraped or machine averaged. It works with ChatGPT and Claude, takes the guesswork out, and lets you go straight to getting things done. You ask better questions, you get better results, and you waste a lot less time.
 
+## Common Questions
+
+**Do I need to write long questions for ChatGPT?** Not long, just specific. 2 to 4 clear sentences with a role, context, format and limits beat a vague one liner every time.
+
+**Can I ask ChatGPT a follow up question?** Yes, and you should. Treat it like a conversation. Ask it to shorten the answer, change the tone or explain a step. It remembers what you said earlier in the same chat.
+
+**Does this work in Claude too?** Yes. The same 4 ingredients work in Claude and in every other AI chat tool.
+
 ## Ask Better, Build Faster
 
-You don't need to be technical to get world class answers from artificial intelligence. You need a role, context, a format and constraints, or someone who has already written the question for you. Try one prompt today and see the difference for yourself. If you want the shortcut, head to [www.lumaprompt.ai](https://www.lumaprompt.ai) and let expert written prompts do the heavy lifting. And for more real time lessons from building 3 companies, subscribe at [www.lisahaven.co](https://www.lisahaven.co).
+You don't need to be technical to get world class answers from artificial intelligence. You need a role, context, a format and constraints, or someone who has already written the question for you. Try one prompt today and see the difference for yourself. A great place to practice is your inbox: here is [how to use AI to answer customer emails](https://www.lisahaven.co/blog/how-to-use-ai-to-answer-customer-emails/) in your own voice. If you want the shortcut, head to [www.lumaprompt.ai](https://www.lumaprompt.ai) and let expert written prompts do the heavy lifting. And for more real time lessons from building 3 companies, subscribe at [www.lisahaven.co](https://www.lisahaven.co).
 
 > "Ask and it will be given to you; seek and you will find; knock and the door will be opened to you."
 >
