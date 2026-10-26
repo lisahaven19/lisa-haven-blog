@@ -411,8 +411,8 @@ try {
         + '<h1>' + esc(p.title) + '</h1>'
         + (p.image ? '<p><img src="' + esc(p.image) + '" alt="' + esc(p.title) + '"></p>' : '')
         + '<div class="post-body">' + md(p.body) + '</div></article>';
-      let html = tpl.replace(/<title>[\s\S]*?<\/title>/, '<title>' + esc(title) + '</title>' + head);
-      html = html.replace(/(<main id="main"[^>]*>)[\s\S]*?(<\/main>)/, '$1' + article + '$2');
+      let html = tpl.replace(/<title>[\s\S]*?<\/title>/, () => '<title>' + esc(title) + '</title>' + head);
+      html = html.replace(/(<main id="main"[^>]*>)[\s\S]*?(<\/main>)/, (m, open, close) => open + article + close);
       const dir = path.join(__dirname, 'blog', p.slug);
       fs.mkdirSync(dir, { recursive: true });
       fs.writeFileSync(path.join(dir, 'index.html'), html);
