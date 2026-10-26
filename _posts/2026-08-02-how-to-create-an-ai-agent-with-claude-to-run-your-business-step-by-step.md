@@ -85,6 +85,8 @@ In your Claude settings, you can connect the tools your business already runs on
 
 I follow 2 rules on connections, and I want you to steal both. First, connect only what the agent's one job needs. My morning brief agent has no reason to see my financial documents, so it can't. Second, start with your less sensitive sources, live with the agent for a couple of weeks, and open up more access once you trust how it behaves. You control every permission, and you can disconnect anything whenever you want.
 
+Not sure which tools are worth connecting? I break down my full stack in [AI tools for entrepreneurs: the 9 I actually use](https://lisahaven.co/blog/ai-tools-for-entrepreneurs/).
+
 ## Step 4: Write the Instructions Like You Are Training an Assistant
 
 This is where the quality of your agent really gets decided, and it's the step most people rush. I'm going to slow down here, because this is the part I know best. Writing instructions that get excellent output again and again is the entire craft behind [LUMAPROMPT.AI](https://www.lumaprompt.ai), where my expert writers author prompts professionally. So think of this section as a free masterclass.

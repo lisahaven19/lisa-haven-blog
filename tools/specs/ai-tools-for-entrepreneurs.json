@@ -1,0 +1,12 @@
+{
+  "slug": "ai-tools-for-entrepreneurs",
+  "category": "AI & Tech",
+  "cover": {"title": "AI Tools for", "accent": "Entrepreneurs",
+            "subtitle": "The 9 I actually use to run 3 companies",
+            "tagline": "What is free, and what to skip."},
+  "pins": [
+    {"title": "AI Tools for", "accent": "Entrepreneurs", "subtitle": "The 9 a founder actually uses to run 3 companies", "tagline": "Most have a free plan."},
+    {"title": "Build Your Own", "accent": "AI Stack", "subtitle": "The brain, the hands and the workplace, in 5 steps", "tagline": "For busy founders."},
+    {"title": "Stop Buying", "accent": "AI Tools", "subtitle": "1 brain, 1 job, 1 connection beats 50 apps", "tagline": "Prompt included."}
+  ]
+}

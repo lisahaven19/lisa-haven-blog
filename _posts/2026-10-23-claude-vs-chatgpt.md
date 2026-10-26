@@ -202,6 +202,8 @@ If you are only paying for 1 tool right now, that is smart. Start with the one t
 - **[Monday.com](https://monday.com):** where I track my creator program and to-dos, so nothing AI helps me plan gets lost.
 - **[LUMAPROMPT.AI](https://www.lumaprompt.ai):** my human-written prompt library for women in business. The prompts work in both Claude and ChatGPT.
 
+Want the full list? Here are the [AI tools for entrepreneurs](https://lisahaven.co/blog/ai-tools-for-entrepreneurs/) I use every day to run 3 companies, and what each one costs.
+
 ## Your 7 day Claude vs ChatGPT test
 
 Do not take my word for it. Run this test with your own work:
