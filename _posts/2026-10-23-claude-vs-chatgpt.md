@@ -167,7 +167,7 @@ In January 2026, OpenAI announced it would start testing ads in ChatGPT for free
 
 Why should a founder care? Because you are pasting your business into these chats. Your pricing, your plans, your customer questions. I like knowing the tool I think with is not also selling to me. If you use ChatGPT, the paid Plus plan and up are not part of the ad test.
 
-1 more privacy habit for both tools: remove personal details you do not need, like phone numbers, addresses and account numbers, before you paste anything in. And check each tool's privacy settings so you know how your chats are stored.
+1 more privacy habit for both tools: remove personal details you do not need, like phone numbers, addresses and account numbers, before you paste anything in. And check each tool's privacy settings so you know how your chats are stored. If your address is already out there, here is [how to remove your address from the internet with AI](https://lisahaven.co/blog/remove-your-address-from-the-internet/), step by step.
 
 ## Claude vs ChatGPT: the full side by side
 
