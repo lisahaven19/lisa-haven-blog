@@ -172,6 +172,8 @@ Then read it out loud and make it sound like you. My post on [how to use AI with
 
 This is the one most moms skip, and the one I need most. You cannot pour from an empty cup.
 
+![A busy mom taking a 10 minute reset with a coffee by a sunny window, toddler toys on the rug behind her.](/images/uploads/chatgpt-prompts-for-busy-moms-reset.jpg)
+
 ```prompt
 I am a busy mom with about 10 minutes free today.
 My energy right now is [low / medium / high].
