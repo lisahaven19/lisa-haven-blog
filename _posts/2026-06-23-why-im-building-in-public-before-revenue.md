@@ -7,6 +7,8 @@ readTime: 3 min read
 excerpt: Most founders wait until they're making money to talk about their
   business. I'm building in public before revenue, on purpose. Here's why.
 image: /images/uploads/ambition.jpg.jpeg
+seoTitle: "Building in Public Before Revenue: Why I Started Early"
+metaDescription: "Most founders wait until they make money to talk about their business. I am building in public before revenue, on purpose. Here is why it works."
 ---
 I built 3 companies before a single one made me a dollar. And instead of hiding until the money shows up, I'm building in public before revenue, and I'm doing it on purpose.
 
@@ -47,6 +49,12 @@ That's the faith I have. I didn't get it from blind hope. I earned it, and I rei
 So I'll keep building in public before the revenue comes in. I'll keep documenting the parts other founders hide. And I'll keep believing, out loud, that something is going to work, because it is.
 
 If you're a woman building something of your own, take this with you. You don't have to wait until you've made it to start. Start now, and let people see you trying. Invest in yourself now. 💸
+
+## Keep reading
+
+- [How to Build a UGC Creator Program Before Launch](/blog/how-to-build-ugc-creator-program-before-launch/)
+- [How to Use AI to Write Blog Posts That Rank on Google](/blog/how-to-use-ai-to-write-blog-posts-that-rank/)
+- [From 0 to 3 Companies: Building While Raising Kids](/blog/from-zero-to-three-companies/)
 
 > "Embrace what you don't know, especially in the beginning, because what you don't know can become your greatest asset."
 >

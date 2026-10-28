@@ -9,6 +9,8 @@ excerpt: Lisa Haven shares the real story behind Havenly, the best makeup
   remover wipes for Gen Z. Bigger, thicker, and built different. Here is why she
   created this beauty brand as a mom of three.
 image: /images/uploads/havenly-makeup-remover-wipes-cover.png
+seoTitle: "Why I Created Havenly Makeup Remover Wipes for Gen Z"
+metaDescription: "The real story behind Havenly: bigger, thicker makeup remover wipes built for Gen Z, and why I started a beauty brand as a mom of 3."
 ---
 I didn't start Havenly because I had a team, a business degree or a perfectly mapped-out plan. I started it because I'm a mom of 3 daughters, I was tired of makeup remover wipes that fell apart before the job was done, and I knew there had to be a better way.
 
@@ -89,6 +91,12 @@ Read the founder's journey: [lisahaven.co](https://www.lisahaven.co)
 AI tools built for women: [lumaprompt.ai](https://www.lumaprompt.ai)
 
 Dating clarity for women: [vixaapp.ai](https://www.vixaapp.ai)
+
+## Keep reading
+
+- [How to Use AI to Answer Customer Emails](/blog/how-to-use-ai-to-answer-customer-emails/)
+- [AI Tools for Entrepreneurs: The 9 I Actually Use](/blog/ai-tools-for-entrepreneurs/)
+- [Why I'm Building in Public Before Revenue](/blog/building-in-public-before-revenue/)
 
 > "I got my start by giving myself a start."
 >

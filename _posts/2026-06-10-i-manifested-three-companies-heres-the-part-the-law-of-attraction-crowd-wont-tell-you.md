@@ -8,6 +8,8 @@ excerpt: The law of attraction for entrepreneurs is real, but not the way they
   sell it. Here is how I manifested three companies with vision plus the daily
   discipline behind it.
 image: /images/uploads/lisa-photo.jpg
+seoTitle: "Law of Attraction for Entrepreneurs: What Nobody Says"
+metaDescription: "The law of attraction for entrepreneurs is real, but not the way it is sold. How I manifested 3 companies with a clear vision plus daily discipline."
 ---
 Everyone wants the vision board. Almost nobody wants the invoice that comes with it.
 
@@ -56,6 +58,12 @@ I know exactly what I'm building toward, down to the details. The brand on Sepho
 I can already see it. And every morning at 3am, I pay the rent on it.
 
 That's the law of attraction nobody monetizes, because it asks you to actually do something. We're just getting started. 💸
+
+## Keep reading
+
+- [How to Lock In Mentally and Finish 2026 Strong](/blog/how-to-lock-in-mentally/)
+- [From 0 to 3 Companies: Building While Raising Kids](/blog/from-zero-to-three-companies/)
+- [Why I'm Building in Public Before Revenue](/blog/building-in-public-before-revenue/)
 
 > "Faith by itself, if it is not accompanied by action, is dead."
 >

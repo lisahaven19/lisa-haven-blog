@@ -144,6 +144,12 @@ I'm back, and I'm just getting started.
 
 Lisa Haven
 
+## Keep reading
+
+- [How to Manage UGC Creators with AI](/blog/how-to-manage-ugc-creators-with-ai/)
+- [What to Do When Apple Rejects Your App](/blog/what-to-do-when-apple-rejects-your-app/)
+- [AI Tools for Entrepreneurs: The 9 I Actually Use](/blog/ai-tools-for-entrepreneurs/)
+
 > "The plans of the diligent lead to profit as surely as haste leads to poverty."
 >
 > ~ Proverbs 21:5

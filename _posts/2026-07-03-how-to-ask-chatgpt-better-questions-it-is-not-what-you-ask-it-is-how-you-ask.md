@@ -47,6 +47,12 @@ I'll be honest with you. Most women don't have time to become prompt experts, an
 
 You don't need to be technical to get world class answers from artificial intelligence. You need a role, context, a format and constraints, or someone who has already written the question for you. Try one prompt today and see the difference for yourself. A great place to practice is your inbox: here is [how to use AI to answer customer emails](https://www.lisahaven.co/blog/how-to-use-ai-to-answer-customer-emails/) in your own voice. Or put these 4 ingredients to work on your privacy with my guide on [how to remove your address from the internet with AI](https://lisahaven.co/blog/remove-your-address-from-the-internet/). If you want the shortcut, head to [www.lumaprompt.ai](https://www.lumaprompt.ai) and let expert written prompts do the heavy lifting. And for more real time lessons from building 3 companies, subscribe at [www.lisahaven.co](https://www.lisahaven.co).
 
+## Keep reading
+
+- [Claude vs ChatGPT: Which AI Should You Use for Business?](/blog/claude-vs-chatgpt/)
+- [How to Use AI Without Sounding Like AI](/blog/how-to-use-ai-without-sounding-like-ai/)
+- [How to Use ChatGPT to Meal Plan for the Week](/blog/how-to-use-chatgpt-to-meal-plan/)
+
 > "Ask and it will be given to you; seek and you will find; knock and the door will be opened to you."
 >
 > ~ Matthew 7:7

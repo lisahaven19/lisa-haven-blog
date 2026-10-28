@@ -5,8 +5,10 @@ emoji: 💬
 date: 2026-05-29
 readTime: 3 min read
 excerpt: VIXA was born from one too many nights dissecting a 'lol' text with my
-  girlfriends. Women deserve actual clarity , not just opinions.
+  girlfriends. Women deserve actual clarity, not just opinions.
 image: /images/uploads/0i4a7811.jpg
+seoTitle: "What Is VIXA? The AI Dating Clarity App for Women"
+metaDescription: "VIXA is an AI dating clarity app that reads tone, timing and effort in texts so women get real answers instead of group chat guesswork. Here is why I built it."
 ---
 You know how it goes. Your phone buzzes, you screenshot the text and send it to 4 group chats. Everyone has a different theory. 2 hours later you're more confused than when you started, and he's gone on with his evening, completely unbothered.
 
@@ -41,6 +43,12 @@ VIXA launches first on Apple iPhone with:
 I'm building this for the woman who is done wasting emotional energy. She deserves better information, and she deserves VIXA.
 
 It's coming soon. Get early access at [VIXAapp.ai](https://vixaapp.ai).
+
+## Keep reading
+
+- [What to Do When Apple Rejects Your App](/blog/what-to-do-when-apple-rejects-your-app/)
+- [How to Build a UGC Creator Program Before Launch](/blog/how-to-build-ugc-creator-program-before-launch/)
+- [How to Manage UGC Creators with AI](/blog/how-to-manage-ugc-creators-with-ai/)
 
 > "When someone shows you who they are, believe them the first time."
 >

@@ -9,6 +9,8 @@ excerpt: Female founder Lisa Haven built an AI app, a beauty brand, a premium
   prompt platform, and a blog using only two AI tools. No dev team. No tech
   background. Here is how she did it and how you can too.
 image: /images/uploads/image.png
+seoTitle: "How to Build an AI App Without a Tech Team: 2 Tools"
+metaDescription: "I built an AI app, a beauty brand, a prompt platform and a blog with only 2 AI tools and no tech team. Here is exactly how, and how you can do it too."
 ---
 In 2 weeks, I built a full AI app from scratch.
 
@@ -115,6 +117,12 @@ Stay on the lookout. 👀
 - LUMAPROMPT: [Lumaprompt.ai](https://lumaprompt.ai)
 - HAVENLY: [Havenly.co](https://havenly.co)
 - BLOG: [lisahaven.co](https://lisahaven.co)
+
+## Keep reading
+
+- [Claude vs ChatGPT: Which AI Should You Use for Business?](/blog/claude-vs-chatgpt/)
+- [AI Tools for Entrepreneurs: The 9 I Actually Use](/blog/ai-tools-for-entrepreneurs/)
+- [How to Create an AI Agent with Claude](/blog/how-to-create-an-ai-agent-with-claude/)
 
 > "Do what you can, with what you have, where you are."
 >

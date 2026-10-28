@@ -8,6 +8,8 @@ excerpt: The exact step by step system I use to run three companies with an AI
   agent that briefs me every morning before my daughters wake up. No code, no
   tech team, about 20 minutes to build.
 image: /images/uploads/ai-agent-claude-cover-v2.png
+seoTitle: "How to Create an AI Agent with Claude (Step by Step)"
+metaDescription: "The exact system I use to run 3 companies with a Claude AI agent that briefs me every morning. No code, no tech team, about 20 minutes to build."
 ---
 Every morning, before my 3 daughters are awake, an AI agent I built inside Claude has already done my first hour of work. It reads what happened overnight across my 3 companies, checks my calendar, pulls out the emails that actually need me, and hands me a short brief I can get through in 5 minutes with my coffee. In this post I'm going to show you how to create an AI agent with Claude, the same way I built mine.
 
@@ -164,6 +166,12 @@ Your first AI agent takes about 20 minutes to build tonight. The you of 30 days 
 If you build one, tell me about it. I share what I'm building every week here on [lisahaven.co](https://www.lisahaven.co) and on [LinkedIn](https://www.linkedin.com/in/lisahaven), and I answer at lisa@vixaapp.ai.
 
 Now go build your first employee who never sleeps.
+
+## Keep reading
+
+- [Claude vs ChatGPT: Which AI Should You Use for Business?](/blog/claude-vs-chatgpt/)
+- [AI Tools for Entrepreneurs: The 9 I Actually Use](/blog/ai-tools-for-entrepreneurs/)
+- [How to Manage UGC Creators with AI](/blog/how-to-manage-ugc-creators-with-ai/)
 
 > "Your time is limited, so don't waste it living someone else's life."
 >

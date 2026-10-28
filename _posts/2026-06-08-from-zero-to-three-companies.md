@@ -7,6 +7,8 @@ readTime: 5 min read
 excerpt: Building three companies as a mom of three daughters taught me
   things no business book ever could. Here's the unfiltered truth.
 image: /images/uploads/family-photo.jpg
+seoTitle: "How to Build a Business While Raising Kids: 0 to 3"
+metaDescription: "Building 3 companies as a mom of 3 daughters taught me what no business book could. The real lessons on time, focus and doing it anyway, unfiltered."
 ---
 Everyone sees the vision board. Nobody sees the 3am work while the baby sleeps and the rest of the house has finally gone quiet.
 
@@ -51,6 +53,12 @@ My girls are watching everything: the discipline, the 3am alarm, the refusal to 
 I'm the one I count on. That's been enough to build everything you see so far, and there's so much more coming.
 
 We're just getting started. 💸
+
+## Keep reading
+
+- [How to Lock In Mentally and Finish 2026 Strong](/blog/how-to-lock-in-mentally/)
+- [AI Tools for Entrepreneurs: The 9 I Actually Use](/blog/ai-tools-for-entrepreneurs/)
+- [How to Create an AI Agent with Claude](/blog/how-to-create-an-ai-agent-with-claude/)
 
 > "She considers a field and buys it; out of her earnings she plants a vineyard."
 >
