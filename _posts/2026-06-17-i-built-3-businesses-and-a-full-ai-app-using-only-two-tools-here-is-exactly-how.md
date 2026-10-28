@@ -82,7 +82,7 @@ If you've got an app idea and you've been telling yourself you can't build it be
 
 Claude Cowork is the desktop tool I use for everything that isn't coding: marketing strategy, content creation, brand design, campaign planning, competitive research, writing and brainstorming. It's like having a brilliant business partner sitting next to me around the clock. It's available 24 hours a day, it never gets tired, and it always shows up ready.
 
-I write my posts myself and use AI to perfect them. My VIXA marketing playbook was built with it too. Every piece of content across all 4 brands starts there.
+I write my own posts, I use AI to perfect them, and I use AI to design everything for me, which helps me so much. My VIXA marketing playbook was built with it too. Every piece of content across all 4 brands starts there.
 
 I really can't live without it.
 

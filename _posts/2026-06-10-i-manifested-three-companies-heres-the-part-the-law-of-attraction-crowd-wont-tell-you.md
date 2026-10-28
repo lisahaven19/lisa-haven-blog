@@ -93,7 +93,7 @@ That is what the law of attraction looks like for me. Not wishing. Working towar
 
 **The Foundation Under All of It**
 
-I'm not running on willpower alone. My foundation is simple: me, my faith and my 3 daughters, Valentina (15), Mili (12) and Scarlett (2). Plus Lucky, who has never missed a 3am shift. I rely on myself, on God and on the family I'm building all of this for.
+I'm not running on willpower alone. My foundation is simple: me, my faith and my 3 daughters, Valentina (14), Mili (12) and Scarlett (19 months). Plus Lucky, who has never missed a 3am shift. I rely on myself, on God and on the family I'm building all of this for.
 
 When the doubt shows up (and it does), I don't argue with it. I outwork it. Then I hand the rest to God and go to sleep so I can do it all again tomorrow.
 

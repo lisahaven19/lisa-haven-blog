@@ -18,7 +18,7 @@ I'm Lisa Haven, founder of **HAVENLY** ([www.havenly.co](https://www.havenly.co)
 
 They sell entrepreneurship like a highlight reel. You wake up one day with a brilliant idea, you pitch it, and *voilà*, you're on a Forbes list.
 
-The real version looks different. You're prepping carnivore meals on Sunday because there's no time to cook during the week. You're answering developer messages with one hand while feeding a toddler with the other. And you carry all of it (the household, the companies, the vision) because that's exactly what you were built to do.
+The real version looks different. You're prepping carnivore meals on Sunday because there's no time to cook during the week. You're answering developer messages with one hand while feeding a 15 month old with the other. And you carry all of it (the household, the companies, the vision) because that's exactly what you were built to do.
 
 You do it anyway. That's really all there is to it.
 
@@ -89,7 +89,7 @@ That is how 1 woman runs 3 companies. Not by doing more, but by letting AI carry
 
 **What Keeps Me Going**
 
-My foundation is simple. It's me, my faith, my 3 daughters, Valentina (15), Mili (12) and Scarlett (2), and Lucky, my dog, who has logged more 3am shifts beside me than anyone. I rely on myself, on God, and on the family I'm building all of this for.
+My foundation is simple. It's me, my faith, my 3 daughters, Valentina (14), Mili (12) and Scarlett (15 months), and Lucky, my dog, who has logged more 3am shifts beside me than anyone. I rely on myself, on God, and on the family I'm building all of this for.
 
 My girls are watching everything: the discipline, the 3am alarm, the refusal to quit. I'm raising 3 future bosses, and every choice I make is a lesson they're soaking up. A woman builds her own life, on her own terms, and she doesn't ask anyone's permission to do it.
 
