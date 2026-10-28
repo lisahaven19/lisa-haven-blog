@@ -339,6 +339,7 @@ try {
     // A small Markdown reader, only for the copy search engines see first.
     // The live page still renders the post with the full Markdown library.
     const inline = t => esc(t)
+      .replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, (m, a, h) => '<img src="' + h.replace(/"/g, '&quot;') + '" alt="' + a + '" loading="lazy">')
       .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, a, h) => '<a href="' + h.replace(/"/g, '&quot;') + '">' + a + '</a>')
       .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
       .replace(/(^|[^*])\*([^*]+)\*/g, '$1<em>$2</em>');
