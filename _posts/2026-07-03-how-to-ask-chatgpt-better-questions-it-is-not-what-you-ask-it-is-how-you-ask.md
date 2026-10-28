@@ -29,7 +29,7 @@ Weak question: "Give me marketing ideas for my app."
 
 Better question: "Act as a growth marketer who has launched consumer apps for women. My app helps women get clarity on confusing dating conversations. My audience is women ages 22 to 40 who live on TikTok and Instagram. Give me 5 launch ideas ranked by cost, with the first step for each one."
 
-The second one took maybe 30 extra seconds to write, and it saves hours of back and forth. That's what you get for asking better.
+The second one took maybe 30 extra seconds to write, and it saves hours of back and forth. That's what you get for asking better. Want to see this formula at work at home? Here are [10 ChatGPT prompts for busy moms](https://lisahaven.co/blog/chatgpt-prompts-for-busy-moms/), ready to copy and fill in.
 
 ## The Shortcut: Let Experts Write the Question for You
 

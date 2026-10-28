@@ -138,6 +138,8 @@ That is about 10 minutes of thinking a week, instead of 7 nights of "what's for 
 
 You do not need to plan the perfect month. Start with this week. Open ChatGPT or Claude, paste the family profile prompt, and ask for 3 dinners. See how it feels. Then do the full week on Sunday.
 
+Once dinner is handled, take on the rest of your week with these [ChatGPT prompts for busy moms](https://lisahaven.co/blog/chatgpt-prompts-for-busy-moms/), from school emails to chore charts.
+
 And if you want to get even better answers from AI, my guide on [how to ask ChatGPT better questions](https://www.lisahaven.co/blog/how-to-ask-chatgpt-better-questions/) will help with every prompt in this post. For staying on track with the rest of your goals, read [how to lock in mentally and finish 2026 strong](https://www.lisahaven.co/blog/how-to-lock-in-mentally/).
 
 ## FAQ
