@@ -351,7 +351,7 @@ try {
         if (fence) { if (l.startsWith('```')) { out.push('<pre class="prompt"><code>' + esc(fence.join('\n')) + '</code></pre>'); fence = null; } else fence.push(line); return; }
         if (l.startsWith('```')) { flush(); fence = []; return; }
         if (!l || l === '[gallery]') { flush(); return; }
-        if ((m = l.match(/^(#{1,4})\s+(.*)$/))) { flush(); const n = Math.min(m[1].length + 1, 4); out.push('<h' + n + '>' + inline(m[2]) + '</h' + n + '>'); return; }
+        if ((m = l.match(/^(#{1,4})\s+(.*)$/))) { flush(); const n = Math.min(Math.max(m[1].length, 2), 4); out.push('<h' + n + '>' + inline(m[2]) + '</h' + n + '>'); return; }
         if (/^(-{3,}|\*{3,})$/.test(l)) { flush(); out.push('<hr>'); return; }
         if ((m = l.match(/^>\s?(.*)$/))) { flush(); out.push('<blockquote><p>' + inline(m[1]) + '</p></blockquote>'); return; }
         if ((m = l.match(/^[-*]\s+(.*)$/)) || (m = l.match(/^\d+[.)]\s+(.*)$/))) {

@@ -33,6 +33,13 @@
   [headers.values]
     Cache-Control = "public, max-age=3600"
 
+# Prompts now live on LUMAPROMPT.AI (Google still sends visitors to /prompts)
+[[redirects]]
+  from = "/prompts"
+  to = "https://www.lumaprompt.ai"
+  status = 301
+  force = true
+
 # Clean URLs for standalone pages
 [[redirects]]
   from = "/start-here"
