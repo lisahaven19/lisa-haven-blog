@@ -6,7 +6,7 @@ excerpt: "How to ask ChatGPT a question the right way: 4 simple ingredients and 
 category: Business Tips
 emoji: ✨
 date: 2026-07-03T11:43:00.000-04:00
-readTime: 4 min read
+readTime: 5 min read
 image: /images/uploads/0i4a8457.jpg
 ---
 If you've ever typed a question into ChatGPT and gotten back an answer that felt generic, flat or just plain wrong, the problem is almost never the tool. It's the question. Here is the short answer on how to ask ChatGPT a question: tell it who to be, give it your situation, say exactly what you want back, and set your limits. Learning to ask this way is the fastest way I know to turn artificial intelligence from a toy into a real business partner, and most people were never taught how. I use artificial intelligence every day to run 3 companies as a mother of 3, and I built an entire platform around one belief: what matters most is HOW you ask.
@@ -31,6 +31,28 @@ Better question: "Act as a growth marketer who has launched consumer apps for wo
 
 The second one took maybe 30 extra seconds to write, and it saves hours of back and forth. That's what you get for asking better.
 
+## How I ask AI now: I just talk to it
+
+Here is my honest confession. These days I barely type prompts at all.
+
+I am running 3 companies and raising 3 daughters, so I move fast. I jump from window to window, and I just talk to Claude, out loud, like I would talk to a business partner. Over time it has learned me. It knows how I think and what I usually need.
+
+But even when I talk fast, I still use the 4 ingredients. They are just built into how I speak. My go-to move is 1 word: **assess.**
+
+**How I used to ask:** "What does this mean?"
+
+**How I ask now:** "Assess this conversation and these screenshots. Tell me what is really going on, what I might be missing, and give me 2 ways to reply. I will make the final call."
+
+That 1 change does 3 things:
+
+1. **It asks for judgment, not just information.** "Assess" tells the AI to think like an advisor, not a search engine.
+2. **It asks for options.** 2 replies to choose from, not 1 answer to accept.
+3. **It keeps me in charge.** AI gives me the assessment. I make the decision, and I make it much faster.
+
+That is the real secret. AI does not make my decisions for me. It helps me make better ones, quicker. I use this every day for customer messages, creator questions, business choices and even my own texts.
+
+Try it today. Pick 1 thing on your plate, paste it in and say: "Assess this and give me 2 options."
+
 ## The Shortcut: Let Experts Write the Question for You
 
 I'll be honest with you. Most women don't have time to become prompt experts, and they shouldn't have to. That's exactly why I built [LUMAPROMPT.AI](https://www.lumaprompt.ai), a premium prompt generator and curated library written by human industry experts and designed around how women take in information and make decisions. Every prompt is written by professionals who understand real world results. Nothing is scraped or machine averaged. It works with ChatGPT and Claude, takes the guesswork out, and lets you go straight to getting things done. You ask better questions, you get better results, and you waste a lot less time.
@@ -46,6 +68,8 @@ I'll be honest with you. Most women don't have time to become prompt experts, an
 ## Ask Better, Build Faster
 
 You don't need to be technical to get world class answers from artificial intelligence. You need a role, context, a format and constraints, or someone who has already written the question for you. Try one prompt today and see the difference for yourself. A great place to practice is your inbox: here is [how to use AI to answer customer emails](https://www.lisahaven.co/blog/how-to-use-ai-to-answer-customer-emails/) in your own voice. Or put these 4 ingredients to work on your privacy with my guide on [how to remove your address from the internet with AI](https://lisahaven.co/blog/remove-your-address-from-the-internet/). If you want the shortcut, head to [www.lumaprompt.ai](https://www.lumaprompt.ai) and let expert written prompts do the heavy lifting. And for more real time lessons from building 3 companies, subscribe at [www.lisahaven.co](https://www.lisahaven.co).
+
+Now tell me in the comments: **what is the 1 thing you will ask AI to assess for you this week?** I read every single one.
 
 ## Keep reading
 
