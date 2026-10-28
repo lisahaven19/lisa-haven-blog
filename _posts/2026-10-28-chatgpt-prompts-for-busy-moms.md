@@ -16,6 +16,8 @@ That is exactly why I lean on ChatGPT prompts for busy moms. Here is the short a
 
 Below are the 10 prompts I would hand any mom, ready to copy. Fill in the blanks and go.
 
+![ChatGPT prompts for busy moms: a calm morning counter with a phone, a latte, an open weekly planner, a box of crayons and dusty rose flowers.](/images/uploads/chatgpt-prompts-for-busy-moms-photo.jpg)
+
 ## Why busy moms need better prompts, not more apps
 
 Search "ChatGPT prompts for moms" and you will find lists of 50 or even 100 prompts. Most are 1 line long. "Give me a chore chart." "Plan my week." The problem is that a 1 line prompt gets you the most average answer on the internet. It does not know your kids, your schedule or your budget.
