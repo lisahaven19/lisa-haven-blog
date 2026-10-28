@@ -4,7 +4,7 @@ title: "Why I Created Havenly: A Mom's Mission to Build the Best Makeup
 category: Founder Life
 emoji: 💄
 date: 2026-06-18T07:52:00.000-04:00
-readTime: 5 min read
+readTime: 7 min read
 excerpt: Lisa Haven shares the real story behind Havenly, the best makeup
   remover wipes for Gen Z. Bigger, thicker, and built different. Here is why she
   created this beauty brand as a mom of three.
@@ -17,6 +17,42 @@ I didn't start Havenly because I had a team, a business degree or a perfectly ma
 That's the real story behind a beauty brand I believe is one of the most important being built right now.
 
 Maybe you've wondered what makes Havenly makeup remover wipes different from everything else on the shelf. Or maybe you're curious how a woman launches a beauty brand on her own while raising 3 kids. Either way, you're in the right place, because I'm going to tell you everything.
+
+## The real story: it started with baby wipes
+
+Here is the moment Havenly was born.
+
+When I had Scarlett, my youngest, I started buying baby wipes again. And I noticed something right away. Baby wipes today are so much bigger and thicker than they used to be.
+
+Then I would go to my bathroom and pull out a makeup remover wipe. Thin. Small. Gone after 1 swipe.
+
+I thought, why do babies get the bigger, thicker wipe, and women trying to take off a full face of makeup get the thin one? In everything I tried, I could not find a single makeup remover wipe that was actually thicker, larger and better.
+
+That is the gap. And I knew I could fill it.
+
+## The Sephora moment
+
+The second moment happened while I was shopping at Sephora.
+
+Every time I walk in, there is a new makeup line. Celebrities and influencers launch cosmetics all the time. Foundations, lip kits, eyeshadow palettes.
+
+But nobody is launching a brand for how to take all that makeup off.
+
+That is when it clicked. Makeup removal is a huge, everyday need, and nobody had made it cool. So I decided to build a line of makeup remover wipes made for Gen Z, with the size, the thickness and the style they actually want.
+
+My daughters are in that market too, so I see what Gen Z wants up close every day.
+
+![Why Havenly is different: most makeup remover wipes are thin and small, tear easily and take 3 to 4 to clean 1 face. Havenly wipes are bigger and thicker, built for Gen Z, with a first run of 30,000 units.](/images/uploads/why-i-created-havenly-makeup-remover-wipes-for-gen-z-chart.jpg)
+
+## Where Havenly is right now
+
+Here is the honest update.
+
+**The samples are in, and I love them.** The feedback so far has been great. Everyone who tries them thinks they are cool, and that is exactly the reaction I wanted.
+
+**The design is locked in.** Now I am locking in the manufacturer for my first production run of 30,000 units. A first order that size is a big step, and it is a big part of why this takes time. There are a lot of moving parts between a sample you love and a product on a shelf.
+
+I am a fast person, so the waiting is hard. But I would rather launch it right than launch it fast. And I am sharing every step of it here, in real time.
 
 ## The Problem With Makeup Remover Wipes Nobody Was Fixing
 
@@ -73,6 +109,19 @@ They're 3 brands in 3 very different categories, with one mission: make products
 Havenly sits right at the center of that, because it came from the most personal problem I had. A thin wipe that didn't work, sitting in my bathroom, and the conviction that I could do better.
 
 So I did. And I'm only getting started.
+
+## Havenly makeup remover wipes FAQ
+
+**What makes Havenly makeup remover wipes different?**
+They are bigger and thicker than typical makeup remover wipes, so 1 wipe can do the job without tearing.
+
+**Who are Havenly wipes made for?**
+Havenly is built for Gen Z, the generation that cares about what works, what it is made of and how it looks.
+
+**When will Havenly launch?**
+The design is locked in, and I am locking in the manufacturer for a first run of 30,000 units. Follow along at [havenly.co](https://www.havenly.co) for launch news.
+
+Now tell me in the comments: **how many makeup wipes does it take you to get a full face off?** I read every single one.
 
 ## Follow the Havenly Journey
 
