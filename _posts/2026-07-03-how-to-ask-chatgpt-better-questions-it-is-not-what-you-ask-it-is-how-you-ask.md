@@ -17,7 +17,7 @@ That answer was only as good as my question. A lazy question gets you the same 1
 
 Here is the short answer on **how to ask ChatGPT a question** and get a great answer: tell it who to be, give it your real situation, say exactly what you want back, set your limits, and let it ask you questions before it answers. That is it. 5 steps, about 30 extra seconds, and a completely different answer.
 
-I write my own posts, I use AI to perfect them, and I use AI to design everything for my 3 companies: [VIXA](https://www.vixaapp.ai), [Havenly](https://www.havenly.co) and [LUMAPROMPT.AI](https://www.lumaprompt.ai). I ask ChatGPT and Claude questions all day long, usually in 10 minute pieces between being a mom of 3. Below is exactly how I do it, with real before and after examples you can copy.
+I write my own posts, I use AI to perfect them, and I use AI to design everything for my 3 companies: VIXA, Havenly and LUMAPROMPT.AI. I ask ChatGPT and Claude questions all day long, usually in 10 minute pieces between being a mom of 3. Below is exactly how I do it, with real before and after examples you can copy.
 
 ## Why your ChatGPT answers feel generic
 
