@@ -62,7 +62,9 @@ export default async (req, context) => {
     counts = { ...blank(id), ...((cur && cur.data) || {}) };
     counts[choice] += 1;
     const opts = cur && cur.etag ? { onlyIfMatch: cur.etag } : { onlyIfNew: true };
-    const res = await store.setJSON(key, counts, opts);
+    let res;
+    try { res = await store.setJSON(key, counts, opts); }
+    catch (e) { await store.setJSON(key, counts); break; } // older library: plain save
     if (!res || res.modified !== false) break;
   }
   await store.set(voteKey, choice);
