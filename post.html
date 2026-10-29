@@ -346,6 +346,22 @@
     .post-signup-form { max-width:520px; margin:0 auto; min-height:60px; }
     .post-signup-note { font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-top:12px !important; }
 
+    /* ── Delayed signup pop-up (opens after 60 seconds of reading, once every 14 days) ── */
+    .haven-pop { position:fixed; inset:0; z-index:9999; display:flex; align-items:center; justify-content:center; padding:16px; background:rgba(10,10,10,0.55); opacity:0; pointer-events:none; transition:opacity .35s ease; }
+    .haven-pop.open { opacity:1; pointer-events:auto; }
+    .haven-pop-card { position:relative; width:100%; max-width:440px; max-height:calc(100vh - 32px); overflow-y:auto; background:var(--cream); border-radius:20px; padding:40px 28px 26px; text-align:center; box-shadow:0 24px 60px rgba(10,10,10,0.3); transform:translateY(24px); transition:transform .4s cubic-bezier(0.22,1,0.36,1); }
+    .haven-pop.open .haven-pop-card { transform:none; }
+    .haven-pop-card::before { content:""; position:absolute; top:0; left:0; right:0; height:5px; background:var(--grad-h); border-radius:20px 20px 0 0; }
+    .haven-pop-close { position:absolute; top:12px; right:12px; width:36px; height:36px; border:0; border-radius:50%; background:#E8E1D8; color:var(--black); font-size:16px; cursor:pointer; }
+    .haven-pop-close:hover { background:var(--rose-light); }
+    .haven-pop-eyebrow { display:block; font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--rose-dark); margin-bottom:10px; }
+    .haven-pop-card h3 { font-family:var(--serif); font-size:26px; line-height:1.25; margin-bottom:10px; }
+    .haven-pop-card h3 em { color:var(--rose); }
+    .haven-pop-card p { font-size:15px; line-height:1.6; color:var(--mid); margin-bottom:18px; }
+    .haven-pop-form { min-height:60px; }
+    .haven-pop-note { font-size:11px !important; letter-spacing:.12em; text-transform:uppercase; color:var(--light) !important; margin:12px 0 0 !important; }
+    .haven-pop-later { margin-top:10px; background:none; border:0; font:500 13px var(--sans); color:var(--light); text-decoration:underline; cursor:pointer; }
+
 
     /* ── Comments ── */
     .comments { margin:48px 0 8px; padding:34px 28px 28px; background:#FAF7F3; border:1px solid #E2DDD5; border-radius:20px; }
@@ -1155,6 +1171,45 @@
 
     // Footer scroll reveal (for elements already in DOM)
     document.addEventListener('DOMContentLoaded', initScrollReveal);
+  </script>
+  <!-- Delayed signup pop-up -->
+  <div class="haven-pop" id="havenPop" role="dialog" aria-modal="true" aria-labelledby="havenPopTitle" aria-hidden="true">
+    <div class="haven-pop-card">
+      <button class="haven-pop-close" id="havenPopClose" aria-label="Close">&#10005;</button>
+      <span class="haven-pop-eyebrow">Join The Haven</span>
+      <h3 id="havenPopTitle">Enjoying this? <em>Get the next one.</em></h3>
+      <p>My free weekly letter: how I run 3 companies with AI, what's working, and what I'd do differently.</p>
+      <div class="haven-pop-form" id="havenPopForm"></div>
+      <p class="haven-pop-note">Free · No spam · Unsubscribe anytime</p>
+      <button class="haven-pop-later" id="havenPopLater">Maybe later</button>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var KEY='havenPopSeen', DAYS=14, DELAY=60000;
+      function get(){ try{ return parseInt(localStorage.getItem(KEY)||'0',10); }catch(e){ return 0; } }
+      function set(){ try{ localStorage.setItem(KEY, String(Date.now())); }catch(e){} }
+      if (Date.now()-get() < DAYS*864e5) return;
+      var pop=document.getElementById('havenPop'), loaded=false, timer;
+      function open(){
+        if (!pop) return;
+        if (document.hidden) { timer=setTimeout(open, 5000); return; }
+        if (!loaded) {
+          loaded=true;
+          var s=document.createElement('script'); s.async=true;
+          s.src='https://subscribe-forms.beehiiv.com/v3/loader.js';
+          s.setAttribute('data-beehiiv-form','422f6a2e-d4cd-4500-a21b-b5883beb30c2');
+          document.getElementById('havenPopForm').appendChild(s);
+        }
+        pop.classList.add('open'); pop.setAttribute('aria-hidden','false'); set();
+      }
+      function close(){ pop.classList.remove('open'); pop.setAttribute('aria-hidden','true'); }
+      document.getElementById('havenPopClose').addEventListener('click', close);
+      document.getElementById('havenPopLater').addEventListener('click', close);
+      pop.addEventListener('click', function(e){ if (e.target===pop) close(); });
+      document.addEventListener('keydown', function(e){ if (e.key==='Escape') close(); });
+      timer=setTimeout(open, DELAY);
+    })();
   </script>
 </body>
 </html>
