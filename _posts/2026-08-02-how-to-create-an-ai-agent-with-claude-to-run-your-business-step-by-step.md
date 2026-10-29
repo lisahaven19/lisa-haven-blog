@@ -13,7 +13,7 @@ metaDescription: "The exact system I use to run 3 companies with a Claude AI age
 ---
 Every morning, before my 3 daughters are awake, an AI agent I built inside Claude has already done my first hour of work. It reads what happened overnight across my 3 companies, checks my calendar, pulls out the emails that actually need me, and hands me a short brief I can get through in 5 minutes with my coffee. In this post I'm going to show you how to create an AI agent with Claude, the same way I built mine.
 
-I didn't write a single line of code. I didn't hire a developer. I didn't sit through a 4 hour course. If you can write a clear text message, you can build this. (Still deciding which AI to build on? Here is my [Claude vs ChatGPT](https://www.lisahaven.co/blog/claude-vs-chatgpt/) breakdown from a founder who uses both.) I'll walk you through it step by step, using the exact morning brief agent I use to run [VIXA](https://www.vixaapp.ai), my dating clarity app for women, [Havenly](https://www.havenly.co), my Gen Z beauty brand built for global retail shelves, and [LUMAPROMPT.AI](https://www.lumaprompt.ai), my human authored prompt platform designed for women.
+I didn't write a single line of code. I didn't hire a developer. I didn't sit through a 4 hour course. If you can write a clear text message, you can build this. (Still deciding which AI to build on? Here is my [Claude vs ChatGPT](https://lisahaven.co/blog/claude-vs-chatgpt/) breakdown from a founder who uses both.) I'll walk you through it step by step, using the exact morning brief agent I use to run [VIXA](https://www.vixaapp.ai), my dating clarity app for women, [Havenly](https://www.havenly.co), my Gen Z beauty brand built for global retail shelves, and [LUMAPROMPT.AI](https://www.lumaprompt.ai), my human authored prompt platform designed for women.
 
 So grab your coffee. This is a full guide, and by the time you finish it you'll know enough to build your first agent tonight.
 
@@ -139,7 +139,7 @@ My morning brief is on version 9 right now. Version 1 was decent. Version 9 feel
 
 My honest advice is to run your morning brief for a full month before you add anything. When you're ready, here are the natural next builds, in the order I'd do them: a weekly numbers agent that sums up your sales and key metrics every Friday, a customer voice agent that turns reviews and support messages into themes once a week, and a competitor watch agent that tells you every Monday what the brands in your space launched, posted and changed. One job each. Always one job each.
 
-If your inbox is where your hours go, start there. Here is my step by step guide on [how to use AI to answer customer emails](https://www.lisahaven.co/blog/how-to-use-ai-to-answer-customer-emails/), with prompts you can copy.
+If your inbox is where your hours go, start there. Here is my step by step guide on [how to use AI to answer customer emails](https://lisahaven.co/blog/how-to-use-ai-to-answer-customer-emails/), with prompts you can copy.
 
 ## What This Actually Changes for You
 
@@ -163,7 +163,7 @@ That's the same principle I built [VIXA](https://www.vixaapp.ai) on. Clarity is 
 
 Your first AI agent takes about 20 minutes to build tonight. The you of 30 days from now, starting every morning with a clear brief instead of a messy inbox, is going to be very glad you spent them.
 
-If you build one, tell me about it. I share what I'm building every week here on [lisahaven.co](https://www.lisahaven.co) and on [LinkedIn](https://www.linkedin.com/in/lisahaven), and I answer at lisa@vixaapp.ai.
+If you build one, tell me about it. I share what I'm building every week here on [lisahaven.co](https://lisahaven.co/) and on [LinkedIn](https://www.linkedin.com/in/lisahaven), and I answer at lisa@vixaapp.ai.
 
 Now go build your first employee who never sleeps.
 

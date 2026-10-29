@@ -45,7 +45,7 @@ Not 5. One. Ask yourself: "If I only moved 1 thing forward before December 31, w
 
 There are about 73 days left in 2026 after today. That is roughly 10 weeks. Ten focused weeks is more than enough time to finish a big project, launch something small, or build a habit that carries into next year.
 
-Write the goal in 1 sentence and make it measurable. "Finish my product page and get 50 people on the waitlist" works. "Get my life together" does not. Wishing is not a plan, which is the part I wrote about in [the truth about manifesting 3 companies](https://www.lisahaven.co/blog/i-manifested-three-companies-heres-the-part-the-law-of-attraction-crowd-wont-tell-you/).
+Write the goal in 1 sentence and make it measurable. "Finish my product page and get 50 people on the waitlist" works. "Get my life together" does not. Wishing is not a plan, which is the part I wrote about in [the truth about manifesting 3 companies](https://lisahaven.co/blog/i-manifested-three-companies-heres-the-part-the-law-of-attraction-crowd-wont-tell-you/).
 
 ### Step 2: Write an if-then plan
 
@@ -108,7 +108,7 @@ for my week, and 1 question to ask myself every Friday.
 Keep it simple and realistic for a busy woman.
 ```
 
-If you want to go further, I showed how I use Claude as an assistant that runs parts of my business in [how to create an AI agent with Claude to run your business](https://www.lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/).
+If you want to go further, I showed how I use Claude as an assistant that runs parts of my business in [how to create an AI agent with Claude to run your business](https://lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/).
 
 ## Is locking in the same as hustle culture?
 
@@ -116,7 +116,7 @@ No. And this matters.
 
 Hustle culture says work more, sleep less, prove yourself. Locking in says work on the right thing, with your full attention, for a set amount of time. Then stop.
 
-Locking in actually protects your rest. When you know you gave your 1 goal a real 45 minutes, you can close the laptop and be fully present with your family, at the gym, or at dinner. No guilt. No half attention. If you want the real picture of building with a full life, read [what nobody tells you about going from 0 to 3 companies](https://www.lisahaven.co/blog/from-zero-to-three-companies/).
+Locking in actually protects your rest. When you know you gave your 1 goal a real 45 minutes, you can close the laptop and be fully present with your family, at the gym, or at dinner. No guilt. No half attention. If you want the real picture of building with a full life, read [what nobody tells you about going from 0 to 3 companies](https://lisahaven.co/blog/from-zero-to-three-companies/).
 
 The gym taught me this. You train hard, you leave, and you go live your life. Focus works the same way.
 
@@ -139,7 +139,7 @@ So if you start this week, you could finish 2026 with a habit that runs on its o
 
 ## Your 7 day lock in starts now
 
-You have read the steps. Now pick your 1 goal, write 1 if-then plan, and schedule your first focus block for tomorrow morning. Then, to make AI do the heavy lifting for you, read [how to create an AI agent with Claude to run your business](https://www.lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/) next. It is the system that keeps me locked in when life gets loud.
+You have read the steps. Now pick your 1 goal, write 1 if-then plan, and schedule your first focus block for tomorrow morning. Then, to make AI do the heavy lifting for you, read [how to create an AI agent with Claude to run your business](https://lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/) next. It is the system that keeps me locked in when life gets loud.
 
 ## FAQ
 

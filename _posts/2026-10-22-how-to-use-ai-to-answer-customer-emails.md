@@ -76,7 +76,7 @@ Rules:
 Answer bank: [paste your answer bank]
 ```
 
-That last rule is the one that protects you. AI is helpful, but it can sound confident and still be wrong. The [CHECK THIS] tag shows you exactly where to look. I wrote a whole guide on [how to use AI without sounding like AI](https://www.lisahaven.co/blog/how-to-use-ai-without-sounding-like-ai/) if you want to go deeper on voice.
+That last rule is the one that protects you. AI is helpful, but it can sound confident and still be wrong. The [CHECK THIS] tag shows you exactly where to look. I wrote a whole guide on [how to use AI without sounding like AI](https://lisahaven.co/blog/how-to-use-ai-without-sounding-like-ai/) if you want to go deeper on voice.
 
 ### Step 4: Let AI draft, then you check every reply
 
@@ -122,7 +122,7 @@ You do not need fancy software to start. Here is what I actually use:
 - **Your email's built-in templates**: Gmail has a free Templates feature in its settings. Save your top 5 AI-polished answers there for 1 click replies.
 - **[Monday.com](https://monday.com)**: I track my creator conversations on boards, so no reply slips through the cracks.
 
-If you want the bigger picture of how I set this kind of system up, read [how to create an AI agent with Claude to run your business](https://www.lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/). The answer bank in this post is the first building block of an agent like that.
+If you want the bigger picture of how I set this kind of system up, read [how to create an AI agent with Claude to run your business](https://lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/). The answer bank in this post is the first building block of an agent like that.
 
 ## A simple daily routine for an AI-powered inbox
 
@@ -138,7 +138,7 @@ That is it. No new software. No support team. Just a smarter way to say what you
 
 Do not try to rebuild your whole inbox tonight. Take the next 5 customer emails you get and run them through the prompt in Step 4. Notice how much time you save. Then build the full answer bank this weekend.
 
-Want your prompts to work even better? My guide on [how to ask ChatGPT better questions](https://www.lisahaven.co/blog/how-to-ask-chatgpt-better-questions/) shows you how to get sharper answers from every AI tool. And if you would rather skip the writing and start with prompts built by real experts, [LUMAPROMPT.AI](https://www.lumaprompt.ai) is my human-written prompt library made for women in business.
+Want your prompts to work even better? My guide on [how to ask ChatGPT better questions](https://lisahaven.co/blog/how-to-ask-chatgpt-better-questions/) shows you how to get sharper answers from every AI tool. And if you would rather skip the writing and start with prompts built by real experts, [LUMAPROMPT.AI](https://www.lumaprompt.ai) is my human-written prompt library made for women in business.
 
 ## FAQ
 

@@ -144,7 +144,7 @@ These are the tools I use to run it:
 
 So even on a day like today, the program doesn't stop. My creators still get answers, and I get to focus on fixing the app.
 
-I'm writing up exactly how I do it, step by step, in an upcoming post, because this is what I want every woman to know: you can leverage AI to run your businesses and take hours off your plate. In the meantime, you can read [how I built my UGC creator program before launch](https://www.lisahaven.co/blog/how-to-build-ugc-creator-program-before-launch/) and [how to create an AI agent with Claude](https://www.lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/).
+I'm writing up exactly how I do it, step by step, in an upcoming post, because this is what I want every woman to know: you can leverage AI to run your businesses and take hours off your plate. In the meantime, you can read [how I built my UGC creator program before launch](https://lisahaven.co/blog/how-to-build-ugc-creator-program-before-launch/) and [how to create an AI agent with Claude](https://lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/).
 
 ## Why I'm sharing this out loud
 
@@ -154,7 +154,7 @@ The same week VIXA got rejected, I read an interview with Christina Qi, the CEO 
 
 As a mother of 3 running 3 companies, I also know my daughters are watching how I handle hard days. I want them to see what a founder does after a no: she fixes it and moves forward.
 
-That's why I believe in [building in public before revenue](https://www.lisahaven.co/blog/building-in-public-before-revenue/). The wins, the mess and everything in between. If you only ever see the highlight reel, you start to think your own setbacks mean something is wrong with you. They don't.
+That's why I believe in [building in public before revenue](https://lisahaven.co/blog/building-in-public-before-revenue/). The wins, the mess and everything in between. If you only ever see the highlight reel, you start to think your own setbacks mean something is wrong with you. They don't.
 
 ## Frequently asked questions
 

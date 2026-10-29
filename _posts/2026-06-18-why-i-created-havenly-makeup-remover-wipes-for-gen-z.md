@@ -125,7 +125,7 @@ Now tell me in the comments: **how many makeup wipes does it take you to get a f
 
 ## Follow the Havenly Journey
 
-If you're tired of makeup remover wipes that don't work, your fix is on the way. And if you're a female entrepreneur watching a mom of 3 build a beauty brand from scratch and wondering how it gets done, I'm documenting all of it in real time at [lisahaven.co](https://www.lisahaven.co).
+If you're tired of makeup remover wipes that don't work, your fix is on the way. And if you're a female entrepreneur watching a mom of 3 build a beauty brand from scratch and wondering how it gets done, I'm documenting all of it in real time at [lisahaven.co](https://lisahaven.co/).
 
 Follow along and share this post. Send it to every woman you know who has tossed a shredded wipe in the trash and thought there had to be something better. There is.
 
@@ -135,7 +135,7 @@ Havenly is what makeup remover wipes for Gen Z should have been all along. The b
 
 Follow Havenly: [havenly.co](https://www.havenly.co)
 
-Read the founder's journey: [lisahaven.co](https://www.lisahaven.co)
+Read the founder's journey: [lisahaven.co](https://lisahaven.co/)
 
 AI tools built for women: [lumaprompt.ai](https://www.lumaprompt.ai)
 

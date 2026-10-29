@@ -25,7 +25,7 @@ The real version goes like this. Belief is the ignition. It gets you to start, b
 
 **What the Law of Attraction Actually Is**
 
-Strip away the mysticism and there's something real underneath. When you obsess over a specific outcome, your brain quietly reorganizes itself around it. You start noticing opportunities you used to walk right past. You catch the one sentence in a podcast that settles a decision for you. You spot a gap in the market, like a makeup wipe nobody had built for Gen Z, which turned into **HAVENLY** ([www.havenly.co](https://www.havenly.co)).
+Strip away the mysticism and there's something real underneath. When you obsess over a specific outcome, your brain quietly reorganizes itself around it. You start noticing opportunities you used to walk right past. You catch the one sentence in a podcast that settles a decision for you. You spot a gap in the market, like [a makeup wipe nobody had built for Gen Z](https://lisahaven.co/blog/why-i-created-havenly-makeup-remover-wipes-for-gen-z/), which turned into **HAVENLY** ([www.havenly.co](https://www.havenly.co)).
 
 Clarity works like a filter. Once you decide exactly what you're building, the world starts sorting itself into useful and noise. There's no magic in that, it's just focus doing its job. But it only kicks in when the vision is specific enough to make you a little uncomfortable.
 

@@ -10,7 +10,7 @@ image: /images/uploads/family-photo.jpg
 seoTitle: "How to Build a Business While Raising Kids: 0 to 3"
 metaDescription: "Building 3 companies as a mom of 3 daughters taught me what no business book could. The real lessons on time, focus and doing it anyway, unfiltered."
 ---
-Everyone sees the vision board. Nobody sees the 3am work while the baby sleeps and the rest of the house has finally gone quiet.
+Everyone sees the [vision board](https://lisahaven.co/blog/i-manifested-three-companies-heres-the-part-the-law-of-attraction-crowd-wont-tell-you/). Nobody sees the 3am work while the baby sleeps and the rest of the house has finally gone quiet.
 
 I'm Lisa Haven, founder of **HAVENLY** ([www.havenly.co](https://www.havenly.co)), the makeup remover wipes brand built for Gen Z; **LUMAPROMPT.AI** ([www.lumaprompt.ai](https://www.lumaprompt.ai)), a premium prompt generator written for the way women actually think; and **VIXA** ([www.vixaapp.ai](https://www.vixaapp.ai)), the dating clarity app that hands women their power back. That's 3 companies and 3 daughters, and one woman in Florida building toward something that would make my girls proud.
 

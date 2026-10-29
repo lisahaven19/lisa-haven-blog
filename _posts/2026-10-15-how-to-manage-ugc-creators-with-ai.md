@@ -16,7 +16,7 @@ Here's the short answer on how to manage UGC creators with AI: give every creato
 
 That's what running a creator program with AI looks like in real life. A clear system, a small team and AI handling the busywork, so the people can focus on the creators.
 
-Yesterday, when I wrote about [what to do when Apple rejects your app](https://www.lisahaven.co/blog/what-to-do-when-apple-rejects-your-app/), I promised you the step by step. Here it is.
+Yesterday, when I wrote about [what to do when Apple rejects your app](https://lisahaven.co/blog/what-to-do-when-apple-rejects-your-app/), I promised you the step by step. Here it is.
 
 ## Why creator programs fall apart
 
@@ -149,7 +149,7 @@ AI is a tool, not a manager. Keep these human:
 
 Want prompts like the ones in this post, written by humans who know how to get real results? That's exactly why I built [LUMAPROMPT.AI](https://www.lumaprompt.ai).
 
-If you're just starting, read [how I built my UGC creator program before launch](https://www.lisahaven.co/blog/how-to-build-ugc-creator-program-before-launch/) first, then [how to create an AI agent with Claude](https://www.lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/) to automate the daily summary.
+If you're just starting, read [how I built my UGC creator program before launch](https://lisahaven.co/blog/how-to-build-ugc-creator-program-before-launch/) first, then [how to create an AI agent with Claude](https://lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/) to automate the daily summary.
 
 ## Frequently asked questions
 

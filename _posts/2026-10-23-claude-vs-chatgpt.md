@@ -70,9 +70,9 @@ Here is why. Claude's first drafts sound more like a real person. Fewer "I hope 
 
 ChatGPT writes well too. It is faster at short, punchy things like captions and headline ideas. But on longer pieces, I spend more time editing it back into my voice.
 
-1 important note: I write my blog posts myself and use AI to edit, tighten and fact check. That is the right way to use either tool. You bring the real stories and opinions. AI helps you say them clearly.
+1 important note: [I write my blog posts myself](https://lisahaven.co/blog/how-to-use-ai-to-write-blog-posts-that-rank/) and use AI to edit, tighten and fact check. That is the right way to use either tool. You bring the real stories and opinions. AI helps you say them clearly.
 
-If your writing comes out stiff in any tool, read my guide on [how to use AI without sounding like AI](https://www.lisahaven.co/blog/how-to-use-ai-without-sounding-like-ai/). It works in both.
+If your writing comes out stiff in any tool, read my guide on [how to use AI without sounding like AI](https://lisahaven.co/blog/how-to-use-ai-without-sounding-like-ai/). It works in both.
 
 Try this prompt in both tools and compare the results yourself:
 
@@ -90,13 +90,13 @@ Rules:
 
 **Claude.** This is where it changed my life.
 
-I am not a developer, and I do not have a computer science degree. Claude designed the layout of VIXA, then HAVENLY, then this blog. Then Claude Code helped me build the real app infrastructure in 1 very long day.
+I am not a developer, and I do not have a computer science degree. Claude designed the layout of VIXA, then HAVENLY, then this blog. Then Claude Code [helped me build the real app infrastructure](https://lisahaven.co/blog/i-built-3-businesses-and-a-full-ai-app-using-only-two-tools-here-is-exactly-how/) in 1 very long day.
 
 Claude can also build small working tools right inside the chat: a pricing calculator, a content calendar, a simple dashboard. You describe it in plain English, and you get something you can click and use.
 
 ChatGPT can write code too, and many developers use it daily. But for a non-technical founder who wants to describe an idea and see it come to life, Claude has been the better teacher and builder for me.
 
-If you want to go deeper, I walk through it in [how to create an AI agent with Claude to run your business](https://www.lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/).
+If you want to go deeper, I walk through it in [how to create an AI agent with Claude to run your business](https://lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/).
 
 ## Which is better for images and voice?
 
@@ -216,7 +216,7 @@ Do not take my word for it. Run this test with your own work:
 6. **Day 6:** Use voice mode in both for a 5 minute brainstorm.
 7. **Day 7:** Count which tool saved you more time. Pay for that one.
 
-Want both tools to give you sharper answers right away? My guide on [how to ask ChatGPT better questions](https://www.lisahaven.co/blog/how-to-ask-chatgpt-better-questions/) works the same way in Claude. And if you sell anything online, my system for [using AI to answer customer emails](https://www.lisahaven.co/blog/how-to-use-ai-to-answer-customer-emails/) is a great first project for either one.
+Want both tools to give you sharper answers right away? My guide on [how to ask ChatGPT better questions](https://lisahaven.co/blog/how-to-ask-chatgpt-better-questions/) works the same way in Claude. And if you sell anything online, my system for [using AI to answer customer emails](https://lisahaven.co/blog/how-to-use-ai-to-answer-customer-emails/) is a great first project for either one.
 
 **Ready to stop guessing what to type?** Grab ready-made business prompts written by real experts at [LUMAPROMPT.AI](https://www.lumaprompt.ai/?ref=blog-claude-vs-chatgpt). They work in Claude and ChatGPT, so you win either way.
 

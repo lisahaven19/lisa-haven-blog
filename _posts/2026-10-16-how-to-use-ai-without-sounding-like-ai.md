@@ -70,7 +70,7 @@ Here's a quick swap chart you can save.
 
 ## How to use AI without sounding like AI: my 7 steps
 
-This is the system I use for blog posts, emails, captions, creator briefs and messages to my team. It works in ChatGPT, Claude or any AI tool.
+This is the system I use for [blog posts](https://lisahaven.co/blog/how-to-use-ai-to-write-blog-posts-that-rank/), emails, captions, creator briefs and messages to my team. It works in ChatGPT, Claude or any AI tool.
 
 ### Step 1. Write a 1 page voice guide
 
@@ -126,7 +126,7 @@ Do not add any facts, stories or numbers I did not give you.
 
 That last sentence matters. AI sometimes fills gaps with made up details that sound nice. One fake detail can cost you trust you spent years building.
 
-If you want to get better at asking AI for exactly what you need, read my guide on [how to ask ChatGPT better questions](https://www.lisahaven.co/blog/how-to-ask-chatgpt-better-questions/).
+If you want to get better at asking AI for exactly what you need, read my guide on [how to ask ChatGPT better questions](https://lisahaven.co/blog/how-to-ask-chatgpt-better-questions/).
 
 ### Step 4. Let AI build the structure, not the soul
 
@@ -168,7 +168,7 @@ Some things should never be fully automated.
 
 In my companies, AI drafts a lot: creator briefs, answers to repeat questions, summaries, outlines. But a welcome to a new team member, feedback on someone's work, a hard conversation or a thank you? Those get my personal touch.
 
-I wrote about this balance in [how to manage UGC creators with AI](https://www.lisahaven.co/blog/how-to-manage-ugc-creators-with-ai/): AI brings the speed, people bring the warmth.
+I wrote about this balance in [how to manage UGC creators with AI](https://lisahaven.co/blog/how-to-manage-ugc-creators-with-ai/): AI brings the speed, people bring the warmth.
 
 Here's a simple way to decide:
 
@@ -295,7 +295,7 @@ Here's what that looks like in my real workflow.
 
 **For my products,** this idea is built right in. At [VIXA](https://www.vixaapp.ai), our AI companion Vela suggests replies that still sound like you, not like a script copied from the internet. And [LUMAPROMPT.AI](https://www.lumaprompt.ai) exists because prompts written by human experts get better, more human results than generic ones.
 
-The pattern is the same everywhere: AI for speed, me for the voice. If you want to take it further and let AI run whole tasks for you, start with [how to create an AI agent with Claude](https://www.lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/).
+The pattern is the same everywhere: AI for speed, me for the voice. If you want to take it further and let AI run whole tasks for you, start with [how to create an AI agent with Claude](https://lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/).
 
 ## Should you tell people you use AI?
 

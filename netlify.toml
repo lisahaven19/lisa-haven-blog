@@ -9,6 +9,25 @@
 [template.environment]
   NETLIFY_IDENTITY_ENABLED = "true"
 
+# Send every www and http address straight to https://lisahaven.co in 1 single hop
+[[redirects]]
+  from = "http://www.lisahaven.co/*"
+  to = "https://lisahaven.co/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.lisahaven.co/*"
+  to = "https://lisahaven.co/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://lisahaven.co/*"
+  to = "https://lisahaven.co/:splat"
+  status = 301
+  force = true
+
 # Allow the admin panel to work on any URL path
 [[redirects]]
   from = "/admin"

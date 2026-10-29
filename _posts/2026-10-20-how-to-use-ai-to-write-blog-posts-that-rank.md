@@ -107,7 +107,7 @@ You are my blog editor. Here is my draft post. The main search phrase is: [phras
 Here is the draft: [paste draft]
 ```
 
-That 4th line matters most. AI will happily make up a statistic that sounds real. **Check every number and every fact against a real source before you publish.** If you want my full method for keeping your voice, read [how to use AI without sounding like AI](https://www.lisahaven.co/blog/how-to-use-ai-without-sounding-like-ai/).
+That 4th line matters most. AI will happily make up a statistic that sounds real. **Check every number and every fact against a real source before you publish.** If you want my full method for keeping your voice, read [how to use AI without sounding like AI](https://lisahaven.co/blog/how-to-use-ai-without-sounding-like-ai/).
 
 ### Step 6: Link it, then share it
 
@@ -139,13 +139,13 @@ AI makes the research and editing faster, so you can keep a steady pace without 
 - **[Google Search Console](https://search.google.com/search-console/about):** what people typed to find you.
 - **A notes app:** for your stories, wins and lessons. This is your real advantage.
 
-If you want better answers from AI in general, start with [how to ask ChatGPT better questions](https://www.lisahaven.co/blog/how-to-ask-chatgpt-better-questions/). Better questions really do get better results.
+If you want better answers from AI in general, start with [how to ask ChatGPT better questions](https://lisahaven.co/blog/how-to-ask-chatgpt-better-questions/). Better questions really do get better results.
 
 ## Start your first post today
 
 Here is your homework. Open Google, type the start of a question your reader would ask, and pick 1 phrase from autocomplete. Write 3 sentences about what happened when you dealt with it yourself. That is your post. AI can help you shape the rest.
 
-And if you want AI to handle more of the busy work in your business, read [how to create an AI agent with Claude to run your business](https://www.lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/) next.
+And if you want AI to handle more of the busy work in your business, read [how to create an AI agent with Claude to run your business](https://lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/) next.
 
 ## FAQ
 

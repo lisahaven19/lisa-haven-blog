@@ -7,6 +7,8 @@ readTime: 7 min read
 excerpt: I am building a UGC creator program for my app before it even launches.
   Here are 7 lessons, plus how AI helps me run it, for any founder who wants to
   do the same.
+seoTitle: How to Build a UGC Creator Program Before Launch
+metaDescription: "How to build a UGC creator program before launch: 7 lessons from lining up creators for my app early, plus how I use AI to run the program day to day."
 image: /images/uploads/ugc-creator-program-cover-v3.png
 ---
 My app isn't live yet, and I already have about 20 user generated content (UGC) creators ready to post about it.
@@ -116,7 +118,7 @@ I follow 2 rules with AI:
 1. **AI follows my rules. It doesn't make them.** Pay, special deals and who joins the team are my calls.
 2. **People still need people.** Sofia brings the warmth and AI brings the speed. You need both.
 
-So once again, AI is running my life like a champ. Want to set this up for your own business? Read [how to create an AI agent with Claude](/post?slug=how-to-create-an-ai-agent-with-claude).
+So once again, AI is running my life like a champ. Want to set this up for your own business? Read [how to create an AI agent with Claude](https://lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/).
 
 ## What I would do differently
 

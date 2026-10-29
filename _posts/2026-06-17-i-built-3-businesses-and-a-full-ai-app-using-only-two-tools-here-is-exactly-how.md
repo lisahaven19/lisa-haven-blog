@@ -16,7 +16,7 @@ In 2 weeks, I built a full AI app from scratch.
 
 On Easter day I sat at my computer for 13 hours straight and built the entire infrastructure of VIXA, an AI dating clarity app. I have zero technical background and no development team, and I did it anyway.
 
-I also run a Gen Z beauty brand called HAVENLY, a premium AI prompt platform called LUMAPROMPT.AI, and this blog, where I document all of it. That's 4 brands and 1 founder, and right now only two tools are powering the whole thing.
+I also run a [Gen Z beauty brand called HAVENLY](https://lisahaven.co/blog/why-i-created-havenly-makeup-remover-wipes-for-gen-z/), a premium AI prompt platform called LUMAPROMPT.AI, and this blog, where I document all of it. That's 4 brands and 1 founder, and right now only two tools are powering the whole thing.
 
 I'm going to tell you exactly what those tools are. First, though, I want to show you what I'm building, because the context matters.
 

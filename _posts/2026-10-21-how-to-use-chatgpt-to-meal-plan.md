@@ -132,7 +132,7 @@ Here is the whole thing, start to finish:
 3. **Sunday, 60 minutes:** prep with the AI prep list.
 4. **Any weeknight, 30 seconds:** ask AI to swap a meal when plans change.
 
-That is about 10 minutes of thinking a week, instead of 7 nights of "what's for dinner?" If you want the bigger picture of how I use AI to take busy work off my plate, read [how to create an AI agent with Claude to run your business](https://www.lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/). The same thinking works at home.
+That is about 10 minutes of thinking a week, instead of 7 nights of "what's for dinner?" If you want the bigger picture of how I use AI to take busy work off my plate, read [how to create an AI agent with Claude to run your business](https://lisahaven.co/blog/how-to-create-an-ai-agent-with-claude/). The same thinking works at home.
 
 ## Start your first AI meal plan tonight
 
@@ -140,7 +140,7 @@ You do not need to plan the perfect month. Start with this week. Open ChatGPT or
 
 Once dinner is handled, take on the rest of your week with these [ChatGPT prompts for busy moms](https://lisahaven.co/blog/chatgpt-prompts-for-busy-moms/), from school emails to chore charts.
 
-And if you want to get even better answers from AI, my guide on [how to ask ChatGPT better questions](https://www.lisahaven.co/blog/how-to-ask-chatgpt-better-questions/) will help with every prompt in this post. For staying on track with the rest of your goals, read [how to lock in mentally and finish 2026 strong](https://www.lisahaven.co/blog/how-to-lock-in-mentally/).
+And if you want to get even better answers from AI, my guide on [how to ask ChatGPT better questions](https://lisahaven.co/blog/how-to-ask-chatgpt-better-questions/) will help with every prompt in this post. For staying on track with the rest of your goals, read [how to lock in mentally and finish 2026 strong](https://lisahaven.co/blog/how-to-lock-in-mentally/).
 
 ## FAQ
 

@@ -16,7 +16,7 @@ That is what the right AI tools for entrepreneurs feel like. Not a shiny app you
 
 So here is my short answer: **the best AI tools for entrepreneurs are 1 or 2 AI assistants (I use Claude and ChatGPT) plus the everyday tools they plug into, like your project board, your team chat and your website. You do not need 50 apps. You need a small stack that talks to each other.**
 
-I run 3 companies with AI: VIXA, my dating clarity app, Havenly, my Gen Z beauty brand, and LUMAPROMPT.AI, my prompt library for women. Below are the 9 tools I actually use, what each one does for me, and how to build your own stack without wasting money.
+I run 3 companies with AI: VIXA, my dating clarity app, [Havenly, my Gen Z beauty brand](https://lisahaven.co/blog/why-i-created-havenly-makeup-remover-wipes-for-gen-z/), and LUMAPROMPT.AI, my prompt library for women. Below are the 9 tools I actually use, what each one does for me, and how to build your own stack without wasting money.
 
 ## Why most AI tool lists do not help you
 
@@ -152,7 +152,7 @@ An AI assistant like Claude or ChatGPT is the best place to start, because it he
 No. Most tools in my stack have a free plan, and the main paid AI plans start at about $20 a month. Start small and only pay for what you use every week.
 
 **Do I need to know how to code to use AI tools?**
-No. I built my app and my websites with AI and no coding background. You need to explain clearly what you want, and check the result.
+No. [I built my app and my websites with AI](https://lisahaven.co/blog/i-built-3-businesses-and-a-full-ai-app-using-only-two-tools-here-is-exactly-how/) and no coding background. You need to explain clearly what you want, and check the result.
 
 ## Before you go
 

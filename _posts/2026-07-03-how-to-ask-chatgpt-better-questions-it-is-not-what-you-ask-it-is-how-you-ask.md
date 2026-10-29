@@ -15,7 +15,7 @@ If you've ever typed a question into ChatGPT and gotten back an answer that felt
 
 ChatGPT and Claude respond to exactly what you give them. When you type "write me an Instagram caption," you're asking the tool to guess your brand, your audience, your tone and your goal all at once. It can't read your mind, so it averages everything out and hands you something that sounds like everybody else. Give it something vague and you'll get something vague back. Give it specifics and you'll get specifics. That's really all there is to it.
 
-Not sure which tool to ask in the first place? Read my honest [Claude vs ChatGPT comparison](https://www.lisahaven.co/blog/claude-vs-chatgpt/) to see which one fits your business.
+Not sure which tool to ask in the first place? Read my honest [Claude vs ChatGPT comparison](https://lisahaven.co/blog/claude-vs-chatgpt/) to see which one fits your business.
 
 ## How to Ask ChatGPT a Question: The 4 Ingredients
 
@@ -67,7 +67,7 @@ I'll be honest with you. Most women don't have time to become prompt experts, an
 
 ## Ask Better, Build Faster
 
-You don't need to be technical to get world class answers from artificial intelligence. You need a role, context, a format and constraints, or someone who has already written the question for you. Try one prompt today and see the difference for yourself. A great place to practice is your inbox: here is [how to use AI to answer customer emails](https://www.lisahaven.co/blog/how-to-use-ai-to-answer-customer-emails/) in your own voice. Or put these 4 ingredients to work on your privacy with my guide on [how to remove your address from the internet with AI](https://lisahaven.co/blog/remove-your-address-from-the-internet/). If you want the shortcut, head to [www.lumaprompt.ai](https://www.lumaprompt.ai) and let expert written prompts do the heavy lifting. And for more real time lessons from building 3 companies, subscribe at [www.lisahaven.co](https://www.lisahaven.co).
+You don't need to be technical to get world class answers from artificial intelligence. You need a role, context, a format and constraints, or someone who has already written the question for you. Try one prompt today and see the difference for yourself. A great place to practice is your inbox: here is [how to use AI to answer customer emails](https://lisahaven.co/blog/how-to-use-ai-to-answer-customer-emails/) in your own voice. Or put these 4 ingredients to work on your privacy with my guide on [how to remove your address from the internet with AI](https://lisahaven.co/blog/remove-your-address-from-the-internet/). If you want the shortcut, head to [www.lumaprompt.ai](https://www.lumaprompt.ai) and let expert written prompts do the heavy lifting. And for more real time lessons from building 3 companies, subscribe at [www.lisahaven.co](https://lisahaven.co/).
 
 Now tell me in the comments: **what is the 1 thing you will ask AI to assess for you this week?** I read every single one.
 
