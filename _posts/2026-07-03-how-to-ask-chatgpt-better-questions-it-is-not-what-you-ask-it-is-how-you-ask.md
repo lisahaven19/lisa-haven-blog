@@ -211,4 +211,10 @@ Which step are you trying first? Vote in the comments with your letter:
 
 And tell me: **what is the 1 question you are going to ask ChatGPT properly this week?** I read every single comment.
 
+## Keep reading
+
+- [How to Use AI to Answer Customer Emails](/blog/how-to-use-ai-to-answer-customer-emails/)
+- [How to Create an AI Agent with Claude to Run Your Business](/blog/how-to-create-an-ai-agent-with-claude/)
+- [How to Use ChatGPT to Meal Plan for the Week](/blog/how-to-use-chatgpt-to-meal-plan/)
+
 > "Quality questions create a quality life." Tony Robbins
