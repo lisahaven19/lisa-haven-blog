@@ -32,6 +32,7 @@ collections:
           - "Carnivore & Wellness"
       - { label: "Emoji", name: "emoji", widget: "string", default: "✨", hint: "One emoji that represents this post" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Last Updated", name: "updated", widget: "datetime", required: false, hint: "Optional. Set this when you refresh an old post, so Google sees it is fresh." }
       - { label: "Read Time", name: "readTime", widget: "string", default: "3 min read" }
       - { label: "Excerpt", name: "excerpt", widget: "text", hint: "Short teaser shown on the homepage (1-2 sentences)" }
       - { label: "SEO Title", name: "seoTitle", widget: "string", required: false, hint: "Optional. The title Google shows, up to 60 characters, search phrase first." }

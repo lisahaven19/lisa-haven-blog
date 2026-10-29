@@ -132,6 +132,7 @@ if (fs.existsSync(POSTS_DIR)) {
       excerpt: meta.excerpt || '',
       seoTitle: meta.seoTitle || '',
       metaDescription: meta.metaDescription || '',
+      updated: meta.updated || '',
       image: meta.image || '',
       gallery: asList(meta.gallery),
       draft: isDraft(meta),
@@ -303,7 +304,7 @@ try {
     { loc: SITE + '/privacy-policy', priority: '0.2' }
   ];
   live.filter(p => p && p.slug && !p.draft).forEach(p => {
-    urls.push({ loc: SITE + '/blog/' + encodeURIComponent(p.slug) + '/', lastmod: day(p.date), priority: '0.9' });
+    urls.push({ loc: SITE + '/blog/' + encodeURIComponent(p.slug) + '/', lastmod: day(p.updated || p.date), priority: '0.9' });
   });
   const xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
     + '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -383,7 +384,7 @@ try {
         description: desc,
         image: [img],
         datePublished: published || undefined,
-        dateModified: published || undefined,
+        dateModified: iso(p.updated) || published || undefined,
         author: { '@type': 'Person', name: 'Lisa Haven', url: SITE + '/' },
         publisher: { '@type': 'Person', name: 'Lisa Haven', url: SITE + '/' },
         mainEntityOfPage: { '@type': 'WebPage', '@id': url },
