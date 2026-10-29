@@ -126,6 +126,8 @@ Here is my honest confession. These days I barely type my questions at all.
 
 I run 3 companies and raise 3 daughters, so I move fast. I jump from window to window and I just talk to AI out loud, like I would talk to a business partner. Both ChatGPT and Claude have voice options, and talking is often faster than typing.
 
+![How to ask ChatGPT a question: a woman's hands typing on a laptop with a chat open, next to an iced latte, an open notebook with a gold pen and dusty rose flowers.](/images/uploads/how-to-ask-chatgpt-a-question-photo.jpg)
+
 But even when I talk fast, I still use the 5 steps. They are built into how I speak. My go to move is 1 word: **assess.**
 
 **How I used to ask:** "What does this mean?"
