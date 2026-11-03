@@ -2119,6 +2119,19 @@
     </div>
   </section>
 
+  <!-- ── SIGN UP (right under the hero) ──────────── -->
+  <section class="hs-band" id="join" aria-label="Join The Haven">
+    <div class="hs-band-text">
+      <span class="hs-eyebrow">Join The Haven</span>
+      <h2>The unfiltered <em>insider letter.</em></h2>
+      <p>How I run 3 companies with AI as a mother of 3. Free, every week.</p>
+    </div>
+    <div class="hs-band-form">
+      <div data-haven-signup></div>
+      <p class="hs-band-note">Free · No spam · Unsubscribe anytime</p>
+    </div>
+  </section>
+
   <!-- ── MARQUEE ─────────────────────────────────── -->
   <div class="marquee-wrap">
     <div class="marquee-track">
@@ -2363,10 +2376,8 @@
     <span class="section-label reveal">Join The Haven</span>
     <h2 class="section-title reveal">The unfiltered <em>insider letter.</em></h2>
     <p class="newsletter-sub reveal">Weekly dispatches from the chaos: what's working, what broke, and what I learned building three companies as a mother of 3. Real talk. No fluff. Free forever.</p>
-    <!-- beehiiv embedded subscribe form — submits directly to beehiiv (replaces the broken /subscribe POST) -->
-    <div class="newsletter-form-embed reveal" id="beehiivForm" style="max-width:520px;margin:0 auto;min-height:60px;">
-      <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="422f6a2e-d4cd-4500-a21b-b5883beb30c2"></script>
-    </div>
+    <!-- Beehiiv form is placed here by /haven-signup.js -->
+    <div class="newsletter-form-embed reveal" id="beehiivForm" data-haven-signup style="max-width:520px;margin:0 auto;min-height:60px;"></div>
     <p class="newsletter-note" id="newsletterNote">Free · No spam · Unsubscribe anytime</p>
   </section>
 
@@ -2907,5 +2918,24 @@
   maybeBuild();
 })();
 </script>
+
+<!-- AUTO-LATEST-STORIES -->
+<script>
+(function(){
+  function fmtDate(d){ try{ return new Date(d).toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'}); }catch(e){ return ''; } }
+  function esc(s){ var x=document.createElement('div'); x.textContent=(s==null?'':s); return x.innerHTML; }
+  fetch('/blog-posts.json',{cache:'no-store'}).then(function(r){ return r.ok?r.json():null; }).then(function(posts){
+    if(!posts||!posts.length) return;
+    var grid=document.querySelector('.latest .posts-grid');
+    if(!grid) return;
+    posts.sort(function(a,b){ return new Date(b.date)-new Date(a.date); });
+    grid.innerHTML=posts.slice(0,5).map(function(p,i){
+      return '<a href="/blog/'+encodeURIComponent(p.slug)+'/" class="post-card'+(i===0?' featured':'')+'"><div class="post-card-body"><div class="post-meta"><span class="post-cat">'+esc(((p.emoji||'')+' '+(p.category||'')).trim())+'</span><span class="post-date">'+esc(fmtDate(p.date))+'</span></div><h3 class="post-title">'+esc(p.title)+'</h3><p class="post-excerpt">'+esc(p.excerpt)+'</p><div class="post-footer"><span class="post-read">⏱ '+esc(p.readTime||'')+'</span><span class="post-arrow">→</span></div></div></a>';
+    }).join('');
+  }).catch(function(){});
+})();
+</script>
+  <!-- Sign up pop-up and boxes: 1 shared file for every page -->
+  <script src="/haven-signup.js"></script>
 </body>
 </html>
