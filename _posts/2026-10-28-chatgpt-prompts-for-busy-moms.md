@@ -205,7 +205,7 @@ Here is a quick guide to keep handy.
 
 The real time saver is not using a prompt once. It is reusing it every week without starting over.
 
-- **In ChatGPT,** open Settings and add your family basics to custom instructions: kids' ages, your work hours and how you like answers. Or create a project called "Home" and keep your favorite prompts inside it.
+- **In ChatGPT,** open Settings and add your family basics to custom instructions: kids' ages, your work hours and how you like answers. Or create a project called "Home" and keep your favorite prompts inside it. Here is my step by step guide to [ChatGPT custom instructions](https://lisahaven.co/blog/chatgpt-custom-instructions/), with a template you can copy.
 - **In Claude,** create a project, add your family details once, and every chat in that project starts from them.
 - **Keep a "prompt list" note** on your phone with your top 5 prompts, ready to copy.
 

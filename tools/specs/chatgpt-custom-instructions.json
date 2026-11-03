@@ -1,0 +1,12 @@
+{
+  "slug": "chatgpt-custom-instructions",
+  "category": "AI & Tech",
+  "cover": {"title": "ChatGPT Custom", "accent": "Instructions",
+            "subtitle": "The 5 minute setup that makes every answer sound like you",
+            "tagline": "Free template inside."},
+  "pins": [
+    {"title": "ChatGPT Custom", "accent": "Instructions", "subtitle": "How to set them up in 5 minutes, step by step", "tagline": "Free template inside."},
+    {"title": "Stop Repeating Yourself", "accent": "to ChatGPT", "subtitle": "Write your rules once and it follows them in every chat", "tagline": "Copy my template."},
+    {"title": "The 5 Rules My AI", "accent": "Always Follows", "subtitle": "The custom instructions template I hand every founder", "tagline": "Works in ChatGPT and Claude."}
+  ]
+}

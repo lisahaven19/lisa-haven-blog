@@ -45,6 +45,8 @@ A role tells ChatGPT which kind of knowledge to pull from and how to talk to you
 
 This is where most people stop short. Tell it who you are, who you are helping, and what you are trying to do. Use real numbers. "I am a founder ordering my first 10,000 units" is worth more than any fancy wording.
 
+Tired of typing your situation every time? Save it once with [ChatGPT custom instructions](https://lisahaven.co/blog/chatgpt-custom-instructions/) and every chat starts already knowing you.
+
 ### Step 3: Say exactly what you want back
 
 A list? A table? 3 options? A script you can read out loud? An email under 100 words? Say it. If you do not tell ChatGPT the format, it picks one for you, and it is usually a long wall of text.
@@ -215,6 +217,7 @@ And tell me: **what is the 1 question you are going to ask ChatGPT properly this
 
 ## Keep reading
 
+- [ChatGPT Custom Instructions: The Setup That Saves Me Hours](/blog/chatgpt-custom-instructions/)
 - [How to Use AI to Answer Customer Emails](/blog/how-to-use-ai-to-answer-customer-emails/)
 - [How to Create an AI Agent with Claude to Run Your Business](/blog/how-to-create-an-ai-agent-with-claude/)
 - [How to Use ChatGPT to Meal Plan for the Week](/blog/how-to-use-chatgpt-to-meal-plan/)
