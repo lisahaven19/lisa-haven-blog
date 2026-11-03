@@ -45,6 +45,8 @@
     + '.hs-form{min-height:60px;width:100%;}'
     + '.hs-form iframe{max-width:100% !important;}'
     + '.hs-note{font-size:11px !important;letter-spacing:.12em;text-transform:uppercase;color:#8a847d !important;margin:12px 0 0 !important;}'
+    + '.hs-thanks{font:600 14px/1.5 "Inter",sans-serif !important;color:#a35f6d !important;margin:10px 0 0 !important;}'
+    + '.hs-band .hs-thanks,.hs-mini .hs-thanks,.post-signup .hs-thanks{color:#e8c4cb !important;}'
     + '.hs-later{margin-top:8px;min-height:44px;background:none;border:0;font:500 13px "Inter",sans-serif;color:#8a847d;text-decoration:underline;cursor:pointer;}'
     + 'html.hs-lock,html.hs-lock body{overflow:hidden !important;}'
     /* Homepage box right under the hero */
@@ -69,25 +71,40 @@
   (document.head || document.documentElement).appendChild(st);
 
   // ── Put the Beehiiv form inside a box ──
-  function mount(host) {
+  // Beehiiv's own form page, placed directly (used by the pop-up, and as a backup everywhere)
+  var directFrames = [];
+  function direct(host) {
+    if (host.querySelector('iframe.hs-direct')) return;
+    var f = document.createElement('iframe');
+    f.className = 'hs-direct';
+    f.src = 'https://subscribe-forms.beehiiv.com/v3/forms/' + FORM_ID;
+    f.title = 'Join The Haven sign up form';
+    f.setAttribute('frameborder', '0');
+    f.setAttribute('scrolling', 'no');
+    f.style.cssText = 'display:block;width:100%;height:' + (window.innerWidth < 420 ? 104 : 56) + 'px;border:0;background:transparent;';
+    host.appendChild(f);
+    directFrames.push(f);
+  }
+  function hasForm(host) {
+    var f = host.querySelector('iframe');
+    return !!(f && f.getBoundingClientRect().height > 10);
+  }
+  function mount(host, directOnly) {
     if (!host || host.getAttribute('data-hs-mounted')) return;
     host.setAttribute('data-hs-mounted', '1');
+    if (directOnly) { direct(host); return; }
     var s = document.createElement('script');
     s.async = true;
     s.src = LOADER;
     s.setAttribute('data-beehiiv-form', FORM_ID);
     host.appendChild(s);
-    // Backup: if the form has not shown up after 10 seconds, place Beehiiv's own form page directly
+    // Backup: if Beehiiv's script has not shown the form after 4 seconds, place the form page directly
+    setTimeout(function () { if (!hasForm(host)) direct(host); }, 4000);
+    // never show 2 forms: if Beehiiv's script finishes late, remove the backup
     setTimeout(function () {
-      if (host.querySelector('iframe, form')) return;
-      var f = document.createElement('iframe');
-      f.src = 'https://subscribe-forms.beehiiv.com/v3/forms/' + FORM_ID;
-      f.title = 'Join The Haven sign up form';
-      f.setAttribute('frameborder', '0');
-      f.setAttribute('scrolling', 'no');
-      f.style.cssText = 'width:100%;height:160px;border:0;background:transparent;';
-      host.appendChild(f);
-    }, 10000);
+      var d = host.querySelector('iframe.hs-direct'), others = [].filter.call(host.querySelectorAll('iframe'), function (f) { return f !== d && f.getBoundingClientRect().height > 10; });
+      if (d && others.length) d.parentNode.removeChild(d);
+    }, 9000);
   }
 
   // Inline boxes load when the reader gets near them (keeps pages fast)
@@ -138,7 +155,7 @@
     pop.classList.add('open');
     pop.setAttribute('aria-hidden', 'false');
     document.documentElement.classList.add('hs-lock');
-    mount(document.getElementById('havenPopForm'));
+    mount(document.getElementById('havenPopForm'), true);
     ss(SEEN, '1');
     setTimeout(function () { var c = pop.querySelector('.hs-close'); if (c) c.focus(); }, 50);
   }
@@ -186,7 +203,23 @@
     if (!/beehiiv\.com$/i.test((e.origin || '').replace(/^https?:\/\//, '').split(':')[0])) return;
     var d = e.data, t = '';
     try { t = typeof d === 'string' ? d : JSON.stringify(d); } catch (x) {}
-    if (/BEEHIIV_SUBSCRIBER_FORM_SUBMITTED|beehiiv:submitted|beehiiv:success|submittedEmail/i.test(t)) ls(JOINED, '1');
+    var frame = null;
+    directFrames.forEach(function (f) { if (f.contentWindow === e.source) frame = f; });
+    // size Beehiiv's form page to fit when it reports its height
+    if (frame && d && typeof d === 'object') {
+      var hgt = d.height || (d.payload && d.payload.height) || (d.data && d.data.height);
+      if (typeof hgt === 'number' && hgt > 20 && hgt < 600) frame.style.height = Math.ceil(hgt) + 'px';
+    }
+    if (/BEEHIIV_SUBSCRIBER_FORM_SUBMITTED|beehiiv:submitted/i.test(t)) {
+      ls(JOINED, '1');
+      if (frame && !frame.parentNode.querySelector('.hs-thanks')) {
+        var ok = document.createElement('p');
+        ok.className = 'hs-thanks';
+        ok.setAttribute('role', 'status');
+        ok.textContent = 'Welcome to The Haven. Check your inbox to confirm.';
+        frame.parentNode.appendChild(ok);
+      }
+    }
   });
   if (/[?&](subscribed|joined)=/.test(location.search)) ls(JOINED, '1');
 
