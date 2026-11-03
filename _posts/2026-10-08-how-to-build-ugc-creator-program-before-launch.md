@@ -35,6 +35,8 @@ I'm building mine for [VIXA](https://www.vixaapp.ai), my dating clarity app for 
 
 Most founders launch first and go looking for creators after. I did it the other way around.
 
+Creators are just 1 part of the plan. I break down the rest in [how to launch an app](https://lisahaven.co/blog/how-to-launch-an-app/), with the 7 lessons I'm learning from VIXA.
+
 A brand new social media account can't post on day 1 and go viral. It has to be "warmed up" first, which means using it like a normal person for about 2 weeks so the platform learns to trust it.
 
 If I waited until launch day to find creators, I'd lose those 2 weeks at the exact moment they matter most. So my creators are warming up their accounts right now, and the day the app goes live, the videos go out.

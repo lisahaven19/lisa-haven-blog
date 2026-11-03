@@ -110,6 +110,8 @@ It sounds small. It isn't. If the reviewer can't log in, they can't see what you
 
 This is the part nobody teaches you. A rejection delays your app, and it also tests your team.
 
+If you're still planning your launch, here are the [7 lessons I'm learning about how to launch an app](https://lisahaven.co/blog/how-to-launch-an-app/), from validating the idea to launch day.
+
 My creators signed up because they believe in VIXA, and I take that seriously. Here's how I keep them close:
 
 **Tell them first.** They should never learn about a delay from a public post. A short, honest message: what happened, what we're doing and when they'll hear from me next.

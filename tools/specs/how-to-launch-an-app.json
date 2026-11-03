@@ -1,0 +1,12 @@
+{
+  "slug": "how-to-launch-an-app",
+  "category": "Founder Life",
+  "cover": {"title": "How to Launch", "accent": "an App",
+            "subtitle": "7 real lessons from launching VIXA, written in the middle of it",
+            "tagline": "No tech team needed."},
+  "pins": [
+    {"title": "How to Launch", "accent": "an App", "subtitle": "7 real lessons from a founder launching her app right now", "tagline": "No tech team needed."},
+    {"title": "Launch Your App", "accent": "Without Code", "subtitle": "How I use AI to run my whole App Store launch", "tagline": "Free prompt inside."},
+    {"title": "Before You Submit", "accent": "to Apple", "subtitle": "The checklist I wish I had before my first rejection", "tagline": "Save this for launch day."}
+  ]
+}
