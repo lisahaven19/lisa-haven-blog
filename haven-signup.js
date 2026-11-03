@@ -81,7 +81,7 @@
     setTimeout(function () {
       if (host.querySelector('iframe, form')) return;
       var f = document.createElement('iframe');
-      f.src = 'https://subscribe-forms.beehiiv.com/' + FORM_ID;
+      f.src = 'https://subscribe-forms.beehiiv.com/v3/forms/' + FORM_ID;
       f.title = 'Join The Haven sign up form';
       f.setAttribute('frameborder', '0');
       f.setAttribute('scrolling', 'no');
@@ -186,7 +186,7 @@
     if (!/beehiiv\.com$/i.test((e.origin || '').replace(/^https?:\/\//, '').split(':')[0])) return;
     var d = e.data, t = '';
     try { t = typeof d === 'string' ? d : JSON.stringify(d); } catch (x) {}
-    if (/success|subscribed|subscription_created|form_submitted|submit/i.test(t)) ls(JOINED, '1');
+    if (/BEEHIIV_SUBSCRIBER_FORM_SUBMITTED|beehiiv:submitted|beehiiv:success|submittedEmail/i.test(t)) ls(JOINED, '1');
   });
   if (/[?&](subscribed|joined)=/.test(location.search)) ls(JOINED, '1');
 
