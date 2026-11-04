@@ -1,148 +1,183 @@
 /*
- * lisahaven.co book mockups for the Playbook Shop
- * Brand: cream #F2EDE6, ink #0A0A0A, dusty rose #C47E8A, Playfair Display + Inter
- * Size a book with --w (default 200px). Everything inside scales with it.
+ * lisahaven.co book covers: The Haven Playbook Series
+ * Brand: cream #F2EDE6, ink #0A0A0A, dusty rose #C47E8A, rose dark #a35f6d,
+ * plum #5a2a3a, Playfair Display (1 italic accent word) + Inter.
+ * Size a book with --w. Everything on the cover scales with it.
  */
 .hb-book {
-  --w: 200px;
+  --w: 260px;
   position: relative;
   width: var(--w);
   aspect-ratio: 2 / 3;
-  font-size: calc(var(--w) * 0.08);
+  font-size: calc(var(--w) * 0.05);
   flex-shrink: 0;
-  transform: perspective(900px) rotateY(-10deg);
+  transform: perspective(1100px) rotateY(-9deg);
   transform-origin: left center;
-  transition: transform .5s cubic-bezier(0.22,1,0.36,1);
+  transition: transform .55s cubic-bezier(0.22,1,0.36,1);
 }
 a.hb-book, .hb-book a { text-decoration: none; color: inherit; }
-.hb-book:hover { transform: perspective(900px) rotateY(-3deg) translateY(-4px); }
+.hb-book:hover { transform: perspective(1100px) rotateY(-2deg) translateY(-6px); }
 
-/* page block peeking out on the right */
+/* page block on the right edge */
 .hb-book::before {
-  content: ""; position: absolute; top: 2.5%; bottom: 2.5%; right: -4.5%; width: 7%;
-  background: repeating-linear-gradient(90deg, #fbf8f3 0 1px, #e4ddd2 1px 2px);
+  content: ""; position: absolute; top: 1.8%; bottom: 1.8%; right: -3.6%; width: 5%;
+  background: repeating-linear-gradient(90deg, #fbf8f3 0 1px, #e2dbd0 1px 2px);
   border-radius: 0 3px 3px 0;
-  box-shadow: 2px 1px 3px rgba(10,10,10,0.15);
+  box-shadow: 2px 1px 4px rgba(10,10,10,0.18);
 }
-/* floor shadow */
+/* soft floor shadow */
 .hb-book::after {
-  content: ""; position: absolute; left: 6%; right: -2%; bottom: -7%; height: 9%;
-  background: radial-gradient(ellipse at center, rgba(10,10,10,0.28) 0%, rgba(10,10,10,0) 70%);
+  content: ""; position: absolute; left: 4%; right: -4%; bottom: -6%; height: 8%;
+  background: radial-gradient(ellipse at center, rgba(10,10,10,0.32) 0%, rgba(10,10,10,0) 70%);
   z-index: -1;
 }
 
 .hb-cover {
-  position: absolute; inset: 0; z-index: 1;
-  overflow: hidden;
-  border-radius: 2px 5px 5px 2px;
-  padding: 11% 10% 9% 15%;
+  position: absolute; inset: 0; z-index: 1; overflow: hidden;
+  border-radius: 2px 6px 6px 2px;
+  padding: 9% 9% 8% 13%;
   display: flex; flex-direction: column;
-  box-shadow: 0 1.2em 2.4em rgba(10,10,10,0.22), 0 0.3em 0.6em rgba(10,10,10,0.12);
-  font-family: "Inter", system-ui, sans-serif;
-  text-align: left;
+  font-family: "Inter", system-ui, sans-serif; text-align: left;
+  box-shadow: 0 1.6em 3.2em rgba(10,10,10,0.26), 0 0.4em 0.8em rgba(10,10,10,0.14);
 }
-/* spine crease and light */
+/* spine crease */
 .hb-cover::before {
-  content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 9%;
-  background: linear-gradient(90deg, rgba(0,0,0,0.28) 0%, rgba(255,255,255,0.16) 45%, rgba(0,0,0,0.12) 70%, rgba(0,0,0,0) 100%);
-  pointer-events: none; z-index: 2;
+  content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 7%; z-index: 4; pointer-events: none;
+  background: linear-gradient(90deg, rgba(0,0,0,0.32) 0%, rgba(255,255,255,0.18) 42%, rgba(0,0,0,0.14) 68%, rgba(0,0,0,0) 100%);
 }
+/* thin inset frame for a printed, premium feel */
 .hb-cover::after {
-  content: ""; position: absolute; inset: 0;
-  background: linear-gradient(115deg, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0) 38%);
-  pointer-events: none; z-index: 2;
+  content: ""; position: absolute; top: 3.2%; bottom: 3.2%; left: 9.5%; right: 4.5%; z-index: 0; pointer-events: none;
+  border: 1px solid currentColor; opacity: 0.16;
 }
 .hb-cover > * { position: relative; z-index: 3; }
-.hb-cover > .hb-circles, .hb-cover > .hb-sheets, .hb-cover > .hb-spark { position: absolute; z-index: 1; }
 
-.hb-eyebrow { position: relative; z-index: 3; font-size: 0.42em; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; line-height: 1.4; }
-.hb-art { position: relative; z-index: 1; flex: 1; display: flex; align-items: center; min-height: 0; }
-.hb-num { font-family: "Playfair Display", Georgia, serif; font-weight: 900; font-size: 3.1em; line-height: 1; }
-.hb-num small { display: block; font-family: "Inter", sans-serif; font-size: 0.13em; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; margin-top: 0.7em; }
-.hb-title { position: relative; z-index: 1; font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 1.28em; line-height: 1.12; margin: 0 0 0.45em; }
-.hb-title em { font-style: italic; }
-.hb-rule { position: relative; z-index: 1; width: 1.6em; height: 2px; margin: 0 0 0.6em; }
-.hb-author { position: relative; z-index: 1; font-family: "Playfair Display", Georgia, serif; font-size: 0.58em; font-weight: 700; letter-spacing: 0.02em; }
-.hb-author em { font-style: italic; font-weight: 400; }
+/* series line */
+.hb-series { display: flex; align-items: center; gap: 0.6em; font-size: 0.56em; font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase; line-height: 1.3; }
+.hb-series::after { content: ""; flex: 1; height: 1px; background: currentColor; opacity: 0.45; }
 
-/* concentric circles art */
-.hb-circles { position: absolute; z-index: 0; top: -14%; right: -22%; width: 78%; aspect-ratio: 1; opacity: 0.32; pointer-events: none; }
-.hb-circles circle { fill: none; stroke-width: 0.8; }
+/* seal badge */
+.hb-seal {
+  position: absolute !important; z-index: 3; top: 12%; right: 8%;
+  width: 4.6em; height: 4.6em; border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  transform: rotate(8deg);
+}
+.hb-seal b { font-family: "Playfair Display", Georgia, serif; font-weight: 900; font-size: 1.55em; line-height: 1; }
+.hb-seal span { font-size: 0.42em; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; line-height: 1.25; margin-top: 0.35em; }
 
-/* ── Cover 1: The Founder's Real Playbook (ink) ── */
-.hb-ink .hb-cover { background: #0A0A0A; color: #fff; }
-.hb-ink .hb-eyebrow { color: #e8c4cb; }
+/* headline block */
+.hb-body { margin-top: auto; }
+.hb-book .hb-cover .hb-kicker { font-size: 0.62em; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; margin: 0 0 0.9em; }
+.hb-book .hb-cover .hb-title { font-family: "Playfair Display", Georgia, serif; font-weight: 900; font-size: 2.15em; line-height: 1.02; letter-spacing: -0.01em; margin: 0 0 0.42em; }
+.hb-title em { font-style: italic; font-weight: 700; }
+.hb-rule { display: block; width: 2.4em; height: 2px; margin: 0 0 0.85em; }
+.hb-book .hb-cover .hb-sub { font-size: 0.74em; line-height: 1.5; margin: 0 0 1.6em; max-width: 95%; }
+.hb-author { display: flex; flex-direction: column; gap: 0.25em; }
+.hb-author b { font-size: 0.78em; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; }
+.hb-author span { font-family: "Playfair Display", Georgia, serif; font-style: italic; font-size: 0.6em; }
+
+/* background art */
+.hb-glow { position: absolute !important; z-index: 1 !important; pointer-events: none; }
+
+/* ── Vol. 01: The Founder's Real Playbook (ink) ── */
+.hb-ink .hb-cover { background: #0A0A0A; color: #F2EDE6; }
+.hb-ink .hb-glow { right: -35%; top: -20%; width: 120%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(196,126,138,0.38) 0%, rgba(90,42,58,0.22) 38%, rgba(10,10,10,0) 68%); }
+.hb-ink .hb-series, .hb-ink .hb-kicker { color: #e8c4cb; }
+.hb-ink .hb-cover .hb-title { color: #fff; }
 .hb-ink .hb-title em { color: #C47E8A; }
 .hb-ink .hb-rule { background: #C47E8A; }
-.hb-ink .hb-author { color: rgba(255,255,255,0.75); }
-.hb-ink .hb-circles circle { stroke: #C47E8A; }
+.hb-ink .hb-cover .hb-sub { color: rgba(242,237,230,0.78); }
+.hb-ink .hb-author b { color: #fff; }
+.hb-ink .hb-author span { color: #e8c4cb; }
+.hb-ink .hb-seal { background: #C47E8A; color: #0A0A0A; box-shadow: 0 0 0 0.25em rgba(196,126,138,0.25); }
 
-/* ── Cover 2: The Founder's Template Kit (cream) ── */
+/* ── Vol. 02: The Founder's Template Kit (cream) ── */
 .hb-cream .hb-cover { background: #F2EDE6; color: #0A0A0A; }
-.hb-cream .hb-cover { background-image: linear-gradient(90deg, #C47E8A 0, #a35f6d 7%, transparent 7%); }
-.hb-cream .hb-eyebrow { color: #a35f6d; }
-.hb-cream .hb-num { color: #0A0A0A; }
-.hb-cream .hb-num small { color: #8a847d; }
+.hb-cream .hb-glow { left: 0; right: 0; bottom: 0; height: 46%; background: linear-gradient(180deg, rgba(232,196,203,0) 0%, rgba(232,196,203,0.45) 100%); }
+.hb-cream .hb-series, .hb-cream .hb-kicker { color: #a35f6d; }
+.hb-cream .hb-cover .hb-title { color: #0A0A0A; }
 .hb-cream .hb-title em { color: #a35f6d; }
 .hb-cream .hb-rule { background: #C47E8A; }
-.hb-cream .hb-author { color: #5a5550; }
-/* little stacked template sheets */
-.hb-sheets { position: absolute; z-index: 0; right: 9%; top: 24%; width: 34%; aspect-ratio: 3 / 4; }
-.hb-sheets i { position: absolute; inset: 0; background: #fff; border: 1px solid #e4ddd2; border-radius: 2px; box-shadow: 0 2px 5px rgba(10,10,10,0.08); }
-.hb-sheets i:nth-child(1) { transform: rotate(9deg) translate(10%, 4%); }
-.hb-sheets i:nth-child(2) { transform: rotate(3deg) translate(4%, 2%); }
-.hb-sheets i:nth-child(3) { background: linear-gradient(#e8c4cb, #e8c4cb) 50% 16% / 64% 7% no-repeat, linear-gradient(#e2dbd0, #e2dbd0) 50% 36% / 64% 4% no-repeat, linear-gradient(#e2dbd0, #e2dbd0) 32% 50% / 46% 4% no-repeat, linear-gradient(#e2dbd0, #e2dbd0) 42% 64% / 58% 4% no-repeat, linear-gradient(#e2dbd0, #e2dbd0) 30% 78% / 42% 4% no-repeat, #fff; }
+.hb-cream .hb-cover .hb-sub { color: #5a5550; }
+.hb-cream .hb-author b { color: #0A0A0A; }
+.hb-cream .hb-author span { color: #a35f6d; }
+.hb-cream .hb-seal { background: #0A0A0A; color: #F2EDE6; box-shadow: 0 0 0 0.25em rgba(10,10,10,0.08); }
+.hb-cream .hb-seal b { color: #e8c4cb; }
 
-/* ── Cover 3: The Artificial Intelligence Playbook (ink to plum) ── */
-.hb-plum .hb-cover { background: linear-gradient(160deg, #0A0A0A 0%, #2a1018 52%, #5a2a3a 100%); color: #fff; }
-.hb-plum .hb-eyebrow { color: #e8c4cb; }
-.hb-plum .hb-num { color: #C47E8A; }
-.hb-plum .hb-num small { color: rgba(255,255,255,0.6); }
+/* ── Vol. 03: The AI Playbook (ink to plum to rose) ── */
+.hb-plum .hb-cover { background: linear-gradient(165deg, #0A0A0A 0%, #2a1018 40%, #5a2a3a 78%, #8a4a5a 100%); color: #F2EDE6; }
+.hb-plum .hb-glow { left: -10%; bottom: -30%; width: 110%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(196,126,138,0.4) 0%, rgba(196,126,138,0) 62%); }
+.hb-plum .hb-series, .hb-plum .hb-kicker { color: #e8c4cb; }
+.hb-plum .hb-cover .hb-title { color: #fff; }
 .hb-plum .hb-title em { color: #e8c4cb; }
 .hb-plum .hb-rule { background: #e8c4cb; }
-.hb-plum .hb-author { color: rgba(255,255,255,0.75); }
-.hb-spark { position: absolute; z-index: 0; right: 10%; top: 26%; width: 22%; aspect-ratio: 1; opacity: 0.9; }
-.hb-spark path { fill: #C47E8A; }
-
-/* Small books (homepage shelf on phones): drop the tiny text that can't be read */
-.hb-sm .hb-eyebrow, .hb-sm .hb-author, .hb-sm .hb-num small { display: none; }
-.hb-sm .hb-cover { padding: 12% 10% 10% 15%; }
+.hb-plum .hb-cover .hb-sub { color: rgba(242,237,230,0.82); }
+.hb-plum .hb-author b { color: #fff; }
+.hb-plum .hb-author span { color: #e8c4cb; }
+.hb-plum .hb-seal { background: #F2EDE6; color: #0A0A0A; box-shadow: 0 0 0 0.25em rgba(242,237,230,0.18); }
+.hb-plum .hb-seal b { color: #a35f6d; }
 
 /* ── Homepage shelf ── */
-.hb-shelf { display: flex; justify-content: center; align-items: flex-end; gap: 34px; margin: 40px auto 44px; padding: 0 0 14px; }
-.hb-shelf .hb-book { --w: 158px; }
-.hb-shelf .hb-book:nth-child(2) { --w: 184px; }
-.hb-shelf-cap { display: block; margin-top: 22px; font: 600 11px/1.4 "Inter", sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #a35f6d; text-align: center; }
-@media (max-width: 600px) {
-  .hb-shelf { gap: 18px; margin: 30px auto 34px; }
-  .hb-shelf .hb-book { --w: 88px; }
-  .hb-shelf .hb-book:nth-child(2) { --w: 104px; }
-  .hb-shelf .hb-book .hb-eyebrow, .hb-shelf .hb-book .hb-author, .hb-shelf .hb-book .hb-num small { display: none; }
+.hb-shelf-wrap { margin: 44px auto 46px; }
+.hb-shelf { display: flex; justify-content: center; align-items: flex-end; gap: 44px; padding: 10px 0 26px; }
+.hb-shelf .hb-book { --w: 230px; }
+.hb-shelf .hb-book:nth-child(2) { --w: 262px; }
+.hb-swipe { display: none; font: 600 10px/1.4 "Inter", sans-serif; letter-spacing: 0.2em; text-transform: uppercase; color: #8a847d; text-align: center; margin-top: 4px; }
+@media (max-width: 900px) {
+  .hb-shelf .hb-book { --w: 190px; }
+  .hb-shelf .hb-book:nth-child(2) { --w: 214px; }
+  .hb-shelf { gap: 30px; }
+}
+/* phones: swipe through full size covers instead of shrinking them */
+@media (max-width: 700px) {
+  .hb-shelf-wrap { margin: 30px -24px 34px; }
+  .hb-shelf {
+    justify-content: flex-start; align-items: center; gap: 26px;
+    overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    padding: 14px 15vw 34px; scrollbar-width: none;
+  }
+  .hb-shelf::-webkit-scrollbar { display: none; }
+  .hb-shelf .hb-book, .hb-shelf .hb-book:nth-child(2) { --w: min(66vw, 250px); scroll-snap-align: center; }
+  .hb-swipe { display: block; }
 }
 
 /* ── Shop page: what's coming ── */
-.hb-grid { margin-top: 12px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 28px; max-width: 1020px; margin: 0 auto 80px; padding: 0 28px; }
+.hb-grid { margin: 12px auto 90px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px 34px; max-width: 1120px; padding: 0 28px; }
 .hb-item { display: flex; flex-direction: column; align-items: center; text-align: center; }
-.hb-item .hb-book { --w: 210px; margin-bottom: 34px; }
-.hb-item-type { font: 700 10px/1.4 "Inter", sans-serif; letter-spacing: 0.26em; text-transform: uppercase; color: #a35f6d; margin-bottom: 8px; }
-.hb-item-title { font-family: "Playfair Display", Georgia, serif; font-size: 22px; font-weight: 900; line-height: 1.2; color: #0A0A0A; margin: 0 0 6px; }
-.hb-item-tag { font-family: "Playfair Display", Georgia, serif; font-style: italic; font-size: 15px; color: #5a5550; margin: 0 0 16px; }
-.hb-item-row { display: flex; gap: 14px; align-items: center; justify-content: center; flex-wrap: wrap; }
-.hb-pill { display: inline-block; font: 700 10px/1 "Inter", sans-serif; letter-spacing: 0.16em; text-transform: uppercase; padding: 10px 14px; border: 1px solid #C47E8A; color: #a35f6d; }
+.hb-item .hb-book { --w: 290px; margin-bottom: 40px; }
+.hb-item-type { font: 700 10px/1.4 "Inter", sans-serif; letter-spacing: 0.26em; text-transform: uppercase; color: #a35f6d; margin-bottom: 10px; }
+.hb-item-title { font-family: "Playfair Display", Georgia, serif; font-size: 24px; font-weight: 900; line-height: 1.2; color: #0A0A0A; margin: 0 0 8px; }
+.hb-item-title em { font-style: italic; color: #a35f6d; }
+.hb-item-tag { font-family: "Playfair Display", Georgia, serif; font-style: italic; font-size: 16px; line-height: 1.5; color: #5a5550; margin: 0 auto 18px; max-width: 300px; }
+.hb-item-row { display: flex; gap: 16px; align-items: center; justify-content: center; flex-wrap: wrap; }
+.hb-pill { display: inline-block; font: 700 10px/1 "Inter", sans-serif; letter-spacing: 0.16em; text-transform: uppercase; padding: 11px 16px; background: #0A0A0A; color: #F2EDE6; }
 .hb-more { font: 600 11px/1 "Inter", sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: #0A0A0A; text-decoration: none; border-bottom: 1px solid #C47E8A; padding: 6px 0; }
+@media (max-width: 1060px) { .hb-item .hb-book { --w: 240px; } }
 @media (max-width: 860px) {
-  .hb-grid { grid-template-columns: 1fr; max-width: 420px; gap: 56px; }
-  .hb-item .hb-book { --w: 200px; }
+  .hb-grid { grid-template-columns: 1fr; max-width: 440px; gap: 72px; }
+  .hb-item .hb-book { --w: min(78vw, 300px); }
 }
 
-/* deep-dive product visual */
-.hb-feature { display: flex; justify-content: center; padding: 10px 0 18px; }
-.hb-feature .hb-book { --w: 230px; }
-@media (max-width: 700px) { .hb-feature .hb-book { --w: 190px; } }
+/* deep dive product visual */
+.hb-feature { display: flex; justify-content: center; padding: 10px 0 22px; }
+.hb-feature .hb-book { --w: 300px; }
+@media (max-width: 700px) { .hb-feature .hb-book { --w: min(74vw, 280px); } }
 
 @media (prefers-reduced-motion: reduce) { .hb-book, .hb-book:hover { transition: none; } }
 
-/* title colors set directly so page paragraph styles can't fade them */
-.hb-book .hb-cover .hb-title { margin: 0 0 0.45em; font-size: 1.28em; line-height: 1.12; }
-.hb-ink .hb-cover .hb-title, .hb-plum .hb-cover .hb-title { color: #fff; }
-.hb-cream .hb-cover .hb-title { color: #0A0A0A; }
+/* homepage: let the shelf run wider than the text column on big screens */
+@media (min-width: 701px) {
+  .shop-teaser-inner .hb-shelf-wrap { width: min(1000px, calc(100vw - 48px)); margin-left: 50%; transform: translateX(-50%); }
+}
+
+/* big outlined volume number fills the middle of the cover */
+.hb-ghost {
+  position: absolute !important; z-index: 2 !important; left: 11%; top: 17%;
+  font-family: "Playfair Display", Georgia, serif; font-style: italic; font-weight: 700;
+  font-size: 8.2em; line-height: 0.9; letter-spacing: -0.02em;
+  color: transparent; -webkit-text-stroke: 1px currentColor; opacity: 0.5; pointer-events: none;
+}
+.hb-ink .hb-ghost, .hb-plum .hb-ghost { color: transparent; -webkit-text-stroke-color: #C47E8A; }
+.hb-cream .hb-ghost { -webkit-text-stroke-color: #a35f6d; opacity: 0.42; }
+.hb-book .hb-cover .hb-title { font-size: 2.4em; }
