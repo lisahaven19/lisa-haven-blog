@@ -14,7 +14,8 @@ The writing rules live in Lisa's "Blog Post Rulebook" artifact (claude.ai). Foll
 2. **Post file.** Create `_posts/YYYY-MM-DD-<slug>.md`. The slug after the date becomes the web address `lisahaven.co/blog/<slug>/`. Frontmatter fields: `title`, `category`, `emoji`, `date`, `readTime` (like `8 min read`), `excerpt`, `seoTitle`, `metaDescription`, `image` (`/images/uploads/<slug>-cover.png`), `draft: false`. Body in Markdown. Posts here show up in Decap automatically.
 3. **Publish.** Commit the post, spec and images together and push to `main`. Netlify runs `build.js`, which adds the post to `blog-posts.json`, builds its page at `/blog/<slug>/` with its own title, description, share image and article details, and updates `sitemap.xml`.
 4. **Check.** Confirm the Netlify deploy is `ready` and lists `blog/<slug>/index.html`.
-5. **Pinterest.** Upload each pin in Pinterest (Claude in Chrome) linking to `https://lisahaven.co/blog/<slug>/`, with title, description, board, alt text and tagged topics, scheduled 1 a day.
+5. **The Haven email (required, same day).** Every new lisahaven.co post is emailed to The Haven subscribers on Beehiiv the day it publishes. Follow `email/README.md` exactly (approved design, Nov 4, 2026). Send a test to hello@lisahaven.co first. Do not send until the Beehiiv footer has a real mailing address; never use Lisa's home address and never make one up.
+6. **Pinterest.** Upload each pin in Pinterest (Claude in Chrome) linking to `https://lisahaven.co/blog/<slug>/`, with title, description, board, alt text and tagged topics, scheduled 1 a day.
 
 ## Rules that matter in this repo
 
