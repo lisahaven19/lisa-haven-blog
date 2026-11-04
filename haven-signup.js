@@ -70,6 +70,33 @@
   st.textContent = css;
   (document.head || document.documentElement).appendChild(st);
 
+  // ── Where did this reader come from? (so Beehiiv credits Pinterest, ads, etc.) ──
+  // Keeps the first tracking tags of the visit, so a reader who lands from a Pin,
+  // reads 2 more posts and then signs up is still credited to Pinterest.
+  var UTM = 'havenUtm';
+  var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+  (function captureSource() {
+    if (ss(UTM)) return;
+    var q = new URLSearchParams(location.search), found = [];
+    UTM_KEYS.forEach(function (k) { var v = q.get(k); if (v) found.push(k + '=' + encodeURIComponent(v.slice(0, 100))); });
+    if (!found.length) {
+      // no tags: still credit Pinterest when the reader clicked over from a Pin
+      var ref = '';
+      try { ref = new URL(document.referrer).hostname; } catch (e) {}
+      if (/(^|\.)pinterest\.[a-z.]+$|(^|\.)pin\.it$/i.test(ref)) found = ['utm_source=pinterest', 'utm_medium=organic'];
+    }
+    ss(UTM, found.length ? found.join('&') : 'none');
+  })();
+  function utmQuery() { var v = ss(UTM); return v && v !== 'none' ? v : ''; }
+
+  // Beehiiv's own helper that hands tracking tags to its forms
+  if (!document.querySelector('script[src*="subscribe-forms.beehiiv.com/attribution.js"]')) {
+    var at = document.createElement('script');
+    at.async = true;
+    at.src = 'https://subscribe-forms.beehiiv.com/attribution.js';
+    (document.head || document.documentElement).appendChild(at);
+  }
+
   // ── Put the Beehiiv form inside a box ──
   // Beehiiv's own form page, placed directly (used by the pop-up, and as a backup everywhere)
   var directFrames = [];
@@ -77,7 +104,8 @@
     if (host.querySelector('iframe.hs-direct')) return;
     var f = document.createElement('iframe');
     f.className = 'hs-direct';
-    f.src = 'https://subscribe-forms.beehiiv.com/v3/forms/' + FORM_ID;
+    var tags = utmQuery();
+    f.src = 'https://subscribe-forms.beehiiv.com/v3/forms/' + FORM_ID + (tags ? '?' + tags : '');
     f.title = 'Join The Haven sign up form';
     f.setAttribute('frameborder', '0');
     f.setAttribute('scrolling', 'no');
@@ -92,7 +120,8 @@
   function mount(host, directOnly) {
     if (!host || host.getAttribute('data-hs-mounted')) return;
     host.setAttribute('data-hs-mounted', '1');
-    if (directOnly) { direct(host); return; }
+    // with tracking tags, use the direct form so the tags always reach Beehiiv
+    if (directOnly || utmQuery()) { direct(host); return; }
     var s = document.createElement('script');
     s.async = true;
     s.src = LOADER;
