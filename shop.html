@@ -342,6 +342,7 @@
     .prod-visual-tag { font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose-light); margin-top: auto; padding-top: 24px; }
     .prod-visual-card.light .prod-visual-tag { color: var(--rose-dark); }
     @media (max-width: 700px) { .shop-product, .shop-product.flip { grid-template-columns: 1fr; direction: ltr; gap: 28px; } }
+    .shop-product { scroll-margin-top: 90px; }
   </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9FBEC5V5BW"></script>
@@ -352,6 +353,7 @@
 
   gtag('config', 'G-9FBEC5V5BW');
 </script>
+  <link rel="stylesheet" href="/haven-books.css">
 </head>
 <body>
   <nav class="navbar">
@@ -428,100 +430,37 @@
     <h1 class="shop-title">What's coming<em>.</em></h1>
   </div>
 
-  <div class="books-grid">
-
-    <!-- Card 1: The Founder's Real Playbook (dark) -->
-    <div class="book-cover book-dark sh-reveal">
-      <svg class="book-circles" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="70" cy="70" r="65" stroke-width="1"/>
-        <circle cx="70" cy="70" r="50" stroke-width="1"/>
-        <circle cx="70" cy="70" r="35" stroke-width="1"/>
-        <circle cx="70" cy="70" r="20" stroke-width="1"/>
-      </svg>
-      <div class="book-top">
-        <span class="book-type">Ebook</span>
-        <span class="book-vol">Vol. 01</span>
-      </div>
-      <h2 class="book-title">The Founder's Real Playbook<em>.</em></h2>
-      <p class="book-tag">Stop guessing. Start building.</p>
-      <div class="book-dot"></div>
-      <p style="font-size:12px; font-style:italic; color:rgba(255,255,255,0.6); margin-bottom:18px; line-height:1.5;">The unfiltered blueprint every ambitious woman needs, from idea validation to your very first sale.</p>
-      <p class="book-section-label">Inside This Guide</p>
-      <ul class="book-bullets">
-        <li>Validate your idea without spending a dollar</li>
-        <li>Your first 90-day launch blueprint</li>
-        <li>Manufacturer negotiation scripts</li>
-        <li>Real costs. Real timelines. No theory.</li>
-      </ul>
-      <div class="book-footer">
-        <span class="book-brand">Lisa Haven<em>.</em></span>
-        <span class="book-cta-btn">Coming Soon</span>
-      </div>
+  <div class="hb-grid">
+    <div class="hb-item sh-reveal">
+      <div class="hb-book hb-ink" role="img" aria-label="The Founder's Real Playbook ebook cover"><div class="hb-cover"><svg class="hb-circles" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48"/><circle cx="50" cy="50" r="37"/><circle cx="50" cy="50" r="26"/><circle cx="50" cy="50" r="15"/></svg><span class="hb-eyebrow">Ebook · Vol. 01</span><div class="hb-art"></div><p class="hb-title">The Founder's <em>Real Playbook</em></p><span class="hb-rule"></span><span class="hb-author">Lisa Haven<em>.</em></span></div></div>
+      <span class="hb-item-type">Ebook</span>
+      <h2 class="hb-item-title">The Founder's Real Playbook</h2>
+      <p class="hb-item-tag">Stop guessing. Start building.</p>
+      <div class="hb-item-row"><span class="hb-pill">Coming Soon</span><a class="hb-more" href="#playbook">See inside &darr;</a></div>
     </div>
-
-    <!-- Card 2: The Founder's Template Kit (light) -->
-    <div class="book-cover book-light sh-reveal">
-      <div class="book-spine"></div>
-      <span class="book-ghost">12</span>
-      <div class="book-top">
-        <span class="book-type">Templates</span>
-        <span class="book-vol">Collection 01</span>
-      </div>
-      <div class="book-num">12</div>
-      <p class="book-num-label">Done-For-You Templates</p>
-      <h2 class="book-title">The Founder's Template Kit<em>.</em></h2>
-      <p class="book-tag">Skip the blank page. Build faster.</p>
-      <div class="book-dot"></div>
-      <p class="book-section-label">What's Included</p>
-      <ul class="book-bullets">
-        <li>Brand strategy one-pager</li>
-        <li>90-day content calendar</li>
-        <li>Product launch checklist: 47 items</li>
-        <li>Investor pitch deck outline</li>
-      </ul>
-      <div class="book-footer">
-        <span class="book-brand">Lisa Haven<em>.</em></span>
-        <span class="book-cta-btn">Coming Soon</span>
-      </div>
+    <div class="hb-item sh-reveal">
+      <div class="hb-book hb-cream" role="img" aria-label="The Founder's Template Kit cover"><div class="hb-cover"><div class="hb-sheets" aria-hidden="true"><i></i><i></i><i></i></div><span class="hb-eyebrow">Templates · Vol. 01</span><div class="hb-art"><span class="hb-num">12<small>Done for you</small></span></div><p class="hb-title">The Founder's <em>Template Kit</em></p><span class="hb-rule"></span><span class="hb-author">Lisa Haven<em>.</em></span></div></div>
+      <span class="hb-item-type">Templates</span>
+      <h2 class="hb-item-title">The Founder's Template Kit</h2>
+      <p class="hb-item-tag">Skip the blank page. Build faster.</p>
+      <div class="hb-item-row"><span class="hb-pill">Coming Soon</span><a class="hb-more" href="#template-kit">See inside &darr;</a></div>
     </div>
-
-    <!-- Card 3: The AI Playbook (dark) -->
-    <div class="book-cover book-dark sh-reveal">
-      <div class="book-top">
-        <span class="book-type">Playbook Series</span>
-        <span class="book-vol">Vol. 01</span>
-      </div>
-      <div class="book-num">50+</div>
-      <p class="book-num-label">Prompt Templates</p>
-      <h2 class="book-title">The Artificial Intelligence Playbook<em>.</em></h2>
-      <p class="book-tag">Move at 10× speed. Every single day.</p>
-      <div class="book-dot"></div>
-      <p class="book-section-label">What's Inside</p>
-      <ul class="book-bullets">
-        <li>50+ battle-tested prompt templates</li>
-        <li>Brand voice training frameworks</li>
-        <li>Marketing and launch campaign systems</li>
-        <li>Full operations at 10× speed</li>
-      </ul>
-      <div class="book-footer">
-        <span class="book-brand">Lisa Haven<em>.</em></span>
-        <span class="book-cta-btn">Coming Soon</span>
-      </div>
+    <div class="hb-item sh-reveal">
+      <div class="hb-book hb-plum" role="img" aria-label="The Artificial Intelligence Playbook cover"><div class="hb-cover"><svg class="hb-spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg><span class="hb-eyebrow">Playbook · Vol. 01</span><div class="hb-art"><span class="hb-num">50+<small>Prompt templates</small></span></div><p class="hb-title">The AI <em>Playbook</em></p><span class="hb-rule"></span><span class="hb-author">Lisa Haven<em>.</em></span></div></div>
+      <span class="hb-item-type">Playbook Series</span>
+      <h2 class="hb-item-title">The Artificial Intelligence Playbook</h2>
+      <p class="hb-item-tag">Move faster with AI. Every single day.</p>
+      <div class="hb-item-row"><span class="hb-pill">Coming Soon</span><a class="hb-more" href="#ai-playbook">See inside &darr;</a></div>
     </div>
-
   </div>
 
   <!-- PRODUCT DEEP-DIVE STRIPS -->
-  <div class="shop-products sh-reveal">
+  <div class="shop-products">
 
     <!-- Product 1: The Founder's Real Playbook -->
-    <div class="shop-product">
+    <div class="shop-product sh-reveal" id="playbook">
       <div class="shop-product-visual">
-        <div class="shop-mini-book" style="background:#1a0c10; color:#fff;">
-          <span style="font-size:9px;font-weight:700;letter-spacing:0.22em;color:rgba(196,126,138,0.7);display:block;margin-bottom:8px;">EBOOK VOL. 01</span>
-          <span style="font-family:'Playfair Display',serif;font-size:18px;font-weight:900;line-height:1.2;display:block;">The Founder's<br><em style="color:#C47E8A;">Real Playbook</em></span>
-          <span style="font-size:10px;color:rgba(255,255,255,0.4);display:block;margin-top:12px;">Lisa Haven.</span>
-        </div>
+        <div class="hb-feature"><div class="hb-book hb-ink" role="img" aria-label="The Founder's Real Playbook ebook cover"><div class="hb-cover"><svg class="hb-circles" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48"/><circle cx="50" cy="50" r="37"/><circle cx="50" cy="50" r="26"/><circle cx="50" cy="50" r="15"/></svg><span class="hb-eyebrow">Ebook · Vol. 01</span><div class="hb-art"></div><p class="hb-title">The Founder's <em>Real Playbook</em></p><span class="hb-rule"></span><span class="hb-author">Lisa Haven<em>.</em></span></div></div></div>
       </div>
       <div class="shop-product-copy">
         <span class="shop-eyebrow">Ebook Vol. 01</span>
@@ -540,13 +479,9 @@
     </div>
 
     <!-- Product 2: The Founder's Template Kit -->
-    <div class="shop-product flip">
+    <div class="shop-product flip sh-reveal" id="template-kit">
       <div class="shop-product-visual">
-        <div class="shop-mini-book" style="background:#FAF7F4; color:#0A0A0A; border:1px solid #E8E1D8;">
-          <span style="font-size:9px;font-weight:700;letter-spacing:0.22em;color:rgba(163,95,109,0.8);display:block;margin-bottom:8px;">TEMPLATES VOL. 01</span>
-          <span style="font-family:'Playfair Display',serif;font-size:18px;font-weight:900;line-height:1.2;display:block;">The Founder's<br><em style="color:#a35f6d;">Template Kit</em></span>
-          <span style="font-size:10px;color:#888;display:block;margin-top:12px;">12 Done-For-You Templates</span>
-        </div>
+        <div class="hb-feature"><div class="hb-book hb-cream" role="img" aria-label="The Founder's Template Kit cover"><div class="hb-cover"><div class="hb-sheets" aria-hidden="true"><i></i><i></i><i></i></div><span class="hb-eyebrow">Templates · Vol. 01</span><div class="hb-art"><span class="hb-num">12<small>Done for you</small></span></div><p class="hb-title">The Founder's <em>Template Kit</em></p><span class="hb-rule"></span><span class="hb-author">Lisa Haven<em>.</em></span></div></div></div>
       </div>
       <div class="shop-product-copy">
         <span class="shop-eyebrow">Templates Collection 01</span>
@@ -565,13 +500,9 @@
     </div>
 
     <!-- Product 3: The AI Playbook -->
-    <div class="shop-product">
+    <div class="shop-product sh-reveal" id="ai-playbook">
       <div class="shop-product-visual">
-        <div class="shop-mini-book" style="background:#1a0c10; color:#fff;">
-          <span style="font-size:9px;font-weight:700;letter-spacing:0.22em;color:rgba(196,126,138,0.7);display:block;margin-bottom:8px;">PLAYBOOK VOL. 01</span>
-          <span style="font-family:'Playfair Display',serif;font-size:18px;font-weight:900;line-height:1.2;display:block;">The Artificial<br>Intelligence<br><em style="color:#C47E8A;">Playbook</em></span>
-          <span style="font-size:10px;color:rgba(255,255,255,0.4);display:block;margin-top:12px;">50+ Prompt Templates</span>
-        </div>
+        <div class="hb-feature"><div class="hb-book hb-plum" role="img" aria-label="The Artificial Intelligence Playbook cover"><div class="hb-cover"><svg class="hb-spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg><span class="hb-eyebrow">Playbook · Vol. 01</span><div class="hb-art"><span class="hb-num">50+<small>Prompt templates</small></span></div><p class="hb-title">The AI <em>Playbook</em></p><span class="hb-rule"></span><span class="hb-author">Lisa Haven<em>.</em></span></div></div></div>
       </div>
       <div class="shop-product-copy">
         <span class="shop-eyebrow">Playbook Series Vol. 01</span>
@@ -675,7 +606,7 @@
         entries.forEach(function (e) {
           if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
         });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
       document.querySelectorAll('.sh-reveal').forEach(function (el) { obs.observe(el); });
     });
   </script>
