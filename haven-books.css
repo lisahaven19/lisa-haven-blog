@@ -181,3 +181,23 @@ a.hb-book, .hb-book a { text-decoration: none; color: inherit; }
 .hb-ink .hb-ghost, .hb-plum .hb-ghost { color: transparent; -webkit-text-stroke-color: #C47E8A; }
 .hb-cream .hb-ghost { -webkit-text-stroke-color: #a35f6d; opacity: 0.42; }
 .hb-book .hb-cover .hb-title { font-size: 2.4em; }
+
+/* ── Layout v3: every cover element gets its own space (no overlaps with the real Playfair font) ── */
+.hb-top { display: flex; align-items: center; justify-content: space-between; gap: 0.6em; margin: 1.1em 0 0; }
+.hb-cover .hb-top .hb-ghost { position: static !important; font-size: 5em; line-height: 1; opacity: 0.55; }
+.hb-cover .hb-top .hb-seal { position: static !important; flex-shrink: 0; width: 4.4em; height: 4.4em; }
+.hb-body { margin-top: auto; padding-top: 0.8em; }
+.hb-book .hb-cover .hb-kicker { margin: 0 0 0.75em; }
+.hb-book .hb-cover .hb-title { font-size: 1.9em; line-height: 1.08; margin: 0 0 0.5em; }
+.hb-rule { margin: 0 0 0.8em; }
+.hb-book .hb-cover .hb-sub { margin: 0 0 1.25em; }
+.hb-item-title { margin: 0 0 12px; text-wrap: balance; }
+.hb-item-tag { text-wrap: balance; margin-bottom: 24px; line-height: 1.55; }
+.hb-item-type { margin-bottom: 14px; }
+.hb-item .hb-book { margin-bottom: 52px; }
+
+/* shop detail sections: more room between the book and the text */
+.shop-product, .shop-product.flip { column-gap: 80px !important; padding: 80px 0 !important; }
+.shop-product-visual .hb-feature { padding: 10px 24px 30px; }
+@media (max-width: 1060px) { .shop-product, .shop-product.flip { column-gap: 56px !important; } .hb-feature .hb-book { --w: 250px; } }
+@media (max-width: 700px) { .shop-product, .shop-product.flip { row-gap: 40px !important; padding: 56px 0 !important; } }
