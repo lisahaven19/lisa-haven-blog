@@ -2043,6 +2043,7 @@
   gtag('config', 'G-9FBEC5V5BW');
 </script>
   <link rel="stylesheet" href="/haven-books.css">
+  <link rel="stylesheet" href="/haven-mobile.css">
 </head>
 <body>
 
@@ -2542,7 +2543,7 @@
           revealObs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('.reveal, .stagger').forEach(el => revealObs.observe(el));
 
@@ -2905,6 +2906,17 @@
 .lh-marquee-outer:hover .lh-marquee-track{animation-play-state:paused;}
 .lh-marquee-track .c-card{flex:0 0 400px;opacity:1 !important;transform:none !important;animation:none !important;}
 @keyframes lhMarquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.lh-swipe-hint{display:none;}
+/* phones: a swipe row where every card fits the screen, instead of a moving strip */
+@media (max-width:700px){
+  .lh-marquee-outer{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;-webkit-mask-image:none;mask-image:none;padding:10px 0 22px;scrollbar-width:none;}
+  .lh-marquee-outer::-webkit-scrollbar{display:none;}
+  .lh-marquee-track{animation:none !important;gap:16px;padding:0 24px;}
+  .lh-marquee-track .c-card{flex:0 0 calc(100vw - 64px);max-width:360px;scroll-snap-align:center;}
+  .lh-marquee-track .lh-clone{display:none !important;}
+  .lh-swipe-hint{display:block;text-align:center;font:600 11px/1.4 "Inter",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8a847d;margin:2px 0 0;}
+}
+@media (prefers-reduced-motion: reduce){.lh-marquee-track{animation:none !important;}.lh-marquee-outer{overflow-x:auto;}}
 </style>
 <script>
 (function(){
@@ -2915,8 +2927,9 @@
     var outer=document.createElement('div'); outer.className='lh-marquee-outer';
     var track=document.createElement('div'); track.className='lh-marquee-track';
     cards.forEach(function(c){track.appendChild(c);});
-    cards.forEach(function(c){track.appendChild(c.cloneNode(true));});
+    cards.forEach(function(c){var k=c.cloneNode(true);k.classList.add('lh-clone');k.setAttribute('aria-hidden','true');k.setAttribute('tabindex','-1');track.appendChild(k);});
     outer.appendChild(track); grid.appendChild(outer);
+    var hint=document.createElement('p'); hint.className='lh-swipe-hint'; hint.textContent='Swipe for more posts \u2192'; grid.appendChild(hint);
     track.style.setProperty('--lh-dur',(cards.length*7)+'s');
   }
   function maybeBuild(){

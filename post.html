@@ -570,6 +570,7 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js',new Date()); gtag('config','G-9FBEC5V5BW');
   </script>
+  <link rel="stylesheet" href="/haven-mobile.css">
 </head>
 <body>
   <div class="progress-bar" id="progressBar"></div>
@@ -688,7 +689,7 @@
         entries.forEach(e => {
           if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
         });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
       els.forEach(el => io.observe(el));
     }
 

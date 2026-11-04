@@ -1,0 +1,34 @@
+/*
+ * lisahaven.co phone fixes (loaded on every page, after each page's own styles)
+ * Bigger tap areas, readable small labels, nothing wider than the screen.
+ */
+@media (max-width: 900px) {
+  /* menu button: same icon, 44 x 44 tap area */
+  .hamburger { box-sizing: content-box; padding: 13px 9px; margin: -13px -9px; }
+  .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+@media (max-width: 700px) {
+  /* nothing wider than the phone screen: slide-in animations can't push the page sideways */
+  html, body { overflow-x: clip; }
+  .sr-left, .sr-right { transform: translateY(24px); }
+  .sr.visible { transform: none; }
+  .hero-left, .hero-right { min-width: 0; max-width: 100%; box-sizing: border-box; }
+  img, video, iframe { max-width: 100%; }
+
+  /* small uppercase labels: 11px minimum so they can be read */
+  .section-label, .post-cat, .post-date, .eyebrow, .cat, .shop-eyebrow,
+  .hb-item-type, .hb-pill, .footer-eyebrow, .shop-product-badge,
+  .shop-product-copy .shop-eyebrow, .prod-label, .book-type, .book-vol,
+  .founder-eyebrow, .founder-li-link, .hb-swipe, .c-cat, .c-date { font-size: 11px !important; }
+
+  /* footer quick links: easy to tap, wrap on the smallest phones */
+  .footer-essentials { flex-wrap: wrap !important; row-gap: 2px; white-space: normal !important; }
+  .footer-essentials a { font-size: 11px !important; padding: 14px 2px !important; display: inline-flex; align-items: center; }
+
+  /* text links that act like buttons */
+  .shop-link, .hb-more { display: inline-flex; align-items: center; min-height: 44px; }
+  .sh-btn-dark { padding-top: 14px !important; padding-bottom: 14px !important; }
+  .footer-icon-btn { min-width: 44px; min-height: 44px; }
+}

@@ -188,6 +188,7 @@
 
   gtag('config', 'G-9FBEC5V5BW');
 </script>
+  <link rel="stylesheet" href="/haven-mobile.css">
 </head>
 <body>
   <nav class="navbar">
@@ -379,7 +380,7 @@
         entries.forEach(function (e) {
           if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
         });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
       document.querySelectorAll('.sh-reveal').forEach(function (el) { obs.observe(el); });
     });
   </script>
