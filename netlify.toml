@@ -59,6 +59,22 @@
   status = 301
   force = true
 
+# Private product download pages and files stay out of Google
+[[headers]]
+  for = "/downloads/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/thank-you-*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[redirects]]
+  from = "/thank-you-d7abd5b2cf1a5321"
+  to = "/thank-you-d7abd5b2cf1a5321.html"
+  status = 200
+
 # Clean URLs for standalone pages
 [[redirects]]
   from = "/start-here"
