@@ -116,7 +116,7 @@ Your instructions should match the work you do most. Here are 3 quick swaps for 
 | Customer emails | "Keep emails under 120 words. Friendly, clear and always end with 1 next step." |
 | Planning and strategy | "Give me a short plan with numbered steps, owners and a deadline for each step." |
 
-Pick the 1 that fits your week and add it. You can always change it later.
+Pick the 1 that fits your week and add it. You can always change it later. You can also save short codes here, like /SOP or /CAPTION. Here are [30 ChatGPT codes for business](https://lisahaven.co/blog/chatgpt-codes/) you can copy.
 
 If you want to go deeper on getting great answers inside each chat, read my guide on [how to ask ChatGPT a question and get a great answer](https://lisahaven.co/blog/how-to-ask-chatgpt-better-questions/). Custom instructions set the stage. A good question does the rest.
 
@@ -173,6 +173,7 @@ Quick poll for the comments: **do you already use custom instructions?** Reply w
 
 ## Keep reading
 
+- [30 ChatGPT Codes for Business (Copy and Paste)](/blog/chatgpt-codes/)
 - [How to Ask ChatGPT a Question (and Get a Great Answer)](/blog/how-to-ask-chatgpt-better-questions/)
 - [ChatGPT Prompts for Busy Moms: 10 That Actually Work](/blog/chatgpt-prompts-for-busy-moms/)
 - [How to Use AI Without Sounding Like AI](/blog/how-to-use-ai-without-sounding-like-ai/)

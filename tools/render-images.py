@@ -4,7 +4,7 @@ Render a post's cover and Pinterest pins in the Lisa Haven template.
 Usage:
     python3 tools/render-images.py tools/specs/<slug>.json
 
-Spec file:
+Spec file (any card may add "photo": "../images/uploads/lisa-circle-photo.jpg" for a small circle photo above the title):
 {
   "slug": "how-to-build-ugc-creator-program-before-launch",
   "category": "Business Tips",
