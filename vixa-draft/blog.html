@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>VIXA Journal: Dating Texts, Mixed Signals and Clarity</title>
+  <meta name="description" content="The VIXA Journal: real talk on modern dating. Mixed signals, emotional patterns, and the art of trusting yourself again. Written for women." />
+<link rel="canonical" href="https://vixaapp.ai/blog" />
+  <meta name="theme-color" content="#3D0A14" />
+  <meta property="og:title" content="Journal · VIXA" />
+  <meta property="og:description" content="Real talk on modern dating: mixed signals, emotional patterns, and trusting yourself again." />
+  <meta property="og:image" content="https://vixaapp.ai/og-image.png" />
+  <meta property="og:url" content="https://vixaapp.ai/blog" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream:       #F6F1E8;
+      --cream-dark:  #EFE8DB;
+      --cream-mid:   #EAE2D2;
+      --burgundy:    #6B1E2E;
+      --burg-light:  #8B2035;
+      --burg-deep:   #3D0A14;
+      --burg-faint:  #F3E4E4;
+      --lavender:    #E4DEFA;
+      --lav-mid:     #C8B8E0;
+      --gold:        #C8A96E; --gold-light: #EDD8A8;
+      --dark:        #1A1010;
+      --mid:         #5C4A4A;
+      --soft:        #8A7676;
+      --white:       #FFFFFF;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ════════════════════════════
+       NAV
+    ════════════════════════════ */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 60px;
+      height: 72px;
+      background: rgba(245,240,235,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      border-bottom: 1px solid rgba(107,21,37,0.07);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      letter-spacing: 0.16em;
+      color: var(--burgundy);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--mid);
+      font-size: 13.5px;
+      font-weight: 500;
+      letter-spacing: 0.025em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--burgundy); }
+
+    .nav-cta {
+      background: var(--burgundy) !important;
+      color: var(--white) !important;
+      padding: 11px 24px !important;
+      border-radius: 100px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.01em !important;
+      transition: background 0.2s, transform 0.15s !important;
+      box-shadow: 0 4px 16px rgba(107,21,37,0.25) !important;
+    }
+    .nav-cta:hover {
+      background: var(--burg-light) !important;
+      transform: translateY(-1px) !important;
+    }
+
+    /* ════════════════════════════
+       HERO: MAGAZINE ENTRANCE
+    ════════════════════════════ */
+    .hero {
+      min-height: 92vh;
+      background: linear-gradient(160deg, var(--burg-deep) 0%, #2A0810 40%, var(--burgundy) 100%);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Ambient glow layers */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 15% 50%, rgba(139,32,53,0.55) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 80% at 85% 20%, rgba(232,224,240,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 60% 90%, rgba(107,21,37,0.4) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* Subtle grain texture */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .hero-left {
+      padding: 100px 60px 100px 80px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px);
+      padding: 6px 16px 6px 10px;
+      border-radius: 100px;
+      margin-bottom: 32px;
+    }
+
+    .hero-eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    .hero-eyebrow span {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+    }
+
+    .hero-left h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 68px;
+      font-weight: 500;
+      line-height: 1.05;
+      color: var(--white);
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-left h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .hero-left p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.65;
+      max-width: 440px;
+      margin-bottom: 44px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .stat-item {}
+
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 500;
+      color: var(--white);
+      letter-spacing: -0.02em;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      margin-top: 2px;
+    }
+
+    /* ── APP MOCKUP ── */
+    .hero-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 80px 80px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .phone-frame {
+      width: 300px;
+      height: 610px;
+      background: linear-gradient(160deg, #2A0E18 0%, #1A0508 100%);
+      border-radius: 44px;
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow:
+        0 0 0 6px rgba(255,255,255,0.04),
+        0 40px 100px rgba(0,0,0,0.6),
+        0 0 80px rgba(107,21,37,0.3),
+        inset 0 1px 0 rgba(255,255,255,0.1);
+      overflow: hidden;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    /* Phone top notch */
+    .phone-notch {
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90px;
+      height: 26px;
+      background: #0E0204;
+      border-radius: 100px;
+      z-index: 10;
+    }
+
+    /* Ambient glow inside phone */
+    .phone-frame::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: -40px;
+      right: -40px;
+      height: 200px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(139,32,53,0.7) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .phone-content {
+      padding: 60px 20px 24px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .phone-header {
+      text-align: center;
+      padding-bottom: 12px;
+    }
+
+    .phone-logo {
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+    }
+
+    /* Vela analysis card */
+    .vela-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 18px;
+      padding: 16px;
+      backdrop-filter: blur(10px);
+    }
+
+    .vela-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .vela-name {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(200,168,122,0.9);
+    }
+
+    .vibe-score {
+      background: linear-gradient(135deg, var(--burgundy), var(--burg-deep));
+      border-radius: 100px;
+      padding: 3px 10px;
+      font-size: 10px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.06em;
+    }
+
+    .vela-message {
+      font-size: 12px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .pattern-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(107,21,37,0.4);
+      border: 1px solid rgba(139,32,53,0.4);
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: 10px;
+      font-weight: 600;
+      color: rgba(255,180,180,0.9);
+    }
+
+    /* Stats row */
+    .phone-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .phone-stat {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      padding: 12px;
+    }
+
+    .phone-stat-label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 4px;
+    }
+
+    .phone-stat-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      color: white;
+    }
+
+    .phone-stat-val.red { color: rgba(255,140,140,0.9); }
+    .phone-stat-val.green { color: rgba(140,255,180,0.85); }
+
+    /* Reply suggestion card */
+    .reply-card {
+      background: rgba(232,224,240,0.07);
+      border: 1px solid rgba(232,224,240,0.12);
+      border-radius: 14px;
+      padding: 14px;
+      flex: 1;
+    }
+
+    .reply-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+      opacity: 0.8;
+    }
+
+    .reply-bubble {
+      background: rgba(255,255,255,0.06);
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.45;
+      margin-bottom: 6px;
+    }
+
+    .reply-bubble:last-child { margin-bottom: 0; }
+
+    /* Floating glow card behind phone */
+    .phone-glow {
+      position: absolute;
+      width: 340px;
+      height: 640px;
+      background: radial-gradient(ellipse at center, rgba(139,32,53,0.35) 0%, transparent 70%);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(30px);
+      pointer-events: none;
+    }
+
+    /* Second floating card */
+    .float-card {
+      position: absolute;
+      right: -20px;
+      top: 120px;
+      background: rgba(232,224,240,0.08);
+      border: 1px solid rgba(232,224,240,0.15);
+      backdrop-filter: blur(20px);
+      border-radius: 16px;
+      padding: 14px 18px;
+      width: 160px;
+    }
+
+    .float-card-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(232,224,240,0.6);
+      margin-bottom: 6px;
+    }
+
+    .float-card-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      color: white;
+      margin-bottom: 2px;
+    }
+
+    .float-card-sub {
+      font-size: 10px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ════════════════════════════
+       CATEGORY STRIP
+    ════════════════════════════ */
+    .category-strip {
+      background: var(--white);
+      border-bottom: 1px solid rgba(107,21,37,0.07);
+      padding: 0 80px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .category-strip::-webkit-scrollbar { display: none; }
+
+    .cat-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 18px 20px;
+      font-size: 13px;
+      font-weight: 500;
+      white-space: nowrap;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: var(--soft);
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    .cat-pill:hover { color: var(--burgundy); }
+
+    .cat-pill.active {
+      color: var(--burgundy);
+      border-bottom-color: var(--burgundy);
+      font-weight: 600;
+    }
+
+    /* ════════════════════════════
+       FEATURED POST
+    ════════════════════════════ */
+    .featured-section {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 72px 80px 0;
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      margin-bottom: 28px;
+    }
+
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--burgundy);
+    }
+
+    .featured-card {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      border-radius: 28px;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 8px 60px rgba(107,21,37,0.1);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s;
+    }
+
+    .featured-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 80px rgba(107,21,37,0.16);
+    }
+
+    .featured-visual {
+      background: url("https://images.unsplash.com/photo-1741217530057-8577856cf7bb?w=800&q=85&auto=format&fit=crop") center/cover no-repeat;
+      min-height: 480px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 36px;
+    }
+
+    .featured-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 30%, rgba(139,32,53,0.6) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 60% at 80% 80%, rgba(232,224,240,0.1) 0%, transparent 50%);
+    }
+
+    .featured-badge {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: white;
+      width: fit-content;
+    }
+
+    .featured-badge-dot {
+      width: 5px;
+      height: 5px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    .featured-visual-bottom { position: relative; }
+
+    .featured-big-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 1.1;
+      color: white;
+      font-style: italic;
+      opacity: 0.12;
+      letter-spacing: -0.02em;
+      user-select: none;
+    }
+
+    .featured-body {
+      padding: 48px 52px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .featured-cat {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      margin-bottom: 16px;
+    }
+
+    .featured-body h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+
+    .featured-body h2 em { font-style: italic; color: var(--burgundy); }
+
+    .featured-body p {
+      font-size: 16px;
+      color: var(--mid);
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    .featured-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 13px;
+      color: var(--soft);
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(107,21,37,0.08);
+      margin-bottom: 28px;
+    }
+
+    .meta-dot {
+      width: 3px;
+      height: 3px;
+      background: var(--soft);
+      border-radius: 50%;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--burgundy);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: gap 0.25s;
+    }
+
+    .read-more-btn:hover { gap: 16px; }
+
+    .arrow-circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--burg-faint);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .read-more-btn:hover .arrow-circle {
+      background: var(--burgundy);
+      transform: rotate(0deg);
+    }
+
+    .read-more-btn:hover .arrow-circle svg { stroke: white; }
+
+    /* ════════════════════════════
+       POST GRID
+    ════════════════════════════ */
+    .grid-section {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 72px 80px 100px;
+    }
+
+    .grid-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 36px;
+    }
+
+    .grid-header h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 500;
+    }
+
+    .view-all-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--burgundy);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+    }
+
+    .view-all-link:hover { gap: 10px; }
+
+    .post-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .post-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s;
+      box-shadow: 0 2px 20px rgba(107,21,37,0.05);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .post-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 50px rgba(107,21,37,0.13);
+    }
+
+    .card-visual {
+      height: 210px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px;
+    }
+
+    .card-vis-1 { background: none; }
+    .card-vis-2 { background: url("https://images.pexels.com/photos/3808008/pexels-photo-3808008.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop") center/cover no-repeat; }
+    .card-vis-3 { background: url("https://images.pexels.com/photos/1415131/pexels-photo-1415131.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop") center/cover no-repeat; }
+    .card-vis-4 { background: url("https://images.pexels.com/photos/3692750/pexels-photo-3692750.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop") center/cover no-repeat; }
+    .card-vis-5 { background: url("https://images.pexels.com/photos/1024975/pexels-photo-1024975.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop") center/cover no-repeat; }
+    .card-vis-6 { background: url("https://images.pexels.com/photos/3671083/pexels-photo-3671083.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop") center/cover no-repeat; }
+
+    .card-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 50% at 20% 20%, rgba(255,255,255,0.06) 0%, transparent 60%);
+    }
+
+    .card-tag {
+      position: relative;
+      width: fit-content;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .card-visual-bottom {
+      position: relative;
+    }
+
+    .card-read-time {
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.04em;
+    }
+
+    .card-body {
+      padding: 24px 26px 0;
+      flex: 1;
+    }
+
+    .card-category {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      margin-bottom: 10px;
+    }
+
+    .card-body h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.3;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .card-body h4 em { font-style: italic; color: var(--burgundy); }
+
+    .card-body p {
+      font-size: 13.5px;
+      color: var(--mid);
+      line-height: 1.6;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 26px;
+      margin-top: 20px;
+      border-top: 1px solid rgba(107,21,37,0.06);
+    }
+
+    .card-date { font-size: 12px; color: var(--soft); }
+
+    .card-arrow {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--burg-faint);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .post-card:hover .card-arrow { background: var(--burgundy); }
+    .post-card:hover .card-arrow svg { stroke: white; }
+
+    /* ════════════════════════════
+       ABOUT VIXA STRIP
+    ════════════════════════════ */
+    .about-strip {
+      background: var(--lavender);
+      padding: 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-left h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--dark);
+      margin-bottom: 18px;
+    }
+
+    .about-left h2 em { font-style: italic; color: var(--burgundy); }
+
+    .about-left p {
+      font-size: 16px;
+      color: var(--mid);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .about-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--burgundy);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(107,21,37,0.3);
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .about-btn:hover {
+      background: var(--burg-light);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(107,21,37,0.35);
+    }
+
+    .about-right {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .feature-tile {
+      background: white;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(107,21,37,0.07);
+    }
+
+    .feature-tile-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--burg-faint);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      font-size: 18px;
+    }
+
+    .feature-tile h5 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+
+    .feature-tile p {
+      font-size: 12.5px;
+      color: var(--soft);
+      line-height: 1.5;
+    }
+
+    /* ════════════════════════════
+       NEWSLETTER
+    ════════════════════════════ */
+    .newsletter {
+      background: linear-gradient(150deg, var(--burg-deep) 0%, #220610 50%, var(--burgundy) 100%);
+      padding: 100px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .newsletter::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(232,224,240,0.14) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 20% 100%, rgba(139,32,53,0.5) 0%, transparent 60%);
+    }
+
+    .newsletter-inner { position: relative; max-width: 560px; margin: 0 auto; }
+
+    .newsletter-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 28px;
+    }
+
+    .newsletter h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 500;
+      color: white;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .newsletter h2 em { font-style: italic; color: var(--gold-light); }
+
+    .newsletter p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.65;
+      margin-bottom: 40px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 10px;
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 15px 22px;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      color: white;
+      font-size: 14px;
+      outline: none;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .newsletter-form input::placeholder { color: rgba(255,255,255,0.38); }
+    .newsletter-form input:focus { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.12); }
+
+    .newsletter-form button {
+      padding: 15px 28px;
+      border-radius: 100px;
+      border: none;
+      background: white;
+      color: var(--burgundy);
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      font-family: 'DM Sans', sans-serif;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .newsletter-form button:hover { background: var(--cream); transform: translateY(-1px); }
+
+    /* ════════════════════════════
+       FOOTER
+    ════════════════════════════ */
+    footer {
+      background: var(--dark);
+      padding: 50px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-logo {
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.18em;
+      color: var(--cream);
+      text-transform: uppercase;
+    }
+
+    footer p { font-size: 13px; color: rgba(245,240,235,0.3); }
+
+    .footer-links { display: flex; gap: 28px; }
+
+    .footer-links a {
+      font-size: 13px;
+      color: rgba(245,240,235,0.4);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--cream); }
+
+    /* ════════════════════════════
+       RESPONSIVE
+    ════════════════════════════ */
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-right { display: none; }
+      .hero-left { padding: 80px 40px; }
+      .hero-left h1 { font-size: 52px; }
+      .featured-section, .grid-section { padding-left: 40px; padding-right: 40px; }
+      .post-grid { grid-template-columns: 1fr 1fr; }
+      .about-strip { grid-template-columns: 1fr; padding: 60px 40px; gap: 40px; }
+      .newsletter { padding: 80px 40px; }
+      footer { padding: 40px; flex-direction: column; gap: 20px; text-align: center; }
+    }
+
+    /* MOBILE BOTTOM NAV (matches rest of site) */
+    .mob-nav{display:none;position:fixed;top:auto;bottom:0;left:0;right:0;height:auto;border-bottom:none;z-index:400;background:var(--cream);border-top:1px solid rgba(107,21,37,0.12);padding:10px 0 calc(16px + env(safe-area-inset-bottom));box-shadow:0 -2px 16px rgba(107,21,37,0.08);}
+    .mob-nav-inner{display:flex;justify-content:space-around;align-items:center;}
+    .mob-nav-item{display:flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;color:var(--soft);font-size:10px;font-weight:500;letter-spacing:0.04em;padding:4px 16px;border-radius:12px;transition:color 0.2s;}
+    .mob-nav-item.active{color:var(--burgundy);}
+
+    @media (max-width: 700px) {
+      nav { padding: 0 20px; }
+      .nav-links { gap: 10px; }
+      .nav-links li:not(:last-child) { display: none; }
+      .nav-cta { padding: 9px 18px !important; font-size: 12px !important; }
+      .nav-logo { font-size: 22px; }
+      .mob-nav { display: block; }
+      body { padding-bottom: 72px; }
+      .newsletter-form input { font-size: 16px; }
+      .hero-left { padding: 60px 24px; }
+      .hero-left h1 { font-size: 40px; }
+      .hero-stats { gap: 24px; }
+      .featured-section { padding: 48px 24px 0; }
+      .featured-card { grid-template-columns: 1fr; }
+      .featured-visual { min-height: 280px; }
+      .featured-body { padding: 32px 28px; }
+      .grid-section { padding: 48px 24px 80px; }
+      .post-grid { grid-template-columns: 1fr; }
+      .category-strip { padding: 0 24px; }
+      .about-strip { padding: 50px 24px; }
+      .about-right { grid-template-columns: 1fr; }
+      .newsletter { padding: 60px 24px; }
+      .newsletter h2 { font-size: 36px; }
+      .newsletter-form { flex-direction: column; }
+    }
+  
+    
+
+  
+    
+
+  
+/* 6-item bottom nav sizing */
+.mob-nav-item{flex:1;min-width:0;padding:4px 2px;font-size:9px;letter-spacing:0.02em;}
+.mob-nav-inner{padding:0 4px;}
+
+/* Footer navigation (mobile) */
+
+@media(max-width:640px){}
+
+footer{background:#1A1010;padding:52px 24px 44px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:0;}
+.footer-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-bottom:30px;}
+.footer-nav a{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,235,0.62);text-decoration:none;transition:color 0.2s;}
+.footer-nav a:hover{color:rgba(245,240,235,1);}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:26px;letter-spacing:0.2em;color:rgba(255,255,255,0.88);margin-bottom:14px;}
+.footer-copy{font-size:12px;color:rgba(245,240,235,0.28);margin-bottom:12px;}
+.footer-links{display:flex;gap:24px;}
+.footer-links a{font-size:12px;color:rgba(245,240,235,0.28);text-decoration:none;transition:color 0.2s;}
+.footer-links a:hover{color:rgba(245,240,235,0.6);}
+@media(max-width:768px){.footer-nav{display:none !important;}}
+
+/* === UNIFIED FOOTER: canonical (matches homepage) === */
+footer{background:#1A1010;padding:52px 24px 44px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:0;}
+.footer-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-bottom:30px;position:static;background:transparent;border:none;height:auto;box-shadow:none;backdrop-filter:none;}
+.footer-nav a{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,235,0.62);text-decoration:none;transition:color 0.2s;}
+.footer-nav a:hover{color:rgba(245,240,235,1);}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:26px;letter-spacing:0.2em;color:rgba(255,255,255,0.88);margin-bottom:14px;}
+.footer-copy{font-size:12px;color:rgba(245,240,235,0.28);margin-bottom:12px;}
+.footer-links{display:flex;gap:24px;}
+.footer-links a{font-size:12px;color:rgba(245,240,235,0.28);text-decoration:none;transition:color 0.2s;}
+.footer-links a:hover{color:rgba(245,240,235,0.6);}
+.footer-founder{display:flex;gap:24px;margin-top:14px;flex-wrap:wrap;justify-content:center;}
+.footer-founder a{font-size:12px;color:rgba(245,240,235,0.45);text-decoration:none;transition:color 0.2s;}
+.footer-founder a:hover{color:rgba(245,240,235,0.85);}
+footer p{font-size:12px;color:rgba(245,240,235,0.28);}
+@media(max-width:768px){.footer-nav{display:none !important;}}
+</style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <a class='nav-logo' href='/'>VIXA</a>
+    <ul class="nav-links">
+      <li><a href='/'>Home</a></li>
+      <li><a class="nav-link nav-decode" href="https://vixa-decode-his-text.netlify.app/" target="_blank" rel="noopener">Try Vela ✦</a></li>
+      <li><a href="/#features">Features</a></li>
+      <li><a href="/creators">Creators</a></li>
+      <li><a class='active' href='/blog'>Blog</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/careers">Careers</a></li>
+      <li><a href="/#waitlist" class="nav-cta">Join the waitlist</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-dot"></div>
+        <span>The VIXA Journal</span>
+      </div>
+
+      <h1>Dating clarity<br>starts with<br><em>knowing.</em></h1>
+
+      <p>Real talk on modern dating: mixed signals, emotional patterns, and the art of trusting yourself again. Written for women who are done guessing.</p>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">In seconds</div>
+          <div class="stat-label">Clarity</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="phone-glow"></div>
+
+      <!-- Floating stat card -->
+      <div class="float-card">
+        <div class="float-card-label">✦ To join</div>
+        <div class="float-card-num">Free</div>
+      </div>
+
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-content">
+
+            <div class="phone-header">
+              <div class="phone-logo">VIXA</div>
+            </div>
+
+            <!-- Vela Analysis Card -->
+            <div class="vela-card">
+              <div class="vela-top">
+                <span class="vela-name">✦ Vela's Read</span>
+              </div>
+              <p class="vela-message">Light topics get quick replies. Response gaps average 9hrs on your direct questions. Warm words, but no time or place yet.</p>
+              <div><span class="pattern-tag">⚠ No plan offered</span></div>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="phone-stats">
+              <div class="phone-stat">
+                <div class="phone-stat-label">Initiates</div>
+                <div class="phone-stat-val red">14%</div>
+              </div>
+              <div class="phone-stat">
+                <div class="phone-stat-label">Effort level</div>
+                <div class="phone-stat-val red">Low</div>
+              </div>
+              <div class="phone-stat">
+                <div class="phone-stat-label">Consistency</div>
+                <div class="phone-stat-val red">Mixed</div>
+              </div>
+              <div class="phone-stat">
+                <div class="phone-stat-label">Notes</div>
+                <div class="phone-stat-val red">3</div>
+              </div>
+            </div>
+
+            <!-- Reply Card -->
+            <div class="reply-card">
+              <div class="reply-label">✦ Reply suggestions</div>
+              <div class="reply-bubble">"Hey, I've been pretty busy too, let me know when you're actually free to make a plan."</div>
+              <div class="reply-bubble">"I noticed we talk a lot but nothing's happening. What are you actually looking for?"</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── CATEGORY STRIP ── -->
+  <div class="category-strip">
+    <a href="#" class="cat-pill active">All Posts</a>
+    <a href="#" class="cat-pill">Patterns</a>
+    <a href="#" class="cat-pill">Communication</a>
+    <a href="#" class="cat-pill">Self-Worth</a>
+    <a href="#" class="cat-pill">Patterns</a>
+    <a href="#" class="cat-pill">Dating Tips</a>
+    <a href="#" class="cat-pill">First Dates</a>
+  </div>
+
+  <!-- ── FEATURED ── -->
+  <section class="featured-section">
+    <div class="section-label">Featured Story</div>
+
+    <a class='featured-card' href='/blog-post-8'>
+      <div class="featured-visual" style="background: url('logos/press-feature.png') center/cover no-repeat;">
+        <div class="featured-badge">
+          <div class="featured-badge-dot"></div>
+          Featured
+        </div>
+        <div class="featured-visual-bottom">
+          <div class="featured-big-text">Press.</div>
+        </div>
+      </div>
+      <div class="featured-body">
+        <p class="featured-cat">Press</p>
+        <h2>VIXA <em>in the News.</em></h2>
+        <p>This month VIXA was featured in USA News and CEO Times: two stories on why women need clarity in dating, not more advice. Read the coverage, in the founder's own words.</p>
+        <div class="featured-meta">
+          <span>June 23, 2026</span>
+          <span class="meta-dot"></span>
+          <span>3 min read</span>
+        </div>
+        <span class="read-more-btn">
+          Read the full story
+          <span class="arrow-circle">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="var(--burgundy)" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </span>
+        </span>
+      </div>
+    </a>
+  </section>
+
+  <!-- AS SEEN IN: auto-scrolling press logo strip -->
+  <style>
+  .asi{padding:54px 0 16px;background:transparent;overflow:hidden;}
+  .asi-label{text-align:center;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.32em;text-transform:uppercase;color:var(--soft);margin-bottom:28px;}
+  .asi-viewport{position:relative;width:100%;overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+            mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);}
+  .asi-track{display:flex;width:max-content;align-items:center;animation:asi-scroll 38s linear infinite;}
+  .asi-viewport:hover .asi-track{animation-play-state:paused;}
+  .asi-track img{height:34px;width:auto;display:block;flex:0 0 auto;margin-right:74px;
+    opacity:0.6;filter:grayscale(100%);transition:opacity 0.3s,filter 0.3s;}
+  .asi-track img:hover{opacity:1;filter:grayscale(0%);}
+  @keyframes asi-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  @media(max-width:560px){.asi{padding:40px 0 8px;}.asi-track{animation-duration:26s;}.asi-track img{height:26px;margin-right:48px;}}
+  @media(prefers-reduced-motion:reduce){.asi-track{animation:none;}}
+  </style>
+  <section class="asi" aria-label="As seen in">
+    <div class="asi-label">As Seen In</div>
+    <div class="asi-viewport">
+      <div class="asi-track">
+        <img src="logos/womens-insider-color.png" alt="Womens Insider"/>
+        <img src="logos/womens-reporter-color.png" alt="Womens Reporter"/>
+        <img src="logos/celeb-digest-color.png" alt="Celeb Digest"/>
+        <img src="logos/usanews-strip.png" alt="USA News"/>
+        <img src="logos/ceotimes-strip.png" alt="CEO Times"/>
+        <img src="logos/womens-insider-color.png" alt="" aria-hidden="true"/>
+        <img src="logos/womens-reporter-color.png" alt="" aria-hidden="true"/>
+        <img src="logos/celeb-digest-color.png" alt="" aria-hidden="true"/>
+        <img src="logos/usanews-strip.png" alt="" aria-hidden="true"/>
+        <img src="logos/ceotimes-strip.png" alt="" aria-hidden="true"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── POST GRID ── -->
+  <section class="grid-section">
+    <div class="grid-header">
+      <h3>Latest from the Journal</h3>
+      <a href="#" class="view-all-link">
+        View all
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+
+    <div class="post-grid">
+
+      <a class='post-card' href='/blog/why-did-he-stop-texting-me/'>
+        <div class="card-visual card-vis-1" style="background: url('/blog/images/why-did-he-stop-texting-me-cover.jpg') center/cover no-repeat; background-size: cover;">
+          <span class="card-tag">Dating Tips</span>
+          <div class="card-visual-bottom">
+            <span class="card-read-time">7 min read</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Dating Tips</p>
+          <h4>Why Did He Stop <em>Texting Me?</em></h4>
+          <p>7 real reasons he went quiet, plus the 1 text worth sending.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">November 6, 2026</span>
+          <span class="card-arrow">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="var(--burgundy)" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/blog/what-does-it-mean-when-a-guy-says-hes-busy/'>
+        <div class="card-visual card-vis-1" style="background: url('/blog/images/what-does-it-mean-when-a-guy-says-hes-busy-cover.jpg') center/cover no-repeat; background-size: cover;">
+          <span class="card-tag">Dating Tips</span>
+          <div class="card-visual-bottom">
+            <span class="card-read-time">7 min read</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Dating Tips</p>
+          <h4>What Does It Mean When a Guy Says <em>He's Busy?</em></h4>
+          <p>How to tell real busy from a brush off, plus calm texts to send back.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">November 4, 2026</span>
+          <span class="card-arrow">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="var(--burgundy)" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/blog/what-to-text-a-guy-after-a-first-date/'>
+        <div class="card-visual card-vis-1" style="background: url('/blog/images/what-to-text-a-guy-after-a-first-date-cover.jpg') center/cover no-repeat; background-size: cover;">
+          <span class="card-tag">Dating Tips</span>
+          <div class="card-visual-bottom">
+            <span class="card-read-time">7 min read</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Dating Tips</p>
+          <h4>What to Text a Guy <em>After a First Date</em> (12 Examples)</h4>
+          <p>12 ready to send texts for every kind of date, plus the best time to send them.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">November 3, 2026</span>
+          <span class="card-arrow">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="var(--burgundy)" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/blog/he-left-me-on-read/'>
+        <div class="card-visual card-vis-1" style="background: url('/blog/images/he-left-me-on-read-cover.jpg') center/cover no-repeat; background-size: cover;">
+          <span class="card-tag">Dating Tips</span>
+          <div class="card-visual-bottom">
+            <span class="card-read-time">7 min read</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Dating Tips</p>
+          <h4>He Left Me <em>on Read</em>: What It Means and What to Text</h4>
+          <p>What "Read" really means, how long is too long, and calm texts to send next.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">November 2, 2026</span>
+          <span class="card-arrow">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="var(--burgundy)" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/blog/how-to-tell-if-a-guy-likes-you-over-text/'>
+        <div class="card-visual card-vis-1" style="background: url('/blog/images/how-to-tell-if-a-guy-likes-you-over-text-cover.jpg') center/cover no-repeat; background-size: cover;">
+          <span class="card-tag">Dating Tips</span>
+          <div class="card-visual-bottom">
+            <span class="card-read-time">7 min read</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Dating Tips</p>
+          <h4>How to Tell If a Guy Likes You <em>Over Text</em></h4>
+          <p>10 signs in his effort, attention and plans, plus what to text next.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">October 22, 2026</span>
+          <span class="card-arrow">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="var(--burgundy)" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/blog/signs-he-is-losing-interest-over-text/'>
+        <div class="card-visual card-vis-1" style="background: url('/blog/images/signs-he-is-losing-interest-over-text-cover.jpg') center/cover no-repeat; background-size: cover;">
+          <span class="card-tag">Dating Tips</span>
+          <div class="card-visual-bottom">
+            <span class="card-read-time">7 min read</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Dating Tips</p>
+          <h4>9 Signs He Is Losing Interest <em>Over Text</em></h4>
+          <p>How to tell busy from pulling away, and exactly what to text back.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">October 21, 2026</span>
+          <span class="card-arrow">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="var(--burgundy)" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/blog/how-to-end-a-situationship-over-text/'>
+        <div class="card-visual card-vis-1" style="background: url('/blog/images/how-to-end-a-situationship-over-text-cover.jpg') center/cover no-repeat; background-size: cover;">
+          <span class="card-tag">Dating Tips</span>
+          <div class="card-visual-bottom">
+            <span class="card-read-time">7 min read</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Dating Tips</p>
+          <h4>How to End a Situationship <em>Over Text</em> (With Examples)</h4>
+          <p>5 calm steps and 6 copy-ready texts to end it with clarity and kindness.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">October 19, 2026</span>
+          <span class="card-arrow">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="var(--burgundy)" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/blog-post-1'>
+        <div class="card-visual" style="background: url('https://images.unsplash.com/photo-1741217530057-8577856cf7bb?w=800&q=85&auto=format&fit=crop') center/cover no-repeat;">
+          <span class="card-tag">Patterns</span>
+          <div class="card-visual-bottom">
+            <span class="card-read-time">6 min read</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Patterns</p>
+          <h4>Mixed Effort Is <em>Not Interest</em></h4>
+          <p>He texts just enough to keep you around but never enough to move things forward. Here's how Vela spots it.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">May 28, 2026</span>
+          <span class="card-arrow">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="var(--burgundy)" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/blog-post-2'>
+        <div class="card-visual card-vis-2" style="background: url('https://images.pexels.com/photos/3808008/pexels-photo-3808008.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop') center/cover no-repeat; background-size: cover;">
+          <span class="card-tag">Self-Worth</span>
+          <div class="card-visual-bottom">
+            <span class="card-read-time">5 min read</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Self-Worth</p>
+          <h4>Why You Keep Attracting <em>Emotionally Unavailable</em> Men</h4>
+          <p>It's not your fault, but it is your pattern. Here's how to recognize the cycle and interrupt it.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">May 22, 2026</span>
+          <span class="card-arrow">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="var(--burgundy)" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/blog-post-3'>
+        <div class="card-visual card-vis-3" style="background: url('https://images.pexels.com/photos/1415131/pexels-photo-1415131.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop') center/cover no-repeat; background-size: cover;">
+          <span class="card-tag">Communication</span>
+          <div class="card-visual-bottom">
+            <span class="card-read-time">4 min read</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Communication</p>
+          <h4>What His <em>Response Time</em> Is Actually Telling You</h4>
+          <p>Timing is data. Response patterns reveal intention more clearly than words ever will.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">May 15, 2026</span>
+          <span class="card-arrow">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="var(--burgundy)" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/blog-post-4'>
+        <div class="card-visual card-vis-4" style="background: url('https://images.pexels.com/photos/3692750/pexels-photo-3692750.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop') center/cover no-repeat; background-size: cover;">
+          <span class="card-tag">Patterns</span>
+          <div class="card-visual-bottom">
+            <span class="card-read-time">7 min read</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Patterns</p>
+          <h4>The <em>Sunday Reset:</em> How to Stop Spiraling and Start Seeing Clearly</h4>
+          <p>Your gut is already telling you something. Use this 5-step framework to turn anxiety into answers.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">May 10, 2026</span>
+          <span class="card-arrow">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="var(--burgundy)" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/blog-post-5'>
+        <div class="card-visual card-vis-1" style="background:none;padding:0;overflow:hidden;">
+              <img src="https://images.pexels.com/photos/3808008/pexels-photo-3808008.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Woman confused" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+          <span class="card-tag">Patterns</span>
+          <div class="card-visual-bottom">
+            <span class="card-read-time">5 min read</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Patterns</p>
+          <h4>The <em>Hot and Cold</em> Cycle: Why He Pulls Back Right When Things Get Good</h4>
+          <p>Inconsistency isn't mysterious. It's a pattern with a name. Break down the psychology.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">May 5, 2026</span>
+          <span class="card-arrow">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="var(--burgundy)" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/blog-post-6'>
+        <div class="card-visual card-vis-5" style="background: url('https://images.pexels.com/photos/1024975/pexels-photo-1024975.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop') center/cover no-repeat; background-size: cover;">
+          <span class="card-tag">Dating Tips</span>
+          <div class="card-visual-bottom">
+            <span class="card-read-time">4 min read</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Dating Tips</p>
+          <h4>Before the Second Date: The Questions That Actually Matter</h4>
+          <p>Not "what are you looking for": the subtle questions that reveal character and intention.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">April 29, 2026</span>
+          <span class="card-arrow">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="var(--burgundy)" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class='post-card' href='/blog-post-7'>
+        <div class="card-visual card-vis-6" style="background: url('https://images.pexels.com/photos/3671083/pexels-photo-3671083.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop') center/cover no-repeat; background-size: cover;">
+          <span class="card-tag">Self-Worth</span>
+          <div class="card-visual-bottom">
+            <span class="card-read-time">3 min read</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-category">Self-Worth</p>
+          <h4>"He's Not That Busy" and Other <em>Truths</em> Your Friends Are Too Kind to Say</h4>
+          <p>Real clarity, zero judgment. The honest conversation your group chat keeps avoiding.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">April 21, 2026</span>
+          <span class="card-arrow">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="var(--burgundy)" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ── ABOUT VIXA STRIP ── -->
+  <section class="about-strip">
+    <div class="about-left">
+      <h2>Stop decoding.<br>Start <em>knowing.</em></h2>
+      <p>VIXA's AI companion Vela reads tone, timing, effort level, and behavioral patterns to tell you what's happening, in seconds. No judgment, no agenda.</p>
+      <a href="#" class="about-btn">
+        Get early access
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+    <div class="about-right">
+      <div class="feature-tile">
+        <div class="feature-tile-icon">📸</div>
+        <h5>Screenshot or paste</h5>
+        <p>Upload any conversation. Vela reads everything: tone, timing, word choice.</p>
+      </div>
+      <div class="feature-tile">
+        <div class="feature-tile-icon">⚡</div>
+        <h5>Clarity in seconds</h5>
+        <p>Get a clear, plain-English breakdown of what's happening.</p>
+      </div>
+      <div class="feature-tile">
+        <div class="feature-tile-icon">🔒</div>
+        <h5>Completely private</h5>
+        <p>Encrypted uploads. Private by default. Deleted within 30 days.</p>
+      </div>
+      <div class="feature-tile">
+        <div class="feature-tile-icon">📊</div>
+        <h5>Track patterns over time</h5>
+        <p>Save analyses in your vault and spot when someone starts pulling back.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NEWSLETTER ── -->
+  <section class="newsletter">
+    <div class="newsletter-inner">
+      <div class="newsletter-badge">✦ The VIXA Journal</div>
+      <h2>Get the clarity<br>in your <em>inbox.</em></h2>
+      <p>Weekly dating insights, pattern breakdowns, and real talk, written for women who are done guessing. Free, always.</p>
+      <form action='/blog' class='newsletter-form' id='newsletter-form' method='POST' name='vixa-newsletter'>
+        <input type="hidden" name="form-name" value="vixa-newsletter" />
+        <input type="email" name="email" id="nl-email" autocomplete="email" inputmode="email" placeholder="Your email address" required />
+        <button type="submit" id="nl-btn">Subscribe free</button>
+      </form>
+      <p id="nl-success" style="display:none;font-size:15px;color:var(--white);margin-top:14px;">✦ You're in. Watch your inbox for the first issue.</p>
+    </div>
+  </section>
+
+  <!-- MOBILE BOTTOM NAV -->
+  <nav class="mob-nav" aria-label="Mobile navigation">
+  <div class="mob-nav-inner">
+    <a class="mob-nav-item" href="/">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><polyline points="9 21 9 12 15 12 15 21"/></svg>
+      HOME
+    </a>
+    <a class="mob-nav-item" href="https://vixa-decode-his-text.netlify.app/" target="_blank" rel="noopener">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15z"/></svg>
+      TRY VELA
+    </a>
+    <a class="mob-nav-item" href="/creators">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      CREATORS
+    </a>
+    <a class="mob-nav-item active" href="/blog">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      BLOG
+    </a>
+    <a class="mob-nav-item" href="/careers">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      CAREERS
+    </a>
+    <a class="mob-nav-item" href="/contact">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      CONTACT
+    </a>
+  </div>
+</nav>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+  <nav class="footer-nav">
+    <a href="/">HOME</a>
+    <a href="https://vixa-decode-his-text.netlify.app/" target="_blank" rel="noopener">TRY VELA</a>
+    <a href="/creators">CREATORS</a>
+    <a href="/blog">BLOG</a>
+    <a href="/careers">CAREERS</a>
+    <a href="/contact">CONTACT</a>
+  </nav>
+  <div class="footer-logo">VIXA</div>
+  <p class="footer-copy">© 2026 VIXA. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/privacy">Privacy</a>
+    <a href="/tos">Terms</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div class="footer-founder">
+    <a href="https://www.lisahaven.co" target="_blank" rel="noopener">✦ Follow my founder's journey · lisahaven.co</a>
+    <a href="https://www.linkedin.com/in/lisahaven" target="_blank" rel="noopener">Connect on LinkedIn</a>
+  </div>
+</footer>
+
+  <script>
+    document.getElementById('newsletter-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      var email = document.getElementById('nl-email').value.trim();
+      if (!email || !email.includes('@')) return;
+      var btn = document.getElementById('nl-btn');
+      btn.disabled = true; btn.textContent = 'Subscribing…';
+      fetch('/blog', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: new URLSearchParams({'form-name': 'vixa-newsletter', 'email': email}).toString()
+      }).then(function(res){
+        if (!res.ok) throw new Error('failed');
+        document.getElementById('newsletter-form').style.display = 'none';
+        document.getElementById('nl-success').style.display = 'block';
+      }).catch(function(){
+        btn.disabled = false; btn.textContent = 'Subscribe free';
+        alert('Something went wrong. Please try again.');
+      });
+    });
+  </script>
+
+
+  
+
+  
+  
+</body>
+</html>
