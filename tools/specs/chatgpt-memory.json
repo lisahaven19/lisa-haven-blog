@@ -1,0 +1,37 @@
+{
+  "slug": "chatgpt-memory",
+  "category": "AI & Tech",
+  "cover": {
+    "title": "ChatGPT",
+    "accent": "Memory",
+    "subtitle": "How I use it to run 3 companies, and what I never let it keep",
+    "tagline": "Plus the prompt that shows what it knows."
+  },
+  "pins": [
+    {
+      "title": "ChatGPT",
+      "accent": "Memory",
+      "subtitle": "How to turn it on, check it and delete what it knows",
+      "tagline": "Simple steps inside."
+    },
+    {
+      "title": "Ask ChatGPT to",
+      "accent": "Describe You",
+      "subtitle": "The prompt that showed me my strengths and weak spots",
+      "tagline": "Copy my prompt."
+    },
+    {
+      "title": "4 Things I Never",
+      "accent": "Tell ChatGPT",
+      "subtitle": "What I let AI remember, and what stays private",
+      "tagline": "From a mom of 3 who runs 3 companies with AI."
+    },
+    {
+      "title": "How I Use ChatGPT",
+      "accent": "Memory",
+      "subtitle": "The mom of 3 who runs 3 companies with AI, and teaches you how",
+      "tagline": "Free prompt inside.",
+      "photo": "../images/uploads/lisa-circle-photo.jpg"
+    }
+  ]
+}

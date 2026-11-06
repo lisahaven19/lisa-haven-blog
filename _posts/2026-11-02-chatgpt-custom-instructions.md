@@ -140,7 +140,7 @@ ChatGPT has 3 ways to "remember" you, and people mix them up all the time.
 | Memory | Details ChatGPT saves from your chats over time | Small facts, like your kids' activities or your favorite tools |
 | Projects | Folders that keep chats and files together | 1 big job, like a launch or a client |
 
-My simple rule: **custom instructions are for how you want to be treated. Memory is for small facts. Projects are for 1 big job.** If you want to see how ChatGPT compares to my other favorite tool for this, read [Claude vs ChatGPT for business](https://lisahaven.co/blog/claude-vs-chatgpt/).
+My simple rule: **custom instructions are for how you want to be treated. Memory is for small facts. Projects are for 1 big job.** Want to go deeper on the memory part? Here is [how I use ChatGPT memory, and what I never let it keep](/blog/chatgpt-memory/). If you want to see how ChatGPT compares to my other favorite tool for this, read [Claude vs ChatGPT for business](https://lisahaven.co/blog/claude-vs-chatgpt/).
 
 ## Tools I use for this
 

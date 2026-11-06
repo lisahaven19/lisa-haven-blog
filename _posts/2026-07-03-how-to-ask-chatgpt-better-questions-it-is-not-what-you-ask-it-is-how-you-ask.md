@@ -45,7 +45,7 @@ A role tells ChatGPT which kind of knowledge to pull from and how to talk to you
 
 This is where most people stop short. Tell it who you are, who you are helping, and what you are trying to do. Use real numbers. "I am a founder ordering my first 10,000 units" is worth more than any fancy wording.
 
-Tired of typing your situation every time? Save it once with [ChatGPT custom instructions](https://lisahaven.co/blog/chatgpt-custom-instructions/) and every chat starts already knowing you. Want a faster way to ask for the same thing? Try these [ChatGPT codes](https://lisahaven.co/blog/chatgpt-codes/), short slash words that tell ChatGPT exactly what to make.
+Tired of typing your situation every time? Save it once with [ChatGPT custom instructions](https://lisahaven.co/blog/chatgpt-custom-instructions/) and every chat starts already knowing you. Then turn on [ChatGPT memory](/blog/chatgpt-memory/) so it remembers the details of your work from chat to chat. Want a faster way to ask for the same thing? Try these [ChatGPT codes](https://lisahaven.co/blog/chatgpt-codes/), short slash words that tell ChatGPT exactly what to make.
 
 ### Step 3: Say exactly what you want back
 
