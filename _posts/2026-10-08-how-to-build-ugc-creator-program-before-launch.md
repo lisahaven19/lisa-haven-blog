@@ -128,6 +128,8 @@ I promised you the mistakes too, so here are 2.
 
 **I changed the rules too many times.** In the first few weeks I changed the pay plan and the steps more than once, and every change confused people. My advice is to set your rules and then lock them for 30 days.
 
+The same goes for your team. Clear rules from day 1 make the hard calls fair later, which is the heart of my 1 warning rule for [when to let an employee go](https://lisahaven.co/blog/when-to-let-an-employee-go/).
+
 **I didn't have example videos ready.** The first thing every creator asks is, "Can I see an example?" Have 2 or 3 sample videos finished before you invite anyone.
 
 ## 1 rule you cannot skip

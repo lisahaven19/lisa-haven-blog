@@ -126,6 +126,8 @@ I don't run my creator group alone, and I don't run it with a big team either. H
 
 Notice the pattern. AI brings the speed. My managers bring the warmth. I keep the decisions.
 
+That includes decisions about the team itself. When someone stops hitting their goals, I follow a simple rule I explain in [when to let an employee go](https://lisahaven.co/blog/when-to-let-an-employee-go/).
+
 ## What AI should never do in your creator program
 
 AI is a tool, not a manager. Keep these human:
