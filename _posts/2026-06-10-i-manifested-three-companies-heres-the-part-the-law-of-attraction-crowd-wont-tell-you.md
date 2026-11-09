@@ -69,7 +69,7 @@ Right now I am rebuilding my vision board. It hangs right next to my office. Thi
 
 The vision is the easy part. The habits are where it actually happens.
 
-![The law of attraction for entrepreneurs: belief sets the destination, discipline is the car and action is the gas. Daily habits include waking up first, reading the vision board, deep work, the gym and finishing the job.](/images/uploads/i-manifested-three-companies-heres-the-part-the-law-of-attraction-crowd-wont-tell-you-chart.jpg)
+![The law of attraction for entrepreneurs: belief sets the destination, discipline is the car and action is the gas. Daily habits include waking up first, reading the vision board, deep work, the gym and finishing the job.](/images/uploads/i-manifested-three-companies-heres-the-part-the-law-of-attraction-crowd-wont-tell-you-chart-v2.jpg)
 
 Here is what I do, every day:
 

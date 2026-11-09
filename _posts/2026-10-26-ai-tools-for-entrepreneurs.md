@@ -30,7 +30,7 @@ So the problem is not access. Everyone has access. The problem is choosing a few
 
 I think about my tools in 3 layers. Once you see it this way, every new app becomes an easy yes or no.
 
-![My AI stack for entrepreneurs in 3 layers: the brain (Claude and ChatGPT), the hands (Claude in Chrome, Netlify and GitHub), and the workplace (Monday.com, Slack, Notion), all fed by free Google data and real freelancers.](/images/uploads/ai-tools-for-entrepreneurs-chart.png)
+![My AI stack for entrepreneurs in 3 layers: the brain (Claude and ChatGPT), the hands (Claude in Chrome, Netlify and GitHub), and the workplace (Monday.com, Slack, Notion), all fed by free Google data and real freelancers.](/images/uploads/ai-tools-for-entrepreneurs-chart-v2.jpg)
 
 1. **The brain.** The AI assistant that thinks, writes and plans with you.
 2. **The hands.** Tools that let AI actually do things, like work a website or publish a page.

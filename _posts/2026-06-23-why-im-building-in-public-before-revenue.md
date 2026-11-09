@@ -52,7 +52,7 @@ But launching a business does not only depend on me. There are a lot of moving p
 
 That has been 1 of the hardest lessons of building in public before revenue. The world does not move on your timeline.
 
-![What I control vs what I do not when launching a business: I control my effort, learning, content and audience. I do not control app review, manufacturing timelines or other people's speed.](/images/uploads/building-in-public-before-revenue-chart.jpg)
+![What I control vs what I do not when launching a business: I control my effort, learning, content and audience. I do not control app review, manufacturing timelines or other people's speed.](/images/uploads/building-in-public-before-revenue-chart-v2.jpg)
 
 So I stopped fighting the waiting and started using it. Here is what I do while I wait:
 

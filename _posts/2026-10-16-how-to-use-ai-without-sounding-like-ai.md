@@ -31,7 +31,7 @@ This topic is everywhere this fall, and for good reason.
 
 In September, Gartner published a survey of 1,006 United States consumers. [65% said brands are making too much AI generated marketing content, and 57% said it has made them trust brand messages less](https://www.gartner.com/en/newsroom/press-releases/2026-09-22-gartner-marketing-survuey-finds-35-percent-of-consumers-rely-on-influencers-less-due-to-ai). 43% said they now rely more on real people when they decide what to buy.
 
-![Bar chart showing 65% of consumers say brands make too much AI marketing content, 57% trust brand messages less, 43% rely more on real people and 35% rely less on influencers, from a 2026 Gartner survey](/images/uploads/how-to-use-ai-without-sounding-like-ai-chart.jpg)
+![Bar chart showing 65% of consumers say brands make too much AI marketing content, 57% trust brand messages less, 43% rely more on real people and 35% rely less on influencers, from a 2026 Gartner survey](/images/uploads/how-to-use-ai-without-sounding-like-ai-chart-v2.jpg)
 
 A second report from Clutch, a business reviews company, surveyed 601 consumers in August. [53% said they are less likely to buy from brands they know use AI in their social media content](https://www.businesswire.com/news/home/20260908931145/en/Clutch-Report-53-of-Consumers-Are-Less-Likely-to-Buy-From-Brands-Using-AI-on-Social-Media). And nearly 90% said brands should tell people when content is made with AI.
 

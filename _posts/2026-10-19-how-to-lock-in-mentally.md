@@ -37,7 +37,7 @@ None of these mean something is wrong with you. They mean your setup needs work.
 
 ## How to lock in mentally in 5 steps
 
-![The 5 step lock in setup: pick 1 goal, write an if-then plan, cut 1 distraction, work in short blocks, and let AI help. 73 days left in 2026 compared with 66 days to build a habit.](/images/uploads/how-to-lock-in-mentally-chart.jpg)
+![The 5 step lock in setup: pick 1 goal, write an if-then plan, cut 1 distraction, work in short blocks, and let AI help. 73 days left in 2026 compared with 66 days to build a habit.](/images/uploads/how-to-lock-in-mentally-chart-v2.jpg)
 
 ### Step 1: Pick 1 lock in goal
 

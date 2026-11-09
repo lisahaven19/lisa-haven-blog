@@ -34,7 +34,7 @@ The good news: most of this is free to fix. It just takes a system. That is wher
 
 ## How to remove your address from the internet with AI: the 5 steps
 
-![The 5 step plan to remove your address from the internet with AI: find it, remove it from Google, opt out of people-search sites, email the rest, then recheck every 2 weeks.](/images/uploads/remove-your-address-from-the-internet-chart.jpg)
+![The 5 step plan to remove your address from the internet with AI: find it, remove it from Google, opt out of people-search sites, email the rest, then recheck every 2 weeks.](/images/uploads/remove-your-address-from-the-internet-chart-v2.jpg)
 
 ### Step 1: Find every place your address shows up
 

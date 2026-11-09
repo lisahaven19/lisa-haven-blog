@@ -1,0 +1,210 @@
+{"charts": [
+{"slug":"ai-tools-for-entrepreneurs","old":"ai-tools-for-entrepreneurs-chart.png","out":"ai-tools-for-entrepreneurs-chart-v2.jpg",
+ "eyebrow":"AI tools for entrepreneurs","title":"My AI stack in <i>3 layers</i>",
+ "blocks":[
+  {"type":"steps","items":[
+   {"t":"The brain","d":"Thinks, writes and plans with you. Claude and ChatGPT.","hl":true},
+   {"t":"The hands","d":"Lets AI actually do the work. Claude in Chrome, Netlify and GitHub."},
+   {"t":"The workplace","d":"Where AI sees your whole business. Monday.com, Slack and Notion."}]},
+  {"type":"pills","label":"The fuel:","items":["Search Console","Keyword Planner","Upwork freelancers"]}]},
+
+{"slug":"why-im-building-in-public-before-revenue","old":"building-in-public-before-revenue-chart.jpg","out":"building-in-public-before-revenue-chart-v2.jpg",
+ "eyebrow":"Building in public before revenue","title":"What I <i>control</i> and what I don’t",
+ "blocks":[
+  {"type":"compare","cols":[
+   {"title":"Not up to me","items":["App Store review","Manufacturing timelines","Developers and partners","Other people’s speed"]},
+   {"title":"Up to me","style":"pink","items":["My effort, every single day","What I learn","The content I share","The audience I build while I wait"]}]},
+  {"type":"rule","text":"Stop fighting the waiting. Use it."}]},
+
+{"slug":"chatgpt-custom-instructions","old":"chatgpt-custom-instructions-chart.png","out":"chatgpt-custom-instructions-chart-v2.jpg",
+ "eyebrow":"ChatGPT custom instructions","title":"The 5 parts of <i>great</i> instructions",
+ "sub":"Cover all 5 and ChatGPT starts every chat already knowing you.",
+ "blocks":[{"type":"rows","items":[
+   {"t":"Who you are","d":"Your role and your business in 1 or 2 lines."},
+   {"t":"Who you serve","d":"Your customer in plain words: who she is and what she wants."},
+   {"t":"How to sound","d":"2 or 3 tone words, like warm, direct and confident."},
+   {"t":"How to format","d":"Length, bullet points, tables and reading level."},
+   {"t":"What to never do","d":"Your hard rules. The part most people skip, and the one that saves the most time.","hl":true}]}]},
+
+{"slug":"chatgpt-memory","old":"chatgpt-memory-chart.png","out":"chatgpt-memory-chart-v2.jpg",
+ "eyebrow":"ChatGPT memory","title":"What I let it <i>remember</i>",
+ "sub":"A simple split that keeps memory useful and your life private.",
+ "blocks":[{"type":"compare","cols":[
+   {"title":"Let it remember","sub":"Makes every answer fit your world.","icon":"check","items":["Your role and your business","How you like to write","The tools you use every day","Your big goals"]},
+   {"title":"Keep it out","sub":"Use a Temporary Chat instead.","style":"dark","icon":"x","items":["Your kids’ details","Money and account numbers","Business secrets","Passwords and logins"]}]}]},
+
+{"slug":"chatgpt-prompts-for-busy-moms","old":"chatgpt-prompts-for-busy-moms-chart.png","out":"chatgpt-prompts-for-busy-moms-chart-v2.jpg",
+ "eyebrow":"ChatGPT prompts for busy moms","title":"Who carries the <i>mental load?</i>",
+ "blocks":[
+  {"type":"bars","style":"pink","head":"Share of household mental load tasks","items":[
+   {"label":"Mothers","value":"71%","pct":71,"color":"rose"},
+   {"label":"Fathers","value":"45%","pct":45,"color":"ink"}],
+   "source":"Study of 3,000 United States parents, Journal of Marriage and Family, 2024. Some tasks are shared."},
+  {"type":"head","text":"Every good prompt has 3 parts"},
+  {"type":"steps","items":[
+   {"t":"A clear job","d":"\"You are my family planner.\"","hl":true},
+   {"t":"Your real details","d":"Ages, days, times, budget."},
+   {"t":"The format you want","d":"A table, a checklist, a text."}]}]},
+
+{"slug":"claude-vs-chatgpt","old":"claude-vs-chatgpt-chart.jpg","out":"claude-vs-chatgpt-chart-v2.jpg",
+ "eyebrow":"Claude vs ChatGPT","title":"Who wins <i>what</i> for founders",
+ "blocks":[
+  {"type":"compare","cols":[
+   {"title":"Claude","sub":"Pro · $20 a month. Best for:","items":["Writing in your voice","Long documents","Websites and apps","Deep planning","No ads"]},
+   {"title":"ChatGPT","sub":"Plus · $20 a month. Best for:","style":"pink","items":["Images and mockups","Voice brainstorming","Quick answers","Fast idea lists","Biggest user base"]}]},
+  {"type":"rule","text":"Same price. Try both free for 1 week, then pay for the one that saves you the most time."}]},
+
+{"slug":"from-zero-to-three-companies","old":"from-zero-to-three-companies-chart.jpg","out":"from-zero-to-three-companies-chart-v2.jpg",
+ "eyebrow":"3 kids, 3 companies","title":"A <i>real</i> day in my life",
+ "blocks":[
+  {"type":"timeline","items":[
+   {"time":"5:30 AM","d":"Up before everyone"},
+   {"time":"Breakfast","d":"Morning brief from Claude"},
+   {"time":"Morning","d":"Girls off to school"},
+   {"time":"Until 12","d":"Deep work"},
+   {"time":"Midday","d":"Gym, about 2 hours"},
+   {"time":"Afternoon","d":"Pickup and my girls"},
+   {"time":"Night","d":"Laptop if needed"}]},
+  {"type":"rule","text":"I don’t stop when I’m tired. I stop when I’m done."}]},
+
+{"slug":"how-to-ask-chatgpt-better-questions","old":"how-to-ask-chatgpt-a-question-chart.jpg","out":"how-to-ask-chatgpt-a-question-chart-v2.jpg",
+ "eyebrow":"How to ask ChatGPT a question","title":"1 sentence. A <i>different answer.</i>",
+ "blocks":[
+  {"type":"bars","style":"pink","head":"Score on math word problems","items":[
+   {"label":"Plain question","value":"17.7%","pct":17.7,"color":"ink"},
+   {"label":"+ \"Let’s think step by step\"","value":"78.7%","pct":78.7,"color":"rose"}],
+   "source":"Kojima and others, \"Large Language Models are Zero-Shot Reasoners,\" 2022. MultiArith test. Today’s models reason more on their own."},
+  {"type":"head","text":"Ask in 5 steps"},
+  {"type":"steps","items":[
+   {"t":"Tell it who to be","d":"\"Act as a sourcing expert.\""},
+   {"t":"Give your real situation","d":"Who, what, real numbers."},
+   {"t":"Say what you want back","d":"A table, 3 options, a script."},
+   {"t":"Set your limits","d":"Tone, length, what to avoid."},
+   {"t":"Let it ask you first","d":"\"Ask me any questions you need.\"","hl":true}]}]},
+
+{"slug":"how-to-launch-an-app","old":"how-to-launch-an-app-chart.png","out":"how-to-launch-an-app-chart-v2.jpg",
+ "eyebrow":"How to launch an app","title":"The 4 stages of an <i>app</i> launch",
+ "sub":"Most launches are won or lost in everything around the code.",
+ "blocks":[{"type":"rows","items":[
+   {"t":"Prove it","d":"Find real people with the problem before you write code."},
+   {"t":"Build it right","d":"Product, legal pages, privacy, pricing and real screenshots."},
+   {"t":"Submit it","d":"Read Apple’s rules, get an expert check, then submit."},
+   {"t":"Launch with a crew","d":"Creators, a waitlist and content ready on day 1.","hl":true}]}]},
+
+{"slug":"how-to-lock-in-mentally","old":"how-to-lock-in-mentally-chart.jpg","out":"how-to-lock-in-mentally-chart-v2.jpg",
+ "eyebrow":"How to lock in mentally","title":"The 5 step <i>lock in</i> setup",
+ "blocks":[
+  {"type":"steps","items":[
+   {"t":"Pick 1 goal","d":"One measurable goal for the rest of the year."},
+   {"t":"If-then plan","d":"Decide when and where, ahead of time."},
+   {"t":"Cut 1 distraction","d":"Usually the phone. Move it out of reach."},
+   {"t":"Short blocks","d":"20 to 45 minutes you protect."},
+   {"t":"Let AI help","d":"A focus coach that never forgets your goal.","hl":true}]},
+  {"type":"bars","items":[
+   {"label":"Days left in 2026 after Oct 19","value":"73","pct":100,"color":"ink"},
+   {"label":"Average days to build a habit","value":"66","pct":90,"color":"rose"}],
+   "source":"Habit average: Lally and others, European Journal of Social Psychology, 2010."}]},
+
+{"slug":"how-to-manage-ugc-creators-with-ai","old":"how-to-manage-ugc-creators-with-ai-chart.png","out":"how-to-manage-ugc-creators-with-ai-chart-v2.jpg",
+ "eyebrow":"Where the workday goes","title":"60% of work time is<br><i>work about work</i>",
+ "blocks":[{"type":"bars","items":[
+   {"label":"Work about work: chasing updates, searching, repeating yourself","value":"60%","pct":60,"color":"rose"},
+   {"label":"Skilled work: the job you were hired to do","value":"40%","pct":40,"color":"ink"}],
+   "source":"Source: Asana Anatomy of Work Index, 10,000+ knowledge workers."}]},
+
+{"slug":"how-to-use-ai-to-answer-customer-emails","old":"how-to-use-ai-to-answer-customer-emails-chart.jpg","out":"how-to-use-ai-to-answer-customer-emails-chart-v2.jpg",
+ "eyebrow":"How to use AI to answer customer emails","title":"The 5 step <i>AI inbox</i> system",
+ "blocks":[
+  {"type":"steps","items":[
+   {"t":"Sort emails","d":"Group your last 30 emails into 5 buckets."},
+   {"t":"1 answer bank","d":"Your real prices, policies and links. Written once.","hl":true},
+   {"t":"Teach your voice","d":"3 replies you love, so AI sounds like you."},
+   {"t":"Draft, then check","d":"AI drafts. A human reads it and hits send."},
+   {"t":"Save the winners","d":"Add new questions and best replies weekly."}]},
+  {"type":"pills","label":"About 1 hour to set up. AI handles:","items":["Repeat questions","Your tone","First drafts","Speed"]}]},
+
+{"slug":"how-to-use-ai-to-write-blog-posts-that-rank","old":"how-to-use-ai-to-write-blog-posts-that-rank-chart.jpg","out":"how-to-use-ai-to-write-blog-posts-that-rank-chart-v2.jpg",
+ "eyebrow":"How to use AI to write blog posts that rank","title":"The 6 step <i>free traffic</i> system",
+ "blocks":[
+  {"type":"steps","items":[
+   {"t":"Find the search","d":"1 real phrase from autocomplete and Trends."},
+   {"t":"Check top 3","d":"See what they cover and what they miss."},
+   {"t":"Answer first","d":"The answer in the first 2 sentences."},
+   {"t":"Add your story","d":"What only you know. AI cannot do this.","hl":true},
+   {"t":"AI edits","d":"Editor, not ghostwriter. Check every fact."},
+   {"t":"Link and share","d":"2 internal links, 3 pins, request indexing."}]},
+  {"type":"pills","label":"4 free tools that replace Keyword Planner","items":["Google autocomplete","People also ask","Google Trends","Search Console"]}]},
+
+{"slug":"how-to-use-ai-without-sounding-like-ai","old":"how-to-use-ai-without-sounding-like-ai-chart.jpg","out":"how-to-use-ai-without-sounding-like-ai-chart-v2.jpg",
+ "eyebrow":"How people feel about AI content in 2026","title":"Buyers are tired of <i>AI that sounds like AI</i>",
+ "blocks":[{"type":"bars","items":[
+   {"label":"Say brands make too much AI marketing content","value":"65%","pct":65,"color":"rose"},
+   {"label":"Trust brand messages less because of it","value":"57%","pct":57,"color":"rose"},
+   {"label":"Now rely more on real people for buying advice","value":"43%","pct":43,"color":"ink"},
+   {"label":"Now rely less on influencers because of AI","value":"35%","pct":35,"color":"ink"}],
+   "source":"Source: Gartner survey of 1,006 United States consumers, published September 2026."}]},
+
+{"slug":"how-to-use-chatgpt-to-meal-plan","old":"how-to-use-chatgpt-to-meal-plan-chart.jpg","out":"how-to-use-chatgpt-to-meal-plan-chart-v2.jpg",
+ "eyebrow":"How to use ChatGPT to meal plan for the week","title":"The 5 step <i>AI meal plan</i>",
+ "blocks":[
+  {"type":"steps","items":[
+   {"t":"Family profile","d":"Who you feed, food rules, budget, time. Once."},
+   {"t":"Plan your week","d":"Fast meals on busy nights. Use what you have."},
+   {"t":"1 grocery list","d":"Sorted by aisle, ready for pickup.","hl":true},
+   {"t":"Prep once","d":"A 60 minute Sunday prep list."},
+   {"t":"Fix the week","d":"Swap a meal in 30 seconds when plans change."}]},
+  {"type":"pills","label":"About 10 minutes a week. AI handles:","items":["Everyone’s food rules","Busy night meals","Grocery list by aisle","Swaps in seconds"]}]},
+
+{"slug":"i-built-3-businesses-and-a-full-ai-app-using-only-two-tools-here-is-exactly-how","old":"i-built-3-businesses-and-a-full-ai-app-using-only-two-tools-here-is-exactly-how-chart.jpg","out":"i-built-3-businesses-and-a-full-ai-app-using-only-two-tools-here-is-exactly-how-chart-v2.jpg",
+ "eyebrow":"The tools I actually use","title":"How I buy back my <i>time</i>",
+ "blocks":[
+  {"type":"steps","numbers":false,"items":[
+   {"t":"Claude","sub":"My BFF, Alma","d":"Building, decisions, organization","hl":true},
+   {"t":"ChatGPT","sub":"Quick things","d":"Fast answers and ideas"},
+   {"t":"Instacart","sub":"Groceries","d":"No more store trips with a toddler"},
+   {"t":"Uber","sub":"Plus Uber Eats","d":"Rides and meals, less running around"}]},
+  {"type":"rule","text":"Time is the 1 thing I can never get more of. So I buy it back."}]},
+
+{"slug":"i-manifested-three-companies-heres-the-part-the-law-of-attraction-crowd-wont-tell-you","old":"i-manifested-three-companies-heres-the-part-the-law-of-attraction-crowd-wont-tell-you-chart.jpg","out":"i-manifested-three-companies-heres-the-part-the-law-of-attraction-crowd-wont-tell-you-chart-v2.jpg",
+ "eyebrow":"Law of attraction for entrepreneurs","title":"Vision <i>plus</i> the daily work",
+ "blocks":[
+  {"type":"steps","items":[
+   {"t":"Belief","sub":"Sets the destination","d":"Read my vision board every morning"},
+   {"t":"Discipline","sub":"Is the car","d":"Up early, deep work, the gym"},
+   {"t":"Action","sub":"Is the gas","d":"Finish what I start, every day","hl":true}]},
+  {"type":"rule","label":"My goal:","text":"A home for my girls, with a dream room for each of them."}]},
+
+{"slug":"remove-your-address-from-the-internet","old":"remove-your-address-from-the-internet-chart.jpg","out":"remove-your-address-from-the-internet-chart-v2.jpg",
+ "eyebrow":"How to remove your address from the internet","title":"The 5 step <i>privacy</i> plan",
+ "blocks":[
+  {"type":"steps","items":[
+   {"t":"Find it","d":"AI searches your name and city, then lists every site."},
+   {"t":"Google first","d":"Free \"Results about you\" tool, plus alerts.","hl":true},
+   {"t":"Opt out","d":"Each people-search site, 1 by 1. Never pay."},
+   {"t":"Email the rest","d":"AI writes a short, firm removal request."},
+   {"t":"Recheck","d":"Update your tracker every 2 weeks."}]},
+  {"type":"pills","label":"Cost: $0. AI handles:","items":["Searching","Requests","Emails","Tracking"]}]},
+
+{"slug":"what-is-vixa","old":"what-is-vixa-chart.jpg","out":"what-is-vixa-chart-v2.jpg",
+ "eyebrow":"VIXA vs a general AI chat","title":"Why women need a <i>real</i> answer",
+ "blocks":[
+  {"type":"compare","cols":[
+   {"title":"A general AI chat","items":["Starts from zero every chat","You re-upload screenshots every time","Can lean toward agreeing with you","Generic reply ideas"]},
+   {"title":"VIXA","style":"pink","items":["Saves the whole story in your vault","Spots patterns over weeks, not 1 text","Brutally honest, judgment free read","Reply ideas that still sound like you"]}]},
+  {"type":"rule","text":"Do not ask AI for reassurance. Ask it for the pattern."}]},
+
+{"slug":"what-to-do-when-apple-rejects-your-app","old":"what-to-do-when-apple-rejects-your-app-chart.jpg","out":"what-to-do-when-apple-rejects-your-app-chart-v2.jpg",
+ "eyebrow":"App Store 2025","title":"About <i>1 in 4</i> app submissions got rejected",
+ "blocks":[{"type":"bars","items":[
+   {"label":"Submissions reviewed","value":"9,100,620","pct":100,"color":"ink"},
+   {"label":"Submissions rejected","value":"2,093,244 <small>(23%)</small>","pct":23,"color":"rose"}],
+   "source":"Source: Apple, 2025 App Store Transparency Report. Counts submissions, not unique apps."}]},
+
+{"slug":"why-i-created-havenly-makeup-remover-wipes-for-gen-z","old":"why-i-created-havenly-makeup-remover-wipes-for-gen-z-chart.jpg","out":"why-i-created-havenly-makeup-remover-wipes-for-gen-z-chart-v2.jpg",
+ "eyebrow":"Why I created Havenly","title":"Built <i>bigger</i>, built thicker",
+ "blocks":[
+  {"type":"compare","cols":[
+   {"title":"Most makeup wipes","items":["Thin and small","Tear halfway across your face","3 to 4 wipes for 1 face","Not made for Gen Z"]},
+   {"title":"Havenly","style":"pink","items":["Bigger, full-face size","Thicker, holds up to the last swipe","1 wipe does the job","Built for Gen Z, first run of 30,000 units"]}]},
+  {"type":"rule","text":"If babies get the thicker wipe, so do we."}]}
+]}

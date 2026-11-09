@@ -53,7 +53,7 @@ Custom instructions work on every plan, including the free one. If you ever want
 
 The best custom instructions cover the same 5 things. Miss 1, and the answers start to drift.
 
-![The 5 parts of great ChatGPT custom instructions: 1 who you are, 2 who you serve, 3 how to sound, 4 how to format, 5 what to never do.](/images/uploads/chatgpt-custom-instructions-chart.png)
+![The 5 parts of great ChatGPT custom instructions: 1 who you are, 2 who you serve, 3 how to sound, 4 how to format, 5 what to never do.](/images/uploads/chatgpt-custom-instructions-chart-v2.jpg)
 
 1. **Who you are.** Your role and your business in 1 or 2 lines. "I am the founder of a skincare brand" beats "I am an entrepreneur."
 2. **Who you serve.** Your customer, in plain words. This changes every marketing answer you get.

@@ -48,7 +48,7 @@ People ask me why I started 3 companies at once. The honest answer is that each 
 
 People always ask me what my day actually looks like. So here it is, the real version.
 
-![A real day building 3 companies as a mom of 3: wake up before everyone at 5:30, morning brief from Claude, breakfast and school drop-off, deep work until 12, gym for 2 hours, school pickup and family time, laptop at night when needed.](/images/uploads/from-zero-to-three-companies-chart.jpg)
+![A real day building 3 companies as a mom of 3: wake up before everyone at 5:30, morning brief from Claude, breakfast and school drop-off, deep work until 12, gym for 2 hours, school pickup and family time, laptop at night when needed.](/images/uploads/from-zero-to-three-companies-chart-v2.jpg)
 
 **5:30 to 6 AM: I wake up before anyone else.** In the very beginning, when I was first building my businesses, I woke up at 3 in the morning and worked for hours until it was done. Now it is closer to 5:30 or 6.
 

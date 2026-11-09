@@ -32,7 +32,7 @@ A plan fixes that. You buy what you will actually use. You cook what you already
 
 ## How to use ChatGPT to meal plan in 5 steps
 
-![The 5 step AI meal plan: set up your family profile, plan around your week, get 1 grocery list, prep once and fix the week. About 10 minutes each week.](/images/uploads/how-to-use-chatgpt-to-meal-plan-chart.jpg)
+![The 5 step AI meal plan: set up your family profile, plan around your week, get 1 grocery list, prep once and fix the week. About 10 minutes each week.](/images/uploads/how-to-use-chatgpt-to-meal-plan-chart-v2.jpg)
 
 ### Step 1: Give AI your family profile (once)
 

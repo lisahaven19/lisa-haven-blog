@@ -36,7 +36,7 @@ Yes. Very normal.
 
 In its [2025 App Store Transparency Report](https://www.apple.com/legal/app-store/transparency/2025), Apple says it reviewed 9,100,620 app submissions and rejected 2,093,244 of them. That's about 23%, or roughly 1 in 4.
 
-![Bar chart showing Apple reviewed 9.1 million app submissions in 2025 and rejected 2.1 million, about 1 in 4](/images/uploads/what-to-do-when-apple-rejects-your-app-chart.jpg)
+![Bar chart showing Apple reviewed 9.1 million app submissions in 2025 and rejected 2.1 million, about 1 in 4](/images/uploads/what-to-do-when-apple-rejects-your-app-chart-v2.jpg)
 
 Big companies get rejected. Funded startups get rejected. Founders with full engineering teams get rejected.
 

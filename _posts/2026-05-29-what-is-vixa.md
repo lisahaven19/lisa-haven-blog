@@ -55,7 +55,7 @@ And here is the part I am most proud of: **every analysis can be saved in your p
 
 This is the question I get the most, so let me make it simple.
 
-![VIXA vs a general AI chat: a general chat starts from zero, needs screenshots re-uploaded and can lean toward agreeing with you. VIXA saves the whole story in your vault, spots patterns over weeks and gives a brutally honest read.](/images/uploads/what-is-vixa-chart.jpg)
+![VIXA vs a general AI chat: a general chat starts from zero, needs screenshots re-uploaded and can lean toward agreeing with you. VIXA saves the whole story in your vault, spots patterns over weeks and gives a brutally honest read.](/images/uploads/what-is-vixa-chart-v2.jpg)
 
 **1. ChatGPT starts from zero. VIXA remembers.**
 A general AI chat is not built to keep your whole relationship organized in 1 place. You end up uploading the same screenshots again and again, explaining the backstory every time. VIXA keeps every analysis in your vault, so the patterns build up and you can see them clearly.

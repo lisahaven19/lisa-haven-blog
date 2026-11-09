@@ -72,7 +72,7 @@ When I ran it, the weak spots were the part I needed most. The plan gave me smal
 
 Memory is only as smart as what you feed it. Here is my simple split.
 
-![What to let ChatGPT remember and what to keep out: let it remember your role, your writing style, your tools and your goals. Keep out kids' details, money and account numbers, business secrets and passwords.](/images/uploads/chatgpt-memory-chart.png)
+![What to let ChatGPT remember and what to keep out: let it remember your role, your writing style, your tools and your goals. Keep out kids' details, money and account numbers, business secrets and passwords.](/images/uploads/chatgpt-memory-chart-v2.jpg)
 
 **What I let it remember:**
 

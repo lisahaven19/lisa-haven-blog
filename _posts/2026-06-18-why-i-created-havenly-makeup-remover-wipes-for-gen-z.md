@@ -42,7 +42,7 @@ That is when it clicked. Makeup removal is a huge, everyday need, and nobody had
 
 My daughters are in that market too, so I see what Gen Z wants up close every day.
 
-![Why Havenly is different: most makeup remover wipes are thin and small, tear easily and take 3 to 4 to clean 1 face. Havenly wipes are bigger and thicker, built for Gen Z, with a first run of 30,000 units.](/images/uploads/why-i-created-havenly-makeup-remover-wipes-for-gen-z-chart.jpg)
+![Why Havenly is different: most makeup remover wipes are thin and small, tear easily and take 3 to 4 to clean 1 face. Havenly wipes are bigger and thicker, built for Gen Z, with a first run of 30,000 units.](/images/uploads/why-i-created-havenly-makeup-remover-wipes-for-gen-z-chart-v2.jpg)
 
 ## Where Havenly is right now
 

@@ -110,7 +110,7 @@ Claude does the heavy lifting, but a few more tools changed my life too.
 
 Here is how I think about it. Every hour I do not spend in a store or in traffic is an hour I can spend building or with my daughters. As a founder and a mom of 3, time is the 1 thing I can never get more of. So I buy it back wherever I can.
 
-![The tools I use to run 3 businesses as a mom: Claude for building, decisions and organization, ChatGPT for quick answers, Instacart for groceries, and Uber and Uber Eats for rides and busy-day meals.](/images/uploads/i-built-3-businesses-and-a-full-ai-app-using-only-two-tools-here-is-exactly-how-chart.jpg)
+![The tools I use to run 3 businesses as a mom: Claude for building, decisions and organization, ChatGPT for quick answers, Instacart for groceries, and Uber and Uber Eats for rides and busy-day meals.](/images/uploads/i-built-3-businesses-and-a-full-ai-app-using-only-two-tools-here-is-exactly-how-chart-v2.jpg)
 
 ## Why I Want to Help Other Women Use AI to Build
 

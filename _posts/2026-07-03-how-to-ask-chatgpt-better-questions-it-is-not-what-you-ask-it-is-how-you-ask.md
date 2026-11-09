@@ -33,7 +33,7 @@ Even OpenAI, the company behind ChatGPT, says the same thing in its own [prompti
 
 Every great question I ask has the same 5 parts. Learn them once and you can use them in any AI tool.
 
-![How to ask ChatGPT a question: adding 1 sentence, "Let's think step by step," raised a model's score on math word problems from 17.7% to 78.7% in a 2022 study. The 5 steps: tell it who to be, give your real situation, say what you want back, set your limits, let it ask you first.](/images/uploads/how-to-ask-chatgpt-a-question-chart.jpg)
+![How to ask ChatGPT a question: adding 1 sentence, "Let's think step by step," raised a model's score on math word problems from 17.7% to 78.7% in a 2022 study. The 5 steps: tell it who to be, give your real situation, say what you want back, set your limits, let it ask you first.](/images/uploads/how-to-ask-chatgpt-a-question-chart-v2.jpg)
 
 ### Step 1: Tell it who to be
 

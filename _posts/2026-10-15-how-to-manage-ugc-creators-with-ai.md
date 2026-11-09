@@ -26,7 +26,7 @@ Every new creator asks the same 10 questions. Where do I start? Do I need an iPh
 
 Here's the part that surprised me. Asana, the work software company, surveyed over 10,000 knowledge workers for its [Anatomy of Work Index](https://asana.com/resources/why-work-about-work-is-bad) and found that 60% of their time goes to "work about work": chasing updates, searching for information and repeating themselves. Only 40% goes to the skilled work they were hired to do.
 
-![Bar chart showing knowledge workers spend 60% of their time on work about work and only 40% on skilled work, from Asana's Anatomy of Work Index](/images/uploads/how-to-manage-ugc-creators-with-ai-chart.png)
+![Bar chart showing knowledge workers spend 60% of their time on work about work and only 40% on skilled work, from Asana's Anatomy of Work Index](/images/uploads/how-to-manage-ugc-creators-with-ai-chart-v2.jpg)
 
 A creator manager's version of "work about work" is answering the same question for the 20th time. That's exactly the part AI is great at.
 

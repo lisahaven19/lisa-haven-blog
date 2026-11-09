@@ -39,7 +39,7 @@ Fix those 4 things and you are ahead of most blogs on the internet.
 
 ## How to use AI to write blog posts that rank in 6 steps
 
-![The 6 step system to rank blog posts with AI: find the search, check the results, answer first, add your story, let AI edit, link and share. All with free tools.](/images/uploads/how-to-use-ai-to-write-blog-posts-that-rank-chart.jpg)
+![The 6 step system to rank blog posts with AI: find the search, check the results, answer first, add your story, let AI edit, link and share. All with free tools.](/images/uploads/how-to-use-ai-to-write-blog-posts-that-rank-chart-v2.jpg)
 
 ### Step 1: Find what people actually type (for free)
 

@@ -49,7 +49,7 @@ Think of it this way. ChatGPT is the big, busy department store that has a littl
 
 Good news first: you do not have to pay to try either one. Both have free plans.
 
-![Claude vs ChatGPT side by side: both main paid plans cost $20 a month. Claude leads on writing in your voice, long documents and building apps. ChatGPT leads on images, voice and everyday quick answers.](/images/uploads/claude-vs-chatgpt-chart.jpg)
+![Claude vs ChatGPT side by side: both main paid plans cost $20 a month. Claude leads on writing in your voice, long documents and building apps. ChatGPT leads on images, voice and everyday quick answers.](/images/uploads/claude-vs-chatgpt-chart-v2.jpg)
 
 Here is how the main plans line up, based on the [official Claude pricing page](https://claude.com/pricing) and the [official ChatGPT pricing page](https://chatgpt.com/pricing):
 

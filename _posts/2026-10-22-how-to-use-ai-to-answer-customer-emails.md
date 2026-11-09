@@ -26,7 +26,7 @@ Big companies solve this with support teams. Small businesses solve it with you,
 
 ## How to use AI to answer customer emails in 5 steps
 
-![The 5 step AI inbox system: sort your emails, build 1 answer bank, let AI draft, check every reply, then save the winners. About 1 hour to set up once.](/images/uploads/how-to-use-ai-to-answer-customer-emails-chart.jpg)
+![The 5 step AI inbox system: sort your emails, build 1 answer bank, let AI draft, check every reply, then save the winners. About 1 hour to set up once.](/images/uploads/how-to-use-ai-to-answer-customer-emails-chart-v2.jpg)
 
 ### Step 1: Sort your emails into 5 buckets
 

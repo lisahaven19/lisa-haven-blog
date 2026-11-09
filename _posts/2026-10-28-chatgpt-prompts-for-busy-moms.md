@@ -30,7 +30,7 @@ You cannot hand all of that to AI. But you can hand it the thinking work: the pl
 
 Every prompt in this post follows the same simple formula. Learn it once, and you can write your own for anything.
 
-![The mom mental load: mothers handle about 71% of household mental load tasks and fathers about 45%. Every good prompt has 3 parts: a clear job, your real details and the format you want.](/images/uploads/chatgpt-prompts-for-busy-moms-chart.png)
+![The mom mental load: mothers handle about 71% of household mental load tasks and fathers about 45%. Every good prompt has 3 parts: a clear job, your real details and the format you want.](/images/uploads/chatgpt-prompts-for-busy-moms-chart-v2.jpg)
 
 1. **A clear job.** Tell ChatGPT who to be. "You are my family planner" works better than "help me."
 2. **Your real details.** Ages, days, times, budget, what you already have. The more real the input, the more useful the output.

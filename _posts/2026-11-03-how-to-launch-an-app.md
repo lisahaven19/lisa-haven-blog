@@ -29,7 +29,7 @@ Here are the 7 lessons I'm learning while launching VIXA, my dating clarity app 
 
 Most "how to launch an app" guides start with code and end with a press release. Real launches have 4 stages, and each one has its own work.
 
-![How to launch an app in 4 stages: 1 prove it, 2 build it right, 3 submit it, 4 launch with a crew.](/images/uploads/how-to-launch-an-app-chart.png)
+![How to launch an app in 4 stages: 1 prove it, 2 build it right, 3 submit it, 4 launch with a crew.](/images/uploads/how-to-launch-an-app-chart-v2.jpg)
 
 1. **Prove it.** Make sure the problem is real before anyone writes code.
 2. **Build it right.** Product, legal pages, privacy, pricing and screenshots.
