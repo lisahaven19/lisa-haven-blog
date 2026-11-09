@@ -54,7 +54,7 @@ I am not alone in thinking this way. The Society for Human Resource Management, 
 
 The best way to handle a hard goodbye is to make it rare. Steps 1 and 2 are how you avoid most of them. Steps 3 and 4 are how you handle the rest, fairly.
 
-![The 1 warning rule in 4 steps: set clear KPIs, test with a paid trial, give 1 fair warning in writing, then decide. Only 20% of employees worldwide are engaged at work, per Gallup.](/images/uploads/when-to-let-an-employee-go-chart.jpg)
+![The 1 warning rule in 4 steps: set clear KPIs, test with a paid trial, give 1 fair warning in writing, then decide. Only 20% of employees worldwide are engaged at work, per Gallup.](/images/uploads/when-to-let-an-employee-go-chart-v2.jpg)
 
 ### Step 1: Prevent it with clear KPIs from day 1
 
