@@ -66,6 +66,8 @@ My websites, including this blog and vixaapp.ai, live on [Netlify](https://www.n
 
 You do not need to understand code to use this. You need to understand what you want the page to say.
 
+For bots that need to stay on all day, like the one that answers my creators, I use Railway. Here is [what Railway app is and how I use it to automate 3 companies](https://lisahaven.co/blog/what-is-railway-app/).
+
 ## The workplace: where AI sees your business
 
 ### 5. Monday.com

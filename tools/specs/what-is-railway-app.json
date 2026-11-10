@@ -1,0 +1,42 @@
+{
+  "slug": "what-is-railway-app",
+  "category": "AI & Tech",
+  "cover": {
+    "title": "What Is",
+    "accent": "Railway App?",
+    "subtitle": "How I automate 3 companies with AI bots that run 24/7 for $5 a month",
+    "tagline": "Plus the prompt to build your first bot."
+  },
+  "pins": [
+    {
+      "title": "What Is",
+      "accent": "Railway App?",
+      "subtitle": "The $5 a month tool that runs my AI bots 24/7",
+      "tagline": "I run 3 companies with AI."
+    },
+    {
+      "title": "My Bot Answers My Creators in",
+      "accent": "1 Second",
+      "subtitle": "How I automate my Discord, Slack and creator program with Railway",
+      "tagline": "No tech team needed."
+    },
+    {
+      "title": "My Creator Manager Bot Costs",
+      "accent": "$5 a Month",
+      "subtitle": "What happened when I let AI run my creator program",
+      "tagline": "Founder math."
+    },
+    {
+      "title": "How to Build Your First",
+      "accent": "AI Bot",
+      "subtitle": "No coding needed. Copy my prompt and run it on Railway",
+      "tagline": "Prompt included."
+    },
+    {
+      "title": "How I Automate",
+      "accent": "3 Companies",
+      "subtitle": "The AI setup that works while I take care of my daughters",
+      "tagline": "Mom. CEO. AI."
+    }
+  ]
+}

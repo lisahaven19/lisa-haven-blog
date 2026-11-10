@@ -141,6 +141,8 @@ My honest advice is to run your morning brief for a full month before you add an
 
 If your inbox is where your hours go, start there. Here is my step by step guide on [how to use AI to answer customer emails](https://lisahaven.co/blog/how-to-use-ai-to-answer-customer-emails/), with prompts you can copy.
 
+When you want an agent that runs 24/7 inside apps like Discord or Slack, it needs a home online. Mine lives on Railway. Here is [what Railway app is and how I use it](https://lisahaven.co/blog/what-is-railway-app/).
+
 ## What This Actually Changes for You
 
 I'm a mother of 3 building 3 companies at once, and I don't have a spare hour every morning to dig through 6 apps to figure out what matters. My agent hands me that hour back every day. It also gives me something worth more than time. I start each day with clarity instead of chaos, and clarity builds on itself.

@@ -206,5 +206,18 @@
   {"type":"compare","cols":[
    {"title":"Most makeup wipes","items":["Thin and small","Tear halfway across your face","3 to 4 wipes for 1 face","Not made for Gen Z"]},
    {"title":"Havenly","style":"pink","items":["Bigger, full-face size","Thicker, holds up to the last swipe","1 wipe does the job","Built for Gen Z, first run of 30,000 units"]}]},
-  {"type":"rule","text":"If babies get the thicker wipe, so do we."}]}
+  {"type":"rule","text":"If babies get the thicker wipe, so do we."}]},
+
+{"slug":"what-is-railway-app","out":"what-is-railway-app-chart.jpg",
+ "eyebrow":"What is Railway app","title":"1 tool, <i>3 companies</i>",
+ "blocks":[
+  {"type":"steps","items":[
+   {"t":"VIXA","d":"Answers about 20 creators in Discord, SideShift messages and my creator manager on Slack. 24/7, in about 1 second.","hl":true},
+   {"t":"LUMAPROMPT.AI","d":"Posts on social media on its own, while I work on everything else."},
+   {"t":"Havenly","d":"Next: customer service and emails, once the brand launches."}]},
+  {"type":"bars","head":"Monthly cost","items":[
+   {"label":"Full-time creator manager","value":"Thousands","pct":100,"color":"ink"},
+   {"label":"My bot on Railway","value":"$5","pct":1.5,"color":"rose"}],
+   "source":"Railway Hobby plan: $5 a month (railway.com/pricing)"},
+  {"type":"rule","label":"My rule:","text":"If a task repeats, a bot can do it."}]}
 ]}
