@@ -89,7 +89,7 @@ A creator asked a question. The bot answered in 1 second. And the answer was fan
 
 Here is a real reply from my bot to one of my creators this week. I hid the names to protect their privacy.
 
-![A real Discord reply from VIXA Assistant, the AI bot that runs on Railway, answering a creator about her 3 submitted videos in about 1 minute, with names hidden.](/images/uploads/what-is-railway-app-discord-bot.jpg)
+![A real Discord reply from VIXA Assistant, the AI bot that runs on Railway, answering a creator about her 3 submitted videos within seconds, with names hidden.](/images/uploads/what-is-railway-app-bot-reply.jpg)
 
 That is not a knock on anyone. People are busy. One of my managers was also a mom, and nobody can answer instantly every single time. That is life. But a bot can.
 
