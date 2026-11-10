@@ -437,6 +437,7 @@
       animation: marqueeLeft 28s linear infinite;
     }
     .related-marquee-track:hover { animation-play-state: paused; }
+    @media (prefers-reduced-motion: reduce) { .related-marquee-track { animation: none; } .related-marquee-outer { overflow-x: auto; } }
 
     .related-card {
       background:var(--white); border:1px solid rgba(0,0,0,0.07);
@@ -885,11 +886,14 @@
         </a>`;
       // Duplicate the set so the marquee loops seamlessly (translateX -50%)
       const cards = pool.map(makeCard).join('');
+      // Slow, steady speed no matter how many posts: about 30px a second
+      // (each card is 240px wide plus an 18px gap).
+      const marqueeSeconds = Math.round(pool.length * 258 / 30);
       return `
         <div class="related-section sr sr-up">
           <div class="related-eyebrow">More from Lisa Haven</div>
           <div class="related-marquee-outer">
-            <div class="related-marquee-track">
+            <div class="related-marquee-track" style="animation-duration:${marqueeSeconds}s">
               ${cards}${cards}
             </div>
           </div>
