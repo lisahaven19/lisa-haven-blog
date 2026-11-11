@@ -366,6 +366,20 @@
     footer .footer-bottom { background: linear-gradient(90deg, #0A0A0A 0%, #3d1e25 55%, #C47E8A 100%); border-top: none; }
     footer .footer-copy { color: rgba(255,255,255,0.8); }
     footer .footer-tagline { color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; }
+    /* Footer effects: drifting gradient, rose glow on hover, fade-up menu */
+    @keyframes ftDrift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+    footer .footer-cols, footer .footer-essentials, footer .footer-bottom { background-size: 170% 100%; animation: ftDrift 14s ease-in-out infinite; }
+    footer .footer-col a { transition: color 0.25s ease, transform 0.25s ease, text-shadow 0.25s ease; }
+    footer .footer-col a:hover { color: #ffffff; transform: translateX(4px); text-shadow: 0 0 14px rgba(232,196,203,0.95), 0 0 28px rgba(196,126,138,0.7); }
+    footer .footer-cols.ft-anim .footer-col { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22,1,0.36,1); }
+    footer .footer-cols.ft-anim.ft-in .footer-col { opacity: 1; transform: none; }
+    footer .footer-cols.ft-anim .footer-col:nth-child(2) { transition-delay: 0.15s; }
+    footer .footer-cols.ft-anim .footer-col:nth-child(3) { transition-delay: 0.3s; }
+    footer .footer-cols.ft-anim .footer-col:nth-child(4) { transition-delay: 0.45s; }
+    @media (prefers-reduced-motion: reduce) {
+      footer .footer-cols, footer .footer-essentials, footer .footer-bottom { animation: none; }
+      footer .footer-cols.ft-anim .footer-col { opacity: 1; transform: none; transition: none; }
+    }
   </style>
 </head>
 <body>
@@ -641,5 +655,17 @@
   </script>
   <!-- Sign up pop-up and boxes: 1 shared file for every page -->
   <script src="/haven-signup.js"></script>
+  <script id="footer-fx">
+    (function () {
+      var cols = document.querySelector('footer .footer-cols');
+      if (!cols || !('IntersectionObserver' in window)) return;
+      if (cols.querySelector('.footer-col.reveal')) return;
+      cols.classList.add('ft-anim');
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { cols.classList.add('ft-in'); io.disconnect(); } });
+      }, { threshold: 0.15 });
+      io.observe(cols);
+    })();
+  </script>
 </body>
 </html>
