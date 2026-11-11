@@ -164,7 +164,7 @@ I woke up disoriented, wondering where I was. My eyes would not open. So much ha
 
 My nurse, Benfu, stayed with me around the clock in the hospital. On the first night, she slept right beside my bed. She was so tender and attentive, and endlessly patient with my many, many protein shake requests. I am quite sure I tested that patience. We still follow each other on Instagram, and I will never forget her kindness.
 
-![My nurse Benfu and me in Turkey, 4 days after my midface lift, my face still wrapped in bandages.](/images/uploads/facelift-in-turkey-review-my-nurse.jpg)
+<img src="/images/uploads/facelift-in-turkey-review-my-nurse.jpg" alt="My nurse Benfu and me in Turkey, 4 days after my midface lift, my face still wrapped in bandages." style="width:100%;max-width:420px;height:auto;display:block;margin:24px auto;">
 
 Surprisingly, my face did not hurt much. My neck was another story. Because of the neck lift, it felt as though someone was pressing on my throat, and for the first few days, swallowing felt almost impossible. That tightness lasted about 2 weeks before it slowly began to ease.
 
