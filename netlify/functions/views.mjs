@@ -10,6 +10,17 @@ const RENAMED = {
   'midface-lift-in-turkey-review': ['facelift-in-turkey-review'],
 };
 
+// Read counts copied from the old counter on Nov 11, 2026 (the old service is slow to reach from here).
+const SEED = {
+  'how-to-ask-chatgpt-better-questions': 606, 'from-zero-to-three-companies': 160, 'why-i-went-carnivore': 119,
+  'what-is-vixa': 102, 'how-to-create-an-ai-agent-with-claude': 66, 'how-to-use-ai-without-sounding-like-ai': 39,
+  'chatgpt-prompts-for-busy-moms': 18, 'how-to-use-chatgpt-to-meal-plan': 17, 'why-i-created-havenly-makeup-remover-wipes-for-gen-z': 16,
+  'what-to-do-when-apple-rejects-your-app': 16, 'how-to-use-ai-to-answer-customer-emails': 16, 'chatgpt-custom-instructions': 15,
+  'midface-lift-in-turkey-review': 15, 'how-to-manage-ugc-creators-with-ai': 12, 'remove-your-address-from-the-internet': 12,
+  'how-to-lock-in-mentally': 12, 'how-to-use-ai-to-write-blog-posts-that-rank': 12, 'claude-vs-chatgpt': 10,
+  'when-to-let-an-employee-go': 8, 'how-to-launch-an-app': 8, 'chatgpt-memory': 5,
+};
+
 const json = (status, body) => new Response(JSON.stringify(body), {
   status, headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' }
 });
@@ -33,6 +44,9 @@ async function load(store, slug) {
   const key = 'reads/' + slug;
   const cur = await store.getWithMetadata(key, { type: 'json' });
   let rec = (cur && cur.data) || { base: 0, baseOk: false, hits: 0 };
+  if (!rec.baseOk && SEED[slug] !== undefined) {
+    rec = { ...rec, base: SEED[slug], baseOk: true }; await store.setJSON(key, rec);
+  }
   if (!rec.baseOk) {
     let base = 0, ok = true;
     for (const s of [slug, ...(RENAMED[slug] || [])]) {
