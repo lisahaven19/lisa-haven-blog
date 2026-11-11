@@ -16,7 +16,7 @@ He met my eyes, completely calm, and said, "Lisa, this is normal."
 
 This is my honest **midface lift in Turkey review**, written for the woman who is quietly researching at midnight, the way I once was. The short answer: I had 9 procedures in a single day, including a deep plane midface lift and neck lift rather than a full facelift, and at 3 months I would rate my results a 9 out of 10. But the recovery was longer, harder and far more emotional than any before and after photo prepared me for. In the pages below, I share every photo, the AI prompt I used to choose my surgeon, my real recovery timeline and the lessons I wish someone had shared with me first.
 
-A quick note before we begin: this post is not sponsored. I paid for my surgery myself, and I receive no discount, perk or commission for telling this story. And every photo you see here is shared exactly as it was taken, with no filter.
+A quick note before we begin: this post is not sponsored by Dr. Vasfi, his clinic or anyone else, in any way. I paid for my surgery myself, and I receive no discount, perk or commission for telling this story. When his team asked me for a testimonial, I told them I would only share my completely honest experience, and they said that was even better. And every photo you see here is shared exactly as it was taken, with no filter.
 
 ## Why I Chose to Do It
 
@@ -54,7 +54,7 @@ The final decision, however, came down to 2 things no AI can measure for you.
 
 **The second was trust.** I simply felt safe with him, and that feeling deserves a vote.
 
-On testimonials, I will say this. Some clinics do reward patients for reviews. But if a woman's face were truly botched, no incentive in the world would convince her to praise that surgeon on camera. His patients speak about him with genuine warmth, 1 after another, and that told me a great deal.
+On testimonials, I will say this. Some clinics do reward patients for reviews. But if a woman's face were truly botched, no incentive in the world would convince her to praise that surgeon on camera. His page is full of real patients on video, 1 after another, speaking about him with genuine warmth. That is a huge sign, because a patient who was unhappy with her results would never do that for her doctor.
 
 > AI did the research. My intuition made the decision.
 
