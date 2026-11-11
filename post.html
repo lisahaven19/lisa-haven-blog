@@ -1151,10 +1151,24 @@
         setupFloatingNext(posts, slug);
 
         // ── View counter ──
-        fetch(`${COUNTER}/hit/${NS}/views-${slug}`)
-          .then(r => r.json())
-          .then(d => { document.getElementById('viewCount').textContent = d.value.toLocaleString(); })
-          .catch(() => { document.getElementById('viewCount').textContent = '1'; });
+        (() => {
+          const out = document.getElementById('viewCount');
+          const seenKey = 'read-' + slug;
+          let seen = false;
+          try { seen = !!sessionStorage.getItem(seenKey); } catch (e) {}
+          const ctl = new AbortController();
+          setTimeout(() => ctl.abort(), 6000);
+          const req = seen
+            ? fetch('/api/views?slug=' + encodeURIComponent(slug), { signal: ctl.signal })
+            : fetch('/api/views', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slug }), signal: ctl.signal });
+          req.then(r => r.json())
+            .then(d => {
+              if (typeof d.value !== 'number') throw new Error('no count');
+              out.textContent = Math.max(1, d.value).toLocaleString();
+              try { sessionStorage.setItem(seenKey, '1'); } catch (e) {}
+            })
+            .catch(() => { out.parentElement.style.display = 'none'; });
+        })();
 
         // ── Likes ──
         const likeBtn = document.getElementById('likeBtn');
