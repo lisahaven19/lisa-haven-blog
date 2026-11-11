@@ -178,6 +178,8 @@ Surprisingly, my face did not hurt much. My neck was another story. Because of t
 
 <details style="margin:24px 0;"><summary onclick="this.style.display='none'" style="list-style:none;cursor:pointer;"><img src="/images/uploads/facelift-in-turkey-review-day-1-blurred.jpg" alt="Sensitive image: blurred photos from the day after my surgery. Tap to view." style="width:100%;height:auto;display:block;"></summary><img src="/images/uploads/facelift-in-turkey-review-day-1.jpg" alt="Day 1 after my midface lift in Turkey: my face taped and bandaged, and the stitches under my chin from the neck lift." style="width:100%;height:auto;display:block;"></details>
 
+Looking at these photos from the day after surgery, my first thought was: Halloween in August! Who needs a costume when I look like this? I could just show up, ready to go. I laughed about it on the outside, but inside, seeing myself like that was truly depressing.
+
 ### Day 3: the day I cried
 
 This was the day my bandages came off. My face was enormously swollen, my nose looked unrecognizable and 1 eye had crossed. I had never seen myself that way, and I truly believed something had gone wrong.
@@ -205,6 +207,8 @@ What carried me through was research. I read story after story from women who ha
 ### Month 3: finally, me
 
 Somewhere between 2 and a half and 3 months, I looked in the mirror and finally recognized the woman I had hoped to see. I am overjoyed.
+
+And this is still not the final result. At 11 weeks, my nose is still swollen. A nose can take 6 months to a full year to settle, especially a third surgery like mine, with everything that was rebuilt inside it. So I am practicing patience. As Dr. Vasfi reminds his patients all over his Instagram, trust the process. I truly cannot wait to see the final shape.
 
 ## My Honest Review at 3 Months
 
