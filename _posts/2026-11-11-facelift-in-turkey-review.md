@@ -14,7 +14,7 @@ On the third day, the nurse gently unwrapped my bandages. I looked into the mirr
 
 He met my eyes, completely calm, and said, "Lisa, this is normal."
 
-This is my honest **facelift in Turkey review**, written for the woman who is quietly researching at midnight, the way I once was. The short answer: I had 9 procedures in a single day, and at 3 months I would rate my results a 9 out of 10. But the recovery was longer, harder and far more emotional than any before and after photo prepared me for. In the pages below, I share every photo, the AI prompt I used to choose my surgeon, my real recovery timeline and the lessons I wish someone had shared with me first.
+This is my honest **facelift in Turkey review**, written for the woman who is quietly researching at midnight, the way I once was. The short answer: I had 9 procedures in a single day, including a deep plane midface lift and neck lift rather than a full facelift, and at 3 months I would rate my results a 9 out of 10. But the recovery was longer, harder and far more emotional than any before and after photo prepared me for. In the pages below, I share every photo, the AI prompt I used to choose my surgeon, my real recovery timeline and the lessons I wish someone had shared with me first.
 
 A quick note before we begin: this post is not sponsored. I paid for my surgery myself, and I receive no discount, perk or commission for telling this story. And every photo you see here is shared exactly as it was taken, with no filter.
 
@@ -138,7 +138,7 @@ My surgery took place on August 6, 2026, and lasted about 8 hours under general 
 
 1. **Revision rhinoplasty (the shape of my nose).** He rebuilt the structure using donor rib cartilage from a tissue bank, meaning cartilage donated by someone who has passed away. He straightened my nose and corrected my uneven nostrils.
 2. **A breathing correction.** He straightened my septum and opened my airways, so I now breathe more easily.
-3. **Endoscopic deep plane midface lift.** This lifts the cheeks from deep beneath the skin, through very small incisions.
+3. **Endoscopic deep plane midface lift.** To be precise, this is what I had instead of a full facelift. It lifts the cheeks from deep beneath the skin, through very small incisions.
 4. **Endoscopic brow and temple lift.** This created the softly lifted cat eye I had admired for 2 years, and my brows have never looked better.
 5. **Upper eyelid lift**, also known as upper blepharoplasty.
 6. **Lower eyelid lift**, also known as lower blepharoplasty.
