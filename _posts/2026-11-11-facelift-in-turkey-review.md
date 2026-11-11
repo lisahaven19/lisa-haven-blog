@@ -120,6 +120,8 @@ I flew first class to Istanbul, then took a short flight south to Mersin. The cl
 
 What struck me first was the people. Everyone was kind, and not in a rehearsed way. They genuinely cared, and you could feel how much they loved their work. That warmth settled my nerves and confirmed that I was in the right hands.
 
+![Facelift in Turkey trip from Miami to Mersin: the airport lounge, the flight to Istanbul, Istanbul Airport, flying south to Mersin, settling in, breakfast in bed, my welcome roses and surgery morning at the hospital.](/images/uploads/facelift-in-turkey-review-the-trip.jpg)
+
 The preparation had been just as smooth. I completed my blood work at home before leaving. We had a FaceTime consultation where I shared every concern, and I sent videos in good lighting so he could study my face in detail.
 
 When I arrived, Dr. Vasfi welcomed me with roses, a gesture he offers every patient. Then we moved through my final tests. He also pulled up my profile on his screen and showed me a preview of how my nose could look after surgery. Seeing it there, on the screen, made everything feel real.
