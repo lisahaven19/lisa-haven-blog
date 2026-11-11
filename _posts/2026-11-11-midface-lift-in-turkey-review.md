@@ -150,7 +150,7 @@ My surgery took place on August 6, 2026, and lasted about 8 hours under general 
 
 As for scars, they are virtually invisible. They rest about half an inch to 1 inch inside my hairline near my brows, behind my ears and beneath my chin.
 
-<details style="margin:24px 0;"><summary onclick="this.style.display='none'" style="list-style:none;cursor:pointer;"><img src="/images/uploads/facelift-in-turkey-review-right-after-surgery-blurred.jpg" alt="Sensitive image: a blurred photo from right after my surgery. Tap to view." style="width:100%;height:auto;display:block;"></summary><img src="/images/uploads/facelift-in-turkey-review-right-after-surgery.jpg" alt="Right after my midface lift in Turkey, still on the operating table: swollen eyes, surgical markings and fresh tape before bandages." style="width:100%;height:auto;display:block;"></details>
+<details style="margin:24px auto;max-width:420px;"><summary onclick="this.style.display='none'" style="list-style:none;cursor:pointer;"><img src="/images/uploads/facelift-in-turkey-review-right-after-surgery-blurred.jpg" alt="Sensitive image: a blurred photo from right after my surgery. Tap to view." style="width:100%;height:auto;display:block;"></summary><img src="/images/uploads/facelift-in-turkey-review-right-after-surgery.jpg" alt="Right after my midface lift in Turkey, still on the operating table: swollen eyes, surgical markings and fresh tape before bandages." style="width:100%;height:auto;display:block;"></details>
 
 ## My Midface Lift in Turkey Recovery, Week by Week
 
@@ -223,6 +223,13 @@ Thank you. You have been a true blessing in my life. You finally corrected what 
 You did more than change my face. You changed the way I feel when I look in the mirror. For years, I avoided the camera. Today, I am ready to start filming, and for the first time in a long time, I feel beautiful on camera.
 
 To your entire team, and to Benfu, the nurse who stayed by my side that first night: thank you for treating me like family when I was so far from home. I will always remember your kindness.
+
+<div style="margin:32px auto;max-width:520px;background:#FDFBF7;border:1px solid #E8E1D8;border-radius:20px;padding:28px 24px;text-align:center;">
+<div style="font-size:12px;letter-spacing:.2em;color:#A35F6D;font-weight:700;">MY SURGEON</div>
+<div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:800;margin-top:8px;color:#0A0A0A;">Dr. Vasfi Çelik</div>
+<div style="color:#555;margin-top:6px;font-size:15px;">Aesthetic, Plastic and Reconstructive Surgeon in Mersin, Turkey</div>
+<a href="https://www.instagram.com/drvasficelik/" target="_blank" rel="noopener" style="display:inline-block;margin-top:18px;background:#0A0A0A;color:#fff;padding:12px 26px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;">Follow @drvasficelik on Instagram</a>
+</div>
 
 ## What I Wish Someone Had Told Me
 
