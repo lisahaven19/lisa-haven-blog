@@ -16,6 +16,11 @@ He met my eyes, completely calm, and said, "Lisa, this is normal."
 
 This is my honest **midface lift in Turkey review**, written for the woman who is quietly researching at midnight, the way I once was. The short answer: I had 9 procedures in a single day, including a deep plane midface lift and neck lift rather than a full facelift, and at 3 months I would rate my results a 9 out of 10. But the recovery was longer, harder and far more emotional than any before and after photo prepared me for. In the pages below, I share every photo, the AI prompt I used to choose my surgeon, my real recovery timeline and the lessons I wish someone had shared with me first.
 
+<div style="margin:28px 0;padding:20px 24px;border-radius:16px;background:#FDFBF7;border:1px solid #E8E1D8;border-left:4px solid #C47E8A;">
+<div style="font-size:12px;letter-spacing:.2em;color:#A35F6D;font-weight:700;">✦ INSIDE THIS POST</div>
+<div style="margin-top:8px;line-height:1.6;">My complete before and after photo timeline, from the operating table to 11 weeks later, a side by side video, my trip from Miami to Mersin and the AI prompt I used to choose my surgeon. Every photo is unfiltered, so keep scrolling to see it all.</div>
+</div>
+
 A quick note before we begin: this post is not sponsored by Dr. Vasfi, his clinic or anyone else, in any way. I paid for my surgery myself, and I receive no discount, perk or commission for telling this story. When his team asked me for a testimonial, I told them I would only share my completely honest experience, and they said that was even better. And every photo you see here is shared exactly as it was taken, with no filter.
 
 ## Why I Chose to Do It
@@ -23,6 +28,9 @@ A quick note before we begin: this post is not sponsored by Dr. Vasfi, his clini
 I am 41. I am a mother of 3 daughters, I run [3 companies](https://lisahaven.co/blog/from-zero-to-three-companies/), and I am the face of my brands.
 
 For a long time, I quietly avoided the camera. I had never made peace with my nose, and I could see my eyes beginning to soften and droop. I noticed it in every video I filmed and every photo I shared. When your face is part of your business, that kind of insecurity costs you more than confidence. It costs you content, connection and, eventually, growth.
+
+<img src="/images/uploads/facelift-in-turkey-review-before.jpg" alt="Before my midface lift in Turkey: my face with full makeup, before surgery." style="width:100%;max-width:420px;height:auto;display:block;margin:24px auto;">
+<p style="text-align:center;font-size:14px;color:#777;margin-top:-12px;">Before surgery, in full makeup. The after photos are further down.</p>
 
 This was my third nose surgery, so I wanted it done right, and done for good. Over the years, I had also spent thousands of dollars on Botox and fillers. There is nothing wrong with either, but I wanted something lasting. I wanted to begin caring for myself now, with intention, rather than chasing small fixes later.
 
