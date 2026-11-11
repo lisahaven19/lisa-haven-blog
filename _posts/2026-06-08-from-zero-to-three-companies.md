@@ -125,7 +125,7 @@ Now tell me in the comments: **what time of day do you do your best work?** I re
 - [How to Lock In Mentally and Finish 2026 Strong](/blog/how-to-lock-in-mentally/)
 - [AI Tools for Entrepreneurs: The 9 I Actually Use](/blog/ai-tools-for-entrepreneurs/)
 - [How to Create an AI Agent with Claude](/blog/how-to-create-an-ai-agent-with-claude/)
-- [Facelift in Turkey: My Honest Review and Recovery Timeline](/blog/facelift-in-turkey-review/)
+- [Midface Lift in Turkey: My Honest Review and Recovery Timeline](/blog/midface-lift-in-turkey-review/)
 
 > "She considers a field and buys it; out of her earnings she plants a vineyard."
 >

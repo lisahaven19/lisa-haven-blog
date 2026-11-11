@@ -11,6 +11,18 @@
 
 # Send every www and http address straight to https://lisahaven.co in 1 single hop
 [[redirects]]
+  from = "/blog/facelift-in-turkey-review/*"
+  to = "/blog/midface-lift-in-turkey-review/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/facelift-in-turkey-review"
+  to = "/blog/midface-lift-in-turkey-review/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "http://www.lisahaven.co/*"
   to = "https://lisahaven.co/:splat"
   status = 301

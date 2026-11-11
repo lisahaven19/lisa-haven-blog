@@ -148,7 +148,7 @@ That 1 word does 3 things:
 2. **It asks for options.** 2 replies to choose from, not 1 answer to accept.
 3. **It keeps me in charge.** AI gives me the read. I make the decision, and I make it faster.
 
-I use this every day for creator questions, customer messages, business choices and even my own texts. AI does not make my decisions for me. It helps me make better ones, quicker. If you are wondering which tool to talk to, here is my honest [Claude vs ChatGPT comparison](https://lisahaven.co/blog/claude-vs-chatgpt/). I even used these steps to compare 3 plastic surgeons before my [facelift in Turkey review](https://lisahaven.co/blog/facelift-in-turkey-review/).
+I use this every day for creator questions, customer messages, business choices and even my own texts. AI does not make my decisions for me. It helps me make better ones, quicker. If you are wondering which tool to talk to, here is my honest [Claude vs ChatGPT comparison](https://lisahaven.co/blog/claude-vs-chatgpt/). I even used these steps to compare 3 plastic surgeons before my [midface lift in Turkey](https://lisahaven.co/blog/midface-lift-in-turkey-review/).
 
 ## What is the best way to ask ChatGPT questions after the first answer?
 
