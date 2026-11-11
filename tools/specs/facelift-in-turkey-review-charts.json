@@ -1,0 +1,15 @@
+{"charts":[
+ {"slug":"facelift-in-turkey-review","out":"facelift-in-turkey-review-chart.jpg",
+  "eyebrow":"Facelift in Turkey recovery timeline","title":"What healing <i>really</i> looked like",
+  "sub":"My real timeline after 9 procedures in 1 day. Yours may be different.",
+  "blocks":[
+   {"type":"timeline","items":[
+     {"time":"Day 1 to 2","d":"Could not open my eyes. A nurse stayed with me 24/7."},
+     {"time":"Day 3","d":"Bandages off. Swollen, 1 eye crossed. I cried."},
+     {"time":"Weeks 1 to 2","d":"Neck felt so tight it was hard to swallow."},
+     {"time":"Day 10","d":"Flew home. My surgeon advises 14 days."},
+     {"time":"Weeks 2 to 10","d":"Stayed home. Watery eyes, sunglasses outside."},
+     {"time":"Month 3","d":"The real results finally started to show."},
+     {"time":"Month 12","d":"When I will judge the final result."}]},
+   {"type":"rule","label":"My rule:","text":"Plan for 3 months of hiding, not 2 weeks."}]}
+]}
