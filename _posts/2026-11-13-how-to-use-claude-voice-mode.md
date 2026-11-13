@@ -12,6 +12,10 @@ draft: false
 ---
 Today I planned 2 blog posts without touching my keyboard. I was driving for about an hour to a photo shoot for Havenly and my blog, and I talked the whole way. Topics, stories, my opinions, the details. By the time I parked, both posts were planned.
 
+![My real drive to the Havenly photo shoot: Claude voice mode open on my laptop in the passenger seat, planning today's blog posts while I drive.](/images/uploads/how-to-use-claude-voice-mode-drive.jpg)
+
+*The real moment: Claude in voice mode on the passenger seat while I drove. I just talked, eyes on the road.*
+
 That is how I use Claude voice mode. And once you learn it, you will never look at "I don't have time" the same way again.
 
 So, how do you use Claude voice mode? **Open the Claude app, tap the voice button next to the message box, pick a voice, and start talking. Claude listens, answers out loud, and saves the whole conversation as text in your chat.** That is it. The magic is in what you ask it to do.
@@ -76,6 +80,12 @@ My CEO dashboard and to-do list.
 I am very structured. I like knowing exactly what my week looks like before it starts. So I built a CEO dashboard with Claude, mostly by talking to it. It holds my priorities for VIXA, Havenly and LUMAPROMPT.AI, my deadlines, and my to-do list.
 
 Now it is the foundation of my whole week. Every morning I ask about it, and every Sunday I plan the next week from it.
+
+![My CEO Command Center, the dashboard I built with Claude: open tasks, top priorities, what is due today, and pinned sticky notes like building the Havenly website on Shopify, checking in with my developers, gym by 12 and my note to self.](/images/uploads/how-to-use-claude-voice-mode-dashboard.jpg)
+
+*My CEO Command Center, built with Claude. This is a sample version: I swapped my real to-do list for everyday tasks to keep my business plans private.*
+
+When I ask Claude by voice to update it, we go over it together. "Move the Shopify site to Monday. Mark the developer check-in done. Add gym by 12." It reads my list, changes it, and tells me what is left.
 
 You do not need to be technical to build your own. Start with this:
 
