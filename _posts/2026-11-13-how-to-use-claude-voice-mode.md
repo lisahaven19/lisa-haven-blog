@@ -100,7 +100,7 @@ At the end, give me a 3 line recap I can read later when I park.
 
 My CEO dashboard and to-do list.
 
-I am very structured. I like knowing exactly what my week looks like before it starts. So I built a CEO dashboard with Claude, mostly by talking to it. It holds my priorities for VIXA, Havenly and LUMAPROMPT.AI, my deadlines, and my to-do list.
+I am very structured. I like knowing exactly what my week looks like before it starts. So I built a CEO dashboard with Claude, mostly by talking to it. It holds my priorities for all 3 of my companies, my deadlines, and my to-do list.
 
 Now it is the foundation of my whole week. Every morning I ask about it, and every Sunday I plan the next week from it.
 
