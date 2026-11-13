@@ -174,6 +174,12 @@
       "title": "Done with group chat",
       "accent": "guesswork.",
       "sub": "Why I built a dating clarity app for women."
+    },
+    "claude-chrome-extension": {
+      "eyebrow": "lisahaven.co · AI & Tech",
+      "title": "Claude booked",
+      "accent": "my trip.",
+      "sub": "My exact prompt, plus my Haven Spa Score."
     }
   }
 }

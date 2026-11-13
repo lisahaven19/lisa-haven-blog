@@ -56,7 +56,7 @@ What makes it powerful for founders is that Claude can connect to the tools you 
 
 ### 3. Claude in Chrome
 
-This is the one most founders have never tried. [Claude in Chrome](https://support.claude.com/en/articles/12012173-claude-in-chrome) is a browser extension that lets Claude work inside websites for you: click, read, fill in forms and pull data. It is how my keyword research happened this morning. It is also how my Pinterest pins get uploaded with every title, description and board filled in.
+This is the one most founders have never tried. [Claude in Chrome](https://support.claude.com/en/articles/12012173-claude-in-chrome) is a browser extension that lets Claude work inside websites for you: click, read, fill in forms and pull data. It is how my keyword research happened this morning. It is also how my Pinterest pins get uploaded with every title, description and board filled in. It even found and booked my last vacation, and I show the exact prompt in [how the Claude Chrome extension booked my trip](https://lisahaven.co/blog/claude-chrome-extension/).
 
 You stay in control. It asks before it does anything big, like sending or buying.
 

@@ -92,7 +92,7 @@ Rules:
 
 I am not a developer, and I do not have a computer science degree. Claude designed the layout of VIXA, then HAVENLY, then this blog. Then Claude Code [helped me build the real app infrastructure](https://lisahaven.co/blog/i-built-3-businesses-and-a-full-ai-app-using-only-two-tools-here-is-exactly-how/) in 1 very long day.
 
-Claude can also build small working tools right inside the chat: a pricing calculator, a content calendar, a simple dashboard. You describe it in plain English, and you get something you can click and use.
+Claude can also build small working tools right inside the chat: a pricing calculator, a content calendar, a simple dashboard. You describe it in plain English, and you get something you can click and use. And with the Chrome extension, Claude can even work inside websites for you. Here is [how the Claude Chrome extension booked my trip](https://lisahaven.co/blog/claude-chrome-extension/) on Expedia.
 
 ChatGPT can write code too, and many developers use it daily. But for a non-technical founder who wants to describe an idea and see it come to life, Claude has been the better teacher and builder for me.
 

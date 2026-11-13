@@ -1,0 +1,24 @@
+{
+  "slug": "claude-chrome-extension",
+  "category": "AI & Tech",
+  "cover": {"title": "Claude Chrome Extension:", "accent": "How It Booked My Trip",
+            "subtitle": "My exact prompt, Expedia on autopilot and an all inclusive under $1,000 a night",
+            "tagline": "Plus my Haven Spa Score."},
+  "pins": [
+    {"title": "Claude Chrome Extension:", "accent": "How It Booked My Trip",
+     "subtitle": "I talked to it like a travel agent. It found my dream resort on Expedia.",
+     "tagline": "Prompt included.", "photo": "../images/uploads/lisa-circle-photo.jpg"},
+    {"title": "AI Became My", "accent": "Travel Agent",
+     "subtitle": "How Claude planned my Cancun spa trip, on budget, in 1 conversation",
+     "tagline": "No agent fee. No stress."},
+    {"title": "The AI Prompt That Plans", "accent": "Your Whole Vacation",
+     "subtitle": "Copy it, add your budget and let Claude do the searching",
+     "tagline": "Copy and paste."},
+    {"title": "How to Use AI to", "accent": "Plan a Trip",
+     "subtitle": "5 simple steps, from your wish list to the checkout page",
+     "tagline": "You stay in charge of the last click.", "photo": "../images/uploads/lisa-circle-photo.jpg"},
+    {"title": "I Let AI Book My", "accent": "Spa Weekend",
+     "subtitle": "Couples massage, ocean views and a 9.5 Haven Spa Score",
+     "tagline": "Every spa gets a score."}
+  ]
+}
