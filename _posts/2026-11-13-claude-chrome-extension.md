@@ -5,7 +5,7 @@ emoji: ✈️
 date: 2026-11-13T01:00:00.000-05:00
 readTime: 8 min read
 excerpt: "I opened Claude in Chrome, talked to it like a travel agent and it found my dream all inclusive in Cancun, on budget. Here is the exact prompt."
-image: /images/uploads/claude-chrome-extension-cover-hd.jpg
+image: /images/uploads/claude-chrome-extension-cover-tall.jpg
 seoTitle: "Claude Chrome Extension: How It Booked My Trip"
 metaDescription: "How the Claude Chrome extension found and booked my Cancun all inclusive on Expedia, under $1,000 a night. My exact prompt, the spa review and every photo."
 draft: false
