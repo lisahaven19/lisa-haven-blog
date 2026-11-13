@@ -3,7 +3,7 @@ title: "How to Use Claude Voice Mode as a Busy Mom"
 category: AI & Tech
 emoji: 🎙️
 date: 2026-11-13T12:45:00.000-05:00
-readTime: 10 min read
+readTime: 11 min read
 excerpt: "How to use Claude voice mode to plan your day, build your to-do list and time block your calendar while you get ready. My real morning routine as a mom of 3 running 3 companies."
 image: /images/uploads/how-to-use-claude-voice-mode-cover.png
 seoTitle: "How to Use Claude Voice Mode as a Busy Mom (My Routine)"
@@ -72,6 +72,29 @@ Keep your answers short, since I am getting ready while we talk.
 ```
 
 Tip: the last line matters. In voice mode, long answers feel even longer. Ask for short answers and Claude will keep it moving.
+
+## My school pickup drive is my second office
+
+Picking up my girls from school is about 1 hour in the car, every single day. That hour used to feel lost. Now it is one of my most productive parts of the day.
+
+I talk to Claude the whole way. (Hands on the wheel, eyes on the road. I talk, I do not read.) Here is what I usually cover:
+
+- **My bots and my team.** I check on the AI bots that answer my creators, ask how my creator manager is doing, and tell Claude what to update in the bot.
+- **Blog ideas.** Half of my blog titles start as a random thought in the car.
+- **What is trending and what is coming.** I ask what is changing in AI, in dating apps and in beauty, so I stay ahead.
+- **What my business needs next.** My next steps, what I am forgetting, and who I could collaborate with.
+
+I am always chatting. And honestly? I love that it never gets tired of me. I can think out loud for an hour, change my mind 5 times, and it is still right there with me.
+
+Here is a prompt for your own drive:
+
+```prompt
+I am driving for the next hour, so keep every answer short and spoken, no lists.
+Ask me 1 question at a time.
+First, help me check on my business: what did I start this week that I have not finished?
+Then ask me what is on my mind, and help me turn it into 3 clear next steps.
+At the end, give me a 3 line recap I can read later when I park.
+```
 
 ## The coolest thing I built by voice
 
