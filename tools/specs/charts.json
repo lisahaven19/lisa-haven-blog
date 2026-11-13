@@ -219,5 +219,15 @@
    {"label":"Full-time creator manager","value":"Thousands","pct":100,"color":"ink"},
    {"label":"My bot on Railway","value":"$5","pct":1.5,"color":"rose"}],
    "source":"Railway Hobby plan: $5 a month (railway.com/pricing)"},
-  {"type":"rule","label":"My rule:","text":"If a task repeats, a bot can do it."}]}
+  {"type":"rule","label":"My rule:","text":"If a task repeats, a bot can do it."}]},
+
+{"slug":"how-to-use-claude-voice-mode","out":"how-to-use-claude-voice-mode-chart.jpg",
+ "eyebrow":"How to use Claude voice mode","title":"My morning, <i>by voice</i>",
+ "blocks":[
+  {"type":"steps","items":[
+   {"t":"Ask for my brief","d":"At my makeup mirror: \u201cGive me my morning brief.\u201d","hl":true},
+   {"t":"Walk my dashboard","d":"Claude pulls up my CEO dashboard: what is due and what matters most."},
+   {"t":"Talk my priorities","d":"\u201cBlog first. Havenly call at 2. Gym at 6.\u201d"},
+   {"t":"Day is planned","d":"My to-do list and time blocked calendar are ready before I sit down."}]},
+  {"type":"rule","label":"My rule:","text":"Use the time you already have, twice."}]}
 ]}

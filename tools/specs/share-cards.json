@@ -180,6 +180,12 @@
       "title": "Claude booked",
       "accent": "my trip.",
       "sub": "My exact prompt, plus my Haven Spa Score."
+    },
+    "how-to-use-claude-voice-mode": {
+      "eyebrow": "lisahaven.co · AI & Tech",
+      "title": "I plan my day",
+      "accent": "by voice.",
+      "sub": "How to use Claude voice mode, plus my morning brief prompt."
     }
   }
 }
