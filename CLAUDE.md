@@ -15,7 +15,9 @@ The writing rules live in Lisa's "Blog Post Rulebook" artifact (claude.ai). Foll
 3. **Publish.** Commit the post, spec and images together and push to `main`. Netlify runs `build.js`, which adds the post to `blog-posts.json`, builds its page at `/blog/<slug>/` with its own title, description, share image and article details, and updates `sitemap.xml`.
 4. **Check.** Confirm the Netlify deploy is `ready` and lists `blog/<slug>/index.html`.
 5. **The Haven email (required, same day).** Every new lisahaven.co post is emailed to The Haven subscribers on Beehiiv the day it publishes. Follow `email/README.md` exactly (approved design, Nov 4, 2026). Send a test to hello@lisahaven.co first. Do not send until the Beehiiv footer has a real mailing address; never use Lisa's home address and never make one up.
-6. **Pinterest.** Upload each pin in Pinterest (Claude in Chrome) linking to `https://lisahaven.co/blog/<slug>/`, with title, description, board, alt text and tagged topics, scheduled 1 a day.
+6. **Lisa's photo.** When Lisa sends photos of herself for a post, use 1 sharp front-facing photo as the share card photo (`"photo"` on the post's entry in `tools/specs/share-cards.json`), the top-of-post `image`, and the homepage card (`cardPhoto` frontmatter, "Homepage Card Photo" in Decap).
+7. **Pinterest.** Upload each pin in Pinterest (Claude in Chrome) linking to `https://lisahaven.co/blog/<slug>/`, with title, description, board, alt text and tagged topics, scheduled 1 a day.
+8. **Google (required, every post).** Last step: in Search Console (sc-domain:lisahaven.co), URL Inspection on `https://lisahaven.co/blog/<slug>/`, then Request Indexing. No need to ask Lisa.
 
 ## Rules that matter in this repo
 
