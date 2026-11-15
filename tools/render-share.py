@@ -23,7 +23,8 @@ async def main(only):
             for v in c.values():
                 if '—' in v or '–' in v: sys.exit(f'Stopped: dash in {slug}: {v}')
             await pg.goto(TEMPLATE)
-            ok = await pg.evaluate('d => window.fill(d)', dict(c, photo=photo))
+            cp = ('file://' + os.path.join(ROOT, c['photo'].lstrip('/'))) if c.get('photo') else photo
+            ok = await pg.evaluate('d => window.fill(d)', dict(c, photo=cp))
             if not ok: sys.exit(f'Stopped: text does not fit cleanly on {slug}. Shorten it.')
             out = os.path.join(ROOT, 'images', 'uploads', 'og-card.jpg') if slug == '_site' else os.path.join(ROOT, 'images', 'og', slug + '.jpg')
             await pg.locator('#card').screenshot(path=out, type='jpeg', quality=90)
