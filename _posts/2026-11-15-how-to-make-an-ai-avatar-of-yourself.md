@@ -6,6 +6,7 @@ date: 2026-11-15T12:30:00.000-05:00
 readTime: 9 min read
 excerpt: "How I made an AI avatar of myself that looks and sounds like me, with Higgsfield for my face and ElevenLabs for my voice. My real before and after, step by step."
 image: /images/uploads/how-to-make-an-ai-avatar-of-yourself-lisa.jpg
+cardPhoto: /images/uploads/how-to-make-an-ai-avatar-of-yourself-lisa.jpg
 seoTitle: "How to Make an AI Avatar of Yourself (Real Before and After)"
 metaDescription: "How to make an AI avatar of yourself that looks and sounds like you. My step by step setup with Higgsfield and ElevenLabs, plus my real before and after video."
 draft: false

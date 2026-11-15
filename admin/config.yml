@@ -38,6 +38,7 @@ collections:
       - { label: "SEO Title", name: "seoTitle", widget: "string", required: false, hint: "Optional. The title Google shows, up to 60 characters, search phrase first." }
       - { label: "Meta Description", name: "metaDescription", widget: "text", required: false, hint: "Optional. The summary Google shows, 150 to 160 characters, with the search phrase." }
       - { label: "Cover Image", name: "image", widget: "image", required: false, hint: "Optional. Leave this empty for a post with only the title and text." }
+      - { label: "Homepage Card Photo", name: "cardPhoto", widget: "image", required: false, hint: "Optional. A photo of Lisa shown on top of this post's card on the homepage." }
       - label: "Photo Gallery"
         name: "gallery"
         widget: "list"
