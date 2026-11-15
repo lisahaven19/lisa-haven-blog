@@ -1,0 +1,44 @@
+{
+ "slug": "how-to-make-an-ai-avatar-of-yourself",
+ "category": "AI & Tech",
+ "cover": {
+  "title": "How to Make an",
+  "accent": "AI Avatar of Yourself",
+  "subtitle": "So you never have to film yourself again",
+  "tagline": "Plus my real before and after."
+ },
+ "pins": [
+  {
+   "title": "How to Make an",
+   "accent": "AI Avatar of Yourself",
+   "subtitle": "Step by step, with the 2 tools I actually use",
+   "tagline": "I run 3 companies with AI."
+  },
+  {
+   "title": "I Made an AI Version of",
+   "accent": "Myself",
+   "subtitle": "It looks like me, talks like me, and I never filmed it",
+   "tagline": "Real before and after.",
+   "photo": "../images/uploads/lisa-circle-photo.jpg"
+  },
+  {
+   "title": "Stop Filming Yourself.",
+   "accent": "Clone Yourself",
+   "subtitle": "How I made my AI avatar with Higgsfield and ElevenLabs",
+   "tagline": "Mom. CEO. AI."
+  },
+  {
+   "title": "Why Your AI Avatar Doesn't",
+   "accent": "Look Like You",
+   "subtitle": "The 1 thing most people skip, and how to fix it",
+   "tagline": "Prompt included."
+  },
+  {
+   "title": "How to Clone",
+   "accent": "Your Own Voice",
+   "subtitle": "Make your AI avatar sound like you, not a robot",
+   "tagline": "I run 3 companies with AI.",
+   "photo": "../images/uploads/lisa-circle-photo.jpg"
+  }
+ ]
+}
