@@ -375,7 +375,7 @@ try {
       const title = (p.seoTitle && p.seoTitle.trim()) ? p.seoTitle.trim() : p.title + ' | Lisa Haven';
       const desc = (p.metaDescription && p.metaDescription.trim()) ? p.metaDescription.trim() : (p.excerpt && p.excerpt.trim()) ? p.excerpt.trim() : (plain(p.body).slice(0, 155) || DEFAULT_DESC);
       const ogFile = path.join(__dirname, 'images', 'og', p.slug + '.jpg');
-      const img = fs.existsSync(ogFile) ? SITE + '/images/og/' + encodeURIComponent(p.slug) + '.jpg' : (abs(p.image) || DEFAULT_IMG);
+      const img = fs.existsSync(ogFile) ? SITE + '/images/og/' + encodeURIComponent(p.slug) + '.jpg?v=' + require('crypto').createHash('md5').update(fs.readFileSync(ogFile)).digest('hex').slice(0, 8) : (abs(p.image) || DEFAULT_IMG);
       const published = iso(p.date);
       const schema = {
         '@context': 'https://schema.org',
