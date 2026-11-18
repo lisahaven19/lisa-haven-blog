@@ -3,7 +3,7 @@ title: "How to Use ChatGPT for Poshmark Photos (No Try-On)"
 category: AI & Tech
 emoji: 👗
 date: 2026-11-17T21:30:00.000-05:00
-readTime: 7 min read
+readTime: 8 min read
 excerpt: "How I put my clothes on an AI model with ChatGPT, so I never have to try them on for a listing. My exact prompt, my real before and after, and the rules that keep your account safe."
 image: /images/uploads/chatgpt-poshmark-photos-cover.png
 seoTitle: "How to Use ChatGPT for Poshmark Photos (Real Before and After)"
@@ -113,6 +113,18 @@ Write a Poshmark listing for this item. Give me a title under 80 characters with
 ```
 
 Always read it before you post. Fix anything that is not true to your item. If you want better answers from ChatGPT in general, here is how I [ask ChatGPT a question and get a great answer](https://lisahaven.co/blog/how-to-ask-chatgpt-better-questions/).
+
+## Ask ChatGPT how much to sell it for
+
+This is my favorite bonus trick. Before you post, ask ChatGPT to research the price for you. Turn on search in ChatGPT, upload your photos and paste this:
+
+```prompt
+Look at these photos of an item I am reselling. Search eBay, Poshmark and Depop for this exact item or the closest match. Show me what it actually SOLD for, not just what people are asking, with the condition of each one. Then suggest 3 prices for my listing: a quick sale price, a fair price and a top price. My item is [new with tags / like new / gently used], size [your size].
+```
+
+Ask for sold prices, not listed prices. Anyone can ask $500 for a top. What it actually sold for tells you what buyers will pay.
+
+Always click the links ChatGPT gives you and check them yourself. Prices change fast, and AI can still pick the wrong item. Then price yours based on its real condition.
 
 ## Tools I use for my listings
 
