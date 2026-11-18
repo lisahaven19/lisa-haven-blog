@@ -199,6 +199,12 @@
    "title": "ChatGPT for",
    "accent": "Poshmark photos.",
    "sub": "Put your clothes on an AI model, no try-on."
+  },
+  "summarize-youtube-videos-with-gemini": {
+   "eyebrow": "lisahaven.co · AI & Tech",
+   "title": "Summarize YouTube",
+   "accent": "with Gemini.",
+   "sub": "My live demo, timestamps and prompts."
   }
  }
 }

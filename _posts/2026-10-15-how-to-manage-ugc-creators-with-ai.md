@@ -84,6 +84,8 @@ That last line matters. AI answers what you already decided. Anything new comes 
 
 This is where my real moment from this week comes in. 2 tracking tools meant 2 places to check, 2 logins and numbers that never quite matched. Now views and payments live in 1 place: SideShift, the creator platform where we recruit and pay creators.
 
+I found SideShift through founder videos on YouTube. Here is how I [summarize YouTube videos with Gemini](https://lisahaven.co/blog/summarize-youtube-videos-with-gemini/) so I never forget a strategy.
+
 Tasks live in Monday.com on a single board. Every creator is 1 row with 1 status: joined, account set up, warming up, ready to post, posting.
 
 Then ask AI to turn that board into a daily summary in plain words:

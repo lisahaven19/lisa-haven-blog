@@ -1,0 +1,44 @@
+{
+ "slug": "summarize-youtube-videos-with-gemini",
+ "category": "AI & Tech",
+ "cover": {
+  "title": "How to Summarize YouTube Videos",
+  "accent": "With Gemini",
+  "subtitle": "Turn any long video into a step by step plan",
+  "tagline": "Plus my live demo and prompts."
+ },
+ "pins": [
+  {
+   "title": "How to Summarize YouTube Videos",
+   "accent": "With Gemini",
+   "subtitle": "The hidden Ask button, timestamps and my exact prompts",
+   "tagline": "I run 3 companies with AI."
+  },
+  {
+   "title": "Stop Watching 2 Hour Videos.",
+   "accent": "Ask Gemini",
+   "subtitle": "Get the summary, the timestamps and the best part in seconds",
+   "tagline": "I run 3 companies with AI.",
+   "photo": "../images/uploads/lisa-circle-photo.jpg"
+  },
+  {
+   "title": "The YouTube Button Most People",
+   "accent": "Never Tap",
+   "subtitle": "How to use the Ask button to summarize any video",
+   "tagline": "Mom. CEO. AI."
+  },
+  {
+   "title": "Turn YouTube Videos Into",
+   "accent": "Your Playbook",
+   "subtitle": "My Gemini and Claude system for never forgetting a strategy",
+   "tagline": "Prompts included."
+  },
+  {
+   "title": "How I Learn Marketing From",
+   "accent": "YouTube With AI",
+   "subtitle": "The system I use to run my app's creator program",
+   "tagline": "I run 3 companies with AI.",
+   "photo": "../images/uploads/lisa-circle-photo.jpg"
+  }
+ ]
+}
