@@ -222,5 +222,6 @@ And tell me: **what is the 1 question you are going to ask ChatGPT properly this
 - [How to Use AI to Answer Customer Emails](/blog/how-to-use-ai-to-answer-customer-emails/)
 - [How to Create an AI Agent with Claude to Run Your Business](/blog/how-to-create-an-ai-agent-with-claude/)
 - [How to Use ChatGPT to Meal Plan for the Week](/blog/how-to-use-chatgpt-to-meal-plan/)
+- [How to Use ChatGPT for Poshmark Photos (No Try-On)](/blog/chatgpt-poshmark-photos/)
 
 > "Quality questions create a quality life." Tony Robbins

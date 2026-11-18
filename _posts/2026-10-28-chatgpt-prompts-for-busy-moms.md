@@ -222,6 +222,8 @@ AI is a great helper, but it is still a website. Keep your family safe:
 
 If you want to lock down your family's privacy even more, read my guide on [how to remove your address from the internet with AI](https://lisahaven.co/blog/remove-your-address-from-the-internet/).
 
+Selling clothes you no longer wear? Here is how I use [ChatGPT for Poshmark photos](/blog/chatgpt-poshmark-photos/), so I never have to try anything on.
+
 ## Tools I use for this
 
 *Some links in this post may be affiliate links, which means I may earn a small commission at no extra cost to you. I only share tools I really use.*
