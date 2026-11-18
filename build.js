@@ -135,6 +135,7 @@ if (fs.existsSync(POSTS_DIR)) {
       updated: meta.updated || '',
       image: meta.image || '',
       cardPhoto: meta.cardPhoto || '',
+      cover: meta.cover || '',
       gallery: asList(meta.gallery),
       draft: isDraft(meta),
       body: body

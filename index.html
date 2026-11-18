@@ -2417,6 +2417,11 @@
         <span class="section-label">The Blog</span>
         <h2 class="section-title">The real <em>playbook.</em></h2>
       </div>
+      <div class="lh-search" id="lhSearch" role="search">
+        <svg class="lh-search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+        <input type="search" id="lhSearchInput" placeholder="Search the blog" aria-label="Search the blog" autocomplete="off">
+        <div class="lh-search-results" id="lhSearchResults" role="listbox" hidden></div>
+      </div>
     </div>
 
     <div class="blog-cats reveal" id="blogCats">
@@ -2758,7 +2763,8 @@
       a.href = '/blog/' + encodeURIComponent(post.slug) + '/';
       a.className = 'c-card';
       a.dataset.slug = post.slug;
-      const photoHtml = post.image ? `<div class="c-photo" style="background-image:url('${post.image}')"></div>` : '';
+      const sliderImg = post.cover || post.image;
+      const photoHtml = sliderImg ? `<div class="c-photo" style="background-image:url('${sliderImg}')"></div>` : '';
       a.innerHTML = `
         ${photoHtml}
         <div class="c-card-top">
@@ -2956,6 +2962,69 @@
   var grid=document.getElementById('allPostsGrid');
   if(grid){ new MutationObserver(maybeBuild).observe(grid,{childList:true}); }
   maybeBuild();
+})();
+</script>
+
+
+<style id="lh-search-css">
+.blog-header{gap:32px;}
+.lh-search{position:relative;scroll-margin-top:90px;width:100%;max-width:380px;flex:0 1 380px;}
+.lh-search input{width:100%;box-sizing:border-box;padding:15px 20px 15px 48px;border:1px solid rgba(196,126,138,0.5);border-radius:100px;background:#F2EDE6;font:400 15px/1.2 "Inter",sans-serif;color:#0A0A0A;outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none;}
+.lh-search input::placeholder{color:#8a847d;}
+.lh-search input::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none;}
+.lh-search input:focus{border-color:#C47E8A;box-shadow:0 0 0 4px rgba(196,126,138,0.15);background:#fff;}
+.lh-search-icon{position:absolute;left:18px;top:50%;width:18px;height:18px;transform:translateY(-50%);fill:none;stroke:#C47E8A;stroke-width:2;stroke-linecap:round;pointer-events:none;}
+.lh-search-results{position:absolute;top:calc(100% + 10px);left:0;right:0;z-index:50;background:#fff;border:1px solid rgba(196,126,138,0.35);border-radius:18px;box-shadow:0 18px 40px rgba(10,10,10,0.12);padding:8px;max-height:440px;overflow-y:auto;}
+.lh-search-results[hidden]{display:none;}
+.lh-sr{display:flex;gap:14px;align-items:center;padding:10px;border-radius:12px;text-decoration:none;color:#0A0A0A;}
+.lh-sr:hover,.lh-sr.on{background:#F2EDE6;}
+.lh-sr img{width:46px;height:58px;object-fit:cover;border-radius:6px;flex:0 0 46px;background:#F2EDE6;}
+.lh-sr-cat{display:block;font:600 10px/1.4 "Inter",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#C47E8A;margin-bottom:3px;}
+.lh-sr-title{display:block;font:600 15px/1.35 "Playfair Display",Georgia,serif;}
+.lh-sr-empty{padding:16px 12px;font:400 14px/1.5 "Inter",sans-serif;color:#8a847d;text-align:center;}
+@media (max-width:900px){.blog-header{flex-direction:column;align-items:stretch;}.lh-search{max-width:none;flex:none;}}
+</style>
+<script id="lh-search-js">
+(function(){
+  var box=document.getElementById('lhSearch'), input=document.getElementById('lhSearchInput'), out=document.getElementById('lhSearchResults');
+  if(!box||!input||!out) return;
+  var posts=[], active=-1;
+  fetch('/blog-posts.json').then(function(r){return r.ok?r.json():[];}).then(function(d){
+    posts=(d||[]).map(function(p){
+      var body=(p.body||'').replace(/<[^>]+>/g,' ').replace(/[#*_>`\[\]()!]/g,' ');
+      return {p:p,t:(p.title||'').toLowerCase(),m:((p.excerpt||'')+' '+(p.category||'')+' '+(p.seoTitle||'')).toLowerCase(),b:body.toLowerCase()};
+    });
+  }).catch(function(){});
+  function esc(s){var x=document.createElement('div');x.textContent=s==null?'':s;return x.innerHTML;}
+  function run(){
+    var q=input.value.trim().toLowerCase();
+    active=-1;
+    if(q.length<2){out.hidden=true;out.innerHTML='';return;}
+    var words=q.split(/\s+/);
+    var hits=posts.map(function(x){
+      var score=0;
+      for(var i=0;i<words.length;i++){var w=words[i];
+        if(x.t.indexOf(w)>-1) score+=10; else if(x.m.indexOf(w)>-1) score+=4; else if(x.b.indexOf(w)>-1) score+=1; else return null;}
+      if(x.t.indexOf(q)>-1) score+=20;
+      return {x:x,s:score};
+    }).filter(Boolean).sort(function(a,b){return b.s-a.s||new Date(b.x.p.date)-new Date(a.x.p.date);}).slice(0,6);
+    if(!hits.length){out.innerHTML='<div class="lh-sr-empty">No posts found for \u201c'+esc(input.value.trim())+'\u201d. Try another word.</div>';out.hidden=false;return;}
+    out.innerHTML=hits.map(function(h){var p=h.x.p, img=p.cover||p.image;
+      return '<a class="lh-sr" role="option" href="/blog/'+encodeURIComponent(p.slug)+'/">'+(img?'<img src="'+esc(img)+'" alt="" loading="lazy">':'')+'<span><span class="lh-sr-cat">'+esc(p.category||'')+'</span><span class="lh-sr-title">'+esc(p.title)+'</span></span></a>';
+    }).join('');
+    out.hidden=false;
+  }
+  function mark(){var a=out.querySelectorAll('.lh-sr');a.forEach(function(el,i){el.classList.toggle('on',i===active);});if(a[active])a[active].scrollIntoView({block:'nearest'});}
+  input.addEventListener('input',run);
+  input.addEventListener('focus',function(){run();if(window.innerWidth<700)setTimeout(function(){box.scrollIntoView({block:'start',behavior:'smooth'});},250);});
+  input.addEventListener('keydown',function(e){
+    var a=out.querySelectorAll('.lh-sr');
+    if(e.key==='ArrowDown'){e.preventDefault();if(a.length){active=(active+1)%a.length;mark();}}
+    else if(e.key==='ArrowUp'){e.preventDefault();if(a.length){active=(active-1+a.length)%a.length;mark();}}
+    else if(e.key==='Enter'){if(a.length){e.preventDefault();window.location.href=(a[active>-1?active:0]).href;}}
+    else if(e.key==='Escape'){out.hidden=true;input.blur();}
+  });
+  document.addEventListener('click',function(e){if(!box.contains(e.target))out.hidden=true;});
 })();
 </script>
 
