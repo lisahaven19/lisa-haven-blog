@@ -1,0 +1,17 @@
+{
+ "slug": "chatgpt-poshmark-photos",
+ "category": "AI & Tech",
+ "cover": {
+  "title": "How to Use ChatGPT for",
+  "accent": "Poshmark Photos",
+  "subtitle": "Put your clothes on an AI model, no try-on",
+  "tagline": "Plus my real before and after."
+ },
+ "pins": [
+  {"title": "How to Use ChatGPT for", "accent": "Poshmark Photos", "subtitle": "1 hanger photo and 1 prompt, no trying anything on", "tagline": "I run 3 companies with AI."},
+  {"title": "Stop Trying On Clothes", "accent": "For Your Listings", "subtitle": "Let ChatGPT put them on an AI model in seconds", "tagline": "Prompt included.", "photo": "../images/uploads/lisa-circle-photo.jpg"},
+  {"title": "My ChatGPT Prompt for", "accent": "AI Model Photos", "subtitle": "The exact words that keep your item looking identical", "tagline": "Copy and paste."},
+  {"title": "5 Rules for AI Photos", "accent": "on Poshmark", "subtitle": "Sell faster with AI and keep your account safe", "tagline": "Real before and after."},
+  {"title": "Sell Your Closet Faster", "accent": "With ChatGPT", "subtitle": "How I turn a hanger photo into a boutique photo", "tagline": "I run 3 companies with AI.", "photo": "../images/uploads/lisa-circle-photo.jpg"}
+ ]
+}

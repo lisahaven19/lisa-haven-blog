@@ -980,6 +980,47 @@
      "text": "Face from Higgsfield. Voice from ElevenLabs. Use each tool for what it does best."
     }
    ]
+  },
+  {
+   "slug": "chatgpt-poshmark-photos",
+   "out": "chatgpt-poshmark-photos-rules.jpg",
+   "eyebrow": "How to use ChatGPT for Poshmark photos",
+   "title": "5 rules for <i>AI photos</i> on Poshmark",
+   "blocks": [
+    {
+     "type": "steps",
+     "numbers": true,
+     "items": [
+      {
+       "t": "Use your real item",
+       "d": "Photograph the actual piece. Never a stock photo or someone else's."
+      },
+      {
+       "t": "Tell ChatGPT to change nothing",
+       "d": "Same color, print, straps, buttons, length and fit."
+      },
+      {
+       "t": "Check every detail",
+       "d": "Print, trims, logos and color. Color is what AI misses most."
+      },
+      {
+       "t": "Add your real photos",
+       "d": "Front, back, tags and any flaws, so buyers see the true item."
+      },
+      {
+       "t": "Say it in the description",
+       "d": "\"First photo is AI styled. All other photos are the real item.\"",
+       "hl": true,
+       "sub": ""
+      }
+     ]
+    },
+    {
+     "type": "rule",
+     "label": "My rule:",
+     "text": "AI shows the fit. Real photos show the truth."
+    }
+   ]
   }
  ]
 }
