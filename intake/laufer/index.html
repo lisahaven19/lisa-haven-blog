@@ -57,6 +57,8 @@
 
     .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; margin-bottom: 14px; }
     .bio { border-left: 3px solid var(--rose); }
+    .bio { display: flex; gap: 26px; align-items: center; }
+    .headshot { width: 132px; height: 132px; border-radius: 50%; object-fit: cover; flex-shrink: 0; box-shadow: 0 0 0 5px var(--cream), 0 0 0 6px var(--line); }
     .bio p { color: #2B2522; margin-bottom: 12px; }
     .bio p:last-child { margin-bottom: 0; font-weight: 500; color: var(--black); }
 
@@ -128,6 +130,7 @@
       .node span { font-size: 11px; }
       .link { flex: 0.35; height: 44px; }
       .top-tag { display: none; }
+      .bio { flex-direction: column; text-align: left; align-items: flex-start; }
     }
   </style>
 </head>
@@ -174,9 +177,12 @@
     <div class="sec-head"><div class="badge">01</div><span class="eyebrow">Who I am</span></div>
     <h2>Hi Evan, I'm <em>Lisa</em></h2>
     <div class="card bio">
+      <img class="headshot" src="/images/uploads/lisa-intake-headshot.jpg" alt="Lisa Haven, Founder and CEO" width="132" height="132">
+      <div class="bio-text">
       <p>I am the Founder and CEO of 3 companies, and I run all of them with AI. <a href="https://vixaapp.ai" target="_blank">VIXA</a> is a dating clarity app for women. <a href="https://havenly.co" target="_blank">Havenly</a> is a beauty brand built for global retail shelves. <a href="https://lumaprompt.ai" target="_blank">LUMAPROMPT.AI</a> is a premium prompt platform for women.</p>
       <p>Behind them is a system of AI assistants and automations I built myself: bots that manage my creator team, post to social media, answer questions and report back to me every morning.</p>
       <p>Now I build the same systems for founders like you. You stay focused on your clients. Your business runs in the background.</p>
+      </div>
     </div>
   </section>
 
