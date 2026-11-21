@@ -110,6 +110,7 @@
     .opt input { margin-top: 3px; width: 16px; height: 16px; accent-color: var(--black); flex-shrink: 0; }
     .opt small { display: block; color: var(--light); font-size: 12.5px; }
     .other { margin-top: 12px; }
+    textarea.other { min-height: 58px; }
 
     .simple { border: 1px solid var(--black); }
     .simple li { list-style: none; padding-left: 22px; position: relative; margin-bottom: 9px; color: #2B2522; font-size: 14.5px; }
@@ -260,7 +261,7 @@
           <label class="opt"><input type="checkbox" name="clients[]" value="Brands and sponsors">Brands and sponsors</label>
           <label class="opt"><input type="checkbox" name="clients[]" value="Parents and families">Parents and families of athletes</label>
         </div>
-        <input class="other" type="text" name="clients-other" placeholder="Other"></div>
+        <textarea class="other" name="clients-other" placeholder="Other, or your own answer. Be as specific as you like." rows="2"></textarea></div>
       <div class="card"><label class="q">How many clients do you represent today? How many would you like in 12 months?</label><input type="text" name="client-count"></div>
       <div class="card"><label class="q">Who is on your team?</label><span class="hint">Just you, staff, assistants or contractors. Include what each person handles.</span><textarea name="team"></textarea></div>
       <div class="card"><label class="q">How do new clients find you today?</label><span class="hint">Referrals, Instagram, events, cold outreach, your website, other.</span><textarea name="lead-sources"></textarea></div>
@@ -295,21 +296,23 @@
           <label class="opt"><input type="checkbox" name="bsi-purpose[]" value="Selling reports to scouts or teams">Selling reports to scouts or teams</label>
           <label class="opt"><input type="checkbox" name="bsi-purpose[]" value="My own research">My own research</label>
         </div>
-        <input class="other" type="text" name="bsi-purpose-other" placeholder="Other"></div>
+        <textarea class="other" name="bsi-purpose-other" placeholder="Other, or your own answer. Be as specific as you like." rows="2"></textarea></div>
       <div class="card"><label class="q">Where did you build it?</label><span class="hint">If you can, send me the file or a link to it.</span>
         <div class="opts">
           <label class="opt"><input type="checkbox" name="bsi-built-in[]" value="Claude">Claude</label>
           <label class="opt"><input type="checkbox" name="bsi-built-in[]" value="ChatGPT">ChatGPT</label>
           <label class="opt"><input type="checkbox" name="bsi-built-in[]" value="A developer built it">A developer built it</label>
           <label class="opt"><input type="checkbox" name="bsi-built-in[]" value="Not sure">Not sure</label>
-        </div></div>
+        </div>
+        <textarea class="other" name="bsi-built-in-own-answer" placeholder="Other, or your own answer. A link to it is perfect." rows="2"></textarea></div>
       <div class="card"><label class="q">Which levels do you scout?</label>
         <div class="opts">
           <label class="opt"><input type="checkbox" name="bsi-levels[]" value="Big college programs">Big college programs</label>
           <label class="opt"><input type="checkbox" name="bsi-levels[]" value="Smaller college programs">Smaller college programs</label>
           <label class="opt"><input type="checkbox" name="bsi-levels[]" value="Junior college">Junior college</label>
           <label class="opt"><input type="checkbox" name="bsi-levels[]" value="High school">High school</label>
-        </div></div>
+        </div>
+        <textarea class="other" name="bsi-levels-own-answer" placeholder="Other, or your own answer. Name specific conferences or schools if you like." rows="2"></textarea></div>
       <div class="card"><label class="q">Which positions matter most? Just quarterbacks, or every position?</label><input type="text" name="bsi-positions"></div>
       <div class="card"><label class="q">How many players do you want to track at once, and which seasons?</label><span class="hint">Example: 300 players, this season plus the last 2.</span><input type="text" name="bsi-players-seasons"></div>
       <div class="card"><label class="q">Where does your draft buzz rank come from, and how often does it change?</label><textarea name="bsi-draft-buzz"></textarea></div>
@@ -320,7 +323,8 @@
           <label class="opt"><input type="checkbox" name="bsi-users[]" value="My team">My team</label>
           <label class="opt"><input type="checkbox" name="bsi-users[]" value="My clients">My clients</label>
           <label class="opt"><input type="checkbox" name="bsi-users[]" value="The public">The public</label>
-        </div></div>
+        </div>
+        <textarea class="other" name="bsi-users-own-answer" placeholder="Other, or your own answer. Who exactly will use it?" rows="2"></textarea></div>
       <div class="card"><label class="q">Where do you want your results to show up?</label>
         <div class="opts">
           <label class="opt"><input type="checkbox" name="bsi-results[]" value="A Google Sheet">A Google Sheet</label>
@@ -328,7 +332,8 @@
           <label class="opt"><input type="checkbox" name="bsi-results[]" value="Text alerts">Text alerts</label>
           <label class="opt"><input type="checkbox" name="bsi-results[]" value="A page on my website">A page on my website</label>
           <label class="opt"><input type="checkbox" name="bsi-results[]" value="A private dashboard">A private dashboard</label>
-        </div></div>
+        </div>
+        <textarea class="other" name="bsi-results-own-answer" placeholder="Other, or your own answer. Tell me exactly how you want to see it." rows="2"></textarea></div>
       <div class="card"><label class="q">What would you do with a weekly list of your top 10 sleepers?</label><textarea name="bsi-top-10-use"></textarea></div>
     </section>
 
@@ -354,7 +359,7 @@
           <label class="opt"><input type="checkbox" name="wishlist[]" value="Website refresh"><span>Website refresh<small>A cleaner, modern site that brings in leads.</small></span></label>
           <label class="opt"><input type="checkbox" name="wishlist[]" value="Personal AI assistant"><span>Personal AI assistant<small>Claude set up to help you with your daily work.</small></span></label>
         </div>
-        <input class="other" type="text" name="wishlist-other" placeholder="Other"></div>
+        <textarea class="other" name="wishlist-other" placeholder="Other, or your own answer. Be as specific as you like." rows="2"></textarea></div>
       <div class="card"><label class="q">Your top 3 priorities, in order</label><span class="hint">1 per line. Your number 1 is where we start.</span><textarea name="top-3-priorities"></textarea></div>
     </section>
 
@@ -382,7 +387,7 @@
           <label class="opt"><input type="checkbox" name="tools[]" value="WhatsApp or text">WhatsApp or text for clients</label>
           <label class="opt"><input type="checkbox" name="tools[]" value="Slack">Slack</label>
         </div>
-        <input class="other" type="text" name="tools-other" placeholder="Other"></div>
+        <textarea class="other" name="tools-other" placeholder="Other, or your own answer. Be as specific as you like." rows="2"></textarea></div>
       <div class="card"><label class="q">Which Claude plan do you have? (Free, Pro or Max)</label><input type="text" name="claude-plan"></div>
       <div class="card"><label class="q">What computer will you use for our Zoom? (Mac or Windows)</label><input type="text" name="computer"></div>
     </section>
@@ -406,7 +411,8 @@
         <div class="opts">
           <label class="opt"><input type="radio" name="under-18" value="Yes">Yes</label>
           <label class="opt"><input type="radio" name="under-18" value="No">No</label>
-        </div></div>
+        </div>
+        <textarea class="other" name="under-18-own-answer" placeholder="Your own answer. About how many, and how old?" rows="2"></textarea></div>
       <div class="card"><label class="q">Is any information off limits for me or anyone helping me?</label><textarea name="off-limits"></textarea></div>
       <div class="card"><label class="q">Before our Zoom, please have these ready. Check what is done.</label>
         <div class="opts">
@@ -416,7 +422,8 @@
           <label class="opt"><input type="checkbox" name="ready[]" value="Wix access added"><span>Wix access<small>Add hello@lisahaven.co as a site collaborator. No password needed.</small></span></label>
           <label class="opt"><input type="checkbox" name="ready[]" value="Football data key"><span>Football data key<small>A free key at <a href="https://collegefootballdata.com" target="_blank">collegefootballdata.com</a>, under your own email.</small></span></label>
           <label class="opt"><input type="checkbox" name="ready[]" value="Other logins"><span>Any other logins<small>Social accounts or tools we will connect. You type the passwords.</small></span></label>
-        </div></div>
+        </div>
+        <textarea class="other" name="ready-own-answer" placeholder="Your own answer. Anything you are unsure about or still need help with?" rows="2"></textarea></div>
     </section>
 
     <section>
@@ -434,7 +441,8 @@
           <label class="opt"><input type="checkbox" name="agree[]" value="OK to use review in marketing">OK to use my name, business name and video review on lisahaven.co and in Lisa's marketing</label>
           <label class="opt"><input type="checkbox" name="agree[]" value="OK to bring in a specialist">OK to bring in a trusted specialist under confidentiality</label>
           <label class="opt"><input type="checkbox" name="agree[]" value="OK to record Zoom">OK to record our Zoom for my handoff walkthrough</label>
-        </div></div>
+        </div>
+        <textarea class="other" name="agree-own-answer" placeholder="Your own answer. Any questions or changes you would like?" rows="2"></textarea></div>
       <div class="card"><label class="q">Anything else I should know?</label><textarea name="anything-else"></textarea></div>
       <div class="card"><label class="q" for="f-sign">Type your full name to sign *</label><input type="text" id="f-sign" name="signature" required></div>
     </section>
