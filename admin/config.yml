@@ -39,6 +39,7 @@ collections:
       - { label: "Meta Description", name: "metaDescription", widget: "text", required: false, hint: "Optional. The summary Google shows, 150 to 160 characters, with the search phrase." }
       - { label: "Cover Image", name: "image", widget: "image", required: false, hint: "Optional. Leave this empty for a post with only the title and text." }
       - { label: "Homepage Card Photo", name: "cardPhoto", widget: "image", required: false, hint: "Optional. A photo of Lisa shown on top of this post's card on the homepage." }
+      - { label: "Top of Post Video", name: "video", widget: "file", required: false, hint: "Optional. A short .mp4 that plays at the top of the post instead of the photo. The Top Photo is used as its still frame." }
       - { label: "Slider Cover", name: "cover", widget: "image", required: false, hint: "Optional. The branded cover shown on the homepage slider when the top image is a photo. Use /images/uploads/<slug>-cover.png." }
       - label: "Photo Gallery"
         name: "gallery"

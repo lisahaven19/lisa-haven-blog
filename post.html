@@ -232,6 +232,8 @@
     .post-photo::before { content:''; position:absolute; inset:-2px; background:linear-gradient(135deg,#C47E8A 0%,rgba(196,126,138,0.2) 45%,#B76E79 100%); z-index:0; }
     .post-photo img { position:relative; z-index:1; display:block; width:100%; height:auto; transition:transform 0.6s cubic-bezier(0.22,1,0.36,1); }
     .post-photo:hover img { transform: scale(1.02); }
+    .post-photo.post-video { max-width:420px; margin-left:auto; margin-right:auto; }
+    .post-photo video { position:relative; z-index:1; display:block; width:100%; height:auto; }
 
     /* ── Photo gallery ── */
     .post-gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:30px 0 36px; }
@@ -1030,7 +1032,9 @@
         const pageUrl = 'https://lisahaven.co/blog/' + encodeURIComponent(slug) + '/';
         const d = new Date(post.date);
         const dateStr = d.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
-        const photo = post.image ? `<div class="post-photo"><img src="${esc(post.image)}" alt="${esc(post.title)}"></div>` : '';
+        const photo = post.video
+          ? `<div class="post-photo post-video"><video src="${esc(post.video)}"${post.image ? ` poster="${esc(post.image)}"` : ''} autoplay muted loop playsinline preload="auto" aria-label="${esc(post.title)}"></video></div>`
+          : (post.image ? `<div class="post-photo"><img src="${esc(post.image)}" alt="${esc(post.title)}"></div>` : '');
 
         let bodyHtml = post.body && post.body.trim() ? marked.parse(post.body) : '<p><em>Full story coming soon. Stay tuned! ✨</em></p>';
 

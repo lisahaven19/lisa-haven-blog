@@ -135,6 +135,7 @@ if (fs.existsSync(POSTS_DIR)) {
       updated: meta.updated || '',
       image: meta.image || '',
       cardPhoto: meta.cardPhoto || '',
+      video: meta.video || '',
       cover: meta.cover || '',
       gallery: asList(meta.gallery),
       draft: isDraft(meta),
@@ -413,7 +414,7 @@ try {
       const article = '<article class="prerender">'
         + '<p class="post-meta">' + esc((p.emoji || '') + ' ' + (p.category || '')) + '</p>'
         + '<h1>' + esc(p.title) + '</h1>'
-        + (p.image ? '<p><img src="' + esc(p.image) + '" alt="' + esc(p.title) + '"></p>' : '')
+        + (p.video ? '<p><video src="' + esc(p.video) + '"' + (p.image ? ' poster="' + esc(p.image) + '"' : '') + ' autoplay muted loop playsinline aria-label="' + esc(p.title) + '"></video></p>' : (p.image ? '<p><img src="' + esc(p.image) + '" alt="' + esc(p.title) + '"></p>' : ''))
         + '<div class="post-body">' + md(p.body) + '</div></article>';
       let html = tpl.replace(/<title>[\s\S]*?<\/title>/, () => '<title>' + esc(title) + '</title>' + head);
       html = html.replace(/(<main id="main"[^>]*>)[\s\S]*?(<\/main>)/, (m, open, close) => open + article + close);

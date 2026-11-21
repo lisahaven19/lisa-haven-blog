@@ -1055,6 +1055,8 @@
       background-position: center top;
       flex-shrink: 0;
     }
+    .c-photo-video { position: relative; overflow: hidden; background: #E8E1D8; }
+    .c-photo-video video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
     .post-modal-photo {
       width: 100%;
       max-width: 340px;
@@ -2764,7 +2766,9 @@
       a.className = 'c-card';
       a.dataset.slug = post.slug;
       const sliderImg = post.cover || post.image;
-      const photoHtml = sliderImg ? `<div class="c-photo" style="background-image:url('${sliderImg}')"></div>` : '';
+      const photoHtml = post.video
+        ? `<div class="c-photo c-photo-video"><video src="${post.video}"${post.image ? ` poster="${post.image}"` : ''} autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></div>`
+        : (sliderImg ? `<div class="c-photo" style="background-image:url('${sliderImg}')"></div>` : '');
       a.innerHTML = `
         ${photoHtml}
         <div class="c-card-top">
