@@ -2081,15 +2081,15 @@
 
   <!-- ── NAVIGATION ──────────────────────────────── -->
   <nav id="navbar">
-    <a href="#" class="nav-logo">Lisa Haven</a>
+    <a href="/" class="nav-logo">Lisa Haven</a>
     <ul class="nav-links">
       <li><a href="/start-here">Start Here</a></li>
       <li><a href="/blog">Blog</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#founder">My Story</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#founder">My Story</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
-    <a href="#newsletter" class="nav-cta">Join the Inner Circle</a>
+    <a href="/#newsletter" class="nav-cta">Join the Inner Circle</a>
 
     <!-- Hamburger button (mobile only) -->
     <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
@@ -2102,10 +2102,10 @@
     <nav class="mobile-nav-links">
       <a href="/start-here" class="mobile-nav-link">Start Here</a>
       <a href="/blog"       class="mobile-nav-link">Blog</a>
-      <a href="#about"      class="mobile-nav-link">About</a>
-      <a href="#founder"    class="mobile-nav-link">My Story</a>
+      <a href="/#about"      class="mobile-nav-link">About</a>
+      <a href="/#founder"    class="mobile-nav-link">My Story</a>
       <a href="/contact"    class="mobile-nav-link">Contact</a>
-      <a href="#newsletter" class="mobile-nav-link mobile-nav-cta">Join the Inner Circle 🖤</a>
+      <a href="/#newsletter" class="mobile-nav-link mobile-nav-cta">Join the Inner Circle 🖤</a>
     </nav>
   </div>
 
@@ -2187,9 +2187,9 @@
         <a href="/">Home</a>
         <a href="/start-here">Start Here</a>
         <a href="/blog">Blog</a>
-        <a href="#about">My Story</a>
-        <a href="#founder">Meet the Founder</a>
-        <a href="#newsletter">Newsletter</a>
+        <a href="/#about">My Story</a>
+        <a href="/#founder">Meet the Founder</a>
+        <a href="/#newsletter">Newsletter</a>
       </div>
       <div class="footer-col reveal" style="transition-delay: 0.15s;">
         <span class="footer-col-title">Pages</span>
@@ -2217,7 +2217,7 @@
       <a href="/start-here">Start Here</a>
       <a href="/blog">Blog</a>
       <a href="/contact">Contact</a>
-      <a href="#newsletter">Newsletter</a>
+      <a href="/#newsletter">Newsletter</a>
     </div>
 
 
@@ -2571,7 +2571,10 @@
         });
         return b;
       };
-      CHIP_DEFS.forEach(([label, matcher], i) => {
+      const live = CHIP_DEFS.filter(function(d){
+        return !d[1] || posts.some(function(p){ return d[1].test(p.category || ''); });
+      });
+      live.forEach(([label, matcher], i) => {
         const b = mkBtn(label, matcher);
         if (i === 0) b.classList.add('active');
         wrap.appendChild(b);
