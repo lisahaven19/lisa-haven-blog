@@ -261,6 +261,15 @@
     .post-body h2::before { content:''; position:absolute; left:0; top:4px; bottom:4px; width:3px; background:var(--rose); border-radius:2px; }
     .post-body h3 { font-family:var(--serif); font-size:21px; margin:30px 0 10px; color:var(--black); }
     .post-body p { margin-bottom:16px; }
+    /* Tables: branded card with black header, soft rows */
+    .post-body table { display:block; width:100%; max-width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; border-collapse:separate; border-spacing:0; margin:28px 0 32px; border:1px solid #E8E1D8; border-radius:14px; background:#FBF8F4; box-shadow:0 8px 24px rgba(10,10,10,.06); font-size:15px; line-height:1.5; }
+    .post-body table thead, .post-body table tbody { display:table; width:100%; table-layout:fixed; }
+    .post-body th { background:#0A0A0A; color:#F2EDE6; font-family:var(--serif); font-weight:700; font-size:16px; text-align:left; padding:16px 18px; letter-spacing:.01em; }
+    .post-body th:empty { background:#0A0A0A; }
+    .post-body td { padding:14px 18px; border-top:1px solid #E8E1D8; color:#333; vertical-align:top; overflow-wrap:break-word; }
+    .post-body tbody tr:nth-child(even) td { background:#F2EDE6; }
+    .post-body td:first-child { font-weight:600; color:#A35F6D; font-size:13px; letter-spacing:.06em; text-transform:uppercase; }
+    @media (max-width:600px) { .post-body table { font-size:14px; } .post-body th, .post-body td { padding:12px 12px; } .post-body td:first-child { font-size:11px; } }
     .post-body em { font-style:italic; }
     .post-body strong { font-weight:700; color:var(--black); }
     .post-body blockquote {
