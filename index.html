@@ -2864,7 +2864,10 @@
         });
         return b;
       };
-      CHIP_DEFS.forEach(([label, matcher], i) => {
+      const live = CHIP_DEFS.filter(function(d){
+        return !d[1] || posts.some(function(p){ return d[1].test(p.category || ''); });
+      });
+      live.forEach(([label, matcher], i) => {
         const b = mkBtn(label, matcher);
         if (i === 0) b.classList.add('active');
         wrap.appendChild(b);
