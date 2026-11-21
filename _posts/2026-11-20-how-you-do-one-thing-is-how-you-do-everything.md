@@ -3,7 +3,7 @@ title: "How You Do One Thing Is How You Do Everything: What It Taught Me"
 category: Mindset & Growth
 emoji: 🖤
 date: 2026-11-20T23:00:00.000-05:00
-readTime: 8 min read
+readTime: 9 min read
 excerpt: "I run my businesses with everything I have. Then I noticed I run everything else that way too. Here is what that taught me about effort, flow and the things meant for me."
 image: /images/uploads/how-you-do-one-thing-is-how-you-do-everything-lisa.jpg
 video: /images/uploads/how-you-do-one-thing-is-how-you-do-everything.mp4
@@ -105,6 +105,20 @@ I know mine. I overdo it. I get obsessed. I run my personal life like a business
 
 If you want help getting there, I wrote about [how to lock in mentally](https://lisahaven.co/blog/how-to-lock-in-mentally/) for the moments you need to get clear and focused.
 
+## The Science Behind How You Do One Thing Is How You Do Everything
+
+I wanted to know if science agrees with what I have seen my whole life. It does. No single study proves the quote, but 4 well known studies point the same way.
+
+**1. People run on patterns.** In 1995, Columbia University psychologists Walter Mischel and Yuichi Shoda showed that people do not act the same in every situation, but they do act in [predictable "if this, then that" patterns](https://pubmed.ncbi.nlm.nih.gov/7740090/). They called them behavioral signatures. In plain words: it is who they are.
+
+**2. If they did it to someone, they will likely do it to you.** A big 1998 review of many studies found that [past behavior is one of the best clues to future behavior](https://dornsife.usc.edu/wendy-wood/wp-content/uploads/sites/183/2023/10/Ouellette.Wood_.1998_Habit_and_intention_in_everyday_life.pdf). When people repeat something often, it becomes automatic. So watch how someone treats the last person. That is your preview.
+
+**3. What Susie says about Sally says more about Susie.** A 2010 Wake Forest University study found that [how you describe other people reveals your own personality](https://www.sciencedaily.com/releases/2010/08/100802165441.htm). People who see others kindly tend to be happier and kinder. People who see others negatively scored higher on narcissism and antisocial behavior.
+
+**4. Gossip comes back to the gossiper.** Psychologists call this spontaneous trait transference. When someone describes another person's traits, listeners [start to link those same traits to the speaker](https://sciencedaily.com/releases/1998/03/980319071139.htm). So if someone talks behind your back to you, they will talk behind your back too, and people notice.
+
+1 honest note: science says people are consistent in patterns, not perfect in every moment. People can grow and change. But the pattern is usually the truth, so pay attention to it.
+
 ## Watch the First 3 Seconds
 
 This last one is really important, and it comes from real life, not a textbook. I am not a psychologist. I am a founder who has met a lot of people: happy people, jealous people, hateful people, and wonderful people.
@@ -143,7 +157,7 @@ Nobody knows for sure. It also goes around as "how you do anything is how you do
 
 ### Is there a study that proves it?
 
-There is no single study behind the quote. It is a saying people keep repeating because they see the pattern in real life: the way you handle small things often shows up in big things.
+There is no single study behind the quote, but research backs the idea. Psychologists have found that people act in steady patterns, that past behavior predicts future behavior, and that how people talk about others reveals who they are.
 
 ### How do you know if something is meant for you?
 
