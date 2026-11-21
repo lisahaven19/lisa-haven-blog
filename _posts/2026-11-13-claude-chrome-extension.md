@@ -1,6 +1,6 @@
 ---
 title: "Claude Chrome Extension: How It Booked My Trip"
-category: AI & Tech
+category: Travel
 emoji: ✈️
 date: 2026-11-13T01:00:00.000-05:00
 readTime: 8 min read
