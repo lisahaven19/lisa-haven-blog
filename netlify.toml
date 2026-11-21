@@ -163,3 +163,9 @@
   to = "/404"
   status = 404
   force = true
+
+# Private client intake pages stay out of Google
+[[headers]]
+  for = "/intake/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Setup Intake | Lisa Haven</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="A private AI setup intake for Laufer Sports & Entertainment.">
+  <meta property="og:title" content="AI Setup Intake | Lisa Haven">
+  <meta property="og:description" content="Let's automate your business. A short intake so I can build your AI system.">
+  <meta property="og:image" content="https://lisahaven.co/images/uploads/og-card.jpg">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #F2EDE6; --card: #FBF8F4; --line: #E3D8CD; --field: #CDBFB2;
+      --black: #0A0A0A; --mid: #5F5955; --light: #8A827C;
+      --rose: #C47E8A; --rose-dark: #a35f6d;
+      --serif: 'Playfair Display', Georgia, serif; --sans: 'Inter', system-ui, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--sans); background: var(--cream); color: var(--black); line-height: 1.65; border-top: 4px solid var(--black); }
+    a { color: var(--black); }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    header.top { display: flex; justify-content: space-between; align-items: center; padding: 26px 0; border-bottom: 1px solid var(--line); }
+    .logo { font-family: var(--serif); font-weight: 600; font-size: 22px; text-decoration: none; color: var(--black); }
+    .logo .heart { font-size: 15px; margin-left: 4px; }
+    .top-tag { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--light); }
+
+    .eyebrow { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--rose); margin-bottom: 14px; }
+    .hero { padding: 72px 0 40px; }
+    .hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(42px, 7vw, 64px); line-height: 1.05; margin-bottom: 22px; }
+    .hero h1 em { font-style: italic; }
+    .hero p { font-size: 17px; color: var(--mid); max-width: 560px; }
+
+    .chips { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin: 34px 0 0; }
+    .chip { background: var(--cream); border-radius: 9px; padding: 12px 16px; }
+    .chip small { display: block; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose); }
+    .chip span { font-weight: 500; font-size: 15px; }
+
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 46px 0 10px; position: relative; }
+    .steps::before { content: ""; position: absolute; top: 17px; left: 12.5%; right: 12.5%; border-top: 2px dotted var(--field); }
+    .step { text-align: center; position: relative; }
+    .num { width: 34px; height: 34px; border-radius: 50%; background: var(--black); color: var(--cream); font-family: var(--serif); font-weight: 600; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+    .step b { display: block; font-size: 14px; font-weight: 600; }
+    .step p { font-size: 12.5px; color: var(--light); line-height: 1.45; margin-top: 3px; }
+
+    section { padding: 56px 0 8px; }
+    .sec-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+    .badge { width: 30px; height: 30px; border-radius: 50%; background: var(--black); color: var(--cream); font-family: var(--serif); font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .sec-head .eyebrow { margin: 0; }
+    h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 4.6vw, 38px); line-height: 1.15; margin: 8px 0 8px; }
+    h2 em { font-style: italic; }
+    .intro { color: var(--mid); font-size: 15px; margin-bottom: 20px; }
+
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; margin-bottom: 14px; }
+    .bio { border-left: 3px solid var(--rose); }
+    .bio p { color: #2B2522; margin-bottom: 12px; }
+    .bio p:last-child { margin-bottom: 0; font-weight: 500; color: var(--black); }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .help { display: flex; gap: 14px; margin: 0; }
+    .ico { width: 40px; height: 40px; border-radius: 50%; background: var(--black); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ico svg { width: 20px; height: 20px; stroke: var(--cream); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .help b { display: block; font-size: 15px; font-weight: 600; margin-bottom: 3px; }
+    .help p { font-size: 13.5px; color: var(--mid); line-height: 1.5; }
+
+    .ba .card { margin: 0; }
+    .ba h3 { font-family: var(--serif); font-weight: 600; font-size: 19px; margin-bottom: 12px; }
+    .ba ul { list-style: none; }
+    .ba li { font-size: 14px; color: var(--mid); padding-left: 20px; position: relative; margin-bottom: 9px; line-height: 1.5; }
+    .ba li::before { content: ""; position: absolute; left: 2px; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: var(--field); }
+    .ba .after { background: var(--black); border-color: var(--black); }
+    .ba .after h3 { color: var(--cream); }
+    .ba .after li { color: #E9DEDA; }
+    .ba .after li::before { content: "\2726"; background: none; color: var(--rose); width: auto; height: auto; top: 0; left: 0; font-size: 12px; }
+
+    .flow h3 { font-family: var(--serif); font-weight: 600; font-size: 19px; }
+    .flow .sub { font-size: 13.5px; color: var(--light); margin-bottom: 22px; }
+    .nodes { display: flex; align-items: flex-start; }
+    .node { flex: 1; text-align: center; }
+    .node .ico { width: 54px; height: 54px; margin: 0 auto 10px; box-shadow: 0 0 0 4px var(--line); }
+    .node .ico svg { width: 24px; height: 24px; }
+    .node span { font-size: 12.5px; font-weight: 500; line-height: 1.35; display: block; padding: 0 4px; }
+    .link { flex: 0.6; height: 54px; display: flex; align-items: center; justify-content: center; position: relative; }
+    .link::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 2px dotted var(--field); }
+    .link::after { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--rose); position: relative; }
+
+    .noticed li { list-style: none; padding-left: 22px; position: relative; margin-bottom: 10px; color: #2B2522; font-size: 15px; }
+    .noticed li::before { content: "\2726"; position: absolute; left: 0; color: var(--rose); }
+    .noticed h3, .simple h3 { font-family: var(--serif); font-weight: 600; font-size: 19px; margin-bottom: 12px; }
+
+    label.q { display: block; font-weight: 500; font-size: 15px; margin-bottom: 4px; }
+    .hint { display: block; font-size: 13px; color: var(--light); margin-bottom: 10px; }
+    label.q + input, label.q + textarea { margin-top: 6px; }
+    input[type=text], input[type=email], input[type=tel], textarea {
+      width: 100%; font-family: var(--sans); font-size: 15px; color: var(--black);
+      background: #fff; border: 1px solid var(--field); border-radius: 8px; padding: 12px 14px; outline: none;
+    }
+    textarea { min-height: 96px; resize: vertical; }
+    input:focus, textarea:focus { border-color: var(--black); }
+    .opts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; margin-top: 10px; }
+    .opts.three { grid-template-columns: 1fr 1fr 1fr; }
+    .opts.one { grid-template-columns: 1fr; }
+    .opt { display: flex; gap: 10px; align-items: flex-start; font-size: 14.5px; cursor: pointer; line-height: 1.4; }
+    .opt input { margin-top: 3px; width: 16px; height: 16px; accent-color: var(--black); flex-shrink: 0; }
+    .opt small { display: block; color: var(--light); font-size: 12.5px; }
+    .other { margin-top: 12px; }
+
+    .simple { border: 1px solid var(--black); }
+    .simple li { list-style: none; padding-left: 22px; position: relative; margin-bottom: 9px; color: #2B2522; font-size: 14.5px; }
+    .simple li::before { content: "\2726"; position: absolute; left: 0; color: var(--rose); }
+
+    .submit-wrap { text-align: center; padding: 30px 0 80px; }
+    button { font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cream); background: var(--black); border: none; border-radius: 10px; padding: 18px 44px; cursor: pointer; transition: transform .2s; }
+    button:hover { transform: translateY(-2px); }
+    .saved { font-size: 12.5px; color: var(--light); margin-top: 14px; }
+    footer { border-top: 1px solid var(--line); padding: 26px 0 40px; display: flex; justify-content: space-between; font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--light); }
+    footer .spark { color: var(--rose); }
+
+    @media (max-width: 640px) {
+      .chips, .grid2, .opts, .opts.three { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; row-gap: 26px; }
+      .steps::before { display: none; }
+      .node .ico { width: 44px; height: 44px; }
+      .node span { font-size: 11px; }
+      .link { flex: 0.35; height: 44px; }
+      .top-tag { display: none; }
+    }
+  </style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="i-data" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></symbol>
+    <symbol id="i-ai" viewBox="0 0 24 24"><path d="M12 2c.6 5.5 4.5 9.4 10 10-5.5.6-9.4 4.5-10 10-.6-5.5-4.5-9.4-10-10 5.5-.6 9.4-4.5 10-10z"/></symbol>
+    <symbol id="i-sheet" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M9 4v16"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1z"/><path d="M8 11h.01M12 11h.01M16 11h.01"/></symbol>
+    <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-form" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></symbol>
+    <symbol id="i-sign" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-web" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="/">Lisa Haven<span class="heart">&#9829;</span></a>
+    <span class="top-tag">AI Setup Intake</span>
+  </header>
+
+  <div class="hero">
+    <span class="eyebrow">AI Setup Intake</span>
+    <h1>Let's automate<br><em>your business.</em></h1>
+    <p>A short intake so I can learn your business, your goals and what slows you down, then build an AI system that does the busy work for you.</p>
+    <div class="chips">
+      <div class="chip"><small>Prepared for</small><span>Evan Laufer</span></div>
+      <div class="chip"><small>Business</small><span>Laufer Sports &amp; Entertainment</span></div>
+      <div class="chip"><small>Time needed</small><span>About 20 minutes</span></div>
+      <div class="chip"><small>Your answers go to</small><span>Lisa, privately</span></div>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><b>You fill this out</b><p>Type your answers and hit send at the bottom.</p></div>
+      <div class="step"><div class="num">2</div><b>I map your plan</b><p>I review your answers and design your setup.</p></div>
+      <div class="step"><div class="num">3</div><b>Zoom setup call</b><p>I share your screen and build it with you.</p></div>
+      <div class="step"><div class="num">4</div><b>Handoff and review</b><p>You get a walkthrough, then your video review.</p></div>
+    </div>
+  </div>
+
+  <section>
+    <div class="sec-head"><div class="badge">01</div><span class="eyebrow">Who I am</span></div>
+    <h2>Hi Evan, I'm <em>Lisa</em></h2>
+    <div class="card bio">
+      <p>I am the Founder and CEO of 3 companies, and I run all of them with AI. <a href="https://vixaapp.ai" target="_blank">VIXA</a> is a dating clarity app for women. <a href="https://havenly.co" target="_blank">Havenly</a> is a beauty brand built for global retail shelves. <a href="https://lumaprompt.ai" target="_blank">LUMAPROMPT.AI</a> is a premium prompt platform for women.</p>
+      <p>Behind them is a system of AI assistants and automations I built myself: bots that manage my creator team, post to social media, answer questions and report back to me every morning.</p>
+      <p>Now I build the same systems for founders like you. You stay focused on your clients. Your business runs in the background.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><div class="badge">02</div><span class="eyebrow">How I can help</span></div>
+    <h2>What I <em>build for you</em></h2>
+    <div class="grid2">
+      <div class="card help"><div class="ico"><svg><use href="#i-ai"/></svg></div><div><b>AI assistants and bots</b><p>A chat assistant on your website that answers athletes, parents and brands, plus a personal assistant in Claude.</p></div></div>
+      <div class="card help"><div class="ico"><svg><use href="#i-data"/></svg></div><div><b>Automations</b><p>Your apps connected so data moves on its own: forms, emails, trackers, reports, reminders.</p></div></div>
+      <div class="card help"><div class="ico"><svg><use href="#i-sheet"/></svg></div><div><b>Data and dashboards</b><p>Your Blind Side Index fed by live football data, scored and ranked for you every week.</p></div></div>
+      <div class="card help"><div class="ico"><svg><use href="#i-web"/></svg></div><div><b>Website and brand</b><p>A refreshed lauferse.com that captures leads, books calls and works for you after hours.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><div class="badge">03</div><span class="eyebrow">The transformation</span></div>
+    <h2>Your business, <em>connected</em></h2>
+    <p class="intro">Each circle is an app. Each dotted line is a connection that moves your work automatically, with no copy and paste.</p>
+    <div class="grid2 ba" style="margin-bottom:14px">
+      <div class="card"><h3>Today</h3><ul>
+        <li>Player stats typed in by hand, 1 at a time</li>
+        <li>Leads email or call, then wait for a reply</li>
+        <li>Follow ups and deadlines live in your head</li>
+        <li>Reports and updates built from scratch</li></ul></div>
+      <div class="card after"><h3>After we automate</h3><ul>
+        <li>Stats flow in every week, all by themselves</li>
+        <li>A chat assistant answers day and night and books calls</li>
+        <li>Every lead and deal tracked, with reminders</li>
+        <li>Your top 10 sleepers land in your inbox every Sunday</li></ul></div>
+    </div>
+    <div class="card flow"><h3>Blind Side Index on autopilot</h3><p class="sub">Live stats come in, AI scores every player, your sleepers are ranked and sent to you.</p>
+      <div class="nodes">
+        <div class="node"><div class="ico"><svg><use href="#i-data"/></svg></div><span>College football data feed</span></div><div class="link"></div>
+        <div class="node"><div class="ico"><svg><use href="#i-ai"/></svg></div><span>Claude scores each player</span></div><div class="link"></div>
+        <div class="node"><div class="ico"><svg><use href="#i-sheet"/></svg></div><span>Your Blind Side Index</span></div><div class="link"></div>
+        <div class="node"><div class="ico"><svg><use href="#i-mail"/></svg></div><span>Sunday top 10 report</span></div>
+      </div></div>
+    <div class="card flow"><h3>Never miss a lead</h3><p class="sub">Someone visits your website at midnight. They still get answers and a call on your calendar.</p>
+      <div class="nodes">
+        <div class="node"><div class="ico"><svg><use href="#i-web"/></svg></div><span>lauferse.com visitor</span></div><div class="link"></div>
+        <div class="node"><div class="ico"><svg><use href="#i-chat"/></svg></div><span>Chat assistant answers</span></div><div class="link"></div>
+        <div class="node"><div class="ico"><svg><use href="#i-person"/></svg></div><span>Added to your lead tracker</span></div><div class="link"></div>
+        <div class="node"><div class="ico"><svg><use href="#i-cal"/></svg></div><span>Call booked on your calendar</span></div>
+      </div></div>
+    <div class="card flow"><h3>New client, signed and organized</h3><p class="sub">An athlete applies, gets a follow up, signs, and lands in your system.</p>
+      <div class="nodes">
+        <div class="node"><div class="ico"><svg><use href="#i-form"/></svg></div><span>Athlete application</span></div><div class="link"></div>
+        <div class="node"><div class="ico"><svg><use href="#i-mail"/></svg></div><span>Automatic follow up</span></div><div class="link"></div>
+        <div class="node"><div class="ico"><svg><use href="#i-sign"/></svg></div><span>Agreement e-signed</span></div><div class="link"></div>
+        <div class="node"><div class="ico"><svg><use href="#i-phone"/></svg></div><span>Text alert to you</span></div>
+      </div></div>
+    <div class="card noticed"><h3>What I already noticed</h3><ul>
+      <li>Your Blind Side Index is smart, but every player is typed in by hand. A live college football data feed can fill in the stats for you and update them every week.</li>
+      <li>Your website, <a href="https://www.lauferse.com" target="_blank">lauferse.com</a>, has no contact form or chat assistant. Athletes, parents and brands can only email or call, so leads can slip away after hours.</li>
+      <li>2 Instagram handles show on your site (laufer_sports_ent and laufer_se). We can confirm which one is your main account.</li></ul></div>
+  </section>
+
+  <form name="ai-intake-laufer" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/intake/thanks/" id="intake">
+    <input type="hidden" name="form-name" value="ai-intake-laufer">
+    <p style="display:none"><label>Do not fill this out: <input name="bot-field"></label></p>
+
+    <section>
+      <div class="sec-head"><div class="badge">04</div><span class="eyebrow">About you</span></div>
+      <h2>You and <em>your business</em></h2>
+      <div class="card"><label class="q" for="f-name">Your full name and title *</label><input type="text" id="f-name" name="name-and-title" required></div>
+      <div class="card"><label class="q" for="f-email">Best email for this project *</label><input type="email" id="f-email" name="email" required></div>
+      <div class="card"><label class="q" for="f-phone">Best phone number</label><input type="tel" id="f-phone" name="phone"></div>
+      <div class="card"><label class="q">In your own words, what does Laufer Sports &amp; Entertainment do?</label><textarea name="what-lse-does"></textarea></div>
+      <div class="card"><label class="q">Who are your clients? Check all that apply.</label>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="clients[]" value="College athletes">College athletes</label>
+          <label class="opt"><input type="checkbox" name="clients[]" value="Professional athletes">Professional athletes</label>
+          <label class="opt"><input type="checkbox" name="clients[]" value="High school recruits">High school recruits</label>
+          <label class="opt"><input type="checkbox" name="clients[]" value="Entertainers">Entertainers (DJs, producers, musicians)</label>
+          <label class="opt"><input type="checkbox" name="clients[]" value="Brands and sponsors">Brands and sponsors</label>
+          <label class="opt"><input type="checkbox" name="clients[]" value="Parents and families">Parents and families of athletes</label>
+        </div>
+        <input class="other" type="text" name="clients-other" placeholder="Other"></div>
+      <div class="card"><label class="q">How many clients do you represent today? How many would you like in 12 months?</label><input type="text" name="client-count"></div>
+      <div class="card"><label class="q">Who is on your team?</label><span class="hint">Just you, staff, assistants or contractors. Include what each person handles.</span><textarea name="team"></textarea></div>
+      <div class="card"><label class="q">How do new clients find you today?</label><span class="hint">Referrals, Instagram, events, cold outreach, your website, other.</span><textarea name="lead-sources"></textarea></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><div class="badge">05</div><span class="eyebrow">Your goals</span></div>
+      <h2>Where you <em>want to go</em></h2>
+      <div class="card"><label class="q">Your top 3 business goals for the next 12 months</label><span class="hint">1 goal per line.</span><textarea name="goals-12-months"></textarea></div>
+      <div class="card"><label class="q">In 90 days, what would make you say "working with Lisa was worth it"?</label><textarea name="worth-it-90-days"></textarea></div>
+      <div class="card"><label class="q">Is there a revenue or client number you are aiming for? (optional)</label><input type="text" name="target-number"></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><div class="badge">06</div><span class="eyebrow">Bottlenecks</span></div>
+      <h2>What is <em>slowing you down</em></h2>
+      <div class="card"><label class="q">What eats up most of your time each week?</label><textarea name="time-eaters"></textarea></div>
+      <div class="card"><label class="q">Which tasks do you repeat over and over?</label><span class="hint">Example: typing in player stats, sending the same email, following up with families.</span><textarea name="repeat-tasks"></textarea></div>
+      <div class="card"><label class="q">Where do things fall through the cracks?</label><span class="hint">Missed follow ups, lost leads, late replies, forgotten deadlines.</span><textarea name="cracks"></textarea></div>
+      <div class="card"><label class="q">About how many hours a week go to admin work?</label><input type="text" name="admin-hours"></div>
+      <div class="card"><label class="q">If you could hand off 1 task tomorrow, what would it be?</label><textarea name="hand-off-first"></textarea></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><div class="badge">07</div><span class="eyebrow">Blind Side Index</span></div>
+      <h2>Your <em>prospect engine</em></h2>
+      <p class="intro">This section helps me automate your sleeper finder so player data fills in by itself.</p>
+      <div class="card"><label class="q">What is the Blind Side Index mainly for?</label>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="bsi-purpose[]" value="Finding athletes to recruit as clients">Finding athletes to recruit as clients</label>
+          <label class="opt"><input type="checkbox" name="bsi-purpose[]" value="Content for social media">Content for social media</label>
+          <label class="opt"><input type="checkbox" name="bsi-purpose[]" value="Selling reports to scouts or teams">Selling reports to scouts or teams</label>
+          <label class="opt"><input type="checkbox" name="bsi-purpose[]" value="My own research">My own research</label>
+        </div>
+        <input class="other" type="text" name="bsi-purpose-other" placeholder="Other"></div>
+      <div class="card"><label class="q">Where did you build it?</label><span class="hint">If you can, send me the file or a link to it.</span>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="bsi-built-in[]" value="Claude">Claude</label>
+          <label class="opt"><input type="checkbox" name="bsi-built-in[]" value="ChatGPT">ChatGPT</label>
+          <label class="opt"><input type="checkbox" name="bsi-built-in[]" value="A developer built it">A developer built it</label>
+          <label class="opt"><input type="checkbox" name="bsi-built-in[]" value="Not sure">Not sure</label>
+        </div></div>
+      <div class="card"><label class="q">Which levels do you scout?</label>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="bsi-levels[]" value="Big college programs">Big college programs</label>
+          <label class="opt"><input type="checkbox" name="bsi-levels[]" value="Smaller college programs">Smaller college programs</label>
+          <label class="opt"><input type="checkbox" name="bsi-levels[]" value="Junior college">Junior college</label>
+          <label class="opt"><input type="checkbox" name="bsi-levels[]" value="High school">High school</label>
+        </div></div>
+      <div class="card"><label class="q">Which positions matter most? Just quarterbacks, or every position?</label><input type="text" name="bsi-positions"></div>
+      <div class="card"><label class="q">How many players do you want to track at once, and which seasons?</label><span class="hint">Example: 300 players, this season plus the last 2.</span><input type="text" name="bsi-players-seasons"></div>
+      <div class="card"><label class="q">Where does your draft buzz rank come from, and how often does it change?</label><textarea name="bsi-draft-buzz"></textarea></div>
+      <div class="card"><label class="q">How do you chart film today, and how long does 1 player take?</label><textarea name="bsi-film"></textarea></div>
+      <div class="card"><label class="q">Who will use it?</label>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="bsi-users[]" value="Just me">Just me</label>
+          <label class="opt"><input type="checkbox" name="bsi-users[]" value="My team">My team</label>
+          <label class="opt"><input type="checkbox" name="bsi-users[]" value="My clients">My clients</label>
+          <label class="opt"><input type="checkbox" name="bsi-users[]" value="The public">The public</label>
+        </div></div>
+      <div class="card"><label class="q">Where do you want your results to show up?</label>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="bsi-results[]" value="A Google Sheet">A Google Sheet</label>
+          <label class="opt"><input type="checkbox" name="bsi-results[]" value="A weekly email report">A weekly email report</label>
+          <label class="opt"><input type="checkbox" name="bsi-results[]" value="Text alerts">Text alerts</label>
+          <label class="opt"><input type="checkbox" name="bsi-results[]" value="A page on my website">A page on my website</label>
+          <label class="opt"><input type="checkbox" name="bsi-results[]" value="A private dashboard">A private dashboard</label>
+        </div></div>
+      <div class="card"><label class="q">What would you do with a weekly list of your top 10 sleepers?</label><textarea name="bsi-top-10-use"></textarea></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><div class="badge">08</div><span class="eyebrow">Automation wish list</span></div>
+      <h2>What I can <em>install for you</em></h2>
+      <p class="intro">Check everything that sounds helpful, then rank your top 3 below. No limits, just dream.</p>
+      <div class="card"><label class="q">In your own words, what would you most like to automate or accomplish with me?</label><textarea name="automate-in-own-words"></textarea></div>
+      <div class="card"><label class="q">Pick what you want</label>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="wishlist[]" value="Website chat assistant"><span>Website chat assistant<small>Answers athletes, parents and brands day and night.</small></span></label>
+          <label class="opt"><input type="checkbox" name="wishlist[]" value="Athlete application form"><span>Athlete application form<small>On your website, with automatic follow up.</small></span></label>
+          <label class="opt"><input type="checkbox" name="wishlist[]" value="Client and lead tracker"><span>Client and lead tracker<small>1 place for every athlete, contact and stage.</small></span></label>
+          <label class="opt"><input type="checkbox" name="wishlist[]" value="Name, Image and Likeness deal tracker"><span>Name, Image and Likeness deal tracker<small>Every deal, payment and deadline, with reminders.</small></span></label>
+          <label class="opt"><input type="checkbox" name="wishlist[]" value="Contracts and e-signatures"><span>Contracts and e-signatures<small>Agreements sent, signed and filed automatically.</small></span></label>
+          <label class="opt"><input type="checkbox" name="wishlist[]" value="Email sorting and drafted replies"><span>Email sorting and drafted replies<small>Your inbox sorted and replies ready to send.</small></span></label>
+          <label class="opt"><input type="checkbox" name="wishlist[]" value="Calendar booking link"><span>Calendar booking link<small>People book calls with you without the back and forth.</small></span></label>
+          <label class="opt"><input type="checkbox" name="wishlist[]" value="Social media posting"><span>Social media posting<small>For Laufer Sports &amp; Entertainment and your athletes.</small></span></label>
+          <label class="opt"><input type="checkbox" name="wishlist[]" value="Content creation"><span>Content creation<small>Posts, graphics and captions made for you.</small></span></label>
+          <label class="opt"><input type="checkbox" name="wishlist[]" value="Recruiting outreach"><span>Recruiting outreach<small>Reach out to prospects from your Blind Side Index.</small></span></label>
+          <label class="opt"><input type="checkbox" name="wishlist[]" value="Weekly reports"><span>Weekly reports<small>Prospects, deals and follow ups in 1 summary.</small></span></label>
+          <label class="opt"><input type="checkbox" name="wishlist[]" value="Invoices and payment reminders"><span>Invoices and payment reminders<small>Get paid on time without chasing.</small></span></label>
+          <label class="opt"><input type="checkbox" name="wishlist[]" value="Website refresh"><span>Website refresh<small>A cleaner, modern site that brings in leads.</small></span></label>
+          <label class="opt"><input type="checkbox" name="wishlist[]" value="Personal AI assistant"><span>Personal AI assistant<small>Claude set up to help you with your daily work.</small></span></label>
+        </div>
+        <input class="other" type="text" name="wishlist-other" placeholder="Other"></div>
+      <div class="card"><label class="q">Your top 3 priorities, in order</label><span class="hint">1 per line. Your number 1 is where we start.</span><textarea name="top-3-priorities"></textarea></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><div class="badge">09</div><span class="eyebrow">Your tools</span></div>
+      <h2>What you <em>use today</em></h2>
+      <div class="card"><label class="q">Check every tool you already use</label>
+        <div class="opts three">
+          <label class="opt"><input type="checkbox" name="tools[]" value="Gmail or Google Workspace">Gmail or Google Workspace</label>
+          <label class="opt"><input type="checkbox" name="tools[]" value="Outlook or Microsoft 365">Outlook or Microsoft 365</label>
+          <label class="opt"><input type="checkbox" name="tools[]" value="Wix">Wix (your website)</label>
+          <label class="opt"><input type="checkbox" name="tools[]" value="Google Sheets or Excel">Google Sheets or Excel</label>
+          <label class="opt"><input type="checkbox" name="tools[]" value="Notion">Notion</label>
+          <label class="opt"><input type="checkbox" name="tools[]" value="A client tracker app">A client tracker app</label>
+          <label class="opt"><input type="checkbox" name="tools[]" value="E-signature tool">DocuSign or another e-signature tool</label>
+          <label class="opt"><input type="checkbox" name="tools[]" value="QuickBooks or bookkeeping">QuickBooks or bookkeeping</label>
+          <label class="opt"><input type="checkbox" name="tools[]" value="Booking tool">Calendly or a booking tool</label>
+          <label class="opt"><input type="checkbox" name="tools[]" value="Instagram">Instagram</label>
+          <label class="opt"><input type="checkbox" name="tools[]" value="X">X (Twitter)</label>
+          <label class="opt"><input type="checkbox" name="tools[]" value="LinkedIn">LinkedIn</label>
+          <label class="opt"><input type="checkbox" name="tools[]" value="TikTok">TikTok</label>
+          <label class="opt"><input type="checkbox" name="tools[]" value="YouTube">YouTube</label>
+          <label class="opt"><input type="checkbox" name="tools[]" value="Claude">Claude</label>
+          <label class="opt"><input type="checkbox" name="tools[]" value="ChatGPT">ChatGPT</label>
+          <label class="opt"><input type="checkbox" name="tools[]" value="WhatsApp or text">WhatsApp or text for clients</label>
+          <label class="opt"><input type="checkbox" name="tools[]" value="Slack">Slack</label>
+        </div>
+        <input class="other" type="text" name="tools-other" placeholder="Other"></div>
+      <div class="card"><label class="q">Which Claude plan do you have? (Free, Pro or Max)</label><input type="text" name="claude-plan"></div>
+      <div class="card"><label class="q">What computer will you use for our Zoom? (Mac or Windows)</label><input type="text" name="computer"></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><div class="badge">10</div><span class="eyebrow">Website and client care</span></div>
+      <h2>Your website and <em>client care</em></h2>
+      <div class="card"><label class="q">Who manages lauferse.com today, and do you have the Wix login?</label><textarea name="website-manager"></textarea></div>
+      <div class="card"><label class="q">What do you like about your website? What would you change?</label><textarea name="website-likes-changes"></textarea></div>
+      <div class="card"><label class="q">What are the top 5 questions athletes, parents and brands ask you?</label><span class="hint">These become the first answers your chat assistant learns.</span><textarea name="top-5-questions" style="min-height:130px"></textarea></div>
+      <div class="card"><label class="q">How do people contact you now, and how fast can you usually reply?</label><textarea name="contact-and-reply-time"></textarea></div>
+      <div class="card"><label class="q">What should a chat assistant never answer, and send straight to you instead?</label><span class="hint">Example: contract terms, money, anything about a specific athlete.</span><textarea name="never-answer"></textarea></div>
+      <div class="card"><label class="q">Which Instagram handle is your main one?</label><input type="text" name="main-instagram"></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><div class="badge">11</div><span class="eyebrow">Access and privacy</span></div>
+      <h2>Keeping it <em>safe</em></h2>
+      <p class="intro">Passwords never go in this form or by email. You sign in yourself during our call.</p>
+      <div class="card"><label class="q">Do you work with any athletes under 18?</label><span class="hint">This tells me how carefully to handle names, photos and contact info.</span>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="under-18" value="Yes">Yes</label>
+          <label class="opt"><input type="radio" name="under-18" value="No">No</label>
+        </div></div>
+      <div class="card"><label class="q">Is any information off limits for me or anyone helping me?</label><textarea name="off-limits"></textarea></div>
+      <div class="card"><label class="q">Before our Zoom, please have these ready. Check what is done.</label>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="ready[]" value="Laptop with Zoom"><span>Laptop with Zoom<small>Ready to share your screen and allow remote control.</small></span></label>
+          <label class="opt"><input type="checkbox" name="ready[]" value="Signed in to Claude"><span>Signed in to Claude<small>A paid plan (Pro or higher) works best for automations.</small></span></label>
+          <label class="opt"><input type="checkbox" name="ready[]" value="Signed in to Google"><span>Signed in to Google<small>Gmail and Google Sheets, if you use them.</small></span></label>
+          <label class="opt"><input type="checkbox" name="ready[]" value="Wix access added"><span>Wix access<small>Add hello@lisahaven.co as a site collaborator. No password needed.</small></span></label>
+          <label class="opt"><input type="checkbox" name="ready[]" value="Football data key"><span>Football data key<small>A free key at <a href="https://collegefootballdata.com" target="_blank">collegefootballdata.com</a>, under your own email.</small></span></label>
+          <label class="opt"><input type="checkbox" name="ready[]" value="Other logins"><span>Any other logins<small>Social accounts or tools we will connect. You type the passwords.</small></span></label>
+        </div></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><div class="badge">12</div><span class="eyebrow">Working together</span></div>
+      <h2>How <em>we work</em></h2>
+      <div class="card simple"><h3>The simple version</h3><ul>
+        <li>Your setup is complimentary in exchange for an honest video review when we are done.</li>
+        <li>It covers your number 1 priority from Section 08. Anything beyond that, I will quote for you first.</li>
+        <li>Every tool is in your name and paid by you, so you own everything we build.</li>
+        <li>After handoff you get a 14-day fix window for anything I built. After that, ongoing help is through my monthly Care Plan.</li>
+        <li>When a project needs extra hands, I may bring in a trusted specialist who signs a confidentiality agreement.</li></ul></div>
+      <div class="card"><label class="q">Please check to agree</label>
+        <div class="opts one">
+          <label class="opt"><input type="checkbox" name="agree[]" value="Agrees to the simple version" required>I agree to the simple version above *</label>
+          <label class="opt"><input type="checkbox" name="agree[]" value="OK to use review in marketing">OK to use my name, business name and video review on lisahaven.co and in Lisa's marketing</label>
+          <label class="opt"><input type="checkbox" name="agree[]" value="OK to bring in a specialist">OK to bring in a trusted specialist under confidentiality</label>
+          <label class="opt"><input type="checkbox" name="agree[]" value="OK to record Zoom">OK to record our Zoom for my handoff walkthrough</label>
+        </div></div>
+      <div class="card"><label class="q">Anything else I should know?</label><textarea name="anything-else"></textarea></div>
+      <div class="card"><label class="q" for="f-sign">Type your full name to sign *</label><input type="text" id="f-sign" name="signature" required></div>
+    </section>
+
+    <div class="submit-wrap">
+      <button type="submit">Send my answers</button>
+      <p class="saved">Your answers save on this device as you type, so you can come back and finish later.</p>
+    </div>
+  </form>
+
+  <footer><span>Lisa Haven &middot; Confidential</span><span class="spark">&#10022;</span><span>lisahaven.co</span></footer>
+</div>
+
+<script>
+(function () {
+  var KEY = 'lh-intake-laufer';
+  var form = document.getElementById('intake');
+  var data = {};
+  try { data = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { data = {}; }
+  Array.prototype.forEach.call(form.elements, function (el, i) {
+    if (!el.name || el.type === 'hidden' || el.name === 'bot-field') return;
+    var id = el.name + '|' + (el.value && (el.type === 'checkbox' || el.type === 'radio') ? el.value : i);
+    if (id in data) {
+      if (el.type === 'checkbox' || el.type === 'radio') el.checked = data[id]; else el.value = data[id];
+    }
+    var save = function () {
+      data[id] = (el.type === 'checkbox' || el.type === 'radio') ? el.checked : el.value;
+      if (el.type === 'radio') {
+        Array.prototype.forEach.call(form.querySelectorAll('input[name="' + el.name + '"]'), function (r) {
+          data[r.name + '|' + r.value] = r.checked;
+        });
+      }
+      try { localStorage.setItem(KEY, JSON.stringify(data)); } catch (e) {}
+    };
+    el.addEventListener('input', save);
+    el.addEventListener('change', save);
+  });
+  form.addEventListener('submit', function () {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>
