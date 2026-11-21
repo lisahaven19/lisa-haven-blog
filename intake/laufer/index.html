@@ -251,7 +251,7 @@
       <div class="card"><label class="q" for="f-name">Your full name and title *</label><input type="text" id="f-name" name="name-and-title" required></div>
       <div class="card"><label class="q" for="f-email">Best email for this project *</label><input type="email" id="f-email" name="email" required></div>
       <div class="card"><label class="q" for="f-phone">Best phone number</label><input type="tel" id="f-phone" name="phone"></div>
-      <div class="card"><label class="q">In your own words, what does Laufer Sports &amp; Entertainment do?</label><textarea name="what-lse-does"></textarea></div>
+      <div class="card"><label class="q" for="f-what-lse-does">In your own words, what does Laufer Sports &amp; Entertainment do?</label><textarea id="f-what-lse-does" name="what-lse-does"></textarea></div>
       <div class="card"><label class="q">Who are your clients? Check all that apply.</label>
         <div class="opts">
           <label class="opt"><input type="checkbox" name="clients[]" value="College athletes">College athletes</label>
@@ -262,27 +262,27 @@
           <label class="opt"><input type="checkbox" name="clients[]" value="Parents and families">Parents and families of athletes</label>
         </div>
         <textarea class="other" name="clients-other" placeholder="Other, or your own answer. Be as specific as you like." rows="2"></textarea></div>
-      <div class="card"><label class="q">How many clients do you represent today? How many would you like in 12 months?</label><input type="text" name="client-count"></div>
-      <div class="card"><label class="q">Who is on your team?</label><span class="hint">Just you, staff, assistants or contractors. Include what each person handles.</span><textarea name="team"></textarea></div>
-      <div class="card"><label class="q">How do new clients find you today?</label><span class="hint">Referrals, Instagram, events, cold outreach, your website, other.</span><textarea name="lead-sources"></textarea></div>
+      <div class="card"><label class="q" for="f-client-count">How many clients do you represent today? How many would you like in 12 months?</label><input type="text" id="f-client-count" name="client-count"></div>
+      <div class="card"><label class="q" for="f-team">Who is on your team?</label><span class="hint">Just you, staff, assistants or contractors. Include what each person handles.</span><textarea id="f-team" name="team"></textarea></div>
+      <div class="card"><label class="q" for="f-lead-sources">How do new clients find you today?</label><span class="hint">Referrals, Instagram, events, cold outreach, your website, other.</span><textarea id="f-lead-sources" name="lead-sources"></textarea></div>
     </section>
 
     <section>
       <div class="sec-head"><div class="badge">05</div><span class="eyebrow">Your goals</span></div>
       <h2>Where you <em>want to go</em></h2>
-      <div class="card"><label class="q">Your top 3 business goals for the next 12 months</label><span class="hint">1 goal per line.</span><textarea name="goals-12-months"></textarea></div>
-      <div class="card"><label class="q">In 90 days, what would make you say "working with Lisa was worth it"?</label><textarea name="worth-it-90-days"></textarea></div>
-      <div class="card"><label class="q">Is there a revenue or client number you are aiming for? (optional)</label><input type="text" name="target-number"></div>
+      <div class="card"><label class="q" for="f-goals-12-months">Your top 3 business goals for the next 12 months</label><span class="hint">1 goal per line.</span><textarea id="f-goals-12-months" name="goals-12-months"></textarea></div>
+      <div class="card"><label class="q" for="f-worth-it-90-days">In 90 days, what would make you say "working with Lisa was worth it"?</label><textarea id="f-worth-it-90-days" name="worth-it-90-days"></textarea></div>
+      <div class="card"><label class="q" for="f-target-number">Is there a revenue or client number you are aiming for? (optional)</label><input type="text" id="f-target-number" name="target-number"></div>
     </section>
 
     <section>
       <div class="sec-head"><div class="badge">06</div><span class="eyebrow">Bottlenecks</span></div>
       <h2>What is <em>slowing you down</em></h2>
-      <div class="card"><label class="q">What eats up most of your time each week?</label><textarea name="time-eaters"></textarea></div>
-      <div class="card"><label class="q">Which tasks do you repeat over and over?</label><span class="hint">Example: typing in player stats, sending the same email, following up with families.</span><textarea name="repeat-tasks"></textarea></div>
-      <div class="card"><label class="q">Where do things fall through the cracks?</label><span class="hint">Missed follow ups, lost leads, late replies, forgotten deadlines.</span><textarea name="cracks"></textarea></div>
-      <div class="card"><label class="q">About how many hours a week go to admin work?</label><input type="text" name="admin-hours"></div>
-      <div class="card"><label class="q">If you could hand off 1 task tomorrow, what would it be?</label><textarea name="hand-off-first"></textarea></div>
+      <div class="card"><label class="q" for="f-time-eaters">What eats up most of your time each week?</label><textarea id="f-time-eaters" name="time-eaters"></textarea></div>
+      <div class="card"><label class="q" for="f-repeat-tasks">Which tasks do you repeat over and over?</label><span class="hint">Example: typing in player stats, sending the same email, following up with families.</span><textarea id="f-repeat-tasks" name="repeat-tasks"></textarea></div>
+      <div class="card"><label class="q" for="f-cracks">Where do things fall through the cracks?</label><span class="hint">Missed follow ups, lost leads, late replies, forgotten deadlines.</span><textarea id="f-cracks" name="cracks"></textarea></div>
+      <div class="card"><label class="q" for="f-admin-hours">About how many hours a week go to admin work?</label><input type="text" id="f-admin-hours" name="admin-hours"></div>
+      <div class="card"><label class="q" for="f-hand-off-first">If you could hand off 1 task tomorrow, what would it be?</label><textarea id="f-hand-off-first" name="hand-off-first"></textarea></div>
     </section>
 
     <section>
@@ -297,7 +297,7 @@
           <label class="opt"><input type="checkbox" name="bsi-purpose[]" value="My own research">My own research</label>
         </div>
         <textarea class="other" name="bsi-purpose-other" placeholder="Other, or your own answer. Be as specific as you like." rows="2"></textarea></div>
-      <div class="card"><label class="q">Where did you build it?</label><span class="hint">If you can, send me the file or a link to it.</span>
+      <div class="card"><label class="q" for="f-bsi-players-seasons">Where did you build it?</label><span class="hint">If you can, send me the file or a link to it.</span>
         <div class="opts">
           <label class="opt"><input type="checkbox" name="bsi-built-in[]" value="Claude">Claude</label>
           <label class="opt"><input type="checkbox" name="bsi-built-in[]" value="ChatGPT">ChatGPT</label>
@@ -314,9 +314,9 @@
         </div>
         <textarea class="other" name="bsi-levels-own-answer" placeholder="Other, or your own answer. Name specific conferences or schools if you like." rows="2"></textarea></div>
       <div class="card"><label class="q">Which positions matter most? Just quarterbacks, or every position?</label><input type="text" name="bsi-positions"></div>
-      <div class="card"><label class="q">How many players do you want to track at once, and which seasons?</label><span class="hint">Example: 300 players, this season plus the last 2.</span><input type="text" name="bsi-players-seasons"></div>
-      <div class="card"><label class="q">Where does your draft buzz rank come from, and how often does it change?</label><textarea name="bsi-draft-buzz"></textarea></div>
-      <div class="card"><label class="q">How do you chart film today, and how long does 1 player take?</label><textarea name="bsi-film"></textarea></div>
+      <div class="card"><label class="q">How many players do you want to track at once, and which seasons?</label><span class="hint">Example: 300 players, this season plus the last 2.</span><input type="text" id="f-bsi-players-seasons" name="bsi-players-seasons"></div>
+      <div class="card"><label class="q" for="f-bsi-draft-buzz">Where does your draft buzz rank come from, and how often does it change?</label><textarea id="f-bsi-draft-buzz" name="bsi-draft-buzz"></textarea></div>
+      <div class="card"><label class="q" for="f-bsi-film">How do you chart film today, and how long does 1 player take?</label><textarea id="f-bsi-film" name="bsi-film"></textarea></div>
       <div class="card"><label class="q">Who will use it?</label>
         <div class="opts">
           <label class="opt"><input type="checkbox" name="bsi-users[]" value="Just me">Just me</label>
@@ -334,14 +334,14 @@
           <label class="opt"><input type="checkbox" name="bsi-results[]" value="A private dashboard">A private dashboard</label>
         </div>
         <textarea class="other" name="bsi-results-own-answer" placeholder="Other, or your own answer. Tell me exactly how you want to see it." rows="2"></textarea></div>
-      <div class="card"><label class="q">What would you do with a weekly list of your top 10 sleepers?</label><textarea name="bsi-top-10-use"></textarea></div>
+      <div class="card"><label class="q" for="f-bsi-top-10-use">What would you do with a weekly list of your top 10 sleepers?</label><textarea id="f-bsi-top-10-use" name="bsi-top-10-use"></textarea></div>
     </section>
 
     <section>
       <div class="sec-head"><div class="badge">08</div><span class="eyebrow">Automation wish list</span></div>
       <h2>What I can <em>install for you</em></h2>
       <p class="intro">Check everything that sounds helpful, then rank your top 3 below. No limits, just dream.</p>
-      <div class="card"><label class="q">In your own words, what would you most like to automate or accomplish with me?</label><textarea name="automate-in-own-words"></textarea></div>
+      <div class="card"><label class="q" for="f-automate-in-own-words">In your own words, what would you most like to automate or accomplish with me?</label><textarea id="f-automate-in-own-words" name="automate-in-own-words"></textarea></div>
       <div class="card"><label class="q">Pick what you want</label>
         <div class="opts">
           <label class="opt"><input type="checkbox" name="wishlist[]" value="Website chat assistant"><span>Website chat assistant<small>Answers athletes, parents and brands day and night.</small></span></label>
@@ -360,7 +360,7 @@
           <label class="opt"><input type="checkbox" name="wishlist[]" value="Personal AI assistant"><span>Personal AI assistant<small>Claude set up to help you with your daily work.</small></span></label>
         </div>
         <textarea class="other" name="wishlist-other" placeholder="Other, or your own answer. Be as specific as you like." rows="2"></textarea></div>
-      <div class="card"><label class="q">Your top 3 priorities, in order</label><span class="hint">1 per line. Your number 1 is where we start.</span><textarea name="top-3-priorities"></textarea></div>
+      <div class="card"><label class="q" for="f-top-3-priorities">Your top 3 priorities, in order</label><span class="hint">1 per line. Your number 1 is where we start.</span><textarea id="f-top-3-priorities" name="top-3-priorities"></textarea></div>
     </section>
 
     <section>
@@ -388,19 +388,19 @@
           <label class="opt"><input type="checkbox" name="tools[]" value="Slack">Slack</label>
         </div>
         <textarea class="other" name="tools-other" placeholder="Other, or your own answer. Be as specific as you like." rows="2"></textarea></div>
-      <div class="card"><label class="q">Which Claude plan do you have? (Free, Pro or Max)</label><input type="text" name="claude-plan"></div>
-      <div class="card"><label class="q">What computer will you use for our Zoom? (Mac or Windows)</label><input type="text" name="computer"></div>
+      <div class="card"><label class="q" for="f-claude-plan">Which Claude plan do you have? (Free, Pro or Max)</label><input type="text" id="f-claude-plan" name="claude-plan"></div>
+      <div class="card"><label class="q" for="f-computer">What computer will you use for our Zoom? (Mac or Windows)</label><input type="text" id="f-computer" name="computer"></div>
     </section>
 
     <section>
       <div class="sec-head"><div class="badge">10</div><span class="eyebrow">Website and client care</span></div>
       <h2>Your website and <em>client care</em></h2>
-      <div class="card"><label class="q">Who manages lauferse.com today, and do you have the Wix login?</label><textarea name="website-manager"></textarea></div>
-      <div class="card"><label class="q">What do you like about your website? What would you change?</label><textarea name="website-likes-changes"></textarea></div>
-      <div class="card"><label class="q">What are the top 5 questions athletes, parents and brands ask you?</label><span class="hint">These become the first answers your chat assistant learns.</span><textarea name="top-5-questions" style="min-height:130px"></textarea></div>
-      <div class="card"><label class="q">How do people contact you now, and how fast can you usually reply?</label><textarea name="contact-and-reply-time"></textarea></div>
-      <div class="card"><label class="q">What should a chat assistant never answer, and send straight to you instead?</label><span class="hint">Example: contract terms, money, anything about a specific athlete.</span><textarea name="never-answer"></textarea></div>
-      <div class="card"><label class="q">Which Instagram handle is your main one?</label><input type="text" name="main-instagram"></div>
+      <div class="card"><label class="q" for="f-website-manager">Who manages lauferse.com today, and do you have the Wix login?</label><textarea id="f-website-manager" name="website-manager"></textarea></div>
+      <div class="card"><label class="q" for="f-website-likes-changes">What do you like about your website? What would you change?</label><textarea id="f-website-likes-changes" name="website-likes-changes"></textarea></div>
+      <div class="card"><label class="q" for="f-top-5-questions">What are the top 5 questions athletes, parents and brands ask you?</label><span class="hint">These become the first answers your chat assistant learns.</span><textarea id="f-top-5-questions" name="top-5-questions" style="min-height:130px"></textarea></div>
+      <div class="card"><label class="q" for="f-contact-and-reply-time">How do people contact you now, and how fast can you usually reply?</label><textarea id="f-contact-and-reply-time" name="contact-and-reply-time"></textarea></div>
+      <div class="card"><label class="q" for="f-never-answer">What should a chat assistant never answer, and send straight to you instead?</label><span class="hint">Example: contract terms, money, anything about a specific athlete.</span><textarea id="f-never-answer" name="never-answer"></textarea></div>
+      <div class="card"><label class="q" for="f-main-instagram">Which Instagram handle is your main one?</label><input type="text" id="f-main-instagram" name="main-instagram"></div>
     </section>
 
     <section>
@@ -413,7 +413,7 @@
           <label class="opt"><input type="radio" name="under-18" value="No">No</label>
         </div>
         <textarea class="other" name="under-18-own-answer" placeholder="Your own answer. About how many, and how old?" rows="2"></textarea></div>
-      <div class="card"><label class="q">Is any information off limits for me or anyone helping me?</label><textarea name="off-limits"></textarea></div>
+      <div class="card"><label class="q" for="f-off-limits">Is any information off limits for me or anyone helping me?</label><textarea id="f-off-limits" name="off-limits"></textarea></div>
       <div class="card"><label class="q">Before our Zoom, please have these ready. Check what is done.</label>
         <div class="opts">
           <label class="opt"><input type="checkbox" name="ready[]" value="Laptop with Zoom"><span>Laptop with Zoom<small>Ready to share your screen and allow remote control.</small></span></label>
@@ -443,7 +443,7 @@
           <label class="opt"><input type="checkbox" name="agree[]" value="OK to record Zoom">OK to record our Zoom for my handoff walkthrough</label>
         </div>
         <textarea class="other" name="agree-own-answer" placeholder="Your own answer. Any questions or changes you would like?" rows="2"></textarea></div>
-      <div class="card"><label class="q">Anything else I should know?</label><textarea name="anything-else"></textarea></div>
+      <div class="card"><label class="q" for="f-anything-else">Anything else I should know?</label><textarea id="f-anything-else" name="anything-else"></textarea></div>
       <div class="card"><label class="q" for="f-sign">Type your full name to sign *</label><input type="text" id="f-sign" name="signature" required></div>
     </section>
 
