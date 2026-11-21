@@ -1,6 +1,6 @@
 ---
 title: "Midface Lift in Turkey: My Honest Review and Recovery Timeline"
-category: The Journey
+category: Travel
 emoji: 🖤
 date: 2026-11-11T02:15:00.000-05:00
 readTime: 15 min read
