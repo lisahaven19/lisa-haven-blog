@@ -300,11 +300,13 @@ try {
   const day = d => { const m = String(d || '').match(/^\d{4}-\d{2}-\d{2}/); return m ? m[0] : ''; };
   const urls = [
     { loc: SITE + '/', priority: '1.0' },
+    { loc: SITE + '/blog', priority: '0.9' },
     { loc: SITE + '/start-here', priority: '0.8' },
     { loc: SITE + '/shop', priority: '0.6' },
     { loc: SITE + '/press-kit', priority: '0.5' },
     { loc: SITE + '/contact', priority: '0.4' },
-    { loc: SITE + '/privacy-policy', priority: '0.2' }
+    { loc: SITE + '/privacy-policy', priority: '0.2' },
+    { loc: SITE + '/disclosure', priority: '0.3' }
   ];
   live.filter(p => p && p.slug && !p.draft).forEach(p => {
     urls.push({ loc: SITE + '/blog/' + encodeURIComponent(p.slug) + '/', lastmod: day(p.updated || p.date), priority: '0.9' });
