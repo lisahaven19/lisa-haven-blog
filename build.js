@@ -323,6 +323,61 @@ try {
   console.log('⚠️ sitemap.xml build skipped:', e.message);
 }
 
+// ── 5b. Build an RSS feed at /feed.xml ─────────────────────────
+// A machine readable list of the newest posts. Email tools, feed readers
+// and automations watch this file and pick up new posts on their own.
+try {
+  const livePath = path.join(__dirname, 'blog-posts.json');
+  let live = [];
+  if (fs.existsSync(livePath)) {
+    const parsed = JSON.parse(fs.readFileSync(livePath, 'utf-8'));
+    if (Array.isArray(parsed)) live = parsed;
+  }
+  const SITE = 'https://lisahaven.co';
+  const esc = s => String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const plain = s => String(s || '')
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .replace(/[#>*_\u0060]/g, '')
+    .replace(/\s+/g, ' ').trim();
+  const rfc822 = d => { const t = new Date(d); return isNaN(t) ? new Date().toUTCString() : t.toUTCString(); };
+
+  const items = live
+    .filter(p => p && p.slug && !p.draft)
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 30)
+    .map(p => {
+      const url = SITE + '/blog/' + encodeURIComponent(p.slug) + '/';
+      const desc = plain(p.excerpt || p.body || '').slice(0, 500);
+      return '  <item>\n'
+        + '    <title>' + esc(p.title) + '</title>\n'
+        + '    <link>' + esc(url) + '</link>\n'
+        + '    <guid isPermaLink="true">' + esc(url) + '</guid>\n'
+        + '    <pubDate>' + rfc822(p.date) + '</pubDate>\n'
+        + (p.category ? '    <category>' + esc(p.category) + '</category>\n' : '')
+        + '    <description>' + esc(desc) + '</description>\n'
+        + '  </item>';
+    });
+
+  const feed = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    + '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
+    + '<channel>\n'
+    + '  <title>Lisa Haven</title>\n'
+    + '  <link>' + SITE + '/</link>\n'
+    + '  <description>The real journey of building three companies as a mother of 3. The wins, the mess, and everything in between.</description>\n'
+    + '  <language>en-us</language>\n'
+    + '  <lastBuildDate>' + new Date().toUTCString() + '</lastBuildDate>\n'
+    + '  <atom:link href="' + SITE + '/feed.xml" rel="self" type="application/rss+xml" />\n'
+    + items.join('\n') + '\n'
+    + '</channel>\n</rss>\n';
+
+  fs.writeFileSync(path.join(__dirname, 'feed.xml'), feed);
+  console.log("Built feed.xml with " + items.length + " post(s).");
+} catch (e) {
+  console.log('⚠️ feed.xml build skipped:', e.message);
+}
+
 // ── 6. Give every post its own real page at /blog/<slug>/ ──
 // Google, Pinterest (Rich Pins), Facebook, LinkedIn and text messages read these
 // pages directly, so each one carries its own title, description, share image,
