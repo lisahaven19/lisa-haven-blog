@@ -33,14 +33,27 @@ body{background:var(--cream)}
 </div>
 </div>
 <script>
+function vsBadge(spec, big){
+  const [l, r] = spec.split('|');
+  const shield = `<svg width="${big?34:26}" height="${big?34:26}" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z" fill="#0A0A0A"/><path d="m8.2 12.2 2.6 2.6 5-5.2" fill="none" stroke="#E8C4CB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  const warn = `<svg width="${big?34:26}" height="${big?34:26}" viewBox="0 0 24 24"><path d="M12 2.5 1.8 20.5h20.4z" fill="#C47E8A"/><path d="M12 9v5.2" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="17.2" r="1.3" fill="#FFFFFF"/></svg>`;
+  const pill = (ic, txt, dark) => `<span style="display:inline-flex;align-items:center;gap:${big?12:9}px;padding:${big?'12px 22px':'9px 16px'};border-radius:999px;background:${dark?'#FFFFFF':'#FFFFFF'};border:2px solid ${dark?'#0A0A0A':'#C47E8A'};font:600 ${big?30:21}px 'IN';color:#0A0A0A">${ic}${txt}</span>`;
+  const el = document.createElement('div'); el.id = 'vs';
+  el.style.cssText = `display:flex;align-items:center;justify-content:${big?'center':'flex-start'};gap:${big?18:12}px;margin-top:${big?40:22}px;flex-wrap:nowrap`;
+  el.innerHTML = pill(shield, l, true) + `<span style="font:italic 700 ${big?34:24}px 'PF',serif;color:#A35F6D">vs</span>` + pill(warn, r, false);
+  return el;
+}
+
 window.fill=async function(d){
   eye.textContent=d.eyebrow; t.textContent=d.title; a.textContent=d.accent; sub.textContent=d.sub; img.src=d.photo;
+  const oldVs=document.getElementById('vs'); if(oldVs) oldVs.remove();
+  if(d.vs) document.getElementById('sub').after(vsBadge(d.vs,false));
   await new Promise(r=>{if(img.complete&&img.naturalWidth)r();else img.onload=r;});
   await document.fonts.ready;
   // shrink headline until the left column fits without touching the brand row
   let size=78; const L=document.querySelector('.left'), brand=document.querySelector('.brand');
   for(;size>=44;size-=2){ h.style.fontSize=size+'px';
-    const s=document.getElementById('sub').getBoundingClientRect(), b=brand.getBoundingClientRect(), hb=h.getBoundingClientRect();
+    const s=(document.getElementById('vs')||document.getElementById('sub')).getBoundingClientRect(), b=brand.getBoundingClientRect(), hb=h.getBoundingClientRect();
     if(s.bottom+28<=b.top && hb.right<=L.getBoundingClientRect().right+1) break; }
   const lr=L.getBoundingClientRect();
   // nothing in the text column may reach the photo

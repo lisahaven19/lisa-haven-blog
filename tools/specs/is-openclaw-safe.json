@@ -4,8 +4,9 @@
  "cover": {
   "title": "Is OpenClaw Safe?",
   "accent": "Why I Chose Claude",
-  "subtitle": "Claude vs OpenClaw: what the 2026 security reports found",
-  "tagline": "Plus a free AI safety checklist."
+  "subtitle": "What the 2026 security reports really found",
+  "tagline": "Plus a free AI safety checklist.",
+  "vs": "Claude|OpenClaw"
  },
  "pins": [
   {
