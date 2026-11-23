@@ -1,12 +1,43 @@
 {
  "slug": "is-openclaw-safe",
  "category": "AI & Tech",
- "cover": {"title": "Is OpenClaw Safe?", "accent": "Why I Chose Claude", "subtitle": "What the 2026 security reports really found", "tagline": "Plus a free AI safety checklist."},
+ "cover": {
+  "title": "Is OpenClaw Safe?",
+  "accent": "Why I Chose Claude",
+  "subtitle": "Claude vs OpenClaw: what the 2026 security reports found",
+  "tagline": "Plus a free AI safety checklist."
+ },
  "pins": [
-  {"title": "Is OpenClaw Safe?", "accent": "The Honest Answer", "subtitle": "512 vulnerabilities, 341 bad add-ons and what changed since", "tagline": "I run 3 companies with AI."},
-  {"title": "OpenClaw vs Claude:", "accent": "Which Is Safer?", "subtitle": "A founder's side by side comparison", "tagline": "Mom. CEO. AI."},
-  {"title": "Before You Install", "accent": "Any AI Agent", "subtitle": "Take the 60 second safety check", "tagline": "Free checklist inside."},
-  {"title": "Why I Trust Claude", "accent": "With My Business", "subtitle": "And why I said no to OpenClaw for now", "tagline": "I run 3 companies with AI.", "photo": "../images/uploads/lisa-circle-photo.jpg"},
-  {"title": "The AI Tool Prompt", "accent": "I Use to Vet Apps", "subtitle": "Copy it before you connect anything new", "tagline": "Prompt included."}
+  {
+   "title": "Is OpenClaw Safe?",
+   "accent": "The Honest Answer",
+   "subtitle": "512 vulnerabilities, 341 bad add-ons and what changed since",
+   "tagline": "I run 3 companies with AI."
+  },
+  {
+   "title": "OpenClaw vs Claude:",
+   "accent": "Which Is Safer?",
+   "subtitle": "A founder's side by side comparison",
+   "tagline": "Mom. CEO. AI."
+  },
+  {
+   "title": "Before You Install",
+   "accent": "Any AI Agent",
+   "subtitle": "Take the 60 second safety check",
+   "tagline": "Free checklist inside."
+  },
+  {
+   "title": "Why I Trust Claude",
+   "accent": "With My Business",
+   "subtitle": "And why I said no to OpenClaw for now",
+   "tagline": "I run 3 companies with AI.",
+   "photo": "../images/uploads/lisa-circle-photo.jpg"
+  },
+  {
+   "title": "The AI Tool Prompt",
+   "accent": "I Use to Vet Apps",
+   "subtitle": "Copy it before you connect anything new",
+   "tagline": "Prompt included."
+  }
  ]
 }
