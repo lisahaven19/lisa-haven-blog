@@ -8,7 +8,7 @@ readTime: 8 min read
 excerpt: Female founder Lisa Haven built an AI app, a beauty brand, a premium
   prompt platform, and a blog using only two AI tools. No dev team. No tech
   background. Here is how she did it and how you can too.
-image: /images/uploads/i-built-3-businesses-photo-centered.jpg
+image: /images/uploads/founder-director-centered.jpg
 seoTitle: "How to Build an AI App Without a Tech Team: 2 Tools"
 metaDescription: "I built an AI app, a beauty brand, a prompt platform and a blog with only 2 AI tools and no tech team. Here is exactly how, and how you can do it too."
 ---
