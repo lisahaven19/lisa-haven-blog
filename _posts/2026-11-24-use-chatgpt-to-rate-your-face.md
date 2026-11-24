@@ -63,7 +63,7 @@ Be specific to MY face, not generic advice. Keep it positive and practical.
 
 Want more prompts like this, written by real human experts? You can find them at [LUMAPROMPT.AI](https://www.lumaprompt.ai).
 
-![What ChatGPT checks when you upload 1 selfie: rating, face shape, skin, makeup, brows and hair, colors, photo tips and quick wins](/images/uploads/use-chatgpt-to-rate-your-face-what-it-checks.png)
+![What ChatGPT checks when you upload 1 selfie: rating, face shape, skin, makeup, brows and hair, colors, photo tips and quick wins](/images/uploads/use-chatgpt-to-rate-your-face-what-it-checks.jpg)
 
 ## How to Take the Right Photo First
 
@@ -77,7 +77,7 @@ ChatGPT can only judge what it can see. A bad photo gives you bad advice. Before
 
 Fun fact: my photo was taken in my car, and ChatGPT called it out. It said the close selfie angle and the bright light from above made my face look a little flatter than a real portrait would. It was right. That is exactly what I used to fix in my retouching days.
 
-It even drew me an angle guide: turn your face about 10 to 15 degrees instead of shooting every selfie straight on.
+It also told me to turn my face about 10 to 15 degrees instead of shooting every selfie straight on.
 
 ![ChatGPT selfie angle and lighting tips](/images/uploads/chatgpt-rate-your-face-photo-angles.jpg)
 
@@ -95,7 +95,7 @@ Here is what came back, in plain words.
 
 For my cheeks, it said to place blush high and slightly out toward my temples.
 
-![ChatGPT cheekbone and blush placement advice](/images/uploads/chatgpt-rate-your-face-cheeks.jpg)
+![ChatGPT face shape, eye and blush advice](/images/uploads/chatgpt-rate-your-face-cheeks.jpg)
 
 **My skin:** smooth and even, with a warm peachy glow. It noticed a little redness around my nose and said my matte foundation hides some of my skin's natural dimension.
 
