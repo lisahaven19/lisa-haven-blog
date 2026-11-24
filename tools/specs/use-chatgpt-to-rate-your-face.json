@@ -1,0 +1,38 @@
+{
+ "slug": "use-chatgpt-to-rate-your-face",
+ "category": "AI & Tech",
+ "cover": {
+  "title": "How to Use ChatGPT",
+  "accent": "to Rate Your Face",
+  "subtitle": "The exact prompt I used for skin, makeup, colors and photos",
+  "tagline": "Free copy and paste prompt inside."
+ },
+ "pins": [
+  {
+   "title": "How to Use ChatGPT",
+   "accent": "to Rate Your Face",
+   "subtitle": "The exact prompt I used for skin, makeup, colors and photos",
+   "tagline": "I run 3 companies with AI."
+  },
+  {
+   "title": "ChatGPT Gave Me a 9/10.",
+   "accent": "Here's What It Said",
+   "subtitle": "Face shape, best colors and 3 quick wins from 1 selfie",
+   "tagline": "Free prompt inside.",
+   "photo": "../images/uploads/lisa-circle-photo.jpg"
+  },
+  {
+   "title": "Turn ChatGPT Into",
+   "accent": "Your Beauty Coach",
+   "subtitle": "A makeup artist, colorist and photographer in 1 prompt",
+   "tagline": "Works with 1 selfie."
+  },
+  {
+   "title": "Find Your Best Colors",
+   "accent": "With ChatGPT",
+   "subtitle": "Upload 1 selfie and get your makeup and clothing palette",
+   "tagline": "I run 3 companies with AI.",
+   "photo": "../images/uploads/lisa-circle-photo.jpg"
+  }
+ ]
+}

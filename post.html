@@ -235,6 +235,8 @@
     .post-photo.post-video { width:fit-content; max-width:100%; margin:0 auto 28px; }
     .post-photo.post-video video { width:auto; max-width:100%; max-height:78vh; }
     .post-photo video { position:relative; z-index:1; display:block; width:100%; height:auto; }
+    .sound-btn { position:absolute; z-index:2; right:14px; bottom:14px; display:flex; align-items:center; gap:8px; padding:10px 16px; background:rgba(10,10,10,0.78); color:#F2EDE6; border:1px solid rgba(232,196,203,0.5); border-radius:999px; font:600 12px/1 Inter,sans-serif; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; backdrop-filter:blur(6px); }
+    .sound-btn:hover { background:#0A0A0A; }
 
     /* ── Photo gallery ── */
     .post-gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:30px 0 36px; }
@@ -1044,7 +1046,7 @@
         const d = new Date(post.date);
         const dateStr = d.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
         const photo = post.video
-          ? `<div class="post-photo post-video"><video src="${esc(post.video)}"${post.image ? ` poster="${esc(post.image)}"` : ''} autoplay muted loop playsinline preload="auto" aria-label="${esc(post.title)}"></video></div>`
+          ? `<div class="post-photo post-video"><video src="${esc(post.video)}"${post.image ? ` poster="${esc(post.image)}"` : ''} autoplay muted loop playsinline preload="auto" aria-label="${esc(post.title)}"></video><button type="button" class="sound-btn" aria-label="Turn sound on">&#128263; Tap for sound</button></div>`
           : (post.image ? `<div class="post-photo"><img src="${esc(post.image)}" alt="${esc(post.title)}"></div>` : '');
 
         let bodyHtml = post.body && post.body.trim() ? marked.parse(post.body) : '<p><em>Full story coming soon. Stay tuned! ✨</em></p>';
@@ -1219,6 +1221,12 @@
       .catch(comingSoon);
 
     // Footer scroll reveal (for elements already in DOM)
+    document.addEventListener('click', function (e) {
+      const b = e.target.closest('.sound-btn'); if (!b) return;
+      const v = b.parentElement.querySelector('video'); if (!v) return;
+      if (v.muted) { v.muted = false; v.currentTime = 0; v.play(); b.innerHTML = '&#128266; Sound on'; b.setAttribute('aria-label','Turn sound off'); }
+      else { v.muted = true; b.innerHTML = '&#128263; Tap for sound'; b.setAttribute('aria-label','Turn sound on'); }
+    });
     document.addEventListener('DOMContentLoaded', initScrollReveal);
   </script>
   <!-- Sign up pop-up and boxes: 1 shared file for every page -->

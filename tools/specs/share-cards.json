@@ -218,6 +218,13 @@
    "accent": "Why I chose Claude.",
    "sub": "The 2026 security reports, plus a free safety check.",
    "vs": "Claude|OpenClaw"
+  },
+  "use-chatgpt-to-rate-your-face": {
+   "eyebrow": "lisahaven.co · AI & Tech",
+   "title": "ChatGPT rated",
+   "accent": "my face.",
+   "sub": "My exact prompt, my 9/10 and 3 quick wins.",
+   "photo": "/images/uploads/use-chatgpt-to-rate-your-face-lisa.jpg"
   }
  }
 }
