@@ -5,16 +5,16 @@ emoji: 🖤
 date: 2026-11-24T19:00:00.000-05:00
 readTime: 8 min read
 excerpt: "I uploaded 1 selfie and asked ChatGPT to rate my face. I got a score, a color palette, a makeup plan and photo tips. Here is the exact prompt I used."
-image: /images/uploads/use-chatgpt-to-rate-your-face-lisa.jpg
-video: /images/uploads/use-chatgpt-to-rate-your-face.mp4
-cardPhoto: /images/uploads/use-chatgpt-to-rate-your-face-lisa.jpg
+image: /images/uploads/use-chatgpt-to-rate-your-face-lisa-wide.jpg
+video: /images/uploads/use-chatgpt-to-rate-your-face-zoomed-out.mp4
+cardPhoto: /images/uploads/use-chatgpt-to-rate-your-face-lisa-wide.jpg
 cover: /images/uploads/use-chatgpt-to-rate-your-face-cover.png
 seoTitle: "How to Use ChatGPT to Rate Your Face (Free Prompt)"
 metaDescription: "Learn how to use ChatGPT to rate your face the healthy way. Get my free copy and paste prompt for skin, makeup, hair, colors and selfie tips in minutes."
 draft: false
 ---
 
-![Lisa Haven car selfie uploaded to ChatGPT to rate her face](/images/uploads/use-chatgpt-to-rate-your-face-lisa.jpg)
+![Lisa Haven car selfie uploaded to ChatGPT to rate her face](/images/uploads/use-chatgpt-to-rate-your-face-lisa-wide.jpg)
 
 Most of your friends won't be honest with you. ChatGPT will.
 
