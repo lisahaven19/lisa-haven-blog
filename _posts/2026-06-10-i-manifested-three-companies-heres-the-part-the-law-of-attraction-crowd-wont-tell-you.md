@@ -7,7 +7,7 @@ readTime: 6 min read
 excerpt: The law of attraction for entrepreneurs is real, but not the way they
   sell it. Here is how I manifested three companies with vision plus the daily
   discipline behind it.
-image: /images/uploads/lisa-photo.jpg
+image: /images/uploads/lisa-photo-up.jpg
 seoTitle: "Law of Attraction for Entrepreneurs: What Nobody Says"
 metaDescription: "The law of attraction for entrepreneurs is real, but not the way it is sold. How I manifested 3 companies with a clear vision plus daily discipline."
 ---

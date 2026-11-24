@@ -6,7 +6,7 @@ date: 2026-05-29
 readTime: 7 min read
 excerpt: VIXA was born from one too many nights dissecting a 'lol' text with my
   girlfriends. Women deserve actual clarity, not just opinions.
-image: /images/uploads/0i4a7811.jpg
+image: /images/uploads/0i4a7811-up.jpg
 seoTitle: "What Is VIXA? The AI Dating Clarity App for Women"
 metaDescription: "VIXA is an AI dating clarity app that reads tone, timing and effort in texts so women get real answers instead of group chat guesswork. Here is why I built it."
 ---

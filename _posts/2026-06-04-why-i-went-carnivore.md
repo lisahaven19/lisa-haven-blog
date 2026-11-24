@@ -6,7 +6,7 @@ date: "2026-06-04"
 readTime: "4 min read"
 excerpt: "I needed something that would give me energy at 5am, clarity at noon, and still leave fuel in the tank for my daughters at 8pm. The carnivore diet did that."
 seoTitle: "Why I Went Carnivore: My Energy as a CEO Mom"
-image: "/images/uploads/gym-photo.jpg"
+image: "/images/uploads/gym-photo-up.jpg"
 ---
 I know, I know. The first thing people ask is, *"But where do you get your fiber?"*
 
