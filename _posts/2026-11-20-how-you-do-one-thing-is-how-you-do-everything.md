@@ -5,9 +5,9 @@ emoji: 🖤
 date: 2026-11-20T23:00:00.000-05:00
 readTime: 9 min read
 excerpt: "I run my businesses with everything I have. Then I noticed I run everything else that way too. Here is what that taught me about effort, flow and the things meant for me."
-image: /images/uploads/how-you-do-one-thing-is-how-you-do-everything-lisa.jpg
-video: /images/uploads/how-you-do-one-thing-is-how-you-do-everything.mp4
-cardPhoto: /images/uploads/how-you-do-one-thing-is-how-you-do-everything-lisa.jpg
+image: /images/uploads/how-you-do-one-thing-is-how-you-do-everything-lisa-centered.jpg
+video: /images/uploads/how-you-do-one-thing-is-how-you-do-everything-centered.mp4
+cardPhoto: /images/uploads/how-you-do-one-thing-is-how-you-do-everything-lisa-centered.jpg
 cover: /images/uploads/how-you-do-one-thing-is-how-you-do-everything-cover.png
 seoTitle: "How You Do One Thing Is How You Do Everything | Lisa Haven"
 metaDescription: "How you do one thing is how you do everything. A founder and mother of 3 on effort, gut feelings, signs, and why what is meant for you always finds you."
