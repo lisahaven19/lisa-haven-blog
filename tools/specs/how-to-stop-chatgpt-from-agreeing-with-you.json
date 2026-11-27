@@ -1,0 +1,38 @@
+{
+ "slug": "how-to-stop-chatgpt-from-agreeing-with-you",
+ "category": "AI & Tech",
+ "cover": {
+  "title": "How to Stop ChatGPT",
+  "accent": "From Agreeing With You",
+  "subtitle": "My honesty prompt for ChatGPT and Claude, plus a 2 minute yes-man test",
+  "tagline": "Free copy and paste prompts inside."
+ },
+ "pins": [
+  {
+   "title": "How to Stop ChatGPT",
+   "accent": "From Agreeing With You",
+   "subtitle": "The honesty prompt I use to run my 3 companies",
+   "tagline": "I run 3 companies with AI."
+  },
+  {
+   "title": "Your AI Is a",
+   "accent": "Yes-Man. Test It.",
+   "subtitle": "A 2 minute test to see if ChatGPT tells you the truth",
+   "tagline": "Free prompt inside.",
+   "photo": "../images/uploads/lisa-circle-photo.jpg"
+  },
+  {
+   "title": "AI Agrees With You",
+   "accent": "49% More Than People",
+   "subtitle": "What a 2026 Stanford study found, and how to fix it",
+   "tagline": "I run 3 companies with AI."
+  },
+  {
+   "title": "The Brutal Business",
+   "accent": "Review Prompt",
+   "subtitle": "Make ChatGPT argue against you before you spend a dollar",
+   "tagline": "I run 3 companies with AI and teach you how.",
+   "photo": "../images/uploads/lisa-circle-photo.jpg"
+  }
+ ]
+}

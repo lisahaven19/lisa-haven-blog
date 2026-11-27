@@ -1021,6 +1021,82 @@
      "text": "AI shows the fit. Real photos show the truth."
     }
    ]
+  },
+  {
+   "slug": "how-to-stop-chatgpt-from-agreeing-with-you",
+   "out": "how-to-stop-chatgpt-from-agreeing-with-you-chart.jpg",
+   "eyebrow": "How to stop ChatGPT from agreeing with you",
+   "title": "AI says <i>yes</i> more than people do",
+   "sub": "How often each one backed the user's behavior, with humans set to 100.",
+   "blocks": [
+    {
+     "type": "bars",
+     "style": "pink",
+     "head": "How often the user was told they were right",
+     "items": [
+      {
+       "label": "AI models",
+       "value": "149",
+       "pct": 100,
+       "color": "rose"
+      },
+      {
+       "label": "Humans",
+       "value": "100",
+       "pct": 67,
+       "color": "ink"
+      }
+     ],
+     "source": "Stanford study of 11 AI models including ChatGPT, Claude and Gemini, published in Science, March 2026. AI affirmed users 49% more often on average."
+    },
+    {
+     "type": "rule",
+     "label": "My rule:",
+     "text": "Honesty is not a default setting. You have to ask for it."
+    }
+   ]
+  },
+  {
+   "slug": "how-to-stop-chatgpt-from-agreeing-with-you",
+   "out": "how-to-stop-chatgpt-from-agreeing-with-you-compare.jpg",
+   "eyebrow": "The 2 minute yes-man test",
+   "title": "Yes-man AI vs <i>honest</i> AI",
+   "sub": "Same risky business idea. 2 very different answers.",
+   "blocks": [
+    {
+     "type": "compare",
+     "cols": [
+      {
+       "title": "Yes-man AI",
+       "sub": "Feels great. Costs you later.",
+       "icon": "x",
+       "items": [
+        "Opens with a pep talk",
+        "Calls the idea brilliant",
+        "Hides warnings at the bottom",
+        "Caves when you push back"
+       ]
+      },
+      {
+       "title": "Honest AI",
+       "sub": "Stings a little. Saves you money.",
+       "style": "dark",
+       "icon": "check",
+       "items": [
+        "Leads with the real risks",
+        "Says how sure it is",
+        "Holds its ground without a new fact",
+        "Gives 1 clear next step"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "rule",
+     "label": "The fix:",
+     "text": "Paste the honesty prompt into your custom instructions, then test again."
+    }
+   ]
   }
  ]
 }
