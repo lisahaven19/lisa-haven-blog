@@ -5,9 +5,9 @@ emoji: 🖤
 date: 2026-11-27T11:55:00.000-05:00
 readTime: 8 min read
 excerpt: "ChatGPT will call almost every idea brilliant. Here is the honesty prompt I use to make ChatGPT and Claude tell me the truth before I spend a single dollar."
-image: /images/uploads/how-to-stop-chatgpt-from-agreeing-with-you-lisa.jpg
-video: /images/uploads/how-to-stop-chatgpt-from-agreeing-with-you.mp4
-cardPhoto: /images/uploads/how-to-stop-chatgpt-from-agreeing-with-you-lisa.jpg
+image: /images/uploads/how-to-stop-chatgpt-from-agreeing-with-you-lisa-centered.jpg
+video: /images/uploads/how-to-stop-chatgpt-from-agreeing-with-you-centered.mp4
+cardPhoto: /images/uploads/how-to-stop-chatgpt-from-agreeing-with-you-lisa-centered.jpg
 cover: /images/uploads/how-to-stop-chatgpt-from-agreeing-with-you-cover.png
 seoTitle: "How to Stop ChatGPT From Agreeing With You (Free Prompt)"
 metaDescription: "Learn how to stop ChatGPT from agreeing with you. Get my free honesty prompt for ChatGPT and Claude, plus a simple test to catch a yes-man AI in 2 minutes."
