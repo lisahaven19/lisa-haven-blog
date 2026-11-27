@@ -6,6 +6,7 @@ date: 2026-11-24T19:00:00.000-05:00
 readTime: 8 min read
 excerpt: "I uploaded 1 selfie and asked ChatGPT to rate my face. I got a score, a color palette, a makeup plan and photo tips. Here is the exact prompt I used."
 image: /images/uploads/use-chatgpt-to-rate-your-face-lisa.jpg
+cardVideoPosition: 30%
 video: /images/uploads/use-chatgpt-to-rate-your-face.mp4
 cardPhoto: /images/uploads/use-chatgpt-to-rate-your-face-lisa.jpg
 cover: /images/uploads/use-chatgpt-to-rate-your-face-cover.png
