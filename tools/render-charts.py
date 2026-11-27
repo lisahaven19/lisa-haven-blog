@@ -2,7 +2,9 @@
 """Render in-post charts in the big, easy-to-read brand style.
 
 Usage: python3 tools/render-charts.py tools/specs/charts.json [slug ...]
-Each chart in the JSON becomes images/uploads/<out> (1600 px wide, height fits the content).
+Each chart in the JSON becomes images/uploads/<out> (1600 px wide, height fits the content),
+plus a phone version images/uploads/<out stem>-m.jpg (900 px wide, 1 column, bigger text).
+post.html swaps in the phone version on small screens (list in images/uploads/charts-mobile.json).
 
 Blocks a chart can use (in order, top to bottom):
   steps    {"items":[{"t","d","hl"?,"sub"?}], "numbers":true}   cards, 2 per row
@@ -91,6 +93,24 @@ h1 i{{font-weight:400;color:#C47E8A}}
 .ft{{position:absolute;bottom:52px;left:90px;right:90px;display:flex;justify-content:space-between;font-size:26px;letter-spacing:.3em;color:#555}}
 """
 
+# Phone version: narrower canvas, 1 column, so the same text reads about 2 times bigger on a phone.
+MOBILE_CSS = """
+#c{width:900px;padding:0 56px 130px}
+.eb{padding-top:70px;font-size:28px}
+h1{font-size:78px}
+.grid,.cmp{grid-template-columns:1fr}
+.card.span{grid-column:auto}
+.card{padding:40px}
+.n{flex:0 0 76px;height:76px;font-size:34px}
+.tr{gap:28px}
+.tt{flex:0 0 190px;font-size:40px}
+.src{font-size:30px}
+.bh{font-size:28px}
+.row{padding:36px 40px;gap:30px}
+.row .t{font-size:46px}
+.ft{left:56px;right:56px;font-size:24px}
+"""
+
 
 def card(it, i, numbers, span):
     cls = "card" + (" hl" if it.get("hl") else "") + (" span" if span else "")
@@ -145,10 +165,10 @@ def block(b):
     raise ValueError(k)
 
 
-def page(ch):
+def page(ch, mobile=False):
     blocks = "".join(f'<div class="blk">{block(b)}</div>' for b in ch["blocks"])
     sub = f'<div class="sub">{E(ch["sub"])}</div>' if ch.get("sub") else ""
-    return (f'<html><head><meta charset="utf-8"><style>{CSS}</style></head><body><div id="c"><div class="bar"></div>'
+    return (f'<html><head><meta charset="utf-8"><style>{CSS}{MOBILE_CSS if mobile else ""}</style></head><body><div id="c"><div class="bar"></div>'
             f'<div class="eb">{E(ch["eyebrow"])}</div><h1>{ch["title"]}</h1>{sub}{blocks}'
             f'<div class="ft"><span>LISA HAVEN</span><span>LISAHAVEN.CO</span></div></div></body></html>')
 
@@ -168,17 +188,26 @@ async def main(spec, only):
         for ch in charts:
             if only and ch["slug"] not in only:
                 continue
-            tmp = ROOT / "tools" / ".chart.html"
-            tmp.write_text(page(ch))
-            await pg.goto(f"file://{tmp}")
-            await pg.wait_for_timeout(250)
-            bad = await pg.evaluate(CHECK)
-            out = ROOT / "images" / "uploads" / ch["out"]
-            await pg.locator("#c").screenshot(path=str(out), type="jpeg", quality=88)
-            h = await pg.evaluate("document.getElementById('c').offsetHeight")
-            print(("OK  " if not bad else "FIX ") + ch["out"], h, bad)
-            tmp.unlink()
+            for mobile in (False, True):
+                tmp = ROOT / "tools" / ".chart.html"
+                tmp.write_text(page(ch, mobile))
+                await pg.goto(f"file://{tmp}")
+                await pg.wait_for_timeout(250)
+                bad = await pg.evaluate(CHECK)
+                name = ch["out"]
+                if mobile:
+                    name = name.rsplit(".", 1)[0] + "-m.jpg"
+                out = ROOT / "images" / "uploads" / name
+                await pg.locator("#c").screenshot(path=str(out), type="jpeg", quality=88)
+                h = await pg.evaluate("document.getElementById('c').offsetHeight")
+                print(("OK  " if not bad else "FIX ") + name, h, bad)
+                tmp.unlink()
         await b.close()
+    # List of charts that have a phone version, read by post.html.
+    lst = ROOT / "images" / "uploads" / "charts-mobile.json"
+    old = set(json.loads(lst.read_text())) if lst.exists() else set()
+    names = sorted(old | {c["out"] for c in charts if (ROOT / "images" / "uploads" / (c["out"].rsplit(".", 1)[0] + "-m.jpg")).exists()})
+    lst.write_text(json.dumps(names, indent=1) + "\n")
 
 
 if __name__ == "__main__":

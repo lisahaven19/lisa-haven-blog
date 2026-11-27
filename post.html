@@ -1035,8 +1035,12 @@
     });
 
     // ── Main fetch ──
+    // Phone versions of charts: list of chart files that have a bigger-text "-m.jpg" twin.
+    const mobileChartsP = fetch('/images/uploads/charts-mobile.json').then(r => r.ok ? r.json() : []).catch(() => []);
+    let mobileCharts = new Set();
     fetch('/blog-posts.json')
       .then(r => r.ok ? r.json() : [])
+      .then(posts => mobileChartsP.then(mc => { mobileCharts = new Set(Array.isArray(mc) ? mc : []); return posts; }))
       .then(posts => {
         const post = (posts || []).find(p => p.slug === slug);
         if (!post) { comingSoon(); return; }
@@ -1059,6 +1063,13 @@
             + '<button type="button" class="prompt-copy" aria-label="Copy prompt ' + promptN + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy</span></button></div>'
             + '<pre><code>' + code.replace(/\n$/, '') + '</code></pre>'
             + '<div class="prompt-card-foot">Want more prompts like this, written by human experts? <a href="https://www.lumaprompt.ai" target="_blank" rel="noopener">Explore LUMAPROMPT.AI &rarr;</a></div></div>';
+        });
+
+        // Charts: on phones, show the 1 column version with bigger text
+        bodyHtml = bodyHtml.replace(/<img src="\/images\/uploads\/([^"\/]+\.jpg)"([^>]*)>/g, (m, file, rest) => {
+          if (!mobileCharts.has(file)) return m;
+          const mob = file.replace(/\.jpg$/, '-m.jpg');
+          return '<picture><source media="(max-width:700px)" srcset="/images/uploads/' + mob + '">' + m + '</picture>';
         });
 
         // Photo gallery: a grid of squares that open big when tapped

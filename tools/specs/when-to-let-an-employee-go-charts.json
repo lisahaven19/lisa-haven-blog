@@ -1,0 +1,14 @@
+{"charts":[
+ {"slug":"when-to-let-an-employee-go","out":"when-to-let-an-employee-go-chart-v2.jpg",
+  "eyebrow":"When to let an employee go","title":"The 1 <i>warning</i> rule",
+  "blocks":[
+   {"type":"steps","items":[
+     {"t":"Clear KPIs","d":"3 to 5 measurable goals, in writing, from day 1."},
+     {"t":"Paid trial","d":"1 to 2 real weeks before you commit."},
+     {"t":"1 fair warning","d":"Facts, the KPI, the next step. They confirm in writing."},
+     {"t":"Decide","d":"Same miss again? Let go with respect. No stays no.","hl":true}]},
+   {"type":"bars","items":[
+     {"label":"Engaged at work","value":"20%","pct":20,"color":"rose"},
+     {"label":"Not engaged at work","value":"80%","pct":80,"color":"ink"}],
+    "source":"Employees worldwide in 2025. Source: Gallup, State of the Global Workplace 2026 report."}]}
+]}
